@@ -35,7 +35,8 @@ HEADERS_CHANGE = {
   },
   'final_csv': {
     'rename_columns': {},
-    'drop_columns': ['Target Geo Id2', 'state_fbi_crime']
+    'drop_columns':
+    ['Target Geo Id2', 'state_fbi_crime', '', 'Geography.1', 'Geography.2']
   }
 }
 

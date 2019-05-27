@@ -12,7 +12,7 @@ FuzzyMatchingKey = collections.namedtuple('FuzzyMatchingKey',
 
 
 class DataTable(ABC):
-  """Data table where each row is statistics for a city."""
+  """ Data table where each row is statistics for a city. """
 
   def __init__(self, data=None, file_path=None, suffix=''):
     """
@@ -84,9 +84,13 @@ class DataTable(ABC):
     Returns:
       FuzzyMatchingKey.
     """
+    # Population key might not be defined.
+    population = None
+    if cls.get_population_key() is not None:
+      population = row[cls.get_population_key()]
     return FuzzyMatchingKey(state=row[cls.get_state_key()],
                             city=row[cls.get_city_key()],
-                            population=row[cls.get_population_key()])
+                            population=population)
 
   @staticmethod
   def compare_keys(key1, key2):
@@ -107,8 +111,11 @@ class DataTable(ABC):
     if key1.city == key2.city:
       # Assume cities with the same name are the same city.
       return 0
-    # Is one city name prefix of the other?
-    if (key1.city.startswith(key2.city)) or (key2.city.startswith(key1.city)):
+    # Is one city name prefix of the other?  Then we will perform fuzzy matching
+    # using population as a sanity check.  If population information is not
+    # available, city names must match in order for key1 and key2 to match.
+    if (key1.population and key2.population and
+        (key1.city.startswith(key2.city) or key2.city.startswith(key1.city))):
       # Might be the same city.
       # Sanity check that populations are within 5% of each other.
       population_percentage_difference = round(
@@ -143,16 +150,13 @@ class DataTable(ABC):
       DataTable of same class as left hand table.
     """
     # pylint: disable=too-many-locals
-    keys_a = [
-      self.get_state_key(),
-      self.get_city_key(),
-      self.get_population_key()
-    ]
-    keys_b = [
-      data_table.get_state_key(),
-      data_table.get_city_key(),
-      data_table.get_population_key()
-    ]
+    keys_a = [self.get_state_key(), self.get_city_key()]
+    keys_b = [data_table.get_state_key(), data_table.get_city_key()]
+    # Population key might not be defined.
+    if self.get_population_key() is not None:
+      keys_a.append(self.get_population_key())
+    if data_table.get_population_key() is not None:
+      keys_b.append(data_table.get_population_key())
     rows_a = self._data.sort_values(by=keys_a)
     rows_b = data_table.data.sort_values(by=keys_b)
     rows_a.reset_index(inplace=True, drop=True)

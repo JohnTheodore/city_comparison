@@ -1,12 +1,12 @@
 """
-Module for parsing any Fbi related data in data/Fbi.
+Module for parsing any Fbi related data in data/fbi.
 """
 import pandas
 from data_table import DataTable
 
 
 class Fbi(DataTable):
-  """Table of FBI data."""
+  """ Table of FBI data. """
 
   @staticmethod
   def read(file_path):
