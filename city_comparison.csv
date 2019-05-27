@@ -1,264 +1,511 @@
-,City,Credit Score,State,aggravated assault,arson2,burglary,city,city_fbi_crime,geography census_2010,land area sqmi census_2010,larceny- theft,motor vehicle theft,murder and nonnegligent manslaughter,population,population census_2010,population census_2017,property crime,rape1,robbery,state,total area sqmi census_2010,violent crime,water area sqmi census_2010
-0,mobile,634.0,alabama,1207.0,57.0,3023.0,mobile,mobile,Mobile city,139.11,9267.0,1259.0,50.0,248431.0,194582,190265,13549.0,142.0,440.0,alabama,179.78,1839.0,40.67
-1,montgomery,626.0,alabama,841.0,0.0,2129.0,montgomery,montgomery,Montgomery city,159.57,5827.0,844.0,38.0,199099.0,205616,199518,8800.0,52.0,346.0,alabama,161.92,1277.0,2.36
-2,tuscaloosa,632.0,alabama,243.0,0.0,814.0,tuscaloosa,tuscaloosa,Tuscaloosa city,60.23,3161.0,199.0,9.0,101124.0,90537,100287,4174.0,54.0,168.0,alabama,70.35,474.0,10.12
-3,avondale,637.0,arizona,127.0,20.0,480.0,avondale,avondale,Avondale city,45.6,2633.0,234.0,6.0,84041.0,76220,84025,3347.0,27.0,97.0,arizona,45.65,257.0,0.05
-4,glendale,650.0,arizona,627.0,48.0,1589.0,glendale,glendale,Glendale city,59.98,8541.0,1163.0,12.0,249273.0,226127,246709,11293.0,97.0,481.0,arizona,60.13,1217.0,0.16
-5,mesa,669.0,arizona,1318.0,23.0,1878.0,mesa,mesa,Mesa city,136.45,7930.0,884.0,23.0,492268.0,440952,496401,10692.0,252.0,454.0,arizona,137.06,2047.0,0.61
-6,phoenix,646.0,arizona,7919.0,190.0,12801.0,phoenix,phoenix,Phoenix city,516.7,39899.0,7653.0,157.0,1644177.0,1449039,1626078,60353.0,1142.0,3293.0,arizona,517.95,12511.0,1.24
-7,tucson,676.0,arizona,2293.0,156.0,4424.0,tucson,tucson,Tucson city,226.71,21125.0,2407.0,46.0,532323.0,523832,535677,27956.0,498.0,1431.0,arizona,227.03,4268.0,0.33
-8,little rock,650.0,arkansas,2524.0,51.0,2378.0,little rock,little rock,Little Rock city,119.2,10309.0,1130.0,55.0,199314.0,193899,198606,13817.0,175.0,502.0,arkansas,120.99,3256.0,1.79
-9,north little rock,630.0,arkansas,378.0,15.0,541.0,north little rock,north little rock,North Little Rock city,51.5,1875.0,348.0,9.0,66938.0,62452,65911,2764.0,19.0,124.0,arkansas,54.77,530.0,3.27
-10,anaheim,677.0,california,648.0,45.0,1351.0,anaheim,anaheim,Anaheim city,49.84,6393.0,1552.0,10.0,353400.0,337177,352497,9296.0,115.0,480.0,california,50.81,1253.0,0.98
-11,antioch,652.0,california,316.0,75.0,589.0,antioch,antioch,Antioch city,28.35,2261.0,988.0,10.0,112252.0,103106,111674,3838.0,51.0,230.0,california,29.08,607.0,0.73
-12,arcadia,742.0,california,47.0,0.0,485.0,arcadia,arcadia,Arcadia city,10.93,957.0,92.0,0.0,58883.0,56392,58799,1534.0,7.0,56.0,california,11.13,110.0,0.21
-13,bakersfield,642.0,california,941.0,269.0,3667.0,bakersfield,bakersfield,Bakersfield city,142.16,9063.0,2777.0,41.0,381154.0,349322,380874,15507.0,92.0,753.0,california,143.61,1827.0,1.44
-14,berkeley,733.0,california,218.0,30.0,843.0,berkeley,berkeley,Berkeley city,10.47,4556.0,621.0,1.0,122687.0,112893,122324,6020.0,83.0,364.0,california,17.7,666.0,7.23
-15,carlsbad,740.0,california,171.0,18.0,432.0,carlsbad,carlsbad,Carlsbad city,37.72,1638.0,139.0,0.0,115344.0,105936,115330,2209.0,30.0,46.0,california,39.11,247.0,1.39
-16,cerritos,742.0,california,50.0,3.0,561.0,cerritos,cerritos,Cerritos city,8.73,1511.0,196.0,2.0,50809.0,49059,51020,2268.0,4.0,71.0,california,8.86,127.0,0.13
-17,colton,637.0,california,120.0,7.0,264.0,colton,colton,Colton city,15.32,828.0,347.0,4.0,55127.0,52276,54828,1439.0,6.0,115.0,california,16.04,245.0,0.72
-18,compton,631.0,california,669.0,54.0,411.0,compton,compton,Compton city,10.01,1402.0,770.0,21.0,97728.0,96481,97612,2583.0,33.0,441.0,california,10.12,1164.0,0.1
-19,coronado,737.0,california,79.0,19.0,561.0,corona,corona,Corona city,38.83,2177.0,559.0,1.0,169164.0,153193,167836,3297.0,36.0,107.0,california,38.93,223.0,0.1
-20,cupertino,767.0,california,45.0,10.0,164.0,cupertino,cupertino,Cupertino city,11.26,756.0,50.0,2.0,60970.0,58719,60777,970.0,9.0,21.0,california,11.26,77.0,0.0
-21,davis,742.0,california,42.0,8.0,269.0,davis,davis,Davis city,9.89,1221.0,129.0,0.0,68540.0,65590,68986,1619.0,17.0,35.0,california,9.92,94.0,0.03
-22,delano,645.0,california,200.0,39.0,219.0,delano,delano,Delano city,14.3,647.0,448.0,6.0,52639.0,53133,53138,1314.0,10.0,32.0,california,14.36,248.0,0.05
-23,diamond bar,734.0,california,27.0,2.0,381.0,diamond bar,diamond bar,Diamond Bar city,14.88,592.0,70.0,0.0,56996.0,55584,56665,1043.0,5.0,25.0,california,14.88,57.0,0.01
-24,dublin,749.0,california,53.0,1.0,117.0,dublin,dublin,Dublin city,14.91,970.0,108.0,0.0,62235.0,45910,60939,1195.0,9.0,23.0,california,14.91,85.0,0.0
-25,encinitas,742.0,california,70.0,2.0,208.0,encinitas,encinitas,Encinitas city,18.81,651.0,66.0,0.0,63722.0,59689,63184,925.0,13.0,23.0,california,19.99,106.0,1.18
-26,folsom,741.0,california,22.0,15.0,257.0,folsom,folsom,Folsom city,21.95,847.0,125.0,0.0,78155.0,72179,78038,1229.0,21.0,21.0,california,24.3,64.0,2.36
-27,fontana,650.0,california,437.0,13.0,563.0,fontana,fontana,Fontana city,42.43,2292.0,881.0,9.0,211782.0,197370,211815,3736.0,62.0,206.0,california,42.43,714.0,0.0
-28,fountain valley,735.0,california,37.0,3.0,238.0,fountain valley,fountain valley,Fountain Valley city,9.02,1199.0,144.0,0.0,56704.0,55484,56313,1581.0,3.0,28.0,california,9.03,68.0,0.01
-29,fremont,742.0,california,174.0,26.0,673.0,fremont,fremont,Fremont city,77.46,3545.0,865.0,2.0,236368.0,214619,234962,5083.0,68.0,187.0,california,87.61,431.0,10.15
-30,fresno,641.0,california,1786.0,217.0,3649.0,fresno,fresno,Fresno city,111.96,13782.0,2789.0,56.0,526371.0,497772,527438,20220.0,174.0,958.0,california,112.31,2974.0,0.35
-31,hesperia,645.0,california,243.0,25.0,452.0,hesperia,hesperia,Hesperia city,73.1,1230.0,435.0,2.0,94292.0,90370,94859,2117.0,38.0,97.0,california,73.21,380.0,0.11
-32,inglewood,644.0,california,337.0,20.0,492.0,inglewood,inglewood,Inglewood city,9.07,1466.0,802.0,13.0,110811.0,109710,110598,2760.0,46.0,389.0,california,9.09,785.0,0.02
-33,irvine,735.0,california,66.0,10.0,627.0,irvine,irvine,Irvine city,66.11,2814.0,194.0,2.0,276115.0,213435,277453,3635.0,46.0,55.0,california,66.45,169.0,0.35
-34,laguna niguel,735.0,california,35.0,1.0,95.0,laguna niguel,laguna niguel,Laguna Niguel city,14.83,428.0,50.0,1.0,65700.0,63131,66334,573.0,7.0,11.0,california,14.88,54.0,0.05
-35,lancaster,639.0,california,787.0,40.0,935.0,lancaster,lancaster,Lancaster city,94.28,1733.0,650.0,15.0,160653.0,156854,160316,3318.0,80.0,337.0,california,94.55,1219.0,0.27
-36,long beach,661.0,california,1639.0,127.0,2765.0,long beach,long beach,Long Beach city,50.29,7104.0,2729.0,22.0,471397.0,462559,469450,12598.0,203.0,1237.0,california,51.44,3101.0,1.14
-37,los angeles,668.0,california,16957.0,1414.0,16668.0,los angeles,los angeles,Los Angeles city,468.67,65757.0,19193.0,281.0,4007147.0,3796060,3999759,101618.0,2455.0,10814.0,california,502.69,30507.0,34.02
-38,lynwood,651.0,california,214.0,22.0,293.0,lynwood,lynwood,Lynwood city,4.84,688.0,700.0,8.0,71453.0,69615,71099,1681.0,16.0,220.0,california,4.84,458.0,0.0
-39,milpitas,738.0,california,42.0,4.0,235.0,milpitas,milpitas,Milpitas city,13.59,1447.0,296.0,2.0,79503.0,66743,78106,1978.0,12.0,58.0,california,13.64,114.0,0.05
-40,mission viejo,732.0,california,61.0,1.0,158.0,mission viejo,mission viejo,Mission Viejo city,17.74,733.0,78.0,1.0,96928.0,93259,96016,969.0,13.0,26.0,california,18.12,101.0,0.38
-41,moreno valley,636.0,california,411.0,14.0,1148.0,moreno valley,moreno valley,Moreno Valley city,51.27,4050.0,1158.0,9.0,207418.0,194279,207226,6356.0,26.0,352.0,california,51.47,798.0,0.2
-42,mountain view,751.0,california,91.0,6.0,290.0,mountain view,mountain view,Mountain View city,12.0,1590.0,102.0,1.0,81525.0,74270,81438,1982.0,14.0,44.0,california,12.27,150.0,0.28
-43,national city,650.0,california,161.0,11.0,132.0,national city,national city,National City city,7.28,667.0,358.0,3.0,61574.0,58634,61363,1157.0,23.0,109.0,california,9.12,296.0,1.84
-44,novato,737.0,california,60.0,2.0,145.0,novato,novato,Novato city,27.44,689.0,93.0,1.0,56698.0,51982,55980,927.0,5.0,26.0,california,27.96,92.0,0.52
-45,oakland,682.0,california,2376.0,196.0,2622.0,oakland,oakland,Oakland city,55.79,17305.0,5495.0,69.0,424915.0,391571,425195,25422.0,400.0,2676.0,california,78.0,5521.0,22.22
-46,palmdale,647.0,california,422.0,29.0,613.0,palmdale,palmdale,Palmdale city,105.96,1611.0,435.0,4.0,158094.0,152999,157519,2659.0,37.0,218.0,california,106.22,681.0,0.25
-47,palo alto,732.0,california,40.0,6.0,214.0,palo alto,palo alto,Palo Alto city,23.88,1478.0,91.0,0.0,67441.0,64576,67178,1783.0,11.0,39.0,california,25.79,90.0,1.9
-48,paramount,649.0,california,185.0,6.0,283.0,paramount,paramount,Paramount city,4.73,892.0,438.0,6.0,55041.0,54119,54909,1613.0,8.0,125.0,california,4.84,324.0,0.11
-49,perris,638.0,california,120.0,7.0,270.0,perris,perris,Perris city,31.39,1104.0,503.0,2.0,77626.0,69001,77879,1877.0,4.0,66.0,california,31.5,192.0,0.11
-50,pleasanton,754.0,california,33.0,5.0,137.0,pleasanton,pleasanton,Pleasanton city,24.11,1406.0,118.0,0.0,84440.0,70393,83007,1661.0,13.0,53.0,california,24.27,99.0,0.15
-51,porterville,653.0,california,175.0,3.0,338.0,porterville,porterville,Porterville city,17.61,925.0,272.0,4.0,59245.0,57437,59145,1535.0,10.0,58.0,california,17.68,247.0,0.07
-52,poway,732.0,california,37.0,3.0,136.0,poway,poway,Poway city,39.08,389.0,51.0,0.0,50438.0,47961,50041,576.0,8.0,13.0,california,39.17,58.0,0.09
-53,redondo beach,736.0,california,96.0,0.0,358.0,redondo beach,redondo beach,Redondo Beach city,6.2,1042.0,170.0,0.0,68051.0,66940,67908,1570.0,18.0,62.0,california,6.21,176.0,0.01
-54,rialto,630.0,california,219.0,3.0,475.0,rialto,rialto,Rialto city,22.35,596.0,613.0,2.0,103980.0,99391,103562,1684.0,28.0,150.0,california,22.37,399.0,0.01
-55,richmond,642.0,california,563.0,42.0,698.0,richmond,richmond,Richmond city,30.07,2199.0,1231.0,10.0,110804.0,103668,110040,4128.0,49.0,392.0,california,52.48,1014.0,22.41
-56,riverside,665.0,california,947.0,73.0,1673.0,riverside,riverside,Riverside city,81.14,6629.0,1730.0,12.0,328023.0,305571,327728,10032.0,166.0,544.0,california,81.44,1669.0,0.3
-57,sacramento,668.0,california,2140.0,209.0,2888.0,sacramento,sacramento,Sacramento city,97.92,9077.0,2718.0,39.0,499997.0,467382,501901,14683.0,99.0,1100.0,california,100.11,3378.0,2.19
-58,san bernardino,610.0,california,1736.0,67.0,2136.0,san bernardino,san bernardino,San Bernardino city,59.2,3990.0,2277.0,34.0,217259.0,210182,216995,8403.0,158.0,877.0,california,59.65,2805.0,0.44
-59,san diego,696.0,california,3217.0,158.0,3817.0,san diego,san diego,San Diego city,325.19,17294.0,5135.0,35.0,1424116.0,1306176,1419516,26246.0,559.0,1410.0,california,372.4,5221.0,47.21
-60,san francisco,732.0,california,2658.0,303.0,4935.0,san francisco,san francisco,San Francisco city,46.87,44587.0,4834.0,56.0,881255.0,805770,884363,54356.0,367.0,3220.0,california,231.89,6301.0,185.02
-61,san jose,715.0,california,2209.0,173.0,3926.0,san jose,san jose,San Jose city,176.53,13329.0,8068.0,32.0,1037529.0,955255,1035317,25323.0,571.0,1376.0,california,179.97,4188.0,3.44
-62,san mateo,738.0,california,185.0,8.0,706.0,san mateo,san mateo,San Mateo city,12.13,1231.0,188.0,0.0,105090.0,97425,104748,2125.0,19.0,64.0,california,15.88,268.0,3.75
-63,san ramon,754.0,california,18.0,7.0,126.0,san ramon,san ramon,San Ramon city,18.06,768.0,80.0,0.0,76325.0,71614,75931,974.0,8.0,30.0,california,18.08,56.0,0.02
-64,santa ana,669.0,california,826.0,60.0,929.0,santa ana,santa ana,Santa Ana city,27.27,4108.0,1980.0,21.0,335699.0,325427,334136,7017.0,188.0,605.0,california,27.52,1640.0,0.25
-65,santa clara,737.0,california,95.0,7.0,408.0,santa clara,santa clara,Santa Clara city,18.41,2810.0,400.0,2.0,127538.0,116838,127134,3618.0,35.0,82.0,california,18.41,214.0,0.0
-66,stockton,646.0,california,2962.0,208.0,2140.0,stockton,stockton,Stockton city,61.67,7040.0,2049.0,55.0,309566.0,292497,310496,11229.0,154.0,1208.0,california,64.75,4379.0,3.08
-67,sunnyvale,748.0,california,96.0,19.0,512.0,sunnyvale,sunnyvale,Sunnyvale city,21.99,1872.0,298.0,1.0,154919.0,140502,153656,2682.0,29.0,56.0,california,22.69,182.0,0.7
-68,thousand oaks,731.0,california,91.0,12.0,269.0,thousand oaks,thousand oaks,Thousand Oaks city,55.03,1305.0,113.0,2.0,129240.0,126754,128995,1687.0,44.0,35.0,california,55.18,172.0,0.15
-69,tulare,648.0,california,164.0,15.0,284.0,tulare,tulare,Tulare city,20.93,1008.0,411.0,2.0,63349.0,59463,63855,1703.0,22.0,66.0,california,21.02,254.0,0.09
-70,victorville,623.0,california,527.0,42.0,830.0,victorville,victorville,Victorville city,73.18,1839.0,649.0,14.0,123284.0,116322,122441,3318.0,54.0,267.0,california,73.74,862.0,0.56
-71,walnut,741.0,california,63.0,2.0,243.0,walnut creek,walnut creek,Walnut Creek city,19.76,1871.0,190.0,1.0,69953.0,64338,69773,2304.0,2.0,39.0,california,19.77,105.0,0.01
-72,yorba linda,746.0,california,31.0,5.0,185.0,yorba linda,yorba linda,Yorba Linda city,19.48,482.0,47.0,0.0,68889.0,64407,68229,714.0,9.0,5.0,california,20.02,45.0,0.54
-73,aurora,672.0,colorado,1211.0,68.0,1671.0,aurora,aurora,Aurora city,154.73,7194.0,2189.0,30.0,368018.0,326027,366623,11054.0,319.0,679.0,colorado,155.43,2239.0,0.7
-74,broomfield,734.0,colorado,53.0,9.0,197.0,broomfield,broomfield,Broomfield city,33.03,1400.0,193.0,1.0,68158.0,56214,68341,1790.0,23.0,7.0,colorado,33.6,84.0,0.57
-75,castle rock,735.0,colorado,18.0,2.0,120.0,castle rock town,castle rock,Castle Rock town,33.79,797.0,52.0,0.0,59337.0,48592,62276,969.0,26.0,10.0,colorado,33.79,54.0,0.0
-76,colorado springs,687.0,colorado,1479.0,115.0,2508.0,colorado springs,colorado springs,Colorado Springs city,194.54,10571.0,2135.0,29.0,472958.0,420492,464474,15214.0,489.0,482.0,colorado,194.91,2479.0,0.37
-77,denver,680.0,colorado,2784.0,129.0,4331.0,denver,denver,Denver city,153.0,16021.0,5560.0,59.0,706616.0,603218,704621,25912.0,699.0,1232.0,colorado,154.63,4774.0,1.63
-78,parker,740.0,colorado,53.0,6.0,117.0,parker town,parker,Parker town,20.48,616.0,51.0,0.0,52179.0,45516,54202,784.0,16.0,8.0,colorado,20.49,77.0,0.02
-79,bridgeport,628.0,connecticut,652.0,14.0,548.0,bridgeport,bridgeport,Bridgeport city,15.97,2152.0,716.0,21.0,146110.0,144923,146579,3416.0,77.0,565.0,connecticut,19.34,1315.0,3.37
-80,hartford,573.0,connecticut,804.0,87.0,738.0,hartford,hartford,Hartford city,17.38,3490.0,679.0,29.0,122891.0,125403,123400,4907.0,45.0,465.0,connecticut,18.06,1343.0,0.67
-81,new britain,628.0,connecticut,135.0,22.0,357.0,new britain,new britain,New Britain city,13.39,1342.0,388.0,4.0,72442.0,73273,72710,2087.0,39.0,91.0,connecticut,13.47,269.0,0.07
-82,new haven,626.0,connecticut,663.0,32.0,840.0,new haven,new haven,New Haven city,18.68,3728.0,643.0,7.0,129953.0,129853,131014,5211.0,52.0,378.0,connecticut,20.12,1100.0,1.45
-83,waterbury,614.0,connecticut,227.0,13.0,690.0,waterbury,waterbury,Waterbury city,28.52,2619.0,827.0,11.0,107924.0,110403,108629,4136.0,51.0,255.0,connecticut,28.94,544.0,0.42
-84,washington,674.0,district of columbia,3674.0,0.0,1808.0,washington,washington,Washington city,61.05,24490.0,2545.0,116.0,693972.0,605040,693972,28843.0,443.0,2351.0,district of columbia,68.34,6584.0,7.29
-85,daytona beach,627.0,florida,631.0,6.0,497.0,daytona beach,daytona beach,Daytona Beach city,58.41,3027.0,295.0,12.0,67564.0,61622,68055,3819.0,23.0,82.0,florida,63.78,748.0,5.37
-86,fort lauderdale,667.0,florida,547.0,15.0,1657.0,fort lauderdale,fort lauderdale,Fort Lauderdale city,34.77,7424.0,925.0,15.0,180972.0,166188,180072,10006.0,81.0,429.0,florida,38.57,1072.0,3.81
-87,hialeah,657.0,florida,280.0,24.0,593.0,hialeah,hialeah,Hialeah city,21.45,3996.0,685.0,6.0,238260.0,225474,239673,5274.0,33.0,154.0,florida,22.84,473.0,1.39
-88,hollywood,666.0,florida,234.0,9.0,722.0,hollywood,hollywood,Hollywood city,27.37,3434.0,505.0,8.0,153893.0,141124,153627,4661.0,27.0,176.0,florida,30.7,445.0,3.33
-89,homestead,626.0,florida,394.0,9.0,420.0,homestead,homestead,Homestead city,15.14,1883.0,179.0,1.0,69276.0,60814,69907,2482.0,25.0,251.0,florida,15.62,671.0,0.48
-90,jacksonville,647.0,florida,3625.0,96.0,5646.0,jacksonville,jacksonville,Jacksonville city,747.0,22980.0,2925.0,109.0,894638.0,823175,892062,31551.0,538.0,1376.0,florida,874.63,5648.0,127.63
-91,kissimmee,642.0,florida,223.0,8.0,314.0,kissimmee,kissimmee,Kissimmee city,21.19,1633.0,157.0,7.0,71130.0,59759,71104,2104.0,32.0,88.0,florida,21.95,350.0,0.75
-92,lakeland,652.0,florida,144.0,3.0,574.0,lakeland,lakeland,Lakeland city,65.27,3237.0,210.0,1.0,107927.0,97737,108054,4021.0,73.0,89.0,florida,74.29,307.0,9.02
-93,miami,661.0,florida,2203.0,73.0,2440.0,miami,miami,Miami city,35.87,14311.0,1835.0,52.0,463009.0,400864,463347,18586.0,105.0,978.0,florida,56.06,3338.0,20.19
-94,miami gardens,602.0,florida,613.0,13.0,492.0,miami gardens,miami gardens,Miami Gardens city,18.23,2811.0,419.0,19.0,114008.0,107530,113750,3722.0,18.0,246.0,florida,19.02,896.0,0.79
-95,orlando,644.0,florida,1302.0,22.0,2388.0,orlando,orlando,Orlando city,102.4,11715.0,1387.0,23.0,283982.0,239198,280257,15490.0,183.0,605.0,florida,110.68,2113.0,8.29
-96,pompano beach,670.0,florida,479.0,8.0,898.0,pompano beach,pompano beach,Pompano Beach city,24.0,3624.0,808.0,8.0,111027.0,100076,110473,5330.0,61.0,410.0,florida,25.41,958.0,1.41
-97,sanford,640.0,florida,258.0,2.0,398.0,sanford,sanford,Sanford city,22.96,1944.0,134.0,9.0,59457.0,53781,59317,2476.0,53.0,95.0,florida,26.5,415.0,3.54
-98,tampa,651.0,florida,1219.0,39.0,1235.0,tampa,tampa,Tampa city,113.41,4900.0,567.0,39.0,384360.0,336766,385430,6702.0,121.0,406.0,florida,175.23,1785.0,61.83
-99,west palm beach,647.0,florida,493.0,27.0,847.0,west palm beach,west palm beach,West Palm Beach city,55.29,3907.0,521.0,25.0,109459.0,100681,110222,5275.0,66.0,322.0,florida,58.04,906.0,2.75
-100,albany,596.0,georgia,626.0,28.0,879.0,albany,albany,Albany city,55.13,3048.0,189.0,22.0,73209.0,77420,73179,4116.0,27.0,152.0,georgia,55.89,827.0,0.76
-101,alpharetta,734.0,georgia,11.0,1.0,96.0,alpharetta,alpharetta,Alpharetta city,26.91,1056.0,35.0,0.0,66711.0,57701,65799,1187.0,1.0,22.0,georgia,27.28,34.0,0.37
-102,atlanta,654.0,georgia,2730.0,74.0,3390.0,atlanta,atlanta,Atlanta city,133.15,16304.0,3297.0,79.0,481343.0,422849,486290,22991.0,282.0,1413.0,georgia,134.01,4504.0,0.86
-103,columbus,628.0,georgia,803.0,35.0,2131.0,columbus,columbus,Columbus city,216.39,5985.0,704.0,35.0,198832.0,191110,194058,8820.0,71.0,394.0,georgia,221.01,1303.0,4.62
-104,marietta,693.0,georgia,95.0,4.0,327.0,marietta,marietta,Marietta city,23.08,1700.0,182.0,4.0,61646.0,56836,61048,2209.0,14.0,102.0,georgia,23.17,215.0,0.09
-105,valdosta,632.0,georgia,141.0,16.0,554.0,valdosta,valdosta,Valdosta city,35.83,2699.0,232.0,10.0,56729.0,54975,56085,3485.0,17.0,47.0,georgia,36.35,215.0,0.52
-106,warner robins,652.0,georgia,214.0,17.0,805.0,warner robins,warner robins,Warner Robins city,35.07,3072.0,230.0,5.0,75323.0,69402,74854,4107.0,34.0,132.0,georgia,35.36,385.0,0.29
-107,arlington heights,749.0,illinois,21.0,6.0,77.0,arlington heights village,arlington heights,Arlington Heights village,16.61,550.0,27.0,0.0,75586.0,75261,75634,654.0,9.0,14.0,illinois,16.64,44.0,0.03
-108,chicago,654.0,illinois,15435.0,514.0,12912.0,chicago,chicago,Chicago city,227.63,63834.0,11578.0,653.0,2706171.0,2697661,2716450,88324.0,1762.0,11887.0,illinois,234.11,29737.0,6.48
-109,cicero,647.0,illinois,112.0,18.0,434.0,cicero town,cicero,Cicero town,5.86,1245.0,161.0,6.0,82779.0,84270,82552,1840.0,37.0,146.0,illinois,5.86,301.0,0.0
-110,mount prospect,732.0,illinois,15.0,1.0,51.0,mount prospect village,mount prospect,Mount Prospect village,10.34,499.0,17.0,0.0,54162.0,54226,53930,567.0,3.0,7.0,illinois,10.37,25.0,0.03
-111,naperville,744.0,illinois,80.0,8.0,129.0,naperville,naperville,Naperville city,38.77,1540.0,47.0,1.0,147934.0,142369,147682,1716.0,22.0,33.0,illinois,39.32,136.0,0.55
-112,orland park,749.0,illinois,23.0,0.0,20.0,orland park village,orland park,Orland Park village,21.88,1059.0,15.0,1.0,59227.0,56725,58765,1094.0,4.0,7.0,illinois,22.16,35.0,0.29
-113,waukegan,648.0,illinois,199.0,11.0,442.0,waukegan,waukegan,Waukegan city,23.67,1487.0,59.0,6.0,88017.0,89139,87729,1988.0,18.0,138.0,illinois,23.88,361.0,0.21
-114,wheaton,748.0,illinois,21.0,6.0,54.0,wheaton,wheaton,Wheaton city,11.25,427.0,12.0,1.0,53444.0,53062,53373,493.0,12.0,4.0,illinois,11.44,38.0,0.19
-115,anderson,653.0,indiana,76.0,0.0,408.0,anderson,anderson,Anderson city,41.37,1786.0,224.0,1.0,54959.0,56147,55076,2418.0,82.0,101.0,indiana,41.48,260.0,0.11
-116,carmel,757.0,indiana,5.0,0.0,61.0,carmel,carmel,Carmel city,47.46,596.0,38.0,0.0,93098.0,79767,92198,695.0,6.0,6.0,indiana,48.55,17.0,1.08
-117,fishers,737.0,indiana,19.0,2.0,69.0,fishers,fishers,Fishers town,33.59,751.0,35.0,1.0,92367.0,77802,91832,855.0,14.0,9.0,indiana,35.83,43.0,2.25
-118,fort wayne,674.0,indiana,480.0,94.0,1308.0,fort wayne,fort wayne,Fort Wayne city,110.62,6626.0,532.0,37.0,266259.0,254102,265904,8466.0,136.0,299.0,indiana,110.83,952.0,0.21
-119,gary,576.0,indiana,199.0,51.0,678.0,gary,gary,Gary city,49.87,1481.0,422.0,48.0,75808.0,80211,76008,2581.0,32.0,192.0,indiana,57.18,471.0,7.31
-120,hammond,630.0,indiana,262.0,32.0,508.0,hammond,hammond,Hammond city,22.78,2162.0,326.0,12.0,76550.0,80714,76618,2996.0,32.0,180.0,indiana,24.88,486.0,2.11
-121,indianapolis,637.0,indiana,7307.0,256.0,8945.0,indianapolis city (balance),indianapolis,Indianapolis city (balance),361.43,24569.0,4904.0,156.0,870788.0,821473,863002,38418.0,668.0,3485.0,indiana,368.02,11616.0,6.59
-122,ankeny,746.0,iowa,97.0,5.0,143.0,ankeny,ankeny,Ankeny city,29.33,650.0,38.0,0.0,61090.0,45837,62416,831.0,23.0,10.0,iowa,29.33,130.0,0.0
-123,wichita,669.0,kansas,2982.0,100.0,3281.0,wichita,wichita,Wichita city,159.29,15890.0,2478.0,35.0,391084.0,382743,390591,21649.0,382.0,599.0,kansas,163.59,3998.0,4.3
-124,lexington,676.0,kentucky,355.0,41.0,2087.0,lexington-fayette urban county,lexington,Lexington-Fayette urban county,283.65,8831.0,1273.0,29.0,322332.0,296702,321959,12191.0,200.0,547.0,kentucky,285.55,1131.0,1.9
-125,baton rouge,651.0,louisiana,1280.0,166.0,3226.0,baton rouge,baton rouge,Baton Rouge city,76.95,8504.0,991.0,87.0,227403.0,229514,225374,12721.0,100.0,868.0,louisiana,79.1,2335.0,2.16
-126,lake charles,648.0,louisiana,438.0,0.0,1836.0,lake charles,lake charles,Lake Charles city,42.06,1429.0,259.0,9.0,77647.0,72167,77117,3524.0,45.0,146.0,louisiana,44.8,638.0,2.74
-127,new orleans,640.0,louisiana,2417.0,41.0,2229.0,new orleans,new orleans,New Orleans city,169.42,12107.0,2531.0,157.0,397447.0,347824,393292,16867.0,575.0,1308.0,louisiana,350.21,4457.0,180.79
-128,shreveport,620.0,louisiana,1148.0,91.0,2256.0,shreveport,shreveport,Shreveport city,105.38,7673.0,884.0,52.0,193937.0,200884,192036,10813.0,152.0,498.0,louisiana,120.83,1850.0,15.46
-129,baltimore,621.0,maryland,5827.0,261.0,8041.0,baltimore,baltimore,Baltimore city,80.94,17008.0,5171.0,342.0,613217.0,621026,611648,30220.0,382.0,5879.0,maryland,92.05,12430.0,11.11
-130,brockton,642.0,massachusetts,645.0,16.0,327.0,brockton,brockton,Brockton city,21.33,1250.0,384.0,7.0,96016.0,93796,95672,1961.0,93.0,172.0,massachusetts,21.52,917.0,0.2
-131,cambridge,735.0,massachusetts,193.0,3.0,252.0,cambridge,cambridge,Cambridge city,6.39,1685.0,94.0,2.0,111707.0,105028,113630,2031.0,17.0,101.0,massachusetts,7.11,313.0,0.72
-132,lawrence,611.0,massachusetts,393.0,0.0,224.0,lawrence,lawrence,Lawrence city,6.93,759.0,408.0,11.0,80890.0,76575,80162,1391.0,30.0,151.0,massachusetts,7.41,585.0,0.48
-133,lynn,652.0,massachusetts,462.0,8.0,299.0,lynn,lynn,Lynn city,10.74,1101.0,231.0,12.0,93140.0,90521,94063,1631.0,28.0,164.0,massachusetts,13.52,666.0,2.78
-134,new bedford,638.0,massachusetts,347.0,35.0,570.0,new bedford,new bedford,New Bedford city,20.0,1971.0,176.0,8.0,95107.0,95052,95120,2717.0,37.0,241.0,massachusetts,24.13,633.0,4.13
-135,springfield,615.0,massachusetts,884.0,37.0,1183.0,springfield,springfield,Springfield city,31.87,2902.0,509.0,14.0,154562.0,153604,154758,4594.0,73.0,380.0,massachusetts,33.07,1351.0,1.21
-136,ann arbor,738.0,michigan,149.0,7.0,278.0,ann arbor,ann arbor,Ann Arbor city,27.83,1731.0,99.0,0.0,121930.0,114093,121477,2108.0,57.0,53.0,michigan,28.7,259.0,0.87
-137,detroit,565.0,michigan,10193.0,869.0,8258.0,detroit,detroit,Detroit city,138.75,14045.0,8155.0,267.0,670792.0,711043,673104,30458.0,697.0,2639.0,michigan,142.87,13796.0,4.12
-138,flint,599.0,michigan,1466.0,45.0,961.0,flint,flint,Flint city,33.42,1397.0,274.0,37.0,96605.0,102024,96448,2632.0,104.0,272.0,michigan,34.05,1879.0,0.64
-139,grand rapids,677.0,michigan,904.0,54.0,763.0,grand rapids,grand rapids,Grand Rapids city,44.4,2976.0,363.0,12.0,197868.0,187992,198829,4102.0,141.0,351.0,michigan,45.26,1408.0,0.87
-140,livonia,732.0,michigan,76.0,6.0,165.0,livonia,livonia,Livonia city,35.7,1137.0,129.0,0.0,93603.0,96705,94105,1431.0,16.0,16.0,michigan,35.85,108.0,0.16
-141,novi,737.0,michigan,26.0,0.0,42.0,novi,novi,Novi city,30.26,543.0,32.0,0.0,59895.0,55280,59715,617.0,11.0,6.0,michigan,31.29,43.0,1.02
-142,pontiac,573.0,michigan,482.0,25.0,468.0,pontiac,pontiac,Pontiac city,19.97,820.0,222.0,4.0,59731.0,59618,59792,1510.0,61.0,97.0,michigan,20.29,644.0,0.31
-143,rochester,744.0,michigan,23.0,1.0,50.0,rochester hills,rochester hills,Rochester Hills city,32.82,403.0,18.0,0.0,73827.0,71039,74205,471.0,13.0,3.0,michigan,32.91,39.0,0.09
-144,saginaw,648.0,michigan,622.0,19.0,383.0,saginaw,saginaw,Saginaw city,17.34,455.0,75.0,15.0,48589.0,51387,48677,913.0,50.0,75.0,michigan,18.1,762.0,0.76
-145,southfield,647.0,michigan,95.0,7.0,315.0,southfield,southfield,Southfield city,26.27,1454.0,263.0,1.0,73324.0,71760,73208,2032.0,18.0,37.0,michigan,26.28,151.0,0.01
-146,taylor,653.0,michigan,247.0,23.0,326.0,taylor,taylor,Taylor city,23.6,973.0,181.0,4.0,60882.0,62978,61276,1480.0,39.0,58.0,michigan,23.63,348.0,0.04
-147,troy,746.0,michigan,35.0,1.0,94.0,troy,troy,Troy city,33.47,1114.0,67.0,0.0,84086.0,81014,83813,1275.0,14.0,6.0,michigan,33.64,55.0,0.17
-148,eden prairie,755.0,minnesota,14.0,0.0,56.0,eden prairie,eden prairie,Eden Prairie city,32.45,739.0,29.0,2.0,64429.0,60900,64400,824.0,7.0,9.0,minnesota,35.18,32.0,2.73
-149,lakeville,750.0,minnesota,27.0,2.0,84.0,lakeville,lakeville,Lakeville city,36.05,494.0,20.0,0.0,62958.0,56160,63748,598.0,11.0,6.0,minnesota,37.82,44.0,1.77
-150,maple grove,763.0,minnesota,27.0,3.0,115.0,maple grove,maple grove,Maple Grove city,32.63,1092.0,35.0,0.0,70966.0,61780,71066,1242.0,18.0,5.0,minnesota,35.03,50.0,2.39
-151,minneapolis,710.0,minnesota,2239.0,107.0,3762.0,minneapolis,minneapolis,Minneapolis city,53.97,13296.0,2388.0,42.0,418971.0,383074,422331,19446.0,514.0,1819.0,minnesota,57.47,4614.0,3.5
-152,minnetonka,764.0,minnesota,16.0,2.0,110.0,minnetonka,minnetonka,Minnetonka city,26.93,755.0,34.0,2.0,52811.0,49797,53085,899.0,13.0,4.0,minnesota,28.21,35.0,1.29
-153,rochester,740.0,minnesota,116.0,5.0,288.0,rochester,rochester,Rochester city,54.59,1757.0,98.0,1.0,115228.0,107011,115733,2143.0,61.0,46.0,minnesota,54.75,224.0,0.16
-154,gulfport,645.0,mississippi,181.0,16.0,562.0,gulfport,gulfport,Gulfport city,55.59,2897.0,203.0,10.0,72792.0,67897,71822,3662.0,26.0,82.0,mississippi,63.99,299.0,8.4
-155,jackson,599.0,mississippi,591.0,75.0,2006.0,jackson,jackson,Jackson city,111.05,4696.0,747.0,60.0,168397.0,173728,166965,7449.0,0.0,542.0,mississippi,113.24,0.0,2.2
-156,southaven,647.0,mississippi,36.0,5.0,196.0,southaven,southaven,Southaven city,41.25,1219.0,64.0,5.0,53928.0,49119,54031,1479.0,8.0,26.0,mississippi,41.53,75.0,0.28
-157,kansas city,665.0,missouri,5909.0,201.0,4658.0,kansas city,kansas city,Kansas City city,314.95,12950.0,4427.0,150.0,484948.0,460734,488943,22035.0,445.0,1858.0,missouri,319.03,8362.0,4.08
-158,omaha,696.0,nebraska,1843.0,0.0,2088.0,omaha,omaha,Omaha city,127.09,11849.0,3500.0,31.0,449388.0,450044,466893,17437.0,410.0,625.0,nebraska,130.58,2909.0,3.49
-159,north las vegas,628.0,nevada,1758.0,11.0,1950.0,north las vegas,north las vegas,North Las Vegas city,101.35,2516.0,1321.0,22.0,242537.0,216889,242975,5787.0,116.0,565.0,nevada,101.39,2461.0,0.04
-160,reno,666.0,nevada,1131.0,18.0,1347.0,reno,reno,Reno city,103.01,4890.0,1432.0,19.0,248531.0,225767,248853,7669.0,142.0,382.0,nevada,105.88,1674.0,2.87
-161,camden,547.0,new jersey,954.0,55.0,583.0,camden,camden county police department,Camden city,8.92,1393.0,550.0,23.0,74299.0,77010,74532,2526.0,75.0,410.0,new jersey,10.34,1462.0,1.42
-162,east orange,564.0,new jersey,245.0,13.0,271.0,east orange,east orange,East Orange city,3.92,552.0,236.0,9.0,65160.0,64203,65378,1059.0,20.0,199.0,new jersey,3.92,473.0,0.0
-163,elizabeth,633.0,new jersey,465.0,9.0,683.0,elizabeth,elizabeth,Elizabeth city,12.32,3017.0,895.0,7.0,129726.0,125343,130215,4595.0,47.0,515.0,new jersey,13.46,1034.0,1.15
-164,hoboken,744.0,new jersey,88.0,0.0,121.0,hoboken,hoboken,Hoboken city,1.28,911.0,32.0,1.0,55348.0,50100,55131,1064.0,10.0,32.0,new jersey,2.01,131.0,0.74
-165,new brunswick,578.0,new jersey,143.0,9.0,253.0,new brunswick,new brunswick,New Brunswick city,5.23,1001.0,87.0,4.0,57481.0,54925,57073,1341.0,22.0,191.0,new jersey,5.79,360.0,0.56
-166,newark,588.0,new jersey,1280.0,72.0,1202.0,newark,newark,Newark city,24.19,3200.0,2392.0,77.0,283673.0,277332,285154,6794.0,116.0,1070.0,new jersey,26.11,2543.0,1.92
-167,passaic,640.0,new jersey,214.0,1.0,193.0,passaic,passaic,Passaic city,3.15,842.0,128.0,1.0,71053.0,69906,71247,1163.0,10.0,165.0,new jersey,3.24,390.0,0.1
-168,paterson,601.0,new jersey,474.0,10.0,992.0,paterson,paterson,Paterson city,8.43,1776.0,631.0,21.0,147690.0,146499,148678,3399.0,45.0,488.0,new jersey,8.7,1028.0,0.28
-169,perth amboy,607.0,new jersey,108.0,2.0,151.0,perth amboy,perth amboy,Perth Amboy city,4.7,598.0,94.0,2.0,52978.0,50945,52823,843.0,5.0,56.0,new jersey,5.96,171.0,1.26
-170,plainfield,609.0,new jersey,129.0,4.0,232.0,plainfield,plainfield,Plainfield city,6.02,726.0,97.0,4.0,50983.0,49810,51327,1055.0,14.0,174.0,new jersey,6.03,321.0,0.01
-171,trenton,639.0,new jersey,654.0,16.0,792.0,trenton,trenton,Trenton city,7.65,1035.0,366.0,23.0,84231.0,85024,84964,2193.0,63.0,343.0,new jersey,8.16,1083.0,0.51
-172,union city,653.0,new jersey,104.0,1.0,114.0,union city,union city,Union City city,1.28,1028.0,93.0,1.0,70053.0,66508,70387,1235.0,1.0,58.0,new jersey,1.28,164.0,0.0
-173,vineland,653.0,new jersey,179.0,12.0,472.0,vineland,vineland,Vineland city,68.42,1883.0,59.0,2.0,60477.0,60829,60392,2414.0,24.0,93.0,new jersey,69.03,298.0,0.61
-174,albuquerque,673.0,new mexico,4213.0,0.0,6996.0,albuquerque,albuquerque,Albuquerque city,187.73,26670.0,7684.0,70.0,561375.0,546866,558545,41350.0,473.0,2930.0,new mexico,189.55,7686.0,1.82
-175,buffalo,672.0,new york,1572.0,192.0,2356.0,buffalo,buffalo,Buffalo city,40.38,6638.0,833.0,40.0,256169.0,261385,258612,9827.0,142.0,857.0,new york,52.49,2611.0,12.11
-176,hempstead,637.0,new york,211.0,3.0,92.0,hempstead village,hempstead village,Hempstead village,3.68,393.0,108.0,6.0,55807.0,54074,55806,593.0,6.0,109.0,new york,3.69,332.0,0.0
-177,mount vernon,624.0,new york,286.0,11.0,159.0,mount vernon,mount vernon,Mount Vernon city,4.39,1001.0,134.0,6.0,68507.0,67416,68703,1294.0,22.0,123.0,new york,4.4,437.0,0.02
-178,new york,706.0,new york,29771.0,0.0,11104.0,new york,new york,New York city,302.64,107976.0,5735.0,292.0,8616333.0,8193703,8622698,124815.0,2375.0,13995.0,new york,468.48,46433.0,165.84
-179,rochester,673.0,new york,997.0,105.0,1337.0,rochester,rochester,Rochester city,35.78,5981.0,616.0,27.0,208591.0,210480,208046,7934.0,141.0,707.0,new york,37.15,1872.0,1.37
-180,apex,742.0,north carolina,16.0,4.0,81.0,apex town,apex,Apex town,15.37,548.0,14.0,1.0,49159.0,37803,50451,643.0,0.0,7.0,north carolina,15.43,0.0,0.06
-181,burlington,653.0,north carolina,381.0,7.0,502.0,burlington,burlington,Burlington city,25.17,1402.0,112.0,4.0,52986.0,50977,53077,2016.0,0.0,114.0,north carolina,25.38,0.0,0.21
-182,cary,746.0,north carolina,63.0,10.0,285.0,cary town,cary,Cary town,54.35,1438.0,72.0,0.0,166986.0,136943,165904,1795.0,0.0,44.0,north carolina,55.44,0.0,1.09
-183,chapel hill,746.0,north carolina,38.0,5.0,251.0,chapel hill town,chapel hill,Chapel Hill town,21.12,980.0,53.0,1.0,59553.0,57395,59862,1284.0,0.0,40.0,north carolina,21.27,0.0,0.15
-184,charlotte,660.0,north carolina,3965.0,194.0,6416.0,charlotte,charlotte-mecklenburg,Charlotte city,297.68,25856.0,2622.0,86.0,914609.0,738500,859035,34894.0,0.0,2017.0,north carolina,299.67,0.0,1.99
-185,fayetteville,650.0,north carolina,1105.0,39.0,1818.0,fayetteville,fayetteville,Fayetteville city,145.84,6578.0,415.0,24.0,205432.0,208318,209889,8811.0,0.0,292.0,north carolina,147.71,0.0,1.86
-186,gastonia,643.0,north carolina,405.0,22.0,587.0,gastonia,gastonia,Gastonia city,50.5,2865.0,262.0,4.0,76191.0,71725,76593,3714.0,0.0,158.0,north carolina,50.73,0.0,0.23
-187,greensboro,651.0,north carolina,1394.0,115.0,2062.0,greensboro,greensboro,Greensboro city,126.52,7424.0,846.0,46.0,290051.0,269581,290222,10332.0,0.0,664.0,north carolina,131.8,0.0,5.29
-188,greenville,635.0,north carolina,420.0,13.0,724.0,greenville,greenville,Greenville city,34.61,2566.0,104.0,4.0,92630.0,84950,92156,3394.0,0.0,154.0,north carolina,35.36,0.0,0.75
-189,rocky mount,632.0,north carolina,270.0,16.0,554.0,rocky mount,rocky mount,Rocky Mount city,43.79,1310.0,120.0,15.0,55098.0,57696,54523,1984.0,0.0,95.0,north carolina,44.0,0.0,0.22
-190,bismarck,737.0,north dakota,178.0,5.0,322.0,bismarck,bismarck,Bismarck city,30.84,1884.0,232.0,0.0,74397.0,61562,72865,2438.0,45.0,33.0,north dakota,31.23,256.0,0.38
-191,cincinnati,677.0,ohio,1275.0,0.0,3448.0,cincinnati,cincinnati,Cincinnati city,77.94,10172.0,1485.0,70.0,299116.0,296794,301301,15105.0,292.0,1196.0,ohio,79.55,2833.0,1.6
-192,cleveland,645.0,ohio,2698.0,253.0,5853.0,cleveland,cleveland,Cleveland city,77.7,9696.0,3395.0,107.0,385351.0,395978,385525,18944.0,497.0,2697.0,ohio,82.47,5999.0,4.77
-193,columbus,654.0,ohio,1454.0,379.0,7111.0,columbus,columbus,Columbus city,217.17,23121.0,4176.0,142.0,872205.0,790812,879170,34408.0,919.0,1963.0,ohio,223.11,4478.0,5.94
-194,dayton,671.0,ohio,687.0,26.0,1779.0,dayton,dayton,Dayton city,55.65,3688.0,616.0,30.0,140171.0,142330,140371,6083.0,122.0,393.0,ohio,56.5,1232.0,0.85
-195,lorain,633.0,ohio,254.0,11.0,590.0,lorain,lorain,Lorain city,23.67,1335.0,94.0,2.0,63672.0,64071,63841,2019.0,30.0,87.0,ohio,24.15,373.0,0.47
-196,toledo,638.0,ohio,1834.0,0.0,3103.0,toledo,"toledo, , ",Toledo city,80.69,7247.0,745.0,35.0,277116.0,286994,276491,11095.0,0.0,780.0,ohio,84.12,0.0,3.43
-197,oklahoma city,646.0,oklahoma,3429.0,82.0,6105.0,oklahoma city,oklahoma city,Oklahoma City city,606.41,15421.0,2800.0,81.0,648260.0,582253,643648,24326.0,474.0,1120.0,oklahoma,620.82,5104.0,14.41
-198,tulsa,649.0,oklahoma,2757.0,144.0,5574.0,tulsa,tulsa,Tulsa city,196.75,13054.0,3460.0,70.0,404868.0,392403,401800,22088.0,423.0,964.0,oklahoma,200.99,4214.0,4.23
-199,portland,710.0,oregon,1842.0,307.0,4735.0,portland,portland,Portland city,133.43,24837.0,7295.0,24.0,649408.0,585340,647805,36867.0,438.0,1045.0,oregon,145.09,3349.0,11.66
-200,allentown,652.0,pennsylvania,202.0,13.0,634.0,allentown,allentown,Allentown city,17.55,2362.0,306.0,16.0,120823.0,118111,121283,3302.0,70.0,269.0,pennsylvania,18.02,557.0,0.48
-201,philadelphia,632.0,pennsylvania,7406.0,413.0,6590.0,philadelphia,philadelphia,Philadelphia city,134.1,36195.0,5483.0,316.0,1575595.0,1528271,1580863,48268.0,1182.0,6026.0,pennsylvania,142.71,14930.0,8.61
-202,pittsburgh,699.0,pennsylvania,1061.0,136.0,1610.0,pittsburgh,pittsburgh,Pittsburgh city,55.37,7238.0,680.0,55.0,305932.0,305405,302407,9528.0,90.0,802.0,pennsylvania,58.34,2008.0,2.97
-203,pawtucket,650.0,rhode island,220.0,16.0,373.0,pawtucket,pawtucket,Pawtucket city,8.68,1224.0,191.0,1.0,71648.0,71208,72001,1788.0,45.0,45.0,rhode island,8.97,311.0,0.29
-204,providence,649.0,rhode island,589.0,16.0,1013.0,providence,providence,Providence city,18.4,4332.0,580.0,12.0,179854.0,178083,180393,5925.0,104.0,255.0,rhode island,20.57,960.0,2.17
-205,columbia,643.0,south carolina,642.0,17.0,954.0,columbia,columbia,Columbia city,132.21,5389.0,791.0,10.0,134957.0,130184,133114,7134.0,66.0,273.0,south carolina,134.93,991.0,2.72
-206,north charleston,609.0,south carolina,612.0,18.0,919.0,north charleston,north charleston,North Charleston city,73.19,4687.0,685.0,35.0,111305.0,97963,110861,6291.0,74.0,305.0,south carolina,76.65,1026.0,3.46
-207,chattanooga,643.0,tennessee,1424.0,17.0,1540.0,chattanooga,chattanooga,Chattanooga city,137.15,7818.0,1342.0,31.0,178753.0,170586,179139,10700.0,120.0,330.0,tennessee,144.55,1905.0,7.4
-208,collierville,738.0,tennessee,54.0,1.0,67.0,collierville town,collierville,Collierville town,29.29,813.0,31.0,0.0,49790.0,45666,50286,911.0,11.0,10.0,tennessee,29.41,75.0,0.12
-209,franklin,740.0,tennessee,113.0,3.0,78.0,franklin,franklin,Franklin city,41.23,940.0,30.0,1.0,76995.0,62849,78321,1048.0,18.0,14.0,tennessee,41.45,146.0,0.22
-210,jackson,651.0,tennessee,529.0,16.0,497.0,jackson,jackson,Jackson city,53.73,2271.0,149.0,7.0,67031.0,66841,66847,2917.0,28.0,91.0,tennessee,53.73,655.0,0.0
-211,knoxville,686.0,tennessee,1127.0,12.0,1665.0,knoxville,knoxville,Knoxville city,98.52,7510.0,1036.0,33.0,187539.0,178455,187347,10211.0,145.0,371.0,tennessee,104.17,1676.0,5.65
-212,memphis,607.0,tennessee,8849.0,365.0,9532.0,memphis,memphis,Memphis city,315.05,27576.0,4002.0,181.0,652765.0,652331,652236,41110.0,590.0,3457.0,tennessee,324.0,13077.0,8.95
-213,amarillo,652.0,texas,1082.0,46.0,1684.0,amarillo,amarillo,Amarillo city,99.48,6113.0,990.0,16.0,200993.0,191255,199826,8787.0,183.0,237.0,texas,101.16,1518.0,1.69
-214,arlington,644.0,texas,1205.0,29.0,1801.0,arlington,arlington,Arlington city,95.88,9546.0,1360.0,19.0,397377.0,366125,396394,12707.0,254.0,576.0,texas,99.62,2054.0,3.74
-215,austin,682.0,texas,2186.0,76.0,4380.0,austin,austin,Austin city,297.9,24542.0,2079.0,25.0,971949.0,806463,950715,31001.0,834.0,987.0,texas,305.06,4032.0,7.17
-216,baytown,649.0,texas,136.0,1.0,506.0,baytown,baytown,Baytown city,35.44,1846.0,326.0,6.0,76704.0,71865,76804,2678.0,38.0,108.0,texas,36.51,288.0,1.07
-217,brownsville,619.0,texas,259.0,6.0,661.0,brownsville,brownsville,Brownsville city,132.33,4374.0,141.0,5.0,185216.0,175378,183299,5176.0,79.0,133.0,texas,146.28,476.0,13.95
-218,corpus christi,640.0,texas,1590.0,57.0,2232.0,corpus christi,corpus christi,Corpus Christi city,160.61,8776.0,731.0,21.0,329256.0,305331,325605,11739.0,232.0,470.0,texas,489.59,2313.0,328.98
-219,dallas,633.0,texas,4994.0,351.0,9874.0,dallas,dallas,Dallas city,340.52,24847.0,7913.0,167.0,1338551.0,1200468,1341075,42634.0,831.0,4377.0,texas,385.84,10369.0,45.33
-220,desoto,637.0,texas,112.0,1.0,257.0,desoto,desoto,DeSoto city,21.62,1009.0,158.0,3.0,53163.0,49345,53568,1424.0,28.0,73.0,texas,21.65,216.0,0.04
-221,edinburg,617.0,texas,202.0,8.0,472.0,edinburg,edinburg,Edinburg city,37.63,2793.0,108.0,2.0,89595.0,76807,90280,3373.0,51.0,44.0,texas,37.69,299.0,0.06
-222,el paso,650.0,texas,1819.0,38.0,1297.0,el paso,el paso,El Paso city,255.24,10429.0,800.0,19.0,688667.0,650586,683577,12526.0,371.0,400.0,texas,256.26,2609.0,1.02
-223,flower mound,746.0,texas,31.0,4.0,79.0,flower mound town,flower mound,Flower Mound town,41.39,596.0,19.0,0.0,75101.0,64861,76681,694.0,9.0,4.0,texas,43.9,44.0,2.52
-224,fort worth,636.0,texas,2966.0,151.0,5116.0,fort worth,fort worth,Fort Worth city,339.82,20250.0,2706.0,70.0,873069.0,748569,874168,28072.0,569.0,1286.0,texas,347.86,4891.0,8.04
-225,grand prairie,639.0,texas,261.0,5.0,582.0,grand prairie,grand prairie,Grand Prairie city,72.1,3629.0,495.0,2.0,193249.0,175970,193837,4706.0,136.0,174.0,texas,81.09,573.0,8.99
-226,harlingen,638.0,texas,183.0,15.0,523.0,harlingen,harlingen,Harlingen city,39.81,2079.0,91.0,0.0,65617.0,65062,65467,2693.0,18.0,32.0,texas,40.3,233.0,0.49
-227,houston,642.0,texas,14201.0,665.0,17108.0,houston,houston,Houston city,599.59,67828.0,11596.0,269.0,2338235.0,2099256,2312717,96532.0,1366.0,9773.0,texas,627.5,25609.0,27.91
-228,killeen,627.0,texas,636.0,29.0,1140.0,killeen,killeen,Killeen city,53.58,2403.0,566.0,18.0,145912.0,128983,145482,4109.0,151.0,313.0,texas,54.25,1118.0,0.67
-229,laredo,624.0,texas,561.0,71.0,874.0,laredo,laredo,Laredo city,88.91,5430.0,170.0,10.0,260669.0,237047,260654,6474.0,114.0,154.0,texas,90.36,839.0,1.45
-230,longview,637.0,texas,229.0,6.0,614.0,longview,longview,Longview city,55.69,1947.0,242.0,6.0,82303.0,80565,81522,2803.0,62.0,99.0,texas,55.8,396.0,0.11
-231,mcallen,650.0,texas,125.0,8.0,185.0,mcallen,mcallen,McAllen city,48.34,3776.0,46.0,7.0,144162.0,131558,142696,4007.0,27.0,49.0,texas,48.65,208.0,0.3
-232,mesquite,630.0,texas,292.0,6.0,773.0,mesquite,mesquite,Mesquite city,46.02,3642.0,849.0,6.0,144406.0,139775,143949,5264.0,74.0,244.0,texas,46.17,616.0,0.15
-233,mission,631.0,texas,41.0,19.0,231.0,mission,mission,Mission city,33.99,1700.0,74.0,0.0,84511.0,78110,84424,2005.0,27.0,30.0,texas,34.06,98.0,0.07
-234,odessa,624.0,texas,726.0,10.0,560.0,odessa,odessa,Odessa city,41.95,2386.0,273.0,7.0,121194.0,99825,116861,3219.0,78.0,101.0,texas,42.21,912.0,0.26
-235,pasadena,646.0,texas,418.0,23.0,636.0,pasadena,pasadena,Pasadena city,42.76,2758.0,379.0,5.0,154000.0,149527,153520,3773.0,93.0,195.0,texas,44.27,711.0,1.51
-236,pharr,618.0,texas,123.0,2.0,268.0,pharr,pharr,Pharr city,23.42,1343.0,62.0,4.0,78467.0,70788,79487,1673.0,44.0,33.0,texas,23.44,204.0,0.03
-237,plano,720.0,texas,220.0,25.0,728.0,plano,plano,Plano city,71.58,3968.0,339.0,15.0,290413.0,261236,286143,5035.0,81.0,119.0,texas,71.94,435.0,0.36
-238,port arthur,634.0,texas,247.0,5.0,767.0,port arthur,port arthur,Port Arthur city,76.9,1111.0,153.0,6.0,55583.0,54502,55498,2031.0,15.0,110.0,texas,144.04,378.0,67.14
-239,san antonio,650.0,texas,7067.0,207.0,11722.0,san antonio,san antonio,San Antonio city,460.93,55090.0,6864.0,124.0,1520712.0,1333413,1511946,73676.0,1270.0,2298.0,texas,466.71,10759.0,5.78
-240,san marcos,642.0,texas,120.0,8.0,278.0,san marcos,san marcos,San Marcos city,30.22,1064.0,169.0,5.0,65327.0,45245,63071,1511.0,50.0,47.0,texas,30.35,222.0,0.13
-241,sugar land,737.0,texas,20.0,0.0,158.0,sugar land,sugar land,Sugar Land city,32.38,1075.0,56.0,0.0,89790.0,79096,88485,1289.0,15.0,36.0,texas,34.02,71.0,1.64
-242,victoria,649.0,texas,116.0,4.0,646.0,victoria,victoria,Victoria city,35.48,1680.0,110.0,4.0,68544.0,62676,67106,2436.0,48.0,49.0,texas,35.63,217.0,0.15
-243,waco,651.0,texas,460.0,15.0,957.0,waco,waco,Waco city,88.96,3741.0,191.0,5.0,135997.0,125405,136436,4889.0,117.0,108.0,texas,101.26,690.0,12.3
-244,wichita falls,652.0,texas,165.0,0.0,725.0,wichita falls,wichita falls,Wichita Falls city,72.14,2294.0,238.0,4.0,104706.0,104829,104747,3257.0,78.0,127.0,texas,72.16,374.0,0.02
-245,salt lake city,686.0,utah,861.0,27.0,1884.0,salt lake city,salt lake city,Salt Lake City city,111.11,11924.0,1886.0,10.0,194968.0,186567,200544,15694.0,334.0,508.0,utah,111.73,1713.0,0.62
-246,south jordan,734.0,utah,30.0,3.0,226.0,south jordan,south jordan,South Jordan city,22.05,1339.0,156.0,0.0,72533.0,51306,70954,1721.0,10.0,5.0,utah,22.13,45.0,0.08
-247,west valley city,648.0,utah,480.0,14.0,861.0,west valley city,west valley,West Valley City city,35.56,3830.0,1146.0,8.0,137762.0,129637,136170,5837.0,164.0,150.0,utah,35.61,802.0,0.05
-248,alexandria,707.0,virginia,138.0,8.0,163.0,alexandria,alexandria,Alexandria city,15.03,2046.0,273.0,6.0,158256.0,140823,160035,2482.0,16.0,102.0,virginia,15.47,262.0,0.44
-249,hampton,648.0,virginia,179.0,18.0,551.0,hampton,hampton,Hampton city,51.41,3481.0,332.0,17.0,134929.0,137343,134669,4364.0,26.0,185.0,virginia,136.3,407.0,84.89
-250,newport news,636.0,virginia,551.0,46.0,829.0,newport news,newport news,Newport News city,68.71,4211.0,488.0,24.0,181738.0,180921,179388,5528.0,93.0,239.0,virginia,119.48,907.0,50.76
-251,norfolk,642.0,virginia,821.0,8.0,1156.0,norfolk,norfolk,Norfolk city,54.12,7318.0,718.0,36.0,245190.0,243027,244703,9192.0,135.0,371.0,virginia,96.35,1363.0,42.23
-252,portsmouth,627.0,virginia,400.0,6.0,1160.0,portsmouth,portsmouth,Portsmouth city,33.65,3903.0,384.0,17.0,95100.0,95449,94572,5447.0,36.0,224.0,virginia,46.73,677.0,13.08
-253,virginia beach,682.0,virginia,237.0,51.0,754.0,virginia beach,virginia beach,Virginia Beach city,249.02,7577.0,459.0,14.0,454353.0,438921,450435,8790.0,102.0,272.0,virginia,497.34,625.0,248.32
-254,bellevue,749.0,washington,65.0,20.0,592.0,bellevue,bellevue,Bellevue city,31.97,3274.0,309.0,0.0,143703.0,128294,144444,4175.0,24.0,55.0,washington,36.47,144.0,4.5
-255,kirkland,742.0,washington,34.0,6.0,231.0,kirkland,kirkland,Kirkland city,10.79,1724.0,226.0,1.0,88898.0,80825,88630,2181.0,24.0,16.0,washington,11.12,75.0,0.33
-256,redmond,755.0,washington,50.0,2.0,271.0,redmond,redmond,Redmond city,16.28,1695.0,111.0,2.0,63889.0,54504,64291,2077.0,11.0,33.0,washington,16.95,96.0,0.66
-257,sammamish,765.0,washington,11.0,7.0,91.0,sammamish,sammamish,Sammamish city,18.22,312.0,39.0,3.0,64857.0,57622,64548,442.0,0.0,1.0,washington,18.47,0.0,0.25
-258,seattle,722.0,washington,2756.0,149.0,7805.0,seattle,seattle,Seattle city,83.94,26499.0,3630.0,27.0,721365.0,610333,724745,37934.0,266.0,1515.0,washington,142.65,4564.0,58.71
-259,spokane,689.0,washington,887.0,50.0,2221.0,spokane,spokane,Spokane city,59.25,11739.0,1737.0,6.0,217066.0,209488,217108,15697.0,238.0,229.0,washington,60.02,1360.0,0.77
-260,tacoma,671.0,washington,1153.0,63.0,2073.0,tacoma,tacoma,Tacoma city,49.72,7742.0,2086.0,10.0,213504.0,198204,213418,11901.0,171.0,403.0,washington,62.34,1737.0,12.62
-261,vancouver,689.0,washington,367.0,52.0,749.0,vancouver,vancouver,Vancouver city,46.46,3657.0,1063.0,9.0,176884.0,162893,175673,5469.0,154.0,122.0,washington,49.85,652.0,3.4
-262,milwaukee,643.0,wisconsin,6036.0,313.0,5518.0,milwaukee,milwaukee,Milwaukee city,96.12,11548.0,5503.0,118.0,595168.0,595141,595351,22569.0,434.0,2919.0,wisconsin,96.8,9507.0,0.68
+,City,County,Credit Score,State,aggravated assault,arson2,burglary,city,city_fbi_crime,geography census_2010,land area sqmi census_2010,larceny- theft,motor vehicle theft,murder and nonnegligent manslaughter,population,population census_2010,population census_2017,property crime,rape1,robbery,state,total area sqmi census_2010,violent crime,water area sqmi census_2010
+0,mobile,0,634.0,alabama,1207.0,57.0,3023.0,mobile,mobile,Mobile city,139.11,9267.0,1259.0,50.0,248431.0,194582,190265,13549.0,142.0,440.0,alabama,179.78,1839.0,40.67
+1,montgomery,0,626.0,alabama,841.0,0.0,2129.0,montgomery,montgomery,Montgomery city,159.57,5827.0,844.0,38.0,199099.0,205616,199518,8800.0,52.0,346.0,alabama,161.92,1277.0,2.36
+2,tuscaloosa,0,632.0,alabama,243.0,0.0,814.0,tuscaloosa,tuscaloosa,Tuscaloosa city,60.23,3161.0,199.0,9.0,101124.0,90537,100287,4174.0,54.0,168.0,alabama,70.35,474.0,10.12
+3,avondale,0,637.0,arizona,127.0,20.0,480.0,avondale,avondale,Avondale city,45.6,2633.0,234.0,6.0,84041.0,76220,84025,3347.0,27.0,97.0,arizona,45.65,257.0,0.05
+4,chandler,Maricopa,701.5337423,arizona,370.0,0.0,784.0,chandler,chandler,Chandler city,64.41,4653.0,372.0,5.0,249355.0,236486,253458,5809.0,130.0,142.0,arizona,64.52,647.0,0.11
+5,flagstaff,Coconino,682.5686202,arizona,208.0,36.0,161.0,flagstaff,flagstaff,Flagstaff city,63.87,2486.0,82.0,7.0,72388.0,66145,71975,2729.0,35.0,57.0,arizona,63.91,307.0,0.04
+6,gilbert,Maricopa,706.0611827,arizona,112.0,30.0,466.0,gilbert town,gilbert,Gilbert town,67.96,2754.0,135.0,5.0,242090.0,209446,242354,3355.0,39.0,51.0,arizona,68.15,207.0,0.18
+7,glendale,0,650.0,arizona,627.0,48.0,1589.0,glendale,glendale,Glendale city,59.98,8541.0,1163.0,12.0,249273.0,226127,246709,11293.0,97.0,481.0,arizona,60.13,1217.0,0.16
+8,goodyear,Maricopa,695.0550306,arizona,153.0,0.0,346.0,goodyear,goodyear,Goodyear city,191.48,1817.0,117.0,2.0,79419.0,65473,79858,2280.0,27.0,28.0,arizona,191.52,210.0,0.04
+9,lake havasu city,Mohave,699.8672951,arizona,93.0,23.0,245.0,lake havasu city,lake havasu city,Lake Havasu City city,44.43,848.0,71.0,0.0,53937.0,52578,54411,1164.0,21.0,6.0,arizona,44.48,120.0,0.05
+10,mesa,0,669.0,arizona,1318.0,23.0,1878.0,mesa,mesa,Mesa city,136.45,7930.0,884.0,23.0,492268.0,440952,496401,10692.0,252.0,454.0,arizona,137.06,2047.0,0.61
+11,peoria,Maricopa,694.5496512,arizona,266.0,7.0,533.0,peoria,peoria,Peoria city,174.4,2615.0,237.0,4.0,165889.0,154896,168181,3385.0,66.0,78.0,arizona,177.97,414.0,3.57
+12,phoenix,0,646.0,arizona,7919.0,190.0,12801.0,phoenix,phoenix,Phoenix city,516.7,39899.0,7653.0,157.0,1644177.0,1449039,1626078,60353.0,1142.0,3293.0,arizona,517.95,12511.0,1.24
+13,scottsdale,Maricopa,724.6640497000002,arizona,188.0,23.0,878.0,scottsdale,scottsdale,Scottsdale city,183.92,4346.0,246.0,5.0,251840.0,217550,249950,5470.0,103.0,100.0,arizona,184.4,396.0,0.48
+14,surprise,Maricopa,696.3498205,arizona,53.0,6.0,228.0,surprise,surprise,Surprise city,105.75,2018.0,175.0,2.0,135345.0,117663,134085,2421.0,18.0,47.0,arizona,105.87,120.0,0.12
+15,tempe,Maricopa,669.9750697000002,arizona,498.0,20.0,1076.0,tempe,tempe,Tempe city,39.93,6120.0,473.0,5.0,186086.0,162297,185038,7669.0,151.0,229.0,arizona,40.19,883.0,0.26
+16,tucson,0,676.0,arizona,2293.0,156.0,4424.0,tucson,tucson,Tucson city,226.71,21125.0,2407.0,46.0,532323.0,523832,535677,27956.0,498.0,1431.0,arizona,227.03,4268.0,0.33
+17,yuma,Yuma,671.4308689,arizona,347.0,34.0,502.0,yuma,yuma,Yuma city,120.28,1874.0,219.0,5.0,95522.0,91326,95502,2595.0,49.0,90.0,arizona,120.41,491.0,0.14
+18,little rock,0,650.0,arkansas,2524.0,51.0,2378.0,little rock,little rock,Little Rock city,119.2,10309.0,1130.0,55.0,199314.0,193899,198606,13817.0,175.0,502.0,arkansas,120.99,3256.0,1.79
+19,north little rock,0,630.0,arkansas,378.0,15.0,541.0,north little rock,north little rock,North Little Rock city,51.5,1875.0,348.0,9.0,66938.0,62452,65911,2764.0,19.0,124.0,arkansas,54.77,530.0,3.27
+20,alameda,Alameda,728.8636705,california,104.0,25.0,219.0,alameda,alameda,Alameda city,10.61,1725.0,403.0,0.0,79761.0,73968,79177,2347.0,16.0,133.0,california,22.96,253.0,12.35
+21,alhambra,0,712.0,california,62.0,12.0,363.0,alhambra,alhambra,Alhambra city,7.63,1244.0,270.0,4.0,85865.0,83180,85396,1877.0,17.0,89.0,california,7.63,172.0,0.0
+22,aliso viejo,Orange,720.1,california,32.0,3.0,62.0,aliso viejo,aliso viejo,Aliso Viejo city,7.47,299.0,33.0,0.0,51984.0,48237,51671,394.0,4.0,8.0,california,7.47,44.0,0.0
+23,anaheim,0,677.0,california,648.0,45.0,1351.0,anaheim,anaheim,Anaheim city,49.84,6393.0,1552.0,10.0,353400.0,337177,352497,9296.0,115.0,480.0,california,50.81,1253.0,0.98
+24,antioch,0,652.0,california,316.0,75.0,589.0,antioch,antioch,Antioch city,28.35,2261.0,988.0,10.0,112252.0,103106,111674,3838.0,51.0,230.0,california,29.08,607.0,0.73
+25,apple valley,0,662.0,california,145.0,7.0,299.0,apple valley town,apple valley,Apple Valley town,73.19,986.0,280.0,4.0,73105.0,69313,73077,1565.0,19.0,63.0,california,73.52,231.0,0.33
+26,arcadia,0,742.0,california,47.0,0.0,485.0,arcadia,arcadia,Arcadia city,10.93,957.0,92.0,0.0,58883.0,56392,58799,1534.0,7.0,56.0,california,11.13,110.0,0.21
+27,bakersfield,0,642.0,california,941.0,269.0,3667.0,bakersfield,bakersfield,Bakersfield city,142.16,9063.0,2777.0,41.0,381154.0,349322,380874,15507.0,92.0,753.0,california,143.61,1827.0,1.44
+28,baldwin park,0,668.0,california,230.0,6.0,290.0,baldwin park,baldwin park,Baldwin Park city,6.63,788.0,327.0,3.0,76636.0,75441,76402,1405.0,26.0,89.0,california,6.79,348.0,0.15
+29,bellflower,0,657.0,california,184.0,13.0,418.0,bellflower,bellflower,Bellflower city,6.12,1065.0,505.0,5.0,77984.0,76630,77772,1988.0,16.0,158.0,california,6.17,363.0,0.05
+30,berkeley,0,733.0,california,218.0,30.0,843.0,berkeley,berkeley,Berkeley city,10.47,4556.0,621.0,1.0,122687.0,112893,122324,6020.0,83.0,364.0,california,17.7,666.0,7.23
+31,brentwood,0,700.0,california,101.0,5.0,273.0,brentwood,brentwood,Brentwood city,14.79,1084.0,132.0,0.0,62120.0,51823,62433,1489.0,11.0,45.0,california,14.8,157.0,0.02
+32,buena park,0,683.0,california,186.0,15.0,299.0,buena park,buena park,Buena Park city,10.52,2115.0,400.0,1.0,83552.0,80807,83015,2814.0,9.0,96.0,california,10.55,292.0,0.03
+33,burbank,0,708.0,california,147.0,16.0,355.0,burbank,burbank,Burbank city,17.34,2344.0,245.0,0.0,104622.0,103396,104834,2944.0,20.0,86.0,california,17.38,253.0,0.04
+34,camarillo,Ventura,727.2131171,california,56.0,6.0,182.0,camarillo,camarillo,Camarillo city,19.53,826.0,78.0,1.0,67714.0,65293,67845,1086.0,8.0,42.0,california,19.54,107.0,0.02
+35,carlsbad,0,740.0,california,171.0,18.0,432.0,carlsbad,carlsbad,Carlsbad city,37.72,1638.0,139.0,0.0,115344.0,105936,115330,2209.0,30.0,46.0,california,39.11,247.0,1.39
+36,carson,0,673.0,california,281.0,21.0,479.0,carson,carson,Carson city,18.72,1261.0,510.0,8.0,92992.0,91626,92735,2250.0,20.0,166.0,california,18.97,475.0,0.24
+37,cathedral city,0,664.0,california,72.0,6.0,176.0,cathedral city,cathedral city,Cathedral City city,21.5,340.0,253.0,2.0,54506.0,51485,54596,769.0,14.0,49.0,california,21.76,137.0,0.26
+38,cerritos,0,742.0,california,50.0,3.0,561.0,cerritos,cerritos,Cerritos city,8.73,1511.0,196.0,2.0,50809.0,49059,51020,2268.0,4.0,71.0,california,8.86,127.0,0.13
+39,chico,0,691.0,california,263.0,157.0,531.0,chico,chico,Chico city,32.92,2615.0,447.0,2.0,92459.0,86716,93293,3593.0,85.0,63.0,california,33.1,413.0,0.17
+40,chino,0,679.0,california,127.0,6.0,443.0,chino,chino,Chino city,29.64,1405.0,294.0,3.0,89420.0,78563,89797,2142.0,10.0,87.0,california,29.65,227.0,0.01
+41,chino hills,San Bernardino,723.6,california,39.0,5.0,323.0,chino hills,chino hills,Chino Hills city,44.68,936.0,103.0,0.0,79480.0,74985,80374,1362.0,12.0,19.0,california,44.75,70.0,0.07
+42,chula vista,0,678.0,california,440.0,23.0,640.0,chula vista,chula vista,Chula Vista city,49.63,2482.0,761.0,2.0,271109.0,244693,270471,3883.0,62.0,304.0,california,52.09,808.0,2.46
+43,citrus heights,0,673.0,california,195.0,11.0,462.0,citrus heights,citrus heights,Citrus Heights city,14.23,1964.0,356.0,2.0,88126.0,83365,87931,2782.0,50.0,102.0,california,14.23,349.0,0.0
+44,clovis,0,691.0,california,138.0,8.0,453.0,clovis,clovis,Clovis city,23.28,2234.0,208.0,0.0,108419.0,96261,109691,2895.0,44.0,61.0,california,23.28,243.0,0.0
+45,colton,0,637.0,california,120.0,7.0,264.0,colton,colton,Colton city,15.32,828.0,347.0,4.0,55127.0,52276,54828,1439.0,6.0,115.0,california,16.04,245.0,0.72
+46,compton,0,631.0,california,669.0,54.0,411.0,compton,compton,Compton city,10.01,1402.0,770.0,21.0,97728.0,96481,97612,2583.0,33.0,441.0,california,10.12,1164.0,0.1
+47,concord,0,695.0,california,231.0,27.0,448.0,concord,concord,Concord city,30.55,3212.0,759.0,5.0,129789.0,122521,129783,4419.0,63.0,163.0,california,30.55,462.0,0.0
+48,corona,0,685.0,california,79.0,19.0,561.0,corona,corona,Corona city,38.83,2177.0,559.0,1.0,169164.0,153193,167836,3297.0,36.0,107.0,california,38.93,223.0,0.1
+49,costa mesa,0,689.0,california,171.0,12.0,620.0,costa mesa,costa mesa,Costa Mesa city,15.65,3158.0,520.0,1.0,113267.0,110168,113825,4298.0,61.0,128.0,california,15.7,361.0,0.05
+50,cupertino,0,767.0,california,45.0,10.0,164.0,cupertino,cupertino,Cupertino city,11.26,756.0,50.0,2.0,60970.0,58719,60777,970.0,9.0,21.0,california,11.26,77.0,0.0
+51,daly city,0,702.0,california,123.0,12.0,202.0,daly city,daly city,Daly City city,7.66,1156.0,203.0,0.0,107355.0,101293,107074,1561.0,52.0,90.0,california,7.66,265.0,0.0
+52,davis,0,742.0,california,42.0,8.0,269.0,davis,davis,Davis city,9.89,1221.0,129.0,0.0,68540.0,65590,68986,1619.0,17.0,35.0,california,9.92,94.0,0.03
+53,delano,0,645.0,california,200.0,39.0,219.0,delano,delano,Delano city,14.3,647.0,448.0,6.0,52639.0,53133,53138,1314.0,10.0,32.0,california,14.36,248.0,0.05
+54,diamond bar,0,734.0,california,27.0,2.0,381.0,diamond bar,diamond bar,Diamond Bar city,14.88,592.0,70.0,0.0,56996.0,55584,56665,1043.0,5.0,25.0,california,14.88,57.0,0.01
+55,downey,0,671.0,california,174.0,9.0,591.0,downey,downey,Downey city,12.41,1866.0,765.0,3.0,113511.0,111807,113092,3222.0,23.0,182.0,california,12.57,382.0,0.16
+56,dublin,0,749.0,california,53.0,1.0,117.0,dublin,dublin,Dublin city,14.91,970.0,108.0,0.0,62235.0,45910,60939,1195.0,9.0,23.0,california,14.91,85.0,0.0
+57,el cajon,0,678.0,california,217.0,12.0,414.0,el cajon,el cajon,El Cajon city,14.43,1502.0,414.0,1.0,104447.0,99771,103894,2330.0,48.0,163.0,california,14.43,429.0,0.0
+58,el monte,0,667.0,california,220.0,13.0,687.0,el monte,el monte,El Monte city,9.56,1431.0,698.0,5.0,116168.0,113659,116109,2816.0,43.0,183.0,california,9.65,451.0,0.09
+59,elk grove,0,704.0,california,419.0,6.0,366.0,elk grove,elk grove,Elk Grove city,42.19,1668.0,211.0,3.0,172620.0,153424,171844,2245.0,39.0,99.0,california,42.24,560.0,0.05
+60,encinitas,0,742.0,california,70.0,2.0,208.0,encinitas,encinitas,Encinitas city,18.81,651.0,66.0,0.0,63722.0,59689,63184,925.0,13.0,23.0,california,19.99,106.0,1.18
+61,escondido,0,684.0,california,348.0,29.0,427.0,escondido,escondido,Escondido city,36.81,1780.0,398.0,3.0,152845.0,144464,151969,2605.0,51.0,174.0,california,36.99,576.0,0.18
+62,fairfield,0,678.0,california,315.0,32.0,545.0,fairfield,fairfield,Fairfield city,37.39,2174.0,533.0,10.0,116372.0,105557,116266,3252.0,40.0,181.0,california,37.64,546.0,0.25
+63,folsom,0,741.0,california,22.0,15.0,257.0,folsom,folsom,Folsom city,21.95,847.0,125.0,0.0,78155.0,72179,78038,1229.0,21.0,21.0,california,24.3,64.0,2.36
+64,fontana,0,650.0,california,437.0,13.0,563.0,fontana,fontana,Fontana city,42.43,2292.0,881.0,9.0,211782.0,197370,211815,3736.0,62.0,206.0,california,42.43,714.0,0.0
+65,fountain valley,0,735.0,california,37.0,3.0,238.0,fountain valley,fountain valley,Fountain Valley city,9.02,1199.0,144.0,0.0,56704.0,55484,56313,1581.0,3.0,28.0,california,9.03,68.0,0.01
+66,fremont,0,742.0,california,174.0,26.0,673.0,fremont,fremont,Fremont city,77.46,3545.0,865.0,2.0,236368.0,214619,234962,5083.0,68.0,187.0,california,87.61,431.0,10.15
+67,fresno,0,641.0,california,1786.0,217.0,3649.0,fresno,fresno,Fresno city,111.96,13782.0,2789.0,56.0,526371.0,497772,527438,20220.0,174.0,958.0,california,112.31,2974.0,0.35
+68,fullerton,0,697.0,california,131.0,30.0,293.0,fullerton,fullerton,Fullerton city,22.35,3273.0,386.0,1.0,141637.0,135333,140392,3952.0,63.0,98.0,california,22.36,293.0,0.01
+69,garden grove,0,689.0,california,355.0,22.0,840.0,garden grove,garden grove,Garden Grove city,17.94,2851.0,657.0,5.0,175466.0,171228,174226,4348.0,22.0,220.0,california,17.96,602.0,0.02
+70,gardena,0,676.0,california,155.0,9.0,353.0,gardena,gardena,Gardena city,5.83,678.0,362.0,4.0,60249.0,58850,60224,1393.0,16.0,218.0,california,5.87,393.0,0.04
+71,gilroy,0,686.0,california,94.0,8.0,213.0,gilroy,gilroy,Gilroy city,16.15,1144.0,291.0,1.0,56163.0,48948,57664,1648.0,32.0,81.0,california,16.16,208.0,0.01
+72,glendale,0,700.0,california,112.0,13.0,498.0,glendale,glendale,Glendale city,30.45,2303.0,317.0,3.0,202381.0,191748,203054,3118.0,32.0,127.0,california,30.58,274.0,0.13
+73,glendora,0,708.0,california,81.0,3.0,248.0,glendora,glendora,Glendora city,19.39,1180.0,105.0,0.0,52133.0,50517,52445,1533.0,15.0,33.0,california,19.56,129.0,0.16
+74,hanford,0,657.0,california,200.0,21.0,197.0,hanford,hanford,Hanford city,16.59,916.0,246.0,2.0,55789.0,54409,56499,1359.0,28.0,54.0,california,16.59,284.0,0.0
+75,hawthorne,0,660.0,california,282.0,16.0,408.0,hawthorne,hawthorne,Hawthorne city,6.08,1350.0,515.0,5.0,88664.0,84319,87854,2273.0,25.0,275.0,california,6.09,587.0,0.01
+76,hayward,0,679.0,california,182.0,37.0,482.0,hayward,hayward,Hayward city,45.32,2740.0,1801.0,5.0,161417.0,144796,160500,5023.0,70.0,306.0,california,63.75,563.0,18.43
+77,hemet,0,655.0,california,295.0,10.0,703.0,hemet,hemet,Hemet city,27.85,1868.0,532.0,4.0,85166.0,79202,85160,3103.0,25.0,133.0,california,27.85,457.0,0.0
+78,hesperia,0,645.0,california,243.0,25.0,452.0,hesperia,hesperia,Hesperia city,73.1,1230.0,435.0,2.0,94292.0,90370,94859,2117.0,38.0,97.0,california,73.21,380.0,0.11
+79,highland,0,670.0,california,95.0,17.0,250.0,highland,highland,Highland city,18.76,609.0,223.0,4.0,55229.0,53226,55342,1082.0,13.0,74.0,california,18.89,186.0,0.13
+80,huntington beach,Orange,720.0145869,california,289.0,32.0,617.0,huntington beach,huntington beach,Huntington Beach city,26.75,3283.0,385.0,2.0,202244.0,191342,201874,4285.0,75.0,95.0,california,31.88,461.0,5.13
+81,huntington park,0,657.0,california,184.0,12.0,210.0,huntington park,huntington park,Huntington Park city,3.01,903.0,704.0,4.0,59004.0,58132,58822,1817.0,42.0,197.0,california,3.02,427.0,0.0
+82,indio,0,663.0,california,478.0,6.0,449.0,indio,indio,Indio city,29.18,1483.0,355.0,3.0,90055.0,79638,89793,2287.0,39.0,119.0,california,29.19,639.0,0.01
+83,inglewood,0,644.0,california,337.0,20.0,492.0,inglewood,inglewood,Inglewood city,9.07,1466.0,802.0,13.0,110811.0,109710,110598,2760.0,46.0,389.0,california,9.09,785.0,0.02
+84,irvine,0,735.0,california,66.0,10.0,627.0,irvine,irvine,Irvine city,66.11,2814.0,194.0,2.0,276115.0,213435,277453,3635.0,46.0,55.0,california,66.45,169.0,0.35
+85,la habra,0,683.0,california,81.0,3.0,197.0,la habra,la habra,La Habra city,7.37,869.0,185.0,1.0,61878.0,60393,62466,1251.0,9.0,46.0,california,7.38,137.0,0.01
+86,la mesa,0,695.0,california,96.0,7.0,177.0,la mesa,la mesa,La Mesa city,9.08,823.0,193.0,3.0,60425.0,57157,60021,1193.0,11.0,50.0,california,9.12,160.0,0.04
+87,laguna niguel,0,735.0,california,35.0,1.0,95.0,laguna niguel,laguna niguel,Laguna Niguel city,14.83,428.0,50.0,1.0,65700.0,63131,66334,573.0,7.0,11.0,california,14.88,54.0,0.05
+88,lake elsinore,0,653.0,california,107.0,1.0,299.0,lake elsinore,lake elsinore,Lake Elsinore city,36.21,1507.0,339.0,1.0,66136.0,53744,66411,2145.0,12.0,57.0,california,41.69,177.0,5.48
+89,lake forest,Orange,714.7,california,90.0,2.0,166.0,lake forest,lake forest,Lake Forest city,17.82,504.0,87.0,0.0,84224.0,77574,84293,757.0,19.0,24.0,california,17.9,133.0,0.09
+90,lakewood,0,695.0,california,151.0,4.0,438.0,lakewood,lakewood,Lakewood city,9.41,1725.0,259.0,3.0,81317.0,80068,80967,2422.0,13.0,151.0,california,9.47,318.0,0.05
+91,lancaster,0,639.0,california,787.0,40.0,935.0,lancaster,lancaster,Lancaster city,94.28,1733.0,650.0,15.0,160653.0,156854,160316,3318.0,80.0,337.0,california,94.55,1219.0,0.27
+92,livermore,Alameda,730.604442,california,88.0,22.0,191.0,livermore,livermore,Livermore city,25.17,1510.0,276.0,0.0,90485.0,81593,90295,1977.0,30.0,48.0,california,25.18,166.0,0.0
+93,lodi,0,682.0,california,182.0,8.0,347.0,lodi,lodi,Lodi city,13.61,985.0,349.0,1.0,65042.0,62280,65884,1681.0,13.0,127.0,california,13.82,323.0,0.21
+94,long beach,0,661.0,california,1639.0,127.0,2765.0,long beach,long beach,Long Beach city,50.29,7104.0,2729.0,22.0,471397.0,462559,469450,12598.0,203.0,1237.0,california,51.44,3101.0,1.14
+95,los angeles,0,668.0,california,16957.0,1414.0,16668.0,los angeles,los angeles,Los Angeles city,468.67,65757.0,19193.0,281.0,4007147.0,3796060,3999759,101618.0,2455.0,10814.0,california,502.69,30507.0,34.02
+96,lynwood,0,651.0,california,214.0,22.0,293.0,lynwood,lynwood,Lynwood city,4.84,688.0,700.0,8.0,71453.0,69615,71099,1681.0,16.0,220.0,california,4.84,458.0,0.0
+97,madera,0,660.0,california,235.0,16.0,336.0,madera,madera,Madera city,15.79,967.0,399.0,4.0,64939.0,61524,65508,1702.0,32.0,107.0,california,15.79,378.0,0.0
+98,manteca,0,677.0,california,145.0,14.0,302.0,manteca,manteca,Manteca city,17.73,1616.0,322.0,4.0,78564.0,67677,79268,2240.0,18.0,89.0,california,17.76,256.0,0.02
+99,menifee,0,678.0,california,69.0,2.0,326.0,menifee,menifee,Menifee city,46.47,1373.0,273.0,3.0,90403.0,78080,90595,1972.0,8.0,43.0,california,46.61,123.0,0.14
+100,merced,0,653.0,california,369.0,92.0,472.0,merced,merced,Merced city,23.32,1706.0,490.0,8.0,83180.0,79147,83081,2668.0,28.0,158.0,california,23.32,563.0,0.0
+101,milpitas,0,738.0,california,42.0,4.0,235.0,milpitas,milpitas,Milpitas city,13.59,1447.0,296.0,2.0,79503.0,66743,78106,1978.0,12.0,58.0,california,13.64,114.0,0.05
+102,mission viejo,0,732.0,california,61.0,1.0,158.0,mission viejo,mission viejo,Mission Viejo city,17.74,733.0,78.0,1.0,96928.0,93259,96016,969.0,13.0,26.0,california,18.12,101.0,0.38
+103,modesto,0,661.0,california,1425.0,63.0,1188.0,modesto,modesto,Modesto city,36.87,5865.0,1412.0,20.0,213677.0,203344,214221,8465.0,110.0,519.0,california,37.09,2074.0,0.23
+104,montebello,0,665.0,california,110.0,103.0,665.0,montebello,montebello,Montebello city,8.33,519.0,460.0,2.0,63473.0,62508,63192,1644.0,9.0,82.0,california,8.37,203.0,0.04
+105,monterey,Monterey,717.3901078,california,46.0,4.0,439.0,monterey park,monterey park,Monterey Park city,7.67,955.0,219.0,1.0,61210.0,60237,61044,1613.0,10.0,55.0,california,7.73,112.0,0.06
+106,moreno valley,0,636.0,california,411.0,14.0,1148.0,moreno valley,moreno valley,Moreno Valley city,51.27,4050.0,1158.0,9.0,207418.0,194279,207226,6356.0,26.0,352.0,california,51.47,798.0,0.2
+107,mountain view,0,751.0,california,91.0,6.0,290.0,mountain view,mountain view,Mountain View city,12.0,1590.0,102.0,1.0,81525.0,74270,81438,1982.0,14.0,44.0,california,12.27,150.0,0.28
+108,murrieta,0,683.0,california,32.0,8.0,254.0,murrieta,murrieta,Murrieta city,33.58,1143.0,185.0,1.0,113016.0,104123,113326,1582.0,14.0,33.0,california,33.61,80.0,0.04
+109,napa,0,706.0,california,189.0,1.0,338.0,napa,napa,Napa city,17.84,828.0,187.0,1.0,80958.0,77229,79774,1353.0,39.0,43.0,california,18.15,272.0,0.31
+110,national city,0,650.0,california,161.0,11.0,132.0,national city,national city,National City city,7.28,667.0,358.0,3.0,61574.0,58634,61363,1157.0,23.0,109.0,california,9.12,296.0,1.84
+111,newport beach,Orange,724.4275377,california,72.0,6.0,361.0,newport beach,newport beach,Newport Beach city,23.8,1630.0,132.0,0.0,86910.0,85358,86160,2123.0,31.0,21.0,california,52.98,124.0,29.17
+112,norwalk,0,671.0,california,282.0,7.0,418.0,norwalk,norwalk,Norwalk city,9.71,1123.0,415.0,5.0,106278.0,105570,106084,1956.0,17.0,133.0,california,9.75,437.0,0.04
+113,novato,0,737.0,california,60.0,2.0,145.0,novato,novato,Novato city,27.44,689.0,93.0,1.0,56698.0,51982,55980,927.0,5.0,26.0,california,27.96,92.0,0.52
+114,oakland,0,682.0,california,2376.0,196.0,2622.0,oakland,oakland,Oakland city,55.79,17305.0,5495.0,69.0,424915.0,391571,425195,25422.0,400.0,2676.0,california,78.0,5521.0,22.22
+115,oceanside,0,684.0,california,451.0,22.0,592.0,oceanside,oceanside,Oceanside city,41.23,3000.0,496.0,9.0,176815.0,167555,176193,4088.0,69.0,165.0,california,42.17,694.0,0.94
+116,ontario,0,656.0,california,319.0,29.0,720.0,ontario,ontario,Ontario city,49.94,2842.0,911.0,8.0,174724.0,164391,175841,4473.0,136.0,220.0,california,50.01,683.0,0.07
+117,orange,0,702.0,california,138.0,19.0,489.0,orange,orange,Orange city,24.8,1754.0,341.0,4.0,141130.0,136794,140560,2584.0,12.0,64.0,california,25.24,218.0,0.44
+118,oxnard,0,661.0,california,398.0,43.0,787.0,oxnard,oxnard,Oxnard city,26.89,3848.0,693.0,15.0,209513.0,198512,210037,5328.0,65.0,430.0,california,39.21,908.0,12.31
+119,palm desert,0,711.0,california,58.0,1.0,424.0,palm desert,palm desert,Palm Desert city,26.81,1536.0,116.0,0.0,52845.0,48693,52932,2076.0,3.0,30.0,california,27.01,91.0,0.2
+120,palmdale,0,647.0,california,422.0,29.0,613.0,palmdale,palmdale,Palmdale city,105.96,1611.0,435.0,4.0,158094.0,152999,157519,2659.0,37.0,218.0,california,106.22,681.0,0.25
+121,palo alto,0,732.0,california,40.0,6.0,214.0,palo alto,palo alto,Palo Alto city,23.88,1478.0,91.0,0.0,67441.0,64576,67178,1783.0,11.0,39.0,california,25.79,90.0,1.9
+122,paramount,0,649.0,california,185.0,6.0,283.0,paramount,paramount,Paramount city,4.73,892.0,438.0,6.0,55041.0,54119,54909,1613.0,8.0,125.0,california,4.84,324.0,0.11
+123,pasadena,0,704.0,california,313.0,42.0,745.0,pasadena,pasadena,Pasadena city,22.97,1842.0,359.0,8.0,142891.0,137170,142647,2946.0,51.0,202.0,california,23.13,574.0,0.16
+124,perris,0,638.0,california,120.0,7.0,270.0,perris,perris,Perris city,31.39,1104.0,503.0,2.0,77626.0,69001,77879,1877.0,4.0,66.0,california,31.5,192.0,0.11
+125,petaluma,Sonoma,724.3825158,california,160.0,9.0,170.0,petaluma,petaluma,Petaluma city,14.38,712.0,64.0,1.0,60957.0,58020,60870,946.0,32.0,40.0,california,14.49,233.0,0.11
+126,pico rivera,0,671.0,california,141.0,5.0,250.0,pico rivera,pico rivera,Pico Rivera city,8.3,853.0,329.0,1.0,63746.0,62967,63522,1432.0,19.0,75.0,california,8.88,236.0,0.59
+127,pittsburg,0,656.0,california,179.0,28.0,299.0,pittsburg,pittsburg,Pittsburg city,17.22,876.0,591.0,7.0,71944.0,63535,72141,1766.0,34.0,121.0,california,19.15,341.0,1.94
+128,placentia,0,713.0,california,62.0,2.0,187.0,placentia,placentia,Placentia city,6.57,563.0,114.0,1.0,52437.0,51008,52157,864.0,1.0,25.0,california,6.58,89.0,0.01
+129,pleasanton,0,754.0,california,33.0,5.0,137.0,pleasanton,pleasanton,Pleasanton city,24.11,1406.0,118.0,0.0,84440.0,70393,83007,1661.0,13.0,53.0,california,24.27,99.0,0.15
+130,pomona,0,658.0,california,403.0,26.0,718.0,pomona,pomona,Pomona city,22.95,2516.0,1250.0,18.0,153066.0,149096,152939,4484.0,88.0,344.0,california,22.96,853.0,0.01
+131,porterville,0,653.0,california,175.0,3.0,338.0,porterville,porterville,Porterville city,17.61,925.0,272.0,4.0,59245.0,57437,59145,1535.0,10.0,58.0,california,17.68,247.0,0.07
+132,poway,0,732.0,california,37.0,3.0,136.0,poway,poway,Poway city,39.08,389.0,51.0,0.0,50438.0,47961,50041,576.0,8.0,13.0,california,39.17,58.0,0.09
+133,rancho cordova,0,686.0,california,202.0,1.0,285.0,rancho cordova,rancho cordova,Rancho Cordova city,33.51,899.0,226.0,1.0,73607.0,65080,73563,1410.0,17.0,85.0,california,33.87,305.0,0.37
+134,rancho cucamonga,0,689.0,california,164.0,7.0,814.0,rancho cucamonga,rancho cucamonga,Rancho Cucamonga city,39.85,2998.0,368.0,1.0,178308.0,166250,177452,4180.0,46.0,118.0,california,39.87,329.0,0.02
+135,redding,0,688.0,california,438.0,9.0,690.0,redding,redding,Redding city,59.65,2360.0,791.0,2.0,92127.0,89903,91794,3841.0,64.0,150.0,california,61.17,654.0,1.53
+136,redlands,0,690.0,california,110.0,20.0,426.0,redlands,redlands,Redlands city,36.13,1910.0,293.0,1.0,71707.0,68813,71554,2629.0,36.0,69.0,california,36.43,216.0,0.3
+137,redondo beach,0,736.0,california,96.0,0.0,358.0,redondo beach,redondo beach,Redondo Beach city,6.2,1042.0,170.0,0.0,68051.0,66940,67908,1570.0,18.0,62.0,california,6.21,176.0,0.01
+138,redwood city,San Mateo,720.0715251,california,91.0,18.0,177.0,redwood city,redwood city,Redwood City city,19.42,1053.0,160.0,0.0,86353.0,77044,86685,1390.0,57.0,61.0,california,34.62,209.0,15.2
+139,rialto,0,630.0,california,219.0,3.0,475.0,rialto,rialto,Rialto city,22.35,596.0,613.0,2.0,103980.0,99391,103562,1684.0,28.0,150.0,california,22.37,399.0,0.01
+140,richmond,0,642.0,california,563.0,42.0,698.0,richmond,richmond,Richmond city,30.07,2199.0,1231.0,10.0,110804.0,103668,110040,4128.0,49.0,392.0,california,52.48,1014.0,22.41
+141,riverside,0,665.0,california,947.0,73.0,1673.0,riverside,riverside,Riverside city,81.14,6629.0,1730.0,12.0,328023.0,305571,327728,10032.0,166.0,544.0,california,81.44,1669.0,0.3
+142,rocklin,Placer,718.8891132,california,23.0,10.0,211.0,rocklin,rocklin,Rocklin city,19.54,813.0,111.0,0.0,63735.0,57462,64838,1135.0,14.0,29.0,california,19.59,66.0,0.05
+143,rosemead,Los Angeles,714.7,california,101.0,7.0,330.0,rosemead,rosemead,Rosemead city,5.16,719.0,278.0,1.0,54615.0,53809,54554,1327.0,12.0,59.0,california,5.18,173.0,0.01
+144,roseville,Placer,715.5990975,california,123.0,33.0,389.0,roseville,roseville,Roseville city,36.22,2623.0,310.0,0.0,135028.0,119809,135329,3322.0,27.0,87.0,california,36.22,237.0,0.0
+145,sacramento,0,668.0,california,2140.0,209.0,2888.0,sacramento,sacramento,Sacramento city,97.92,9077.0,2718.0,39.0,499997.0,467382,501901,14683.0,99.0,1100.0,california,100.11,3378.0,2.19
+146,salinas,0,665.0,california,564.0,24.0,964.0,salinas,salinas,Salinas city,23.18,2589.0,1242.0,28.0,158313.0,150820,157596,4795.0,71.0,358.0,california,23.22,1021.0,0.04
+147,san bernardino,0,610.0,california,1736.0,67.0,2136.0,san bernardino,san bernardino,San Bernardino city,59.2,3990.0,2277.0,34.0,217259.0,210182,216995,8403.0,158.0,877.0,california,59.65,2805.0,0.44
+148,san clemente,Orange,726.6780872,california,45.0,4.0,173.0,san clemente,san clemente,San Clemente city,18.71,574.0,65.0,0.0,65596.0,63603,65267,812.0,9.0,37.0,california,19.47,91.0,0.76
+149,san diego,0,696.0,california,3217.0,158.0,3817.0,san diego,san diego,San Diego city,325.19,17294.0,5135.0,35.0,1424116.0,1306176,1419516,26246.0,559.0,1410.0,california,372.4,5221.0,47.21
+150,san francisco,0,732.0,california,2658.0,303.0,4935.0,san francisco,san francisco,San Francisco city,46.87,44587.0,4834.0,56.0,881255.0,805770,884363,54356.0,367.0,3220.0,california,231.89,6301.0,185.02
+151,san jose,0,715.0,california,2209.0,173.0,3926.0,san jose,san jose,San Jose city,176.53,13329.0,8068.0,32.0,1037529.0,955255,1035317,25323.0,571.0,1376.0,california,179.97,4188.0,3.44
+152,san leandro,0,691.0,california,209.0,20.0,460.0,san leandro,san leandro,San Leandro city,13.34,2369.0,886.0,2.0,91386.0,85118,90553,3715.0,21.0,292.0,california,15.66,524.0,2.32
+153,san marcos,0,702.0,california,116.0,4.0,202.0,san marcos,san marcos,San Marcos city,24.37,784.0,150.0,0.0,97290.0,83972,96198,1136.0,25.0,54.0,california,24.39,195.0,0.02
+154,san mateo,0,738.0,california,185.0,8.0,706.0,san mateo,san mateo,San Mateo city,12.13,1231.0,188.0,0.0,105090.0,97425,104748,2125.0,19.0,64.0,california,15.88,268.0,3.75
+155,san rafael,Marin,725.5140191,california,84.0,19.0,271.0,san rafael,san rafael,San Rafael city,16.47,1091.0,265.0,0.0,59144.0,57803,59070,1627.0,21.0,89.0,california,22.42,194.0,5.95
+156,san ramon,0,754.0,california,18.0,7.0,126.0,san ramon,san ramon,San Ramon city,18.06,768.0,80.0,0.0,76325.0,71614,75931,974.0,8.0,30.0,california,18.08,56.0,0.02
+157,santa ana,0,669.0,california,826.0,60.0,929.0,santa ana,santa ana,Santa Ana city,27.27,4108.0,1980.0,21.0,335699.0,325427,334136,7017.0,188.0,605.0,california,27.52,1640.0,0.25
+158,santa barbara,Santa Barbara,717.2232762,california,230.0,23.0,327.0,santa barbara,santa barbara,Santa Barbara city,19.47,1968.0,204.0,0.0,92508.0,88486,92101,2499.0,67.0,80.0,california,41.97,377.0,22.5
+159,santa clara,0,737.0,california,95.0,7.0,408.0,santa clara,santa clara,Santa Clara city,18.41,2810.0,400.0,2.0,127538.0,116838,127134,3618.0,35.0,82.0,california,18.41,214.0,0.0
+160,santa clarita,Los Angeles,717.7333665,california,186.0,13.0,674.0,santa clarita,santa clarita,Santa Clarita city,52.72,1997.0,410.0,4.0,216350.0,204299,210888,3081.0,40.0,122.0,california,52.78,352.0,0.06
+161,santa cruz,Santa Cruz,723.1517271,california,248.0,30.0,412.0,santa cruz,santa cruz,Santa Cruz city,12.74,2911.0,361.0,1.0,65132.0,60591,65021,3684.0,57.0,103.0,california,15.83,409.0,3.09
+162,santa maria,0,675.0,california,260.0,11.0,446.0,santa maria,santa maria,Santa Maria city,22.76,1231.0,677.0,3.0,107424.0,99714,107014,2354.0,58.0,155.0,california,23.39,476.0,0.64
+163,santa monica,Los Angeles,728.8542236000002,california,407.0,25.0,648.0,santa monica,santa monica,Santa Monica city,8.41,3462.0,264.0,3.0,92935.0,89782,92306,4374.0,54.0,241.0,california,8.42,705.0,0.0
+164,santa rosa,0,701.0,california,482.0,22.0,525.0,santa rosa,santa rosa,Santa Rosa city,41.29,2309.0,411.0,5.0,176361.0,168062,175269,3245.0,109.0,126.0,california,41.5,722.0,0.21
+165,santee,0,698.0,california,101.0,1.0,109.0,santee,santee,Santee city,16.24,665.0,92.0,0.0,58563.0,53647,58113,866.0,11.0,43.0,california,16.53,155.0,0.29
+166,simi valley,0,710.0,california,113.0,7.0,331.0,simi valley,simi valley,Simi Valley city,41.48,1355.0,138.0,0.0,126635.0,124495,126878,1824.0,32.0,39.0,california,42.25,184.0,0.77
+167,south gate,0,664.0,california,404.0,14.0,507.0,south gate,south gate,South Gate city,7.24,1691.0,933.0,6.0,95717.0,94463,95430,3131.0,41.0,223.0,california,7.35,674.0,0.12
+168,south san francisco,San Mateo,714.4,california,130.0,8.0,214.0,south san francisco,south san francisco,South San Francisco city,9.14,1184.0,207.0,1.0,67533.0,63752,67429,1605.0,31.0,72.0,california,30.16,234.0,21.02
+169,stockton,0,646.0,california,2962.0,208.0,2140.0,stockton,stockton,Stockton city,61.67,7040.0,2049.0,55.0,309566.0,292497,310496,11229.0,154.0,1208.0,california,64.75,4379.0,3.08
+170,sunnyvale,0,748.0,california,96.0,19.0,512.0,sunnyvale,sunnyvale,Sunnyvale city,21.99,1872.0,298.0,1.0,154919.0,140502,153656,2682.0,29.0,56.0,california,22.69,182.0,0.7
+171,temecula,0,691.0,california,73.0,2.0,353.0,temecula,temecula,Temecula city,30.15,2011.0,250.0,1.0,115220.0,100755,114327,2614.0,5.0,38.0,california,30.17,117.0,0.02
+172,thousand oaks,0,731.0,california,91.0,12.0,269.0,thousand oaks,thousand oaks,Thousand Oaks city,55.03,1305.0,113.0,2.0,129240.0,126754,128995,1687.0,44.0,35.0,california,55.18,172.0,0.15
+173,torrance,Los Angeles,717.093112,california,115.0,12.0,557.0,torrance,torrance,Torrance city,20.48,2213.0,436.0,0.0,147482.0,145300,146758,3206.0,36.0,116.0,california,20.55,267.0,0.08
+174,tracy,0,685.0,california,86.0,11.0,201.0,tracy,tracy,Tracy city,22.0,1616.0,362.0,3.0,90263.0,83569,90889,2179.0,27.0,77.0,california,22.14,193.0,0.14
+175,tulare,0,648.0,california,164.0,15.0,284.0,tulare,tulare,Tulare city,20.93,1008.0,411.0,2.0,63349.0,59463,63855,1703.0,22.0,66.0,california,21.02,254.0,0.09
+176,turlock,0,677.0,california,277.0,35.0,382.0,turlock,turlock,Turlock city,16.93,1471.0,443.0,4.0,73488.0,68768,73556,2296.0,24.0,142.0,california,16.93,447.0,0.0
+177,tustin,0,696.0,california,71.0,9.0,288.0,tustin,tustin,Tustin city,11.08,1484.0,177.0,3.0,81246.0,75491,80498,1949.0,11.0,47.0,california,11.08,132.0,0.0
+178,union city,Alameda,715.8,california,156.0,4.0,216.0,union city,union city,Union City city,19.47,1114.0,356.0,1.0,76311.0,69631,75343,1686.0,15.0,83.0,california,19.47,255.0,0.0
+179,upland,0,685.0,california,99.0,6.0,586.0,upland,upland,Upland city,15.62,1194.0,291.0,7.0,77154.0,73893,76999,2071.0,25.0,101.0,california,15.65,232.0,0.03
+180,vacaville,0,690.0,california,121.0,17.0,186.0,vacaville,vacaville,Vacaville city,28.37,1742.0,180.0,1.0,99293.0,92582,100032,2108.0,20.0,56.0,california,28.58,198.0,0.21
+181,vallejo,0,655.0,california,550.0,60.0,2445.0,vallejo,vallejo,Vallejo city,30.67,1181.0,971.0,15.0,122174.0,116196,122105,4597.0,93.0,390.0,california,49.54,1048.0,18.87
+182,victorville,0,623.0,california,527.0,42.0,830.0,victorville,victorville,Victorville city,73.18,1839.0,649.0,14.0,123284.0,116322,122441,3318.0,54.0,267.0,california,73.74,862.0,0.56
+183,visalia,0,667.0,california,223.0,16.0,839.0,visalia,visalia,Visalia city,36.25,2953.0,604.0,9.0,132143.0,124816,133010,4396.0,81.0,144.0,california,36.27,457.0,0.02
+184,vista,0,680.0,california,224.0,9.0,310.0,vista,vista,Vista city,18.68,889.0,295.0,4.0,103004.0,93734,101568,1494.0,38.0,104.0,california,18.68,370.0,0.0
+185,walnut,0,741.0,california,63.0,2.0,243.0,walnut creek,walnut creek,Walnut Creek city,19.76,1871.0,190.0,1.0,69953.0,64338,69773,2304.0,2.0,39.0,california,19.77,105.0,0.01
+186,watsonville,0,676.0,california,187.0,14.0,251.0,watsonville,watsonville,Watsonville city,6.69,995.0,465.0,1.0,54226.0,51279,54098,1711.0,41.0,69.0,california,6.78,298.0,0.1
+187,west covina,0,682.0,california,100.0,10.0,502.0,west covina,west covina,West Covina city,16.04,1821.0,410.0,0.0,108128.0,106156,107598,2733.0,31.0,144.0,california,16.09,275.0,0.05
+188,west sacramento,0,686.0,california,94.0,21.0,201.0,west sacramento,west sacramento,West Sacramento city,21.43,756.0,181.0,7.0,53703.0,48853,53512,1138.0,19.0,79.0,california,22.85,199.0,1.42
+189,westminster,0,700.0,california,122.0,14.0,443.0,westminster,westminster,Westminster city,10.05,1987.0,395.0,4.0,91863.0,89789,91564,2825.0,23.0,132.0,california,10.05,281.0,0.0
+190,whittier,0,675.0,california,143.0,6.0,420.0,whittier,whittier,Whittier city,14.65,1774.0,313.0,5.0,87141.0,85339,86838,2507.0,15.0,137.0,california,14.67,300.0,0.02
+191,woodland,0,690.0,california,128.0,35.0,326.0,woodland,woodland,Woodland city,15.3,1306.0,229.0,0.0,59676.0,55547,60012,1861.0,21.0,38.0,california,15.3,187.0,0.0
+192,yorba linda,0,746.0,california,31.0,5.0,185.0,yorba linda,yorba linda,Yorba Linda city,19.48,482.0,47.0,0.0,68889.0,64407,68229,714.0,9.0,5.0,california,20.02,45.0,0.54
+193,yuba city,0,682.0,california,150.0,15.0,380.0,yuba city,yuba city,Yuba City city,14.58,1448.0,379.0,0.0,67042.0,65650,66860,2207.0,23.0,82.0,california,14.66,255.0,0.08
+194,yucaipa,0,682.0,california,39.0,5.0,202.0,yucaipa,yucaipa,Yucaipa city,27.89,590.0,135.0,0.0,53614.0,51508,53683,927.0,12.0,23.0,california,27.89,74.0,0.01
+195,aurora,0,672.0,colorado,1211.0,68.0,1671.0,aurora,aurora,Aurora city,154.73,7194.0,2189.0,30.0,368018.0,326027,366623,11054.0,319.0,679.0,colorado,155.43,2239.0,0.7
+196,broomfield,0,734.0,colorado,53.0,9.0,197.0,broomfield,broomfield,Broomfield city,33.03,1400.0,193.0,1.0,68158.0,56214,68341,1790.0,23.0,7.0,colorado,33.6,84.0,0.57
+197,castle rock,0,735.0,colorado,18.0,2.0,120.0,castle rock town,castle rock,Castle Rock town,33.79,797.0,52.0,0.0,59337.0,48592,62276,969.0,26.0,10.0,colorado,33.79,54.0,0.0
+198,colorado springs,0,687.0,colorado,1479.0,115.0,2508.0,colorado springs,colorado springs,Colorado Springs city,194.54,10571.0,2135.0,29.0,472958.0,420492,464474,15214.0,489.0,482.0,colorado,194.91,2479.0,0.37
+199,denver,0,680.0,colorado,2784.0,129.0,4331.0,denver,denver,Denver city,153.0,16021.0,5560.0,59.0,706616.0,603218,704621,25912.0,699.0,1232.0,colorado,154.63,4774.0,1.63
+200,parker,0,740.0,colorado,53.0,6.0,117.0,parker town,parker,Parker town,20.48,616.0,51.0,0.0,52179.0,45516,54202,784.0,16.0,8.0,colorado,20.49,77.0,0.02
+201,bridgeport,0,628.0,connecticut,652.0,14.0,548.0,bridgeport,bridgeport,Bridgeport city,15.97,2152.0,716.0,21.0,146110.0,144923,146579,3416.0,77.0,565.0,connecticut,19.34,1315.0,3.37
+202,hartford,0,573.0,connecticut,804.0,87.0,738.0,hartford,hartford,Hartford city,17.38,3490.0,679.0,29.0,122891.0,125403,123400,4907.0,45.0,465.0,connecticut,18.06,1343.0,0.67
+203,new britain,0,628.0,connecticut,135.0,22.0,357.0,new britain,new britain,New Britain city,13.39,1342.0,388.0,4.0,72442.0,73273,72710,2087.0,39.0,91.0,connecticut,13.47,269.0,0.07
+204,new haven,0,626.0,connecticut,663.0,32.0,840.0,new haven,new haven,New Haven city,18.68,3728.0,643.0,7.0,129953.0,129853,131014,5211.0,52.0,378.0,connecticut,20.12,1100.0,1.45
+205,waterbury,0,614.0,connecticut,227.0,13.0,690.0,waterbury,waterbury,Waterbury city,28.52,2619.0,827.0,11.0,107924.0,110403,108629,4136.0,51.0,255.0,connecticut,28.94,544.0,0.42
+206,wilmington,New Castle,666.129128,delaware,694.0,2.0,705.0,wilmington,wilmington,Wilmington city,10.9,2413.0,432.0,34.0,71552.0,70753,71106,3550.0,33.0,381.0,delaware,16.95,1142.0,6.04
+207,washington,0,674.0,district of columbia,3674.0,0.0,1808.0,washington,washington,Washington city,61.05,24490.0,2545.0,116.0,693972.0,605040,693972,28843.0,443.0,2351.0,district of columbia,68.34,6584.0,7.29
+208,boca raton,Palm Beach,713.1938443,florida,114.0,1.0,435.0,boca raton,boca raton,Boca Raton city,29.33,1871.0,197.0,1.0,98069.0,85160,98150,2503.0,27.0,81.0,florida,31.29,223.0,1.96
+209,boynton beach,Palm Beach,706.447467,florida,246.0,6.0,384.0,boynton beach,boynton beach,Boynton Beach city,16.17,2454.0,338.0,9.0,76845.0,68342,77702,3176.0,15.0,175.0,florida,16.51,445.0,0.33
+210,bradenton,Manatee,688.6102639999998,florida,208.0,5.0,199.0,bradenton,bradenton,Bradenton city,14.18,1166.0,79.0,4.0,56821.0,49153,56508,1444.0,27.0,59.0,florida,16.91,298.0,2.73
+211,daytona beach,0,627.0,florida,631.0,6.0,497.0,daytona beach,daytona beach,Daytona Beach city,58.41,3027.0,295.0,12.0,67564.0,61622,68055,3819.0,23.0,82.0,florida,63.78,748.0,5.37
+212,delray beach,Palm Beach,700.7072642,florida,278.0,1.0,366.0,delray beach,delray beach,Delray Beach city,15.81,1949.0,272.0,2.0,68533.0,60787,68749,2587.0,36.0,93.0,florida,16.25,409.0,0.44
+213,fort lauderdale,0,667.0,florida,547.0,15.0,1657.0,fort lauderdale,fort lauderdale,Fort Lauderdale city,34.77,7424.0,925.0,15.0,180972.0,166188,180072,10006.0,81.0,429.0,florida,38.57,1072.0,3.81
+214,fort myers,Lee,690.2752671000002,florida,502.0,5.0,374.0,fort myers,fort myers,Fort Myers city,39.96,1607.0,226.0,10.0,79918.0,62506,79943,2207.0,53.0,187.0,florida,48.98,752.0,9.02
+215,hialeah,0,657.0,florida,280.0,24.0,593.0,hialeah,hialeah,Hialeah city,21.45,3996.0,685.0,6.0,238260.0,225474,239673,5274.0,33.0,154.0,florida,22.84,473.0,1.39
+216,hollywood,0,666.0,florida,234.0,9.0,722.0,hollywood,hollywood,Hollywood city,27.37,3434.0,505.0,8.0,153893.0,141124,153627,4661.0,27.0,176.0,florida,30.7,445.0,3.33
+217,homestead,0,626.0,florida,394.0,9.0,420.0,homestead,homestead,Homestead city,15.14,1883.0,179.0,1.0,69276.0,60814,69907,2482.0,25.0,251.0,florida,15.62,671.0,0.48
+218,jacksonville,0,647.0,florida,3625.0,96.0,5646.0,jacksonville,jacksonville,Jacksonville city,747.0,22980.0,2925.0,109.0,894638.0,823175,892062,31551.0,538.0,1376.0,florida,874.63,5648.0,127.63
+219,jupiter,Palm Beach,723.9863488,florida,63.0,5.0,133.0,jupiter town,jupiter,Jupiter town,21.47,1019.0,58.0,4.0,65311.0,55510,64976,1210.0,14.0,22.0,florida,23.25,103.0,1.79
+220,kissimmee,0,642.0,florida,223.0,8.0,314.0,kissimmee,kissimmee,Kissimmee city,21.19,1633.0,157.0,7.0,71130.0,59759,71104,2104.0,32.0,88.0,florida,21.95,350.0,0.75
+221,lakeland,0,652.0,florida,144.0,3.0,574.0,lakeland,lakeland,Lakeland city,65.27,3237.0,210.0,1.0,107927.0,97737,108054,4021.0,73.0,89.0,florida,74.29,307.0,9.02
+222,melbourne,Brevard,703.1577589,florida,482.0,11.0,548.0,melbourne,melbourne,Melbourne city,33.86,2679.0,172.0,4.0,82013.0,76417,82011,3399.0,63.0,121.0,florida,39.57,670.0,5.71
+223,miami,0,661.0,florida,2203.0,73.0,2440.0,miami,miami,Miami city,35.87,14311.0,1835.0,52.0,463009.0,400864,463347,18586.0,105.0,978.0,florida,56.06,3338.0,20.19
+224,miami gardens,0,602.0,florida,613.0,13.0,492.0,miami gardens,miami gardens,Miami Gardens city,18.23,2811.0,419.0,19.0,114008.0,107530,113750,3722.0,18.0,246.0,florida,19.02,896.0,0.79
+225,orlando,0,644.0,florida,1302.0,22.0,2388.0,orlando,orlando,Orlando city,102.4,11715.0,1387.0,23.0,283982.0,239198,280257,15490.0,183.0,605.0,florida,110.68,2113.0,8.29
+226,palm beach gardens,Palm Beach,723.5110252999998,florida,27.0,2.0,143.0,palm beach gardens,palm beach gardens,Palm Beach Gardens city,55.09,1259.0,62.0,2.0,54677.0,48745,55036,1464.0,9.0,28.0,florida,55.34,66.0,0.25
+227,pembroke pines,Broward,695.5,florida,208.0,6.0,361.0,pembroke pines,pembroke pines,Pembroke Pines city,33.12,3054.0,310.0,1.0,170923.0,155193,170712,3725.0,27.0,85.0,florida,34.82,321.0,1.7
+228,pompano beach,0,670.0,florida,479.0,8.0,898.0,pompano beach,pompano beach,Pompano Beach city,24.0,3624.0,808.0,8.0,111027.0,100076,110473,5330.0,61.0,410.0,florida,25.41,958.0,1.41
+229,port orange,Volusia,698.892152,florida,26.0,1.0,193.0,port orange,port orange,Port Orange city,26.66,1252.0,105.0,1.0,61892.0,56615,63203,1550.0,0.0,5.0,florida,28.69,32.0,2.03
+230,sanford,0,640.0,florida,258.0,2.0,398.0,sanford,sanford,Sanford city,22.96,1944.0,134.0,9.0,59457.0,53781,59317,2476.0,53.0,95.0,florida,26.5,415.0,3.54
+231,sarasota,Sarasota,705.5535587,florida,209.0,2.0,270.0,sarasota,sarasota,Sarasota city,14.66,1582.0,112.0,1.0,57383.0,52182,56994,1964.0,26.0,87.0,florida,25.2,323.0,10.53
+232,tampa,0,651.0,florida,1219.0,39.0,1235.0,tampa,tampa,Tampa city,113.41,4900.0,567.0,39.0,384360.0,336766,385430,6702.0,121.0,406.0,florida,175.23,1785.0,61.83
+233,wellington,Palm Beach,692.7,florida,78.0,6.0,79.0,wellington village,wellington,Wellington village,44.89,885.0,112.0,1.0,65156.0,56851,64848,1076.0,11.0,25.0,florida,45.09,115.0,0.2
+234,west palm beach,0,647.0,florida,493.0,27.0,847.0,west palm beach,west palm beach,West Palm Beach city,55.29,3907.0,521.0,25.0,109459.0,100681,110222,5275.0,66.0,322.0,florida,58.04,906.0,2.75
+235,albany,0,596.0,georgia,626.0,28.0,879.0,albany,albany,Albany city,55.13,3048.0,189.0,22.0,73209.0,77420,73179,4116.0,27.0,152.0,georgia,55.89,827.0,0.76
+236,alpharetta,Fulton,734.1778581,georgia,11.0,1.0,96.0,alpharetta,alpharetta,Alpharetta city,26.91,1056.0,35.0,0.0,66711.0,57701,65799,1187.0,1.0,22.0,georgia,27.28,34.0,0.37
+237,atlanta,0,654.0,georgia,2730.0,74.0,3390.0,atlanta,atlanta,Atlanta city,133.15,16304.0,3297.0,79.0,481343.0,422849,486290,22991.0,282.0,1413.0,georgia,134.01,4504.0,0.86
+238,columbus,0,628.0,georgia,803.0,35.0,2131.0,columbus,columbus,Columbus city,216.39,5985.0,704.0,35.0,198832.0,191110,194058,8820.0,71.0,394.0,georgia,221.01,1303.0,4.62
+239,marietta,Cobb,693.2174064,georgia,95.0,4.0,327.0,marietta,marietta,Marietta city,23.08,1700.0,182.0,4.0,61646.0,56836,61048,2209.0,14.0,102.0,georgia,23.17,215.0,0.09
+240,roswell,Fulton,718.4388167000002,georgia,59.0,1.0,229.0,roswell,roswell,Roswell city,40.72,1278.0,109.0,2.0,95602.0,88811,94786,1616.0,15.0,32.0,georgia,42.01,108.0,1.28
+241,valdosta,0,632.0,georgia,141.0,16.0,554.0,valdosta,valdosta,Valdosta city,35.83,2699.0,232.0,10.0,56729.0,54975,56085,3485.0,17.0,47.0,georgia,36.35,215.0,0.52
+242,warner robins,0,652.0,georgia,214.0,17.0,805.0,warner robins,warner robins,Warner Robins city,35.07,3072.0,230.0,5.0,75323.0,69402,74854,4107.0,34.0,132.0,georgia,35.36,385.0,0.29
+243,arlington heights,0,749.0,illinois,21.0,6.0,77.0,arlington heights village,arlington heights,Arlington Heights village,16.61,550.0,27.0,0.0,75586.0,75261,75634,654.0,9.0,14.0,illinois,16.64,44.0,0.03
+244,chicago,0,654.0,illinois,15435.0,514.0,12912.0,chicago,chicago,Chicago city,227.63,63834.0,11578.0,653.0,2706171.0,2697661,2716450,88324.0,1762.0,11887.0,illinois,234.11,29737.0,6.48
+245,cicero,0,647.0,illinois,112.0,18.0,434.0,cicero town,cicero,Cicero town,5.86,1245.0,161.0,6.0,82779.0,84270,82552,1840.0,37.0,146.0,illinois,5.86,301.0,0.0
+246,mount prospect,0,732.0,illinois,15.0,1.0,51.0,mount prospect village,mount prospect,Mount Prospect village,10.34,499.0,17.0,0.0,54162.0,54226,53930,567.0,3.0,7.0,illinois,10.37,25.0,0.03
+247,naperville,0,744.0,illinois,80.0,8.0,129.0,naperville,naperville,Naperville city,38.77,1540.0,47.0,1.0,147934.0,142369,147682,1716.0,22.0,33.0,illinois,39.32,136.0,0.55
+248,orland park,0,749.0,illinois,23.0,0.0,20.0,orland park village,orland park,Orland Park village,21.88,1059.0,15.0,1.0,59227.0,56725,58765,1094.0,4.0,7.0,illinois,22.16,35.0,0.29
+249,waukegan,0,648.0,illinois,199.0,11.0,442.0,waukegan,waukegan,Waukegan city,23.67,1487.0,59.0,6.0,88017.0,89139,87729,1988.0,18.0,138.0,illinois,23.88,361.0,0.21
+250,wheaton,0,748.0,illinois,21.0,6.0,54.0,wheaton,wheaton,Wheaton city,11.25,427.0,12.0,1.0,53444.0,53062,53373,493.0,12.0,4.0,illinois,11.44,38.0,0.19
+251,anderson,0,653.0,indiana,76.0,0.0,408.0,anderson,anderson,Anderson city,41.37,1786.0,224.0,1.0,54959.0,56147,55076,2418.0,82.0,101.0,indiana,41.48,260.0,0.11
+252,carmel,0,757.0,indiana,5.0,0.0,61.0,carmel,carmel,Carmel city,47.46,596.0,38.0,0.0,93098.0,79767,92198,695.0,6.0,6.0,indiana,48.55,17.0,1.08
+253,fishers,0,737.0,indiana,19.0,2.0,69.0,fishers,fishers,Fishers town,33.59,751.0,35.0,1.0,92367.0,77802,91832,855.0,14.0,9.0,indiana,35.83,43.0,2.25
+254,fort wayne,0,674.0,indiana,480.0,94.0,1308.0,fort wayne,fort wayne,Fort Wayne city,110.62,6626.0,532.0,37.0,266259.0,254102,265904,8466.0,136.0,299.0,indiana,110.83,952.0,0.21
+255,gary,0,576.0,indiana,199.0,51.0,678.0,gary,gary,Gary city,49.87,1481.0,422.0,48.0,75808.0,80211,76008,2581.0,32.0,192.0,indiana,57.18,471.0,7.31
+256,hammond,0,630.0,indiana,262.0,32.0,508.0,hammond,hammond,Hammond city,22.78,2162.0,326.0,12.0,76550.0,80714,76618,2996.0,32.0,180.0,indiana,24.88,486.0,2.11
+257,indianapolis,0,637.0,indiana,7307.0,256.0,8945.0,indianapolis city (balance),indianapolis,Indianapolis city (balance),361.43,24569.0,4904.0,156.0,870788.0,821473,863002,38418.0,668.0,3485.0,indiana,368.02,11616.0,6.59
+258,ames,Story County,722.0,iowa,51.0,0.0,248.0,ames,ames,Ames city,24.21,1087.0,57.0,1.0,67461.0,59058,66498,1392.0,49.0,23.0,iowa,24.28,124.0,0.06
+259,ankeny,0,746.0,iowa,97.0,5.0,143.0,ankeny,ankeny,Ankeny city,29.33,650.0,38.0,0.0,61090.0,45837,62416,831.0,23.0,10.0,iowa,29.33,130.0,0.0
+260,cedar rapids,Linn County,702.0,iowa,209.0,14.0,929.0,cedar rapids,cedar rapids,Cedar Rapids city,70.8,3681.0,342.0,6.0,131878.0,126693,132228,4952.0,34.0,121.0,iowa,72.07,370.0,1.27
+261,council bluffs,Pottawattamie County,675.0,iowa,63.0,16.0,435.0,council bluffs,council bluffs,Council Bluffs city,40.97,2853.0,429.0,1.0,62549.0,62368,62316,3717.0,24.0,62.0,iowa,43.62,150.0,2.64
+262,davenport,Scott County,674.0,iowa,444.0,23.0,1108.0,davenport,davenport,Davenport city,62.95,3586.0,555.0,13.0,103063.0,99663,102320,5249.0,90.0,203.0,iowa,65.07,750.0,2.13
+263,des moines,Polk County,671.0,iowa,991.0,42.0,2388.0,des moines,des moines,Des Moines city,80.87,5941.0,1260.0,28.0,217277.0,204902,217521,9589.0,73.0,364.0,iowa,82.6,1456.0,1.73
+264,dubuque,Dubuque County,712.0,iowa,108.0,15.0,333.0,dubuque,dubuque,Dubuque city,29.97,1210.0,63.0,2.0,58674.0,57682,58276,1606.0,40.0,16.0,iowa,31.22,166.0,1.25
+265,iowa city,Johnson County,722.0,iowa,81.0,5.0,310.0,iowa city,iowa city,Iowa City city,25.01,1376.0,81.0,4.0,75519.0,67994,75798,1767.0,25.0,46.0,iowa,25.28,156.0,0.27
+266,sioux city,Woodbury County,670.0,iowa,231.0,16.0,612.0,sioux city,sioux city,Sioux City city,57.35,2660.0,289.0,2.0,82879.0,82822,82514,3561.0,56.0,71.0,iowa,58.49,360.0,1.14
+267,waterloo,Black Hawk County,674.0,iowa,249.0,19.0,532.0,waterloo,waterloo,Waterloo city,61.39,1253.0,142.0,5.0,67855.0,68397,67587,1927.0,34.0,53.0,iowa,63.23,341.0,1.84
+268,lenexa,Johnson,702.543375,kansas,63.0,1.0,145.0,lenexa,lenexa,Lenexa city,34.1,696.0,97.0,1.0,53717.0,48306,53553,938.0,17.0,9.0,kansas,34.45,90.0,0.35
+269,olathe,Johnson,715.6202208,kansas,149.0,9.0,165.0,olathe,olathe,Olathe city,59.66,1641.0,152.0,2.0,137070.0,126255,137472,1958.0,71.0,33.0,kansas,60.42,255.0,0.76
+270,overland park,Johnson,708.111868,kansas,216.0,10.0,302.0,overland park,overland park,Overland Park city,74.84,2655.0,274.0,4.0,191566.0,174037,191278,3231.0,109.0,70.0,kansas,75.37,399.0,0.53
+271,wichita,0,669.0,kansas,2982.0,100.0,3281.0,wichita,wichita,Wichita city,159.29,15890.0,2478.0,35.0,391084.0,382743,390591,21649.0,382.0,599.0,kansas,163.59,3998.0,4.3
+272,lexington,0,676.0,kentucky,355.0,41.0,2087.0,lexington-fayette urban county,lexington,Lexington-Fayette urban county,283.65,8831.0,1273.0,29.0,322332.0,296702,321959,12191.0,200.0,547.0,kentucky,285.55,1131.0,1.9
+273,baton rouge,0,651.0,louisiana,1280.0,166.0,3226.0,baton rouge,baton rouge,Baton Rouge city,76.95,8504.0,991.0,87.0,227403.0,229514,225374,12721.0,100.0,868.0,louisiana,79.1,2335.0,2.16
+274,lake charles,0,648.0,louisiana,438.0,0.0,1836.0,lake charles,lake charles,Lake Charles city,42.06,1429.0,259.0,9.0,77647.0,72167,77117,3524.0,45.0,146.0,louisiana,44.8,638.0,2.74
+275,new orleans,0,640.0,louisiana,2417.0,41.0,2229.0,new orleans,new orleans,New Orleans city,169.42,12107.0,2531.0,157.0,397447.0,347824,393292,16867.0,575.0,1308.0,louisiana,350.21,4457.0,180.79
+276,shreveport,0,620.0,louisiana,1148.0,91.0,2256.0,shreveport,shreveport,Shreveport city,105.38,7673.0,884.0,52.0,193937.0,200884,192036,10813.0,152.0,498.0,louisiana,120.83,1850.0,15.46
+277,baltimore,0,621.0,maryland,5827.0,261.0,8041.0,baltimore,baltimore,Baltimore city,80.94,17008.0,5171.0,342.0,613217.0,621026,611648,30220.0,382.0,5879.0,maryland,92.05,12430.0,11.11
+278,brockton,0,642.0,massachusetts,645.0,16.0,327.0,brockton,brockton,Brockton city,21.33,1250.0,384.0,7.0,96016.0,93796,95672,1961.0,93.0,172.0,massachusetts,21.52,917.0,0.2
+279,cambridge,0,735.0,massachusetts,193.0,3.0,252.0,cambridge,cambridge,Cambridge city,6.39,1685.0,94.0,2.0,111707.0,105028,113630,2031.0,17.0,101.0,massachusetts,7.11,313.0,0.72
+280,lawrence,0,611.0,massachusetts,393.0,0.0,224.0,lawrence,lawrence,Lawrence city,6.93,759.0,408.0,11.0,80890.0,76575,80162,1391.0,30.0,151.0,massachusetts,7.41,585.0,0.48
+281,lynn,0,652.0,massachusetts,462.0,8.0,299.0,lynn,lynn,Lynn city,10.74,1101.0,231.0,12.0,93140.0,90521,94063,1631.0,28.0,164.0,massachusetts,13.52,666.0,2.78
+282,new bedford,0,638.0,massachusetts,347.0,35.0,570.0,new bedford,new bedford,New Bedford city,20.0,1971.0,176.0,8.0,95107.0,95052,95120,2717.0,37.0,241.0,massachusetts,24.13,633.0,4.13
+283,newton,Middlesex,755.1,massachusetts,39.0,2.0,87.0,newton,newton,Newton city,17.84,471.0,18.0,0.0,89736.0,85334,88994,576.0,5.0,5.0,massachusetts,18.16,49.0,0.33
+284,springfield,0,615.0,massachusetts,884.0,37.0,1183.0,springfield,springfield,Springfield city,31.87,2902.0,509.0,14.0,154562.0,153604,154758,4594.0,73.0,380.0,massachusetts,33.07,1351.0,1.21
+285,ann arbor,Washtenaw County,739.0,michigan,149.0,7.0,278.0,ann arbor,ann arbor,Ann Arbor city,27.83,1731.0,99.0,0.0,121930.0,114093,121477,2108.0,57.0,53.0,michigan,28.7,259.0,0.87
+286,dearborn,Wayne County,688.0,michigan,167.0,11.0,218.0,dearborn,dearborn,Dearborn city,24.22,1776.0,278.0,0.0,93889.0,97845,94491,2272.0,38.0,51.0,michigan,24.47,256.0,0.25
+287,detroit,0,565.0,michigan,10193.0,869.0,8258.0,detroit,detroit,Detroit city,138.75,14045.0,8155.0,267.0,670792.0,711043,673104,30458.0,697.0,2639.0,michigan,142.87,13796.0,4.12
+288,farmington,Oakland County,714.0,michigan,61.0,8.0,119.0,farmington hills,farmington hills,Farmington Hills city,33.28,719.0,77.0,1.0,81359.0,79743,81050,915.0,15.0,16.0,michigan,33.31,93.0,0.03
+289,flint,0,599.0,michigan,1466.0,45.0,961.0,flint,flint,Flint city,33.42,1397.0,274.0,37.0,96605.0,102024,96448,2632.0,104.0,272.0,michigan,34.05,1879.0,0.64
+290,grand rapids,0,677.0,michigan,904.0,54.0,763.0,grand rapids,grand rapids,Grand Rapids city,44.4,2976.0,363.0,12.0,197868.0,187992,198829,4102.0,141.0,351.0,michigan,45.26,1408.0,0.87
+291,livonia,Wayne County,732.0,michigan,76.0,6.0,165.0,livonia,livonia,Livonia city,35.7,1137.0,129.0,0.0,93603.0,96705,94105,1431.0,16.0,16.0,michigan,35.85,108.0,0.16
+292,novi,Oakland County,737.0,michigan,26.0,0.0,42.0,novi,novi,Novi city,30.26,543.0,32.0,0.0,59895.0,55280,59715,617.0,11.0,6.0,michigan,31.29,43.0,1.02
+293,pontiac,0,573.0,michigan,482.0,25.0,468.0,pontiac,pontiac,Pontiac city,19.97,820.0,222.0,4.0,59731.0,59618,59792,1510.0,61.0,97.0,michigan,20.29,644.0,0.31
+294,rochester,Oakland County,744.0,michigan,23.0,1.0,50.0,rochester hills,rochester hills,Rochester Hills city,32.82,403.0,18.0,0.0,73827.0,71039,74205,471.0,13.0,3.0,michigan,32.91,39.0,0.09
+295,royal oak,Oakland County,729.0,michigan,40.0,4.0,46.0,royal oak,royal oak,Royal Oak city,11.78,446.0,51.0,0.0,59303.0,57253,59112,543.0,7.0,7.0,michigan,11.79,54.0,0.0
+296,saginaw,0,648.0,michigan,622.0,19.0,383.0,saginaw,saginaw,Saginaw city,17.34,455.0,75.0,15.0,48589.0,51387,48677,913.0,50.0,75.0,michigan,18.1,762.0,0.76
+297,southfield,0,647.0,michigan,95.0,7.0,315.0,southfield,southfield,Southfield city,26.27,1454.0,263.0,1.0,73324.0,71760,73208,2032.0,18.0,37.0,michigan,26.28,151.0,0.01
+298,sterling heights,Macomb County,715.0,michigan,180.0,6.0,164.0,sterling heights,sterling heights,Sterling Heights city,36.5,1233.0,107.0,4.0,132882.0,129704,132631,1504.0,42.0,19.0,michigan,36.8,245.0,0.29
+299,taylor,0,653.0,michigan,247.0,23.0,326.0,taylor,taylor,Taylor city,23.6,973.0,181.0,4.0,60882.0,62978,61276,1480.0,39.0,58.0,michigan,23.63,348.0,0.04
+300,troy,Oakland County,746.0,michigan,35.0,1.0,94.0,troy,troy,Troy city,33.47,1114.0,67.0,0.0,84086.0,81014,83813,1275.0,14.0,6.0,michigan,33.64,55.0,0.17
+301,burnsville,Dakota County,711.0686364000002,minnesota,62.0,6.0,184.0,burnsville,burnsville,Burnsville city,24.91,1465.0,104.0,0.0,61442.0,60379,61439,1753.0,11.0,28.0,minnesota,26.92,101.0,2.02
+302,duluth,St. Louis County,716.5723386,minnesota,181.0,10.0,506.0,duluth,duluth,Duluth city,67.79,3091.0,222.0,1.0,86306.0,86189,86066,3819.0,31.0,66.0,minnesota,87.43,279.0,19.64
+303,eden prairie,Hennepin County,754.4999921,minnesota,14.0,0.0,56.0,eden prairie,eden prairie,Eden Prairie city,32.45,739.0,29.0,2.0,64429.0,60900,64400,824.0,7.0,9.0,minnesota,35.18,32.0,2.73
+304,lakeville,Dakota County,750.0,minnesota,27.0,2.0,84.0,lakeville,lakeville,Lakeville city,36.05,494.0,20.0,0.0,62958.0,56160,63748,598.0,11.0,6.0,minnesota,37.82,44.0,1.77
+305,maple grove,Hennepin County,763.0,minnesota,27.0,3.0,115.0,maple grove,maple grove,Maple Grove city,32.63,1092.0,35.0,0.0,70966.0,61780,71066,1242.0,18.0,5.0,minnesota,35.03,50.0,2.39
+306,minneapolis,Hennepin County,710.4122334,minnesota,2239.0,107.0,3762.0,minneapolis,minneapolis,Minneapolis city,53.97,13296.0,2388.0,42.0,418971.0,383074,422331,19446.0,514.0,1819.0,minnesota,57.47,4614.0,3.5
+307,minnetonka,Hennepin County,764.0,minnesota,16.0,2.0,110.0,minnetonka,minnetonka,Minnetonka city,26.93,755.0,34.0,2.0,52811.0,49797,53085,899.0,13.0,4.0,minnesota,28.21,35.0,1.29
+308,rochester,Olmsted County,740.0789499,minnesota,116.0,5.0,288.0,rochester,rochester,Rochester city,54.59,1757.0,98.0,1.0,115228.0,107011,115733,2143.0,61.0,46.0,minnesota,54.75,224.0,0.16
+309,gulfport,0,645.0,mississippi,181.0,16.0,562.0,gulfport,gulfport,Gulfport city,55.59,2897.0,203.0,10.0,72792.0,67897,71822,3662.0,26.0,82.0,mississippi,63.99,299.0,8.4
+310,jackson,0,599.0,mississippi,591.0,75.0,2006.0,jackson,jackson,Jackson city,111.05,4696.0,747.0,60.0,168397.0,173728,166965,7449.0,0.0,542.0,mississippi,113.24,0.0,2.2
+311,southaven,0,647.0,mississippi,36.0,5.0,196.0,southaven,southaven,Southaven city,41.25,1219.0,64.0,5.0,53928.0,49119,54031,1479.0,8.0,26.0,mississippi,41.53,75.0,0.28
+312,kansas city,0,665.0,missouri,5909.0,201.0,4658.0,kansas city,kansas city,Kansas City city,314.95,12950.0,4427.0,150.0,484948.0,460734,488943,22035.0,445.0,1858.0,missouri,319.03,8362.0,4.08
+313,omaha,0,696.0,nebraska,1843.0,0.0,2088.0,omaha,omaha,Omaha city,127.09,11849.0,3500.0,31.0,449388.0,450044,466893,17437.0,410.0,625.0,nebraska,130.58,2909.0,3.49
+314,henderson,Clark,686.9322427999998,nevada,218.0,21.0,1089.0,henderson,henderson,Henderson city,107.73,3756.0,641.0,10.0,299285.0,257567,302539,5486.0,86.0,240.0,nevada,107.73,554.0,0.0
+315,north las vegas,0,628.0,nevada,1758.0,11.0,1950.0,north las vegas,north las vegas,North Las Vegas city,101.35,2516.0,1321.0,22.0,242537.0,216889,242975,5787.0,116.0,565.0,nevada,101.39,2461.0,0.04
+316,reno,0,666.0,nevada,1131.0,18.0,1347.0,reno,reno,Reno city,103.01,4890.0,1432.0,19.0,248531.0,225767,248853,7669.0,142.0,382.0,nevada,105.88,1674.0,2.87
+317,sparks,Washoe,673.424558,nevada,313.0,11.0,591.0,sparks,sparks,Sparks city,35.76,1684.0,417.0,2.0,99732.0,91209,100888,2692.0,54.0,105.0,nevada,35.93,474.0,0.17
+318,bayonne,Hudson County,672.0,new jersey,80.0,4.0,115.0,bayonne,bayonne,Bayonne city,5.8,624.0,71.0,0.0,67041.0,63125,67186,810.0,11.0,49.0,new jersey,11.08,140.0,5.28
+319,camden,0,547.0,new jersey,954.0,55.0,583.0,camden,camden county police department,Camden city,8.92,1393.0,550.0,23.0,74299.0,77010,74532,2526.0,75.0,410.0,new jersey,10.34,1462.0,1.42
+320,clifton,Passaic County,699.0,new jersey,103.0,4.0,191.0,clifton,clifton,Clifton city,11.26,1086.0,109.0,0.0,86472.0,84201,86607,1386.0,8.0,73.0,new jersey,11.4,184.0,0.14
+321,east orange,0,564.0,new jersey,245.0,13.0,271.0,east orange,east orange,East Orange city,3.92,552.0,236.0,9.0,65160.0,64203,65378,1059.0,20.0,199.0,new jersey,3.92,473.0,0.0
+322,elizabeth,0,633.0,new jersey,465.0,9.0,683.0,elizabeth,elizabeth,Elizabeth city,12.32,3017.0,895.0,7.0,129726.0,125343,130215,4595.0,47.0,515.0,new jersey,13.46,1034.0,1.15
+323,hoboken,0,744.0,new jersey,88.0,0.0,121.0,hoboken,hoboken,Hoboken city,1.28,911.0,32.0,1.0,55348.0,50100,55131,1064.0,10.0,32.0,new jersey,2.01,131.0,0.74
+324,jersey city,Hudson County,658.0,new jersey,687.0,38.0,1119.0,jersey city,jersey city,Jersey City city,14.79,3231.0,491.0,21.0,267906.0,248639,270753,4841.0,123.0,534.0,new jersey,21.08,1365.0,6.29
+325,new brunswick,0,578.0,new jersey,143.0,9.0,253.0,new brunswick,new brunswick,New Brunswick city,5.23,1001.0,87.0,4.0,57481.0,54925,57073,1341.0,22.0,191.0,new jersey,5.79,360.0,0.56
+326,newark,0,588.0,new jersey,1280.0,72.0,1202.0,newark,newark,Newark city,24.19,3200.0,2392.0,77.0,283673.0,277332,285154,6794.0,116.0,1070.0,new jersey,26.11,2543.0,1.92
+327,passaic,0,640.0,new jersey,214.0,1.0,193.0,passaic,passaic,Passaic city,3.15,842.0,128.0,1.0,71053.0,69906,71247,1163.0,10.0,165.0,new jersey,3.24,390.0,0.1
+328,paterson,0,601.0,new jersey,474.0,10.0,992.0,paterson,paterson,Paterson city,8.43,1776.0,631.0,21.0,147690.0,146499,148678,3399.0,45.0,488.0,new jersey,8.7,1028.0,0.28
+329,perth amboy,0,607.0,new jersey,108.0,2.0,151.0,perth amboy,perth amboy,Perth Amboy city,4.7,598.0,94.0,2.0,52978.0,50945,52823,843.0,5.0,56.0,new jersey,5.96,171.0,1.26
+330,plainfield,0,609.0,new jersey,129.0,4.0,232.0,plainfield,plainfield,Plainfield city,6.02,726.0,97.0,4.0,50983.0,49810,51327,1055.0,14.0,174.0,new jersey,6.03,321.0,0.01
+331,trenton,0,639.0,new jersey,654.0,16.0,792.0,trenton,trenton,Trenton city,7.65,1035.0,366.0,23.0,84231.0,85024,84964,2193.0,63.0,343.0,new jersey,8.16,1083.0,0.51
+332,union,Union County,690.0,new jersey,104.0,1.0,114.0,union city,union city,Union City city,1.28,1028.0,93.0,1.0,70053.0,66508,70387,1235.0,1.0,58.0,new jersey,1.28,164.0,0.0
+333,vineland,0,653.0,new jersey,179.0,12.0,472.0,vineland,vineland,Vineland city,68.42,1883.0,59.0,2.0,60477.0,60829,60392,2414.0,24.0,93.0,new jersey,69.03,298.0,0.61
+334,west new york,Hudson County,672.0,new jersey,61.0,2.0,87.0,west new york town,west new york,West New York town,1.01,409.0,29.0,0.0,54156.0,49897,54227,525.0,8.0,39.0,new jersey,1.33,108.0,0.32
+335,albuquerque,0,673.0,new mexico,4213.0,0.0,6996.0,albuquerque,albuquerque,Albuquerque city,187.73,26670.0,7684.0,70.0,561375.0,546866,558545,41350.0,473.0,2930.0,new mexico,189.55,7686.0,1.82
+336,buffalo,0,672.0,new york,1572.0,192.0,2356.0,buffalo,buffalo,Buffalo city,40.38,6638.0,833.0,40.0,256169.0,261385,258612,9827.0,142.0,857.0,new york,52.49,2611.0,12.11
+337,hempstead,0,637.0,new york,211.0,3.0,92.0,hempstead village,hempstead village,Hempstead village,3.68,393.0,108.0,6.0,55807.0,54074,55806,593.0,6.0,109.0,new york,3.69,332.0,0.0
+338,mount vernon,0,624.0,new york,286.0,11.0,159.0,mount vernon,mount vernon,Mount Vernon city,4.39,1001.0,134.0,6.0,68507.0,67416,68703,1294.0,22.0,123.0,new york,4.4,437.0,0.02
+339,new york,0,706.0,new york,29771.0,0.0,11104.0,new york,new york,New York city,302.64,107976.0,5735.0,292.0,8616333.0,8193703,8622698,124815.0,2375.0,13995.0,new york,468.48,46433.0,165.84
+340,rochester,0,673.0,new york,997.0,105.0,1337.0,rochester,rochester,Rochester city,35.78,5981.0,616.0,27.0,208591.0,210480,208046,7934.0,141.0,707.0,new york,37.15,1872.0,1.37
+341,apex,Wake,741.0,north carolina,16.0,4.0,81.0,apex town,apex,Apex town,15.37,548.0,14.0,1.0,49159.0,37803,50451,643.0,0.0,7.0,north carolina,15.43,0.0,0.06
+342,asheville,Buncombe,695.0,north carolina,363.0,7.0,733.0,asheville,asheville,Asheville city,44.93,3191.0,324.0,7.0,90103.0,83403,91902,4248.0,0.0,181.0,north carolina,45.23,0.0,0.3
+343,burlington,Alamance,653.0,north carolina,381.0,7.0,502.0,burlington,burlington,Burlington city,25.17,1402.0,112.0,4.0,52986.0,50977,53077,2016.0,0.0,114.0,north carolina,25.38,0.0,0.21
+344,cary,Wake,746.0,north carolina,63.0,10.0,285.0,cary town,cary,Cary town,54.35,1438.0,72.0,0.0,166986.0,136943,165904,1795.0,0.0,44.0,north carolina,55.44,0.0,1.09
+345,chapel hill,Orange,747.0,north carolina,38.0,5.0,251.0,chapel hill town,chapel hill,Chapel Hill town,21.12,980.0,53.0,1.0,59553.0,57395,59862,1284.0,0.0,40.0,north carolina,21.27,0.0,0.15
+346,charlotte,Mecklenburg,660.0,north carolina,3965.0,194.0,6416.0,charlotte,charlotte-mecklenburg,Charlotte city,297.68,25856.0,2622.0,86.0,914609.0,738500,859035,34894.0,0.0,2017.0,north carolina,299.67,0.0,1.99
+347,concord,Cabarrus,676.0,north carolina,62.0,4.0,293.0,concord,concord,Concord city,60.27,1433.0,65.0,1.0,91756.0,79482,92067,1791.0,0.0,31.0,north carolina,60.3,0.0,0.04
+348,durham,Durham,672.0,north carolina,1257.0,31.0,2334.0,durham,durham,Durham city,107.37,7200.0,762.0,23.0,269088.0,229177,267743,10296.0,0.0,852.0,north carolina,108.28,0.0,0.91
+349,fayetteville,0,650.0,north carolina,1105.0,39.0,1818.0,fayetteville,fayetteville,Fayetteville city,145.84,6578.0,415.0,24.0,205432.0,208318,209889,8811.0,0.0,292.0,north carolina,147.71,0.0,1.86
+350,gastonia,0,643.0,north carolina,405.0,22.0,587.0,gastonia,gastonia,Gastonia city,50.5,2865.0,262.0,4.0,76191.0,71725,76593,3714.0,0.0,158.0,north carolina,50.73,0.0,0.23
+351,greensboro,0,651.0,north carolina,1394.0,115.0,2062.0,greensboro,greensboro,Greensboro city,126.52,7424.0,846.0,46.0,290051.0,269581,290222,10332.0,0.0,664.0,north carolina,131.8,0.0,5.29
+352,greenville,0,635.0,north carolina,420.0,13.0,724.0,greenville,greenville,Greenville city,34.61,2566.0,104.0,4.0,92630.0,84950,92156,3394.0,0.0,154.0,north carolina,35.36,0.0,0.75
+353,high point,Guilford,656.0,north carolina,530.0,14.0,754.0,high point,high point,High Point city,53.8,3127.0,280.0,20.0,112368.0,104677,111513,4161.0,0.0,206.0,north carolina,55.45,0.0,1.64
+354,huntersville,Mecklenburg,723.0,north carolina,42.0,5.0,100.0,huntersville town,huntersville,Huntersville town,39.61,857.0,36.0,2.0,56279.0,46957,56212,993.0,0.0,17.0,north carolina,39.77,0.0,0.16
+355,jacksonville,Onslow,656.0,north carolina,142.0,9.0,380.0,jacksonville,jacksonville,Jacksonville city,46.51,1529.0,52.0,5.0,67293.0,77854,72447,1961.0,0.0,71.0,north carolina,50.71,0.0,4.2
+356,rocky mount,0,632.0,north carolina,270.0,16.0,554.0,rocky mount,rocky mount,Rocky Mount city,43.79,1310.0,120.0,15.0,55098.0,57696,54523,1984.0,0.0,95.0,north carolina,44.0,0.0,0.22
+357,wilmington,New Hanover,679.0,north carolina,535.0,6.0,998.0,wilmington,wilmington,Wilmington city,51.49,3039.0,281.0,18.0,119422.0,106713,119045,4318.0,0.0,195.0,north carolina,53.0,0.0,1.51
+358,bismarck,0,737.0,north dakota,178.0,5.0,322.0,bismarck,bismarck,Bismarck city,30.84,1884.0,232.0,0.0,74397.0,61562,72865,2438.0,45.0,33.0,north dakota,31.23,256.0,0.38
+359,cincinnati,0,677.0,ohio,1275.0,0.0,3448.0,cincinnati,cincinnati,Cincinnati city,77.94,10172.0,1485.0,70.0,299116.0,296794,301301,15105.0,292.0,1196.0,ohio,79.55,2833.0,1.6
+360,cleveland,0,645.0,ohio,2698.0,253.0,5853.0,cleveland,cleveland,Cleveland city,77.7,9696.0,3395.0,107.0,385351.0,395978,385525,18944.0,497.0,2697.0,ohio,82.47,5999.0,4.77
+361,columbus,0,654.0,ohio,1454.0,379.0,7111.0,columbus,columbus,Columbus city,217.17,23121.0,4176.0,142.0,872205.0,790812,879170,34408.0,919.0,1963.0,ohio,223.11,4478.0,5.94
+362,dayton,0,671.0,ohio,687.0,26.0,1779.0,dayton,dayton,Dayton city,55.65,3688.0,616.0,30.0,140171.0,142330,140371,6083.0,122.0,393.0,ohio,56.5,1232.0,0.85
+363,lorain,0,633.0,ohio,254.0,11.0,590.0,lorain,lorain,Lorain city,23.67,1335.0,94.0,2.0,63672.0,64071,63841,2019.0,30.0,87.0,ohio,24.15,373.0,0.47
+364,toledo,0,638.0,ohio,1834.0,0.0,3103.0,toledo,"toledo, , ",Toledo city,80.69,7247.0,745.0,35.0,277116.0,286994,276491,11095.0,0.0,780.0,ohio,84.12,0.0,3.43
+365,oklahoma city,0,646.0,oklahoma,3429.0,82.0,6105.0,oklahoma city,oklahoma city,Oklahoma City city,606.41,15421.0,2800.0,81.0,648260.0,582253,643648,24326.0,474.0,1120.0,oklahoma,620.82,5104.0,14.41
+366,tulsa,0,649.0,oklahoma,2757.0,144.0,5574.0,tulsa,tulsa,Tulsa city,196.75,13054.0,3460.0,70.0,404868.0,392403,401800,22088.0,423.0,964.0,oklahoma,200.99,4214.0,4.23
+367,albany,Linn County,693.0,oregon,28.0,10.0,158.0,albany,albany,Albany city,17.54,1137.0,111.0,0.0,53701.0,50337,53503,1406.0,8.0,20.0,oregon,17.75,56.0,0.21
+368,beaverton,Washington,715.3475338,oregon,79.0,14.0,157.0,beaverton,beaverton,Beaverton city,18.73,1396.0,207.0,1.0,98897.0,90146,97514,1760.0,60.0,32.0,oregon,18.73,172.0,0.0
+369,bend,Deschutes County,707.0,oregon,97.0,12.0,177.0,bend,bend,Bend city,33.01,1680.0,103.0,0.0,93786.0,76636,94520,1960.0,33.0,24.0,oregon,33.26,154.0,0.26
+370,corvallis,Benton,728.124151,oregon,40.0,26.0,153.0,corvallis,corvallis,Corvallis city,14.13,1229.0,58.0,2.0,57576.0,54393,57961,1440.0,20.0,13.0,oregon,14.3,75.0,0.17
+371,eugene,Lane County,705.0,oregon,370.0,55.0,1129.0,eugene,eugene,Eugene city,43.72,4602.0,545.0,3.0,168310.0,156506,168916,6276.0,101.0,177.0,oregon,43.75,651.0,0.02
+372,gresham,Multnomah County,685.0,oregon,215.0,23.0,424.0,gresham,gresham,Gresham city,23.2,2034.0,1255.0,9.0,112466.0,105993,111053,3713.0,76.0,86.0,oregon,23.43,386.0,0.23
+373,hillsboro,Washington County,707.0,oregon,127.0,26.0,209.0,hillsboro,hillsboro,Hillsboro city,23.9,1714.0,221.0,1.0,107433.0,92529,106894,2144.0,80.0,60.0,oregon,23.91,268.0,0.01
+374,medford,Jackson County,686.0,oregon,241.0,36.0,489.0,medford,medford,Medford city,25.73,4145.0,302.0,4.0,82792.0,74990,81780,4936.0,33.0,98.0,oregon,25.74,376.0,0.01
+375,portland,0,710.0,oregon,1842.0,307.0,4735.0,portland,portland,Portland city,133.43,24837.0,7295.0,24.0,649408.0,585340,647805,36867.0,438.0,1045.0,oregon,145.09,3349.0,11.66
+376,salem,Polk County,712.0,oregon,424.0,34.0,897.0,salem,salem,Salem city,47.9,5437.0,861.0,6.0,169565.0,155030,169798,7195.0,44.0,167.0,oregon,48.44,641.0,0.55
+377,springfield,Lane County,680.0,oregon,102.0,17.0,238.0,springfield,springfield,Springfield city,15.74,2063.0,165.0,1.0,62318.0,59411,62353,2466.0,25.0,41.0,oregon,15.75,169.0,0.01
+378,allentown,Lehigh County,651.0,pennsylvania,202.0,13.0,634.0,allentown,allentown,Allentown city,17.55,2362.0,306.0,16.0,120823.0,118111,121283,3302.0,70.0,269.0,pennsylvania,18.02,557.0,0.48
+379,bethlehem,Northampton County,697.0,pennsylvania,504.0,7.0,187.0,bethlehem,bethlehem,Bethlehem city,19.1,1124.0,48.0,0.0,75336.0,74995,75707,1359.0,29.0,61.0,pennsylvania,19.45,594.0,0.35
+380,erie,Erie County,676.0,pennsylvania,170.0,43.0,531.0,erie,erie,Erie city,19.08,1619.0,108.0,6.0,98071.0,101758,97369,2258.0,32.0,98.0,pennsylvania,19.28,306.0,0.2
+381,lancaster,Lancaster County,692.0,pennsylvania,287.0,20.0,205.0,lancaster,lancaster,Lancaster city,7.23,1689.0,105.0,5.0,59199.0,59335,59708,1999.0,97.0,141.0,pennsylvania,7.35,530.0,0.13
+382,philadelphia,Philadelphia County,631.0,pennsylvania,7406.0,413.0,6590.0,philadelphia,philadelphia,Philadelphia city,134.1,36195.0,5483.0,316.0,1575595.0,1528271,1580863,48268.0,1182.0,6026.0,pennsylvania,142.71,14930.0,8.61
+383,pittsburgh,Allegheny County,699.0,pennsylvania,1061.0,136.0,1610.0,pittsburgh,pittsburgh,Pittsburgh city,55.37,7238.0,680.0,55.0,305932.0,305405,302407,9528.0,90.0,802.0,pennsylvania,58.34,2008.0,2.97
+384,reading,Berks County,658.0,pennsylvania,336.0,11.0,631.0,reading,reading,Reading city,9.88,1278.0,197.0,9.0,87487.0,88123,88423,2106.0,60.0,219.0,pennsylvania,10.14,624.0,0.26
+385,scranton,Lackawanna County,666.0,pennsylvania,85.0,13.0,351.0,scranton,scranton,Scranton city,25.31,1215.0,132.0,1.0,77499.0,76089,77605,1698.0,22.0,90.0,pennsylvania,25.54,198.0,0.23
+386,pawtucket,0,650.0,rhode island,220.0,16.0,373.0,pawtucket,pawtucket,Pawtucket city,8.68,1224.0,191.0,1.0,71648.0,71208,72001,1788.0,45.0,45.0,rhode island,8.97,311.0,0.29
+387,providence,0,649.0,rhode island,589.0,16.0,1013.0,providence,providence,Providence city,18.4,4332.0,580.0,12.0,179854.0,178083,180393,5925.0,104.0,255.0,rhode island,20.57,960.0,2.17
+388,charleston,Charleston County,669.0,south carolina,232.0,12.0,399.0,charleston,charleston,Charleston city,108.98,2442.0,303.0,6.0,136845.0,120338,134875,3144.0,50.0,100.0,south carolina,127.49,388.0,18.51
+389,columbia,0,643.0,south carolina,642.0,17.0,954.0,columbia,columbia,Columbia city,132.21,5389.0,791.0,10.0,134957.0,130184,133114,7134.0,66.0,273.0,south carolina,134.93,991.0,2.72
+390,greenville,Greenville County,657.0,south carolina,292.0,6.0,393.0,greenville,greenville,Greenville city,28.67,2281.0,157.0,4.0,68922.0,59301,68219,2831.0,28.0,91.0,south carolina,28.82,415.0,0.15
+391,mount pleasant,Charleston,730.5690549999998,south carolina,119.0,2.0,169.0,mount pleasant town,mount pleasant,Mount Pleasant town,45.08,1076.0,87.0,2.0,87216.0,67965,86668,1332.0,20.0,24.0,south carolina,52.61,165.0,7.52
+392,north charleston,0,609.0,south carolina,612.0,18.0,919.0,north charleston,north charleston,North Charleston city,73.19,4687.0,685.0,35.0,111305.0,97963,110861,6291.0,74.0,305.0,south carolina,76.65,1026.0,3.46
+393,rock hill,York County,655.0,south carolina,314.0,4.0,365.0,rock hill,rock hill,Rock Hill city,35.72,2506.0,136.0,9.0,74053.0,66559,73068,3007.0,51.0,95.0,south carolina,35.88,469.0,0.16
+394,summerville,Dorchester County,673.0,south carolina,90.0,5.0,173.0,summerville town,summerville,Summerville town,18.04,1457.0,115.0,4.0,50498.0,42886,50388,1745.0,22.0,31.0,south carolina,18.16,147.0,0.11
+395,sioux falls,Lincoln,762.0,south dakota,576.0,47.0,655.0,sioux falls,sioux falls,Sioux Falls city,72.96,3959.0,469.0,4.0,177888.0,154542,176888,5083.0,121.0,100.0,south dakota,73.47,801.0,0.51
+396,chattanooga,0,643.0,tennessee,1424.0,17.0,1540.0,chattanooga,chattanooga,Chattanooga city,137.15,7818.0,1342.0,31.0,178753.0,170586,179139,10700.0,120.0,330.0,tennessee,144.55,1905.0,7.4
+397,collierville,Shelby,737.5,tennessee,54.0,1.0,67.0,collierville town,collierville,Collierville town,29.29,813.0,31.0,0.0,49790.0,45666,50286,911.0,11.0,10.0,tennessee,29.41,75.0,0.12
+398,franklin,Williamson,740.2997793999998,tennessee,113.0,3.0,78.0,franklin,franklin,Franklin city,41.23,940.0,30.0,1.0,76995.0,62849,78321,1048.0,18.0,14.0,tennessee,41.45,146.0,0.22
+399,hendersonville,Sumner,695.2,tennessee,85.0,3.0,71.0,hendersonville,hendersonville,Hendersonville city,31.37,902.0,44.0,0.0,58034.0,51468,57517,1017.0,6.0,11.0,tennessee,36.93,102.0,5.56
+400,jackson,0,651.0,tennessee,529.0,16.0,497.0,jackson,jackson,Jackson city,53.73,2271.0,149.0,7.0,67031.0,66841,66847,2917.0,28.0,91.0,tennessee,53.73,655.0,0.0
+401,knoxville,0,686.0,tennessee,1127.0,12.0,1665.0,knoxville,knoxville,Knoxville city,98.52,7510.0,1036.0,33.0,187539.0,178455,187347,10211.0,145.0,371.0,tennessee,104.17,1676.0,5.65
+402,memphis,0,607.0,tennessee,8849.0,365.0,9532.0,memphis,memphis,Memphis city,315.05,27576.0,4002.0,181.0,652765.0,652331,652236,41110.0,590.0,3457.0,tennessee,324.0,13077.0,8.95
+403,abilene,Taylor County,656.0,texas,394.0,20.0,0.0,abilene,"abilene, ",Abilene city,106.79,2605.0,260.0,4.0,122981.0,117807,121885,0.0,100.0,138.0,texas,112.21,636.0,5.41
+404,allen,Collin County,729.0,texas,44.0,0.0,155.0,allen,allen,Allen city,26.29,1061.0,52.0,2.0,101779.0,84925,100685,1268.0,24.0,30.0,texas,26.39,100.0,0.1
+405,amarillo,Randall County,682.0,texas,1082.0,46.0,1684.0,amarillo,amarillo,Amarillo city,99.48,6113.0,990.0,16.0,200993.0,191255,199826,8787.0,183.0,237.0,texas,101.16,1518.0,1.69
+406,arlington,Tarrant County,645.0,texas,1205.0,29.0,1801.0,arlington,arlington,Arlington city,95.88,9546.0,1360.0,19.0,397377.0,366125,396394,12707.0,254.0,576.0,texas,99.62,2054.0,3.74
+407,austin,Hays County,755.0,texas,2186.0,76.0,4380.0,austin,austin,Austin city,297.9,24542.0,2079.0,25.0,971949.0,806463,950715,31001.0,834.0,987.0,texas,305.06,4032.0,7.17
+408,baytown,Chambers County,689.0,texas,136.0,1.0,506.0,baytown,baytown,Baytown city,35.44,1846.0,326.0,6.0,76704.0,71865,76804,2678.0,38.0,108.0,texas,36.51,288.0,1.07
+409,beaumont,Jefferson County,654.0,texas,853.0,42.0,1259.0,beaumont,beaumont,Beaumont city,82.8,3472.0,405.0,16.0,118456.0,117364,119114,5136.0,86.0,304.0,texas,85.83,1259.0,3.03
+410,brownsville,Cameron County,619.0,texas,259.0,6.0,661.0,brownsville,brownsville,Brownsville city,132.33,4374.0,141.0,5.0,185216.0,175378,183299,5176.0,79.0,133.0,texas,146.28,476.0,13.95
+411,bryan,Brazos County,658.0,texas,237.0,16.0,348.0,bryan,bryan,Bryan city,44.41,1557.0,123.0,4.0,84438.0,76520,84021,2028.0,53.0,69.0,texas,44.5,363.0,0.09
+412,carrollton,Denton County,701.0,texas,67.0,0.0,463.0,carrollton,carrollton,Carrollton city,36.3,1690.0,227.0,2.0,135823.0,119437,135710,2380.0,36.0,61.0,texas,37.11,166.0,0.81
+413,cedar park,Williamson County,716.0,texas,60.0,3.0,109.0,cedar park,cedar park,Cedar Park city,22.85,846.0,51.0,0.0,72143.0,55755,75704,1006.0,51.0,14.0,texas,23.02,125.0,0.18
+414,college station,Brazos County,704.0,texas,127.0,0.0,300.0,college station,college station,College Station city,49.44,1887.0,117.0,1.0,115357.0,94655,113564,2304.0,53.0,49.0,texas,49.62,230.0,0.17
+415,conroe,Montgomery County,669.0,texas,126.0,3.0,276.0,conroe,conroe,Conroe city,52.71,1479.0,176.0,4.0,85534.0,65265,84378,1931.0,54.0,65.0,texas,53.17,249.0,0.45
+416,corpus christi,Nueces County,639.0,texas,1590.0,57.0,2232.0,corpus christi,corpus christi,Corpus Christi city,160.61,8776.0,731.0,21.0,329256.0,305331,325605,11739.0,232.0,470.0,texas,489.59,2313.0,328.98
+417,dallas,Collin County,708.0,texas,4994.0,351.0,9874.0,dallas,dallas,Dallas city,340.52,24847.0,7913.0,167.0,1338551.0,1200468,1341075,42634.0,831.0,4377.0,texas,385.84,10369.0,45.33
+418,denton,Denton County,667.0,texas,201.0,0.0,426.0,denton,denton,Denton city,87.95,2367.0,298.0,1.0,136836.0,117052,136268,3091.0,120.0,94.0,texas,89.32,416.0,1.36
+419,desoto,Dallas County,637.0,texas,112.0,1.0,257.0,desoto,desoto,DeSoto city,21.62,1009.0,158.0,3.0,53163.0,49345,53568,1424.0,28.0,73.0,texas,21.65,216.0,0.04
+420,edinburg,Hidalgo County,617.0,texas,202.0,8.0,472.0,edinburg,edinburg,Edinburg city,37.63,2793.0,108.0,2.0,89595.0,76807,90280,3373.0,51.0,44.0,texas,37.69,299.0,0.06
+421,el paso,El Paso County,650.0,texas,1819.0,38.0,1297.0,el paso,el paso,El Paso city,255.24,10429.0,800.0,19.0,688667.0,650586,683577,12526.0,371.0,400.0,texas,256.26,2609.0,1.02
+422,euless,Tarrant County,661.0,texas,53.0,2.0,214.0,euless,euless,Euless city,16.21,909.0,140.0,1.0,55345.0,51427,55174,1263.0,1.0,29.0,texas,16.29,84.0,0.08
+423,flower mound,Denton County,746.0,texas,31.0,4.0,79.0,flower mound town,flower mound,Flower Mound town,41.39,596.0,19.0,0.0,75101.0,64861,76681,694.0,9.0,4.0,texas,43.9,44.0,2.52
+424,fort worth,Tarrant County,634.0,texas,2966.0,151.0,5116.0,fort worth,fort worth,Fort Worth city,339.82,20250.0,2706.0,70.0,873069.0,748569,874168,28072.0,569.0,1286.0,texas,347.86,4891.0,8.04
+425,frisco,Collin County,732.0,texas,99.0,2.0,309.0,frisco,frisco,Frisco city,61.8,2178.0,84.0,2.0,172804.0,118116,177286,2571.0,39.0,36.0,texas,62.38,176.0,0.58
+426,galveston,Galveston County,661.0,texas,110.0,3.0,275.0,galveston,galveston,Galveston city,41.22,1231.0,284.0,2.0,51021.0,47795,50497,1790.0,63.0,82.0,texas,209.34,257.0,168.12
+427,garland,Dallas County,657.0,texas,292.0,15.0,1214.0,garland,garland,Garland city,57.08,5140.0,810.0,8.0,236243.0,227289,238002,7164.0,129.0,319.0,texas,57.22,748.0,0.13
+428,georgetown,Williamson County,724.0,texas,38.0,4.0,97.0,georgetown,georgetown,Georgetown city,47.86,564.0,35.0,0.0,71007.0,48000,70685,696.0,31.0,14.0,texas,50.11,83.0,2.25
+429,grand prairie,Tarrant County,693.0,texas,261.0,5.0,582.0,grand prairie,grand prairie,Grand Prairie city,72.1,3629.0,495.0,2.0,193249.0,175970,193837,4706.0,136.0,174.0,texas,81.09,573.0,8.99
+430,grapevine,Tarrant County,707.0,texas,73.0,4.0,114.0,grapevine,grapevine,Grapevine city,31.93,1066.0,85.0,1.0,52925.0,46608,53982,1265.0,14.0,19.0,texas,35.55,107.0,3.62
+431,harlingen,Cameron County,638.0,texas,183.0,15.0,523.0,harlingen,harlingen,Harlingen city,39.81,2079.0,91.0,0.0,65617.0,65062,65467,2693.0,18.0,32.0,texas,40.3,233.0,0.49
+432,houston,Harris County,642.0,texas,14201.0,665.0,17108.0,houston,houston,Houston city,599.59,67828.0,11596.0,269.0,2338235.0,2099256,2312717,96532.0,1366.0,9773.0,texas,627.5,25609.0,27.91
+433,irving,Dallas County,659.0,texas,259.0,23.0,969.0,irving,irving,Irving city,67.02,4467.0,711.0,8.0,242062.0,216852,240373,6147.0,54.0,228.0,texas,68.02,549.0,1.0
+434,killeen,Bell County,625.0,texas,636.0,29.0,1140.0,killeen,killeen,Killeen city,53.58,2403.0,566.0,18.0,145912.0,128983,145482,4109.0,151.0,313.0,texas,54.25,1118.0,0.67
+435,laredo,Webb County,623.0,texas,561.0,71.0,874.0,laredo,laredo,Laredo city,88.91,5430.0,170.0,10.0,260669.0,237047,260654,6474.0,114.0,154.0,texas,90.36,839.0,1.45
+436,league city,Galveston County,710.0,texas,42.0,3.0,218.0,league city,league city,League City city,51.29,1407.0,93.0,3.0,105351.0,84077,104903,1718.0,34.0,18.0,texas,53.0,97.0,1.71
+437,lewisville,Denton County,672.0,texas,155.0,6.0,340.0,lewisville,lewisville,Lewisville city,36.4,1565.0,229.0,3.0,106199.0,95855,106021,2134.0,51.0,71.0,texas,42.47,280.0,6.07
+438,longview,Gregg County,636.0,texas,229.0,6.0,614.0,longview,longview,Longview city,55.69,1947.0,242.0,6.0,82303.0,80565,81522,2803.0,62.0,99.0,texas,55.8,396.0,0.11
+439,mansfield,Tarrant County,680.0,texas,37.0,0.0,154.0,mansfield,mansfield,Mansfield city,36.38,612.0,42.0,0.0,67233.0,56860,68928,808.0,21.0,20.0,texas,36.43,78.0,0.04
+440,mcallen,Hidalgo County,650.0,texas,125.0,8.0,185.0,mcallen,mcallen,McAllen city,48.34,3776.0,46.0,7.0,144162.0,131558,142696,4007.0,27.0,49.0,texas,48.65,208.0,0.3
+441,mckinney,Collin County,701.0,texas,151.0,12.0,297.0,mckinney,mckinney,McKinney city,62.21,1965.0,155.0,2.0,179934.0,132950,181330,2417.0,46.0,68.0,texas,62.88,267.0,0.67
+442,mesquite,Dallas County,630.0,texas,292.0,6.0,773.0,mesquite,mesquite,Mesquite city,46.02,3642.0,849.0,6.0,144406.0,139775,143949,5264.0,74.0,244.0,texas,46.17,616.0,0.15
+443,midland,Midland County,660.0,texas,279.0,5.0,431.0,midland,midland,Midland city,72.07,2026.0,220.0,2.0,138954.0,111279,136089,2677.0,37.0,59.0,texas,72.24,377.0,0.17
+444,mission,Hidalgo County,631.0,texas,41.0,19.0,231.0,mission,mission,Mission city,33.99,1700.0,74.0,0.0,84511.0,78110,84424,2005.0,27.0,30.0,texas,34.06,98.0,0.07
+445,missouri city,Fort Bend County,681.0,texas,78.0,0.0,133.0,missouri city,missouri city,Missouri City city,28.42,767.0,69.0,2.0,75863.0,67065,74497,969.0,23.0,46.0,texas,29.8,149.0,1.38
+446,new braunfels,Comal County,687.0,texas,130.0,8.0,221.0,new braunfels,new braunfels,New Braunfels city,43.87,952.0,148.0,1.0,76993.0,58109,79152,1321.0,33.0,29.0,texas,44.28,193.0,0.4
+447,north richland hills,Tarrant County,685.0,texas,80.0,2.0,208.0,north richland hills,north richland hills,North Richland Hills city,18.17,1064.0,101.0,2.0,70910.0,63480,70441,1373.0,31.0,34.0,texas,18.22,147.0,0.04
+448,odessa,Ector County,623.0,texas,726.0,10.0,560.0,odessa,odessa,Odessa city,41.95,2386.0,273.0,7.0,121194.0,99825,116861,3219.0,78.0,101.0,texas,42.21,912.0,0.26
+449,pasadena,Harris County,647.0,texas,418.0,23.0,636.0,pasadena,pasadena,Pasadena city,42.76,2758.0,379.0,5.0,154000.0,149527,153520,3773.0,93.0,195.0,texas,44.27,711.0,1.51
+450,pflugerville,Travis County,676.0,texas,55.0,2.0,127.0,pflugerville,pflugerville,Pflugerville city,22.32,796.0,45.0,1.0,61212.0,48715,63359,968.0,31.0,15.0,texas,22.33,102.0,0.01
+451,pharr,Hidalgo County,618.0,texas,123.0,2.0,268.0,pharr,pharr,Pharr city,23.42,1343.0,62.0,4.0,78467.0,70788,79487,1673.0,44.0,33.0,texas,23.44,204.0,0.03
+452,plano,Collin County,719.0,texas,220.0,25.0,728.0,plano,plano,Plano city,71.58,3968.0,339.0,15.0,290413.0,261236,286143,5035.0,81.0,119.0,texas,71.94,435.0,0.36
+453,port arthur,Jefferson County,634.0,texas,247.0,5.0,767.0,port arthur,port arthur,Port Arthur city,76.9,1111.0,153.0,6.0,55583.0,54502,55498,2031.0,15.0,110.0,texas,144.04,378.0,67.14
+454,richards,Montgomery County,671.0,texas,68.0,5.0,389.0,richardson,richardson,Richardson city,28.56,1717.0,189.0,3.0,115824.0,99555,116783,2295.0,25.0,97.0,texas,28.66,193.0,0.09
+455,round rock,Williamson County,691.0,texas,90.0,4.0,232.0,round rock,round rock,Round Rock city,34.11,2405.0,64.0,2.0,124617.0,100759,123678,2701.0,33.0,44.0,texas,34.41,169.0,0.3
+456,rowlett,Dallas County,685.0,texas,97.0,1.0,133.0,rowlett,rowlett,Rowlett city,19.89,877.0,71.0,1.0,62998.0,56344,62868,1081.0,20.0,23.0,texas,19.96,141.0,0.07
+457,san angelo,Tom Green County,662.0,texas,165.0,10.0,802.0,san angelo,san angelo,San Angelo city,56.86,3425.0,272.0,3.0,101931.0,93625,100119,4499.0,74.0,40.0,texas,59.14,282.0,2.28
+458,san antonio,Comal County,750.0,texas,7067.0,207.0,11722.0,san antonio,san antonio,San Antonio city,460.93,55090.0,6864.0,124.0,1520712.0,1333413,1511946,73676.0,1270.0,2298.0,texas,466.71,10759.0,5.78
+459,san marcos,Hays County,642.0,texas,120.0,8.0,278.0,san marcos,san marcos,San Marcos city,30.22,1064.0,169.0,5.0,65327.0,45245,63071,1511.0,50.0,47.0,texas,30.35,222.0,0.13
+460,sugar land,Fort Bend County,735.0,texas,20.0,0.0,158.0,sugar land,sugar land,Sugar Land city,32.38,1075.0,56.0,0.0,89790.0,79096,88485,1289.0,15.0,36.0,texas,34.02,71.0,1.64
+461,temple,Bell County,664.0,texas,105.0,6.0,409.0,temple,temple,Temple city,69.01,1483.0,238.0,5.0,74794.0,66609,74503,2130.0,63.0,65.0,texas,69.42,238.0,0.42
+462,tyler,Smith County,655.0,texas,333.0,4.0,446.0,tyler,tyler,Tyler city,53.86,2745.0,146.0,6.0,106115.0,97171,104991,3337.0,65.0,60.0,texas,54.39,464.0,0.53
+463,victoria,Victoria County,648.0,texas,116.0,4.0,646.0,victoria,victoria,Victoria city,35.48,1680.0,110.0,4.0,68544.0,62676,67106,2436.0,48.0,49.0,texas,35.63,217.0,0.15
+464,waco,McLennan County,651.0,texas,460.0,15.0,957.0,waco,waco,Waco city,88.96,3741.0,191.0,5.0,135997.0,125405,136436,4889.0,117.0,108.0,texas,101.26,690.0,12.3
+465,wichita falls,Wichita County,651.0,texas,165.0,0.0,725.0,wichita falls,wichita falls,Wichita Falls city,72.14,2294.0,238.0,4.0,104706.0,104829,104747,3257.0,78.0,127.0,texas,72.16,374.0,0.02
+466,layton,Davis County,701.0,utah,52.0,11.0,250.0,layton,layton,Layton city,22.0,1397.0,83.0,1.0,77048.0,67821,76691,1730.0,42.0,11.0,utah,22.17,106.0,0.17
+467,lehi,Utah County,724.0,utah,18.0,1.0,142.0,lehi,lehi,Lehi city,26.34,697.0,56.0,0.0,63605.0,48156,62712,895.0,23.0,8.0,utah,26.68,49.0,0.34
+468,logan,Cache County,698.0,utah,23.0,0.0,94.0,logan,logan,Logan city,17.94,547.0,37.0,1.0,51059.0,48456,51115,678.0,23.0,1.0,utah,18.52,48.0,0.59
+469,ogden,Weber County,687.0,utah,317.0,23.0,546.0,ogden,ogden,Ogden city,27.09,2780.0,468.0,6.0,87323.0,83048,87031,3794.0,49.0,91.0,utah,27.1,463.0,0.0
+470,orem,Utah County,696.0,utah,33.0,2.0,191.0,orem,orem,Orem city,18.29,1696.0,129.0,0.0,99045.0,88720,97839,2016.0,14.0,22.0,utah,18.29,69.0,0.0
+471,provo,Utah County,699.0,utah,66.0,5.0,155.0,provo,provo,Provo city,41.67,1764.0,117.0,1.0,117540.0,112917,117335,2036.0,52.0,29.0,utah,44.17,148.0,2.5
+472,salt lake city,0,686.0,utah,861.0,27.0,1884.0,salt lake city,salt lake city,Salt Lake City city,111.11,11924.0,1886.0,10.0,194968.0,186567,200544,15694.0,334.0,508.0,utah,111.73,1713.0,0.62
+473,sandy,Salt Lake County,719.0,utah,101.0,4.0,541.0,sandy,sandy,Sandy city,22.87,2384.0,270.0,3.0,96957.0,90005,96145,3195.0,53.0,60.0,utah,22.88,217.0,0.01
+474,south jordan,0,734.0,utah,30.0,3.0,226.0,south jordan,south jordan,South Jordan city,22.05,1339.0,156.0,0.0,72533.0,51306,70954,1721.0,10.0,5.0,utah,22.13,45.0,0.08
+475,west jordan,Salt Lake County,683.0,utah,203.0,3.0,388.0,west jordan,west jordan,West Jordan city,32.46,2767.0,384.0,3.0,115390.0,104032,113905,3539.0,36.0,53.0,utah,32.46,295.0,0.0
+476,west valley city,0,648.0,utah,480.0,14.0,861.0,west valley city,west valley,West Valley City city,35.56,3830.0,1146.0,8.0,137762.0,129637,136170,5837.0,164.0,150.0,utah,35.61,802.0,0.05
+477,alexandria,Alexandria City,707.6032196000001,virginia,138.0,8.0,163.0,alexandria,alexandria,Alexandria city,15.03,2046.0,273.0,6.0,158256.0,140823,160035,2482.0,16.0,102.0,virginia,15.47,262.0,0.44
+478,hampton,0,648.0,virginia,179.0,18.0,551.0,hampton,hampton,Hampton city,51.41,3481.0,332.0,17.0,134929.0,137343,134669,4364.0,26.0,185.0,virginia,136.3,407.0,84.89
+479,harrisonburg,Rockingham,689.1863882,virginia,89.0,3.0,115.0,harrisonburg,harrisonburg,Harrisonburg city,17.42,739.0,43.0,3.0,53717.0,49015,54215,897.0,24.0,12.0,virginia,17.48,128.0,0.06
+480,newport news,0,636.0,virginia,551.0,46.0,829.0,newport news,newport news,Newport News city,68.71,4211.0,488.0,24.0,181738.0,180921,179388,5528.0,93.0,239.0,virginia,119.48,907.0,50.76
+481,norfolk,0,642.0,virginia,821.0,8.0,1156.0,norfolk,norfolk,Norfolk city,54.12,7318.0,718.0,36.0,245190.0,243027,244703,9192.0,135.0,371.0,virginia,96.35,1363.0,42.23
+482,portsmouth,0,627.0,virginia,400.0,6.0,1160.0,portsmouth,portsmouth,Portsmouth city,33.65,3903.0,384.0,17.0,95100.0,95449,94572,5447.0,36.0,224.0,virginia,46.73,677.0,13.08
+483,virginia beach,0,682.0,virginia,237.0,51.0,754.0,virginia beach,virginia beach,Virginia Beach city,249.02,7577.0,459.0,14.0,454353.0,438921,450435,8790.0,102.0,272.0,virginia,497.34,625.0,248.32
+484,auburn,King County,688.0,washington,192.0,19.0,0.0,auburn,auburn,Auburn city,29.62,2124.0,653.0,3.0,78718.0,70388,80776,0.0,64.0,117.0,washington,29.89,376.0,0.27
+485,bellevue,0,749.0,washington,65.0,20.0,592.0,bellevue,bellevue,Bellevue city,31.97,3274.0,309.0,0.0,143703.0,128294,144444,4175.0,24.0,55.0,washington,36.47,144.0,4.5
+486,bellingham,Whatcom,716.682865,washington,127.0,10.0,552.0,bellingham,bellingham,Bellingham city,27.08,3435.0,164.0,2.0,88652.0,81334,89045,4151.0,56.0,73.0,washington,28.9,258.0,1.82
+487,everett,Snohomish County,679.0,washington,309.0,13.0,869.0,everett,everett,Everett city,33.45,3292.0,938.0,5.0,110040.0,103255,110079,5099.0,52.0,131.0,washington,48.48,497.0,15.03
+488,federal way,King County,674.0,washington,224.0,10.0,679.0,federal way,federal way,Federal Way city,22.26,3716.0,944.0,7.0,98014.0,89518,96690,5339.0,39.0,170.0,washington,22.46,440.0,0.2
+489,kennewick,Benton County,696.0,washington,123.0,25.0,307.0,kennewick,kennewick,Kennewick city,26.93,1732.0,189.0,1.0,81499.0,74440,81607,2228.0,30.0,59.0,washington,28.36,213.0,1.43
+490,kent,King County,686.0,washington,185.0,17.0,948.0,kent,kent,Kent city,28.63,4666.0,1314.0,7.0,128990.0,119002,128458,6928.0,70.0,203.0,washington,29.18,465.0,0.56
+491,kirkland,0,742.0,washington,34.0,6.0,231.0,kirkland,kirkland,Kirkland city,10.79,1724.0,226.0,1.0,88898.0,80825,88630,2181.0,24.0,16.0,washington,11.12,75.0,0.33
+492,marysville,Snohomish County,682.0,washington,86.0,5.0,292.0,marysville,marysville,Marysville city,20.68,1206.0,301.0,3.0,68950.0,60180,68864,1799.0,32.0,30.0,washington,20.94,151.0,0.26
+493,olympia,Thurston County,709.0,washington,146.0,6.0,371.0,olympia,olympia,Olympia city,17.82,1596.0,204.0,1.0,51923.0,46950,51609,2171.0,42.0,67.0,washington,19.68,256.0,1.86
+494,pasco,Franklin County,682.0,washington,89.0,16.0,255.0,pasco,pasco,Pasco city,30.5,1009.0,167.0,1.0,72146.0,62939,73013,1431.0,21.0,43.0,washington,34.07,154.0,3.58
+495,redmond,0,755.0,washington,50.0,2.0,271.0,redmond,redmond,Redmond city,16.28,1695.0,111.0,2.0,63889.0,54504,64291,2077.0,11.0,33.0,washington,16.95,96.0,0.66
+496,renton,King County,713.0,washington,167.0,14.0,607.0,renton,renton,Renton city,23.12,3640.0,881.0,3.0,102470.0,92295,101379,5128.0,45.0,113.0,washington,23.54,328.0,0.42
+497,richland,Benton,721.3604752,washington,69.0,5.0,184.0,richland,richland,Richland city,35.72,1086.0,51.0,0.0,56151.0,48483,56243,1321.0,19.0,14.0,washington,39.11,102.0,3.39
+498,sammamish,0,765.0,washington,11.0,7.0,91.0,sammamish,sammamish,Sammamish city,18.22,312.0,39.0,3.0,64857.0,57622,64548,442.0,0.0,1.0,washington,18.47,0.0,0.25
+499,seattle,0,722.0,washington,2756.0,149.0,7805.0,seattle,seattle,Seattle city,83.94,26499.0,3630.0,27.0,721365.0,610333,724745,37934.0,266.0,1515.0,washington,142.65,4564.0,58.71
+500,spokane,0,689.0,washington,887.0,50.0,2221.0,spokane,spokane,Spokane city,59.25,11739.0,1737.0,6.0,217066.0,209488,217108,15697.0,238.0,229.0,washington,60.02,1360.0,0.77
+501,spokane,Spokane County,689.0,washington,121.0,5.0,606.0,spokane valley,spokane valley,Spokane Valley city,37.77,3376.0,435.0,2.0,97430.0,90030,97847,4417.0,48.0,29.0,washington,38.06,200.0,0.29
+502,tacoma,0,671.0,washington,1153.0,63.0,2073.0,tacoma,tacoma,Tacoma city,49.72,7742.0,2086.0,10.0,213504.0,198204,213418,11901.0,171.0,403.0,washington,62.34,1737.0,12.62
+503,vancouver,0,689.0,washington,367.0,52.0,749.0,vancouver,vancouver,Vancouver city,46.46,3657.0,1063.0,9.0,176884.0,162893,175673,5469.0,154.0,122.0,washington,49.85,652.0,3.4
+504,yakima,Yakima County,677.0,washington,360.0,15.0,901.0,yakima,yakima,Yakima city,27.18,2841.0,564.0,13.0,94375.0,91651,93667,4306.0,70.0,150.0,washington,27.69,593.0,0.51
+505,charleston,Kanawha,671.6212576,west virginia,421.0,26.0,736.0,charleston,charleston,Charleston city,31.52,2427.0,353.0,10.0,48788.0,51277,47929,3516.0,57.0,84.0,west virginia,32.66,572.0,1.14
+506,appleton,Outagamie,726.4867948,wisconsin,146.0,15.0,136.0,appleton,appleton,Appleton city,24.33,996.0,23.0,1.0,74660.0,72739,74653,1155.0,39.0,17.0,wisconsin,24.82,203.0,0.49
+507,madison,Dane,725.3928654,wisconsin,640.0,10.0,927.0,madison,madison,Madison city,76.79,5452.0,432.0,11.0,255850.0,233637,255214,6811.0,95.0,212.0,wisconsin,94.03,958.0,17.24
+508,milwaukee,0,643.0,wisconsin,6036.0,313.0,5518.0,milwaukee,milwaukee,Milwaukee city,96.12,11548.0,5503.0,118.0,595168.0,595141,595351,22569.0,434.0,2919.0,wisconsin,96.8,9507.0,0.68
+509,waukesha,Waukesha,724.9715672,wisconsin,51.0,2.0,126.0,waukesha,waukesha,Waukesha city,24.81,845.0,36.0,0.0,72565.0,71223,72489,1007.0,43.0,25.0,wisconsin,25.06,119.0,0.26
