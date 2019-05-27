@@ -7,11 +7,12 @@ from headers_cleanup import HEADERS_CHANGE
 
 
 class Census(DataTable):
-  """Table of Census data."""
+  """ Table of Census data. """
 
   @staticmethod
   def read(file_path):
-    """Census data is stored as CSV.
+    """
+    Census data is stored as CSV.
 
     Args:
       file_path: String path to file.
