@@ -112,10 +112,14 @@ class DataTable(ABC):
       # Assume cities with the same name are the same city.
       return 0
     # Is one city name prefix of the other?  Then we will perform fuzzy matching
-    # using population as a sanity check.  If population information is not
-    # available, city names must match in order for key1 and key2 to match.
-    if (key1.population and key2.population and
-        (key1.city.startswith(key2.city) or key2.city.startswith(key1.city))):
+    # using population as a sanity check.
+    if (key1.city.startswith(key2.city) or key2.city.startswith(key1.city)):
+      if not key1.population or not key2.population:
+        # We can't perform sanity check with population.  Let's experiment with
+        # being generous and allow the cities to match anyway.
+        print('assume match key1: ', key1, 'key2: ', key2)
+        return 0
+
       # Might be the same city.
       # Sanity check that populations are within 5% of each other.
       population_percentage_difference = round(
@@ -133,6 +137,7 @@ class DataTable(ABC):
       # the same prefix, have about the same population.
       return 0
     if key1.city < key2.city:
+      print('Will pop off key1: ', key1, 'key2: ', key2)
       return -1
     if key1.city > key2.city:
       return 1

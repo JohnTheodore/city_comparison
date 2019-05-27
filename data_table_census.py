@@ -29,7 +29,8 @@ class Census(DataTable):
 
       def parse_city_and_state(row):
         city, state = row['Geography.2'].lower().split(', ')
-        city = city.rstrip(' city')
+        if city.endswith(' city'):
+          city = city[:-5]
         return pandas.Series([city, state])
 
       data[['city', 'state']] = data.apply(parse_city_and_state, axis=1)
