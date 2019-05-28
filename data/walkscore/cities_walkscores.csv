@@ -1,0 +1,770 @@
+city,state,latitude,longitude,reverse_address,walkscore,bikescore,transitscore
+new york,new york,40.7127753,-74.0059728,"11 Centre St, New York, NY 10007, USA",98,89,100
+los angeles,california,34.0522342,-118.24368490000002,"106 W 1st St, Los Angeles, CA 90012, USA",93,85,100
+chicago,illinois,41.8781136,-87.62979820000001,"55 W Jackson Blvd, Chicago, IL 60604, USA",99,85,100
+houston,texas,29.7604267,-95.36980279999999,"998 Bagby St, Houston, TX 77002, USA",71,78,94
+phoenix,arizona,33.4483771,-112.07403729999999,"22 W Washington St, Phoenix, AZ 85004, USA",87,63,65
+philadelphia,pennsylvania,39.9525839,-75.1652215,"1500 PA-3, Philadelphia, PA 19102, USA",99,78,100
+san antonio,texas,29.4241219,-98.4936282,"cm morales annex bldg.old national hi-way Binan Laguna, San Antonio, TX 78205, United States",96,71,92
+san diego,california,32.715738,-117.1610838,"998 Fourth Ave, San Diego, CA 92101, USA",99,73,83
+dallas,texas,32.7766642,-96.7969879,"1502 Marilla St, Dallas, TX 75201, USA",92,69,86
+san jose,california,37.338208200000004,-121.88632859999998,"195 E Santa Clara St, San Jose, CA 95112, USA",93,92,75
+austin,texas,30.267153000000004,-97.7430608,"472 Congress Ave, Austin, TX 78701, USA",97,92,72
+jacksonville,florida,30.3321838,-81.65565099999998,"720n N Ocean St, Jacksonville, FL 32202, USA",88,65,
+san francisco,california,37.7749295,-122.4194155,"Unnamed Road, San Francisco, CA 94102, USA",99,97,100
+columbus,ohio,39.9611755,-82.99879419999998,"Ohio State Capitol, 1 Capitol Square, Columbus, OH 43215, USA",80,84,73
+fort worth,texas,32.7554883,-97.3307658,"401 Commerce St, Fort Worth, TX 76102, USA",87,92,66
+indianapolis city (balance),indiana,39.768403,-86.158068,"Intl Airport - Zone 1 Ground Transportation Center, Indianapolis, IN 46204, USA",96,97,65
+charlotte,north carolina,35.2270869,-80.8431267,"106 S Tryon St, Charlotte, NC 28280, USA",94,62,
+seattle,washington,47.6062095,-122.33207079999998,"Fourth and Madison Building, 909 5th Ave, Seattle, WA 98164, USA",98,69,100
+denver,colorado,39.739235799999996,-104.990251,"1437 Bannock St, Denver, CO 80202, USA",93,94,91
+washington,district of columbia,38.9071923,-77.03687070000001,"1301 Bataan St NW, Washington, DC 20036, USA",98,91,100
+boston,massachusetts,42.360082500000004,-71.0588801,"1 Cambridge St, Boston, MA 02114, USA",97,83,100
+el paso,texas,31.7618778,-106.48502169999999,"300 N Campbell St, El Paso, TX 79901, USA",89,65,
+detroit,michigan,42.331427000000005,-83.0457538,"First National Building, 660 Woodward Ave, Detroit, MI 48226, USA",99,73,75
+nashville-davidson metropolitan government (balance),tennessee,36.1626638,-86.78160159999999,"201 6th Ave N, Nashville, TN 37219, USA",96,64,74
+memphis,tennessee,35.1495343,-90.0489801,"157 Poplar Ave, Memphis, TN 38103, USA",86,82,
+portland,oregon,45.5154586,-122.67934609999999,"SW 5th & Madison, SW 5th Ave, Portland, OR 97204, USA",97,94,98
+oklahoma city,oklahoma,35.4675602,-97.5164276,"89 N Robinson Ave, Oklahoma City, OK 73102, USA",71,88,56
+las vegas,nevada,36.169941200000004,-115.13982959999998,"160 Las Vegas Blvd N, Las Vegas, NV 89101, USA",90,64,68
+louisville/jefferson county metro government (balance),kentucky,38.252664700000004,-85.7584557,"409 S 5th St, Louisville, KY 40202, USA",96,74,64
+baltimore,maryland,39.2903848,-76.6121893,"201 E Fayette St, Baltimore, MD 21202, USA",98,86,91
+milwaukee,wisconsin,43.0389025,-87.9064736,"400 E Wisconsin Ave, Milwaukee, WI 53202, USA",97,83,69
+albuquerque,new mexico,35.0843859,-106.65042199999999,"301 Central Ave NW, Albuquerque, NM 87102, USA",95,89,58
+tucson,arizona,32.2226066,-110.9747108,"255 W Alameda St, Tucson, AZ 85701, USA",78,99,71
+fresno,california,36.737798100000006,-119.78712469999999,"2323 Mariposa St, Fresno, CA 93721, USA",88,83,54
+sacramento,california,38.5815719,-121.49439960000001,"907 9th St, Sacramento, CA 95814, USA",94,98,69
+mesa,arizona,33.4151843,-111.83147240000001,"4 E Main St, Mesa, AZ 85201, USA",74,88,55
+kansas city,missouri,39.0997265,-94.5785667,"1200 Oak St, Kansas City, MO 64106, USA",90,76,74
+atlanta,georgia,33.7489954,-84.3879824,"Georgia State Capitol, Atlanta, GA 30334, USA",93,61,83
+long beach,california,33.770050399999995,-118.1937395,"249299 Pacific Avenue, Long Beach, CA 90802, USA",97,85,
+omaha,nebraska,41.2565369,-95.93450340000001,"14th & Harney SE, Omaha, NE 68102, USA",93,83,
+raleigh,north carolina,35.7795897,-78.6381787,"81 S Wilmington St, Raleigh, NC 27603, USA",96,92,78
+colorado springs,colorado,38.8338816,-104.82136340000001,"200 E Pikes Peak Ave, Colorado Springs, CO 80903, USA",85,88,49
+miami,florida,25.7616798,-80.1917902,"1213 Brickell Ave, Miami, FL 33131, USA",96,83,88
+virginia beach,virginia,36.8529263,-75.97798499999998,"2412 Pacific Ave, Virginia Beach, VA 23451, USA",78,74,45
+oakland,california,37.8043637,-122.27111370000002,"1395 Broadway, Oakland, CA 94612, USA",99,91,88
+minneapolis,minnesota,44.977753,-93.2650108,"Municipal Building, 350 S 5th St, Minneapolis, MN 55415, USA",97,86,96
+tulsa,oklahoma,36.1539816,-95.992775,"199 South Boulder Ave W, Tulsa, OK 74103, USA",75,75,48
+arlington,texas,32.735687,-97.1080656,"101 S Center St, Arlington, TX 76010, USA",69,68,
+new orleans,louisiana,29.95106579999999,-90.0715323,"339 Carondelet St, New Orleans, LA 70130, USA",95,88,
+wichita,kansas,37.68717609999999,-97.330053,"128 N Santa Fe St, Wichita, KS 67202, USA",75,66,
+cleveland,ohio,41.499320000000004,-81.6943605,"2 W Roadway, Cleveland, OH 44113, USA",95,62,84
+tampa,florida,27.950575,-82.4571776,"509 E Zack St, Tampa, FL 33602, USA",85,71,68
+bakersfield,california,35.3732921,-119.0187125,"1401-1499 Truxtun Ave, Bakersfield, CA 93301, USA",77,62,51
+aurora,colorado,39.729431899999994,-104.8319195,"899 Vaughn St, Aurora, CO 80011, USA",33,69,48
+anaheim,california,33.8365932,-117.91430120000001,"255 Anaheim Blvd, Anaheim, CA 92805, USA",89,64,48
+urban honolulu cdp,hawaii,21.3069444,-157.8583333,"364 S King St, Honolulu, HI 96813, USA",95,64,79
+santa ana,california,33.7454725,-117.867653,"1st-Main, Santa Ana, CA 92701, USA",99,61,51
+riverside,california,33.9806005,-117.3754942,"3900 Main St, Riverside, CA 92501, USA",86,63,54
+corpus christi,texas,27.800582799999997,-97.396381,"I-37, Corpus Christi, TX 78401, USA",52,59,47
+lexington-fayette urban county,kentucky,38.040583700000006,-84.50371640000002,"404 S Limestone, Lexington, KY 40508, USA",85,85,54
+stockton,california,37.9577016,-121.29077959999998,"510 N El Dorado St, Stockton, CA 95202, USA",91,67,51
+st. louis,missouri,38.6270025,-90.1994042,"City Hall, 1200 Market St, St. Louis, MO 63103, USA",87,61,74
+st. paul,minnesota,44.953702899999996,-93.0899578,"594 Wacouta St, St Paul, MN 55101, USA",88,74,75
+henderson,nevada,36.0395247,-114.9817213,"116 E Lake Mead Pkwy, Henderson, NV 89015, USA",72,71,40
+pittsburgh,pennsylvania,40.44062479999999,-79.9958864,"572-598 Grant St, Pittsburgh, PA 15219, USA",98,77,100
+cincinnati,ohio,39.103118200000004,-84.5120196,"609 Walnut St, Cincinnati, OH 45202, USA",98,65,83
+anchorage municipality,alaska,61.2180556,-149.90027780000003,"939 W 5th Ave, Anchorage, AK 99501, USA",66,77,52
+greensboro,north carolina,36.072635399999996,-79.79197540000001,"216 W Market St, Greensboro, NC 27401, USA",88,61,
+plano,texas,33.0198431,-96.6988856,"1508 K Ave, Plano, TX 75074, USA",88,77,54
+newark,new jersey,40.735657,-74.1723667,"Broad St at Market St, Newark, NJ 07102, USA",99,76,97
+lincoln,nebraska,40.813615999999996,-96.7025955,"1273 P St, Lincoln, NE 68508, USA",96,90,
+orlando,florida,28.5383355,-81.3792365,"2 W South St, Orlando, FL 32801, USA",90,76,68
+irvine,california,33.6845673,-117.82650490000002,"Harvard-Alton, Irvine, CA, USA",60,82,39
+toledo,ohio,41.6528052,-83.53786740000001,"244 N Erie St, Toledo, OH 43604, USA",91,66,
+jersey city,new jersey,40.7177545,-74.0431435,"280 Grove St, Jersey City, NJ 07302, USA",99,80,84
+chula vista,california,32.6400541,-117.0841955,"302 4th Ave, Chula Vista, CA 91910, USA",80,63,50
+durham,north carolina,35.99403289999999,-78.898619,"201 E Main St, Durham, NC 27701, USA",91,71,61
+fort wayne,indiana,41.079273,-85.13935129999999,"803 S Calhoun St, Fort Wayne, IN 46802, USA",76,83,47
+st. petersburg,florida,27.767600800000004,-82.64029149999998,"341 5th St S, St. Petersburg, FL 33701, USA",91,91,57
+laredo,texas,27.5035613,-99.50755190000001,"319 Convent Ave, Laredo, TX 78040, USA",91,65,
+buffalo,new york,42.88644679999999,-78.8783689,"5 Niagara Square, Buffalo, NY 14202, USA",93,88,73
+madison,wisconsin,43.07305170000001,-89.4012302,"Grainger Hall of Business Administration, Madison, WI 53715, USA",93,90,64
+lubbock,texas,33.5778631,-101.85516650000001,"Ave. Q & 19th, Lubbock, TX 79411, USA",66,61,38
+chandler,arizona,33.3061605,-111.8412502,"7 E Chandler Blvd, Chandler, AZ 85225, USA",84,65,38
+scottsdale,arizona,33.494170399999994,-111.9260519,"4017 N Scottsdale Rd, Scottsdale, AZ 85251, USA",75,87,55
+reno,nevada,39.529632899999996,-119.8138027,"354 N Virginia St, Reno, NV 89501, USA",91,73,65
+glendale,arizona,33.538652299999995,-112.18598659999999,"5900 W Glendale Ave, Glendale, AZ 85301, USA",85,70,40
+norfolk,virginia,36.8507689,-76.28587259999998,"457 St Pauls Blvd, Norfolk, VA 23510, USA",81,58,63
+winston-salem,north carolina,36.09985959999999,-80.24421600000001,"100 5th St E, Winston-Salem, NC 27101, USA",83,74,
+north las vegas,nevada,36.1988592,-115.1175013,"2200 Civic Center Dr, North Las Vegas, NV 89030, USA",65,61,46
+gilbert town,arizona,33.3528264,-111.789027,"133 N Gilbert Rd, Gilbert, AZ 85234, USA",63,71,33
+chesapeake,virginia,36.7682088,-76.2874927,"Pvt 7 Rd, Chesapeake, VA 23320, USA",15,44,20
+irving,texas,32.814017699999994,-96.9488945,"301 W Irving Blvd, Irving, TX 75060, USA",74,62,51
+hialeah,florida,25.8575963,-80.2781057,"228 E 39th St, Hialeah, FL 33013, USA",75,59,42
+garland,texas,32.912624,-96.6388833,"620-698 Main St, Garland, TX 75040, USA",71,57,55
+fremont,california,37.548269700000006,-121.98857190000001,"4025 Mowry Ave, Fremont, CA 94538, USA",82,75,47
+richmond,virginia,37.540724600000004,-77.4360481,"703 E Grace St, Richmond, VA 23219, USA",93,71,
+boise city,idaho,43.6150186,-116.2023137,"625 W Main St, Boise, ID 83702, USA",87,96,
+baton rouge,louisiana,30.451467699999995,-91.1871466,"401 Main St, Baton Rouge, LA 70802, USA",80,68,
+des moines,iowa,41.5868353,-93.6249593,"Equitable Building, 604 Locust St, Des Moines, IA 50309, USA",90,66,
+spokane,washington,47.6587802,-117.42604650000001,"920 W Riverside Ave, Spokane, WA 99201, USA",95,62,71
+san bernardino,california,34.1083449,-117.2897652,"300-312 W 5th St, San Bernardino, CA 92401, USA",78,62,54
+modesto,california,37.63909719999999,-120.99687820000001,"781 11th St, Modesto, CA 95354, USA",81,63,55
+tacoma,washington,47.252876799999996,-122.4442906,"591 S 11th St, Tacoma, WA 98405, USA",93,55,
+fontana,california,34.0922335,-117.435048,"16932 Merrill Ave, Fontana, CA 92335, USA",82,60,53
+santa clarita,california,34.3916641,-118.54258600000001,"25128 Newhall Ave, Santa Clarita, CA 91321, USA",22,74,
+birmingham,alabama,33.5185892,-86.8103567,"595 19th St N, Birmingham, AL 35203, USA",85,64,56
+oxnard,california,34.1975048,-119.17705159999998,"108 E 5th St, Oxnard, CA 93030, USA",92,63,
+fayetteville,north carolina,35.0526641,-78.87835849999998,"2 Market Square, Fayetteville, NC 28301, USA",71,65,
+rochester,new york,43.15657789999999,-77.6088465,"126 St Paul St, Rochester, NY 14604, USA",91,67,75
+moreno valley,california,33.9424658,-117.2296717,"24805 Hemlock Ave, Moreno Valley, CA 92557, USA",63,49,35
+glendale,california,34.1425078,-118.255075,"100 E Colorado St, Glendale, CA 91204, USA",95,63,62
+yonkers,new york,40.9312099,-73.89874689999998,"75 S Broadway, Yonkers, NY 10701, USA",97,51,64
+huntington beach,california,33.6594835,-117.99880259999999,"310 Orange Ave, Huntington Beach, CA 92648, USA",87,73,37
+aurora,illinois,41.7605849,-88.32007150000003,"299 W Galena Blvd, Aurora, IL 60506, USA",82,83,40
+salt lake city,utah,40.760779299999996,-111.89104740000002,"395 Main St, Salt Lake City, UT 84111, USA",80,93,80
+amarillo,texas,35.2219971,-101.8312969,"800 N Fillmore St, Amarillo, TX 79107, USA",74,61,
+montgomery,alabama,32.3792233,-86.3077368,"103 N Perry St, Montgomery, AL 36104, USA",69,62,
+grand rapids,michigan,42.9633599,-85.6680863,"1 Monroe Center St NW, Grand Rapids, MI 49503, USA",96,72,
+little rock,arkansas,34.7464809,-92.2895948,"112-172 State Capitol, Little Rock, AR 72201, USA",57,52,38
+akron,ohio,41.081444700000006,-81.51900529999998,"2 W Bowery St, Akron, OH 44308, USA",75,71,
+augusta-richmond county consolidated government (balance),georgia,33.4709529,-81.9618655,"535 Telfair St, Augusta, GA 30901, USA",67,64,
+huntsville,alabama,34.730368799999994,-86.5861037,"101-199 Spring St SW, Huntsville, AL 35801, USA",74,82,29
+columbus,georgia,32.4609764,-84.9877094,"801-803 Veterans Pkwy, Columbus, GA 31901, USA",76,73,
+grand prairie,texas,32.7459645,-96.9977846,"500 E Main St, Grand Prairie, TX 75050, USA",74,60,
+shreveport,louisiana,32.5251516,-93.75017890000001,"4450 Hilry Huckaby III Ave, Shreveport, LA 71107, USA",33,41,
+overland park,kansas,38.9822282,-94.6707917,"7319 W 81st St, Overland Park, KS 66204, USA",84,55,25
+tallahassee,florida,30.4382559,-84.28073289999998,"198-100, FL-20, Tallahassee, FL 32301, United States",74,69,
+mobile,alabama,30.6953657,-88.0398912,"1 St Louis St, Mobile, AL 36602, USA",52,57,
+port st. lucie,florida,27.273049199999996,-80.3582261,"3961 SW Port St Lucie Blvd, Port St. Lucie, FL 34953, USA",51,48,
+knoxville,tennessee,35.96063839999999,-83.9207392,"800 Lee Hwy, Knoxville, TN 37902, USA",80,67,
+worcester,massachusetts,42.262593200000005,-71.8022934,"Worcester City Hall, 455 Main St, Worcester, MA 01608, USA",93,66,58
+tempe,arizona,33.4255104,-111.9400054,"501 S Mill Ave, Tempe, AZ 85281, USA",83,93,70
+cape coral,florida,26.5628537,-81.94953309999998,"1207 Cape Coral Pkwy E, Cape Coral, FL 33904, USA",75,65,
+brownsville,texas,25.9017472,-97.4974838,"1157-1199 E Washington St, Brownsville, TX 78520, USA",91,69,
+mckinney,texas,33.197246500000006,-96.6397822,"524 S Central Expy, McKinney, TX 75070, USA",63,45,
+providence,rhode island,41.8239891,-71.4128343,"25 Dorrance St, Providence, RI 02903, USA",85,83,77
+fort lauderdale,florida,26.122438600000002,-80.13731740000001,"599 E Broward Blvd, Fort Lauderdale, FL 33301, USA",94,57,59
+newport news,virginia,37.087082099999996,-76.4730122,"725 Town Center Dr, Newport News, VA 23606, USA",49,58,33
+chattanooga,tennessee,35.0456297,-85.3096801,"10 W M.L.K. Blvd, Chattanooga, TN 37402, USA",84,96,
+rancho cucamonga,california,34.10639889999999,-117.5931084,"9719 E Foothill Blvd, Rancho Cucamonga, CA 91730, USA",71,60,34
+frisco,texas,33.1506744,-96.8236116,"7026 Main St, Frisco, TX 75033, USA",76,56,
+sioux falls,south dakota,43.5473028,-96.72833299999999,"101 S Main Ave, Sioux Falls, SD 57104, USA",90,84,
+oceanside,california,33.1958696,-117.3794834,"500 Mission Ave, Oceanside, CA 92054, USA",96,66,52
+ontario,california,34.0633443,-117.65088759999999,"100 N Euclid Ave, Ontario, CA 91762, USA",83,60,36
+vancouver,washington,45.6272259,-122.6727305,"801 Washington St, Vancouver, WA 98660, USA",76,83,
+santa rosa,california,38.440428999999995,-122.7140548,"570 4th St, Santa Rosa, CA 95401, USA",99,77,49
+garden grove,california,33.774269200000006,-117.9379952,"12999 S Euclid St, Garden Grove, CA 92843, USA",76,58,33
+elk grove,california,38.4087993,-121.37161780000001,"8896 Elk Grove Blvd, Elk Grove, CA 95624, USA",83,70,
+pembroke pines,florida,26.007765,-80.2962555,"11230 Pines Blvd, Pembroke Pines, FL 33026, USA",69,68,
+salem,oregon,44.9428975,-123.03509629999999,"400 High St NE, Salem, OR 97301, USA",89,93,58
+eugene,oregon,44.0520691,-123.08675359999998,"405 E 8th Ave, Eugene, OR 97401, USA",92,99,63
+peoria,arizona,33.5805955,-112.23737790000001,"83rd Av & Washington St, Peoria, AZ 85345, USA",72,53,36
+corona,california,33.8752935,-117.56643840000001,"114 E 6th St, Corona, CA 92879, USA",83,59,40
+springfield,missouri,37.20895720000001,-93.2922989,"118122 Park Central Square, Springfield, MO 65806, USA",90,84,
+jackson,mississippi,32.298757300000005,-90.1848103,"222-298 E Pearl St, Jackson, MS 39201, USA",55,60,
+cary town,north carolina,35.791540000000005,-78.78111690000001,"500 N Academy St, Cary, NC 27513, USA",72,64,43
+fort collins,colorado,40.5852602,-105.084423,"203 S Sherwood St, Fort Collins, CO 80521, USA",89,100,49
+hayward,california,37.6688205,-122.08079640000001,"22898 CA-185, Hayward, CA 94541, USA",90,67,
+lancaster,california,34.6867846,-118.1541632,"1304 W Ave J, Lancaster, CA 93534, USA",60,56,
+alexandria,virginia,38.804835499999996,-77.0469214,"628 King St, Alexandria, VA 22314, USA",96,69,66
+salinas,california,36.6777372,-121.6555013,"1 Main St, Salinas, CA 93901, USA",73,61,
+palmdale,california,34.5794343,-118.11646129999998,"700 Sierra Hwy, Palmdale, CA 93550, USA",79,64,
+lakewood,colorado,39.7047095,-105.08137340000002,"670 S Wadsworth Blvd, Lakewood, CO 80226, USA",83,80,45
+springfield,massachusetts,42.1014831,-72.589811,"36 Court St, Springfield, MA 01103, USA",93,79,64
+sunnyvale,california,37.368829999999996,-122.03634960000001,"390 W El Camino Real, Sunnyvale, CA 94087, USA",88,75,48
+hollywood,florida,26.0112014,-80.1494901,"2100 FL-820, Hollywood, FL 33020, USA",95,69,43
+pasadena,texas,29.6910625,-95.2091006,"1221 Main St, Pasadena, TX 77506, USA",72,60,
+clarksville,tennessee,36.5297706,-87.3594528,"299 N 2nd St, Clarksville, TN 37040, USA",77,47,
+pomona,california,34.055103,-117.7499909,"Garey Ave and Mission S, Pomona, CA 91766, USA",90,60,52
+kansas city,kansas,39.11553139999999,-94.6267873,"On Minnesota Ave at 7th Street WB, Kansas City, KS 66101, USA",84,58,40
+macon-bibb county,georgia,32.8406946,-83.6324022,"895 GA-49, Macon, GA 31201, USA",63,45,
+escondido,california,33.1192068,-117.086421,"970 W Valley Parkway #1006, Escondido, CA 92025, United States",42,36,31
+paterson,new jersey,40.916765399999996,-74.17181099999998,"5 Colt St, Paterson, NJ 07505, USA",99,56,63
+joliet,illinois,41.525031,-88.0817251,"7 US-6, Joliet, IL 60432, USA",86,77,46
+naperville,illinois,41.7508391,-88.15353520000001,"1052 Alder Ln, Naperville, IL 60540, USA",52,57,19
+rockford,illinois,42.2711311,-89.09399520000001,"203 W State St, Rockford, IL 61101, USA",88,81,
+torrance,california,33.835849200000006,-118.34062879999999,"3221 Torrance Blvd, Torrance, CA 90503, USA",68,65,44
+bridgeport,connecticut,41.1792258,-73.18943840000001,"108 Fairfield Ave, Bridgeport, CT 06604, USA",89,70,
+savannah,georgia,32.0808989,-81.09120300000001,"2 Bull St, Savannah, GA 31401, USA",88,76,
+killeen,texas,31.117119399999996,-97.7277959,"325 E Veterans Memorial Blvd, Killeen, TX 76541, USA",78,63,
+bellevue,washington,47.6101497,-122.2015159,"1-5 Bellevue Way SE, Bellevue, WA 98004, USA",92,52,56
+mesquite,texas,32.76679550000001,-96.5991593,"100 S Galloway Ave, Mesquite, TX 75149, USA",68,61,
+syracuse,new york,43.0481221,-76.14742439999998,"349-399 US-11, Syracuse, NY 13202, USA",93,74,
+mcallen,texas,26.203407100000003,-98.2300124,"1630 N 10th St, McAllen, TX 78501, USA",82,63,
+pasadena,california,34.1477849,-118.1445155,"279 E Holly St, Pasadena, CA 91101, USA",93,75,
+orange,california,33.7879139,-117.8531007,"1 Plaza Square, Orange, CA 92866, USA",89,63,45
+fullerton,california,33.8703645,-117.9242123,"162-100 El Camino Real, Fullerton, CA 92832, USA",94,60,49
+dayton,ohio,39.758947799999994,-84.1916069,"20 S Main St, Dayton, OH 45402, USA",89,73,
+miramar,florida,25.9860762,-80.30356019999998,"Miramar Blvd, Miramar, FL 33025, USA",48,71,34
+olathe,kansas,38.8813958,-94.8191285,"126 S Cherry St, Olathe, KS 66061, USA",63,59,18
+thornton,colorado,39.8680412,-104.9719243,"9451 Dorothy Blvd, Thornton, CO 80229, USA",52,43,
+waco,texas,31.549333,-97.1466695,"1724 W Waco Dr, Waco, TX 76701, USA",68,56,
+murfreesboro,tennessee,35.8456213,-86.39027,"120 E Main St, Murfreesboro, TN 37130, USA",79,71,
+denton,texas,33.2148412,-97.1330683,"110 W Hickory St, Denton, TX 76201, USA",85,69,
+west valley city,utah,40.691613200000006,-112.00105009999999,"3701 Atlas Way, West Valley City, UT 84120, USA",37,49,37
+midland,texas,31.9973456,-102.0779146,"349 S Big Spring St, Midland, TX 79701, USA",66,58,
+carrollton,texas,32.975641499999995,-96.88996359999999,"1754 E Jackson Rd, Carrollton, TX 75006, USA",77,50,
+roseville,california,38.752123499999996,-121.28800590000002,"301-307 Washington Blvd, Roseville, CA 95678, USA",74,69,33
+warren,michigan,42.5144566,-83.01465259999998,"11209 Common Rd, Warren, MI 48093, USA",44,47,
+charleston,south carolina,32.776474900000004,-79.93105120000001,"84 Broad St, Charleston, SC 29401, USA",93,74,
+hampton,virginia,37.0298687,-76.34522179999998,"364-398 N King St, Hampton, VA 23669, USA",65,65,48
+surprise,arizona,33.62923370000001,-112.36792790000001,"16000 N Civic Center Plaza, Surprise, AZ 85374, USA",10,38,
+columbia,south carolina,34.0007104,-81.0348144,"Columbia international airport, Columbia, SC 29201, USA",83,61,
+coral springs,florida,26.271192,-80.27060440000001,"10800 W Sample Rd, Coral Springs, FL 33065, USA",40,50,
+visalia,california,36.330228399999996,-119.2920585,"22223 Carson Ave, Visalia, CA 93291, USA",87,62,
+sterling heights,michigan,42.5803122,-83.0302033,"Van Dyke @ 17 Mile Rd, Sterling Heights, MI, USA",44,49,
+gainesville,florida,29.6516344,-82.32482619999998,"1-39 S Main St, Gainesville, FL 32601, USA",89,98,
+cedar rapids,iowa,41.9778795,-91.66562320000001,"310 3rd Ave SE, Cedar Rapids, IA 52401, USA",75,86,
+new haven,connecticut,41.308274,-72.9278835,"285 College St, New Haven, CT 06510, USA",94,95,
+stamford,connecticut,41.0534302,-73.53873409999999,"130 Atlantic St, Stamford, CT 06901, USA",94,57,
+elizabeth,new jersey,40.6639916,-74.2107006,"1089 E Jersey St, Elizabeth, NJ 07201, USA",97,62,59
+concord,california,37.9779776,-122.0310733,"2349 Willow Pass Rd, Concord, CA 94520, USA",94,63,53
+thousand oaks,california,34.1705609,-118.83759369999999,"2945 Thousand Oaks Blvd, Thousand Oaks, CA 91362, USA",78,54,
+kent,washington,47.380933500000005,-122.2348432,"221 W Gowe St, Kent, WA 98032, USA",92,73,54
+santa clara,california,37.354107899999995,-121.9552356,"1675 Lincoln St, Santa Clara, CA 95050, USA",64,77,50
+simi valley,california,34.2694474,-118.78148200000001,"864 Pacific Ave, Simi Valley, CA 93065, USA",76,83,
+lafayette,louisiana,30.2240897,-92.0198427,"200 W Vermilion St, Lafayette, LA 70501, USA",86,68,
+topeka,kansas,39.0473451,-95.6751576,"900 S Kansas Ave, Topeka, KS 66612, USA",73,86,45
+athens-clarke county unified government (balance),georgia,33.9596701,-83.37639300000001,"301 College Ave, Athens, GA 30601, USA",82,78,
+round rock,texas,30.508255100000003,-97.678896,"106 S Mays St, Round Rock, TX 78664, USA",65,58,
+hartford,connecticut,41.76580429999999,-72.6733723,"P O Box 341193, Hartford, CT 06103, United States",94,70,
+norman,oklahoma,35.222566799999996,-97.4394777,"328 E Main St, Norman, OK 73069, USA",84,92,
+victorville,california,34.5362184,-117.29276409999999,"15655 7th St, Victorville, CA 92395, USA",61,43,28
+fargo,north dakota,46.8771863,-96.78980340000001,"631 1st Ave N, Fargo, ND 58102, USA",96,65,
+berkeley,california,37.87159260000001,-122.272747,"University Ave. at Martin Luther King Jr. Way, Berkeley, CA 94704, USA",96,99,70
+vallejo,california,38.1040864,-122.25663670000002,"901 Marin St, Vallejo, CA 94590, USA",87,64,
+abilene,texas,32.4487364,-99.73314390000002,"100-148 S Pine St, Abilene, TX 79601, USA",51,53,
+columbia,missouri,38.95170529999999,-92.33407240000001,"219 E Broadway, Columbia, MO 65203, USA",94,76,
+ann arbor,michigan,42.2808256,-83.7430378,"425 E Washington St, Ann Arbor, MI 48104, USA",97,88,74
+allentown,pennsylvania,40.6022939,-75.4714098,"H495010, Allentown, PA, United States",94,53,46
+pearland,texas,29.5635666,-95.2860474,"9707 E Broadway St, Pearland, TX 77584, USA",66,57,
+beaumont,texas,30.080174,-94.12655620000001,"88 Jaguar Dr, Beaumont, TX 77702, USA",50,56,
+wilmington,north carolina,34.2103894,-77.88681170000001,"4603 Oleander Dr, Wilmington, NC 28403, USA",64,59,25
+evansville,indiana,37.9715592,-87.5710898,"2 SE 4th St, Evansville, IN 47708, USA",65,68,
+arvada,colorado,39.802764399999994,-105.08748419999999,"8101 Ralston Rd, Arvada, CO 80002, USA",66,77,49
+provo,utah,40.233843799999995,-111.6585337,"3 N University Ave, Provo, UT 84601, USA",90,80,48
+independence,missouri,39.0911161,-94.4155068,"113-199 E Kansas Ave, Independence, MO 64050, USA",76,55,
+lansing,michigan,42.732535,-84.55553470000001,"303 W Allegan St, Lansing, MI 48933, USA",78,76,
+odessa,texas,31.8456816,-102.3676431,"20 E Business Loop 20, Odessa, TX 79761, USA",55,55,
+richardson,texas,32.948333500000004,-96.72985190000001,"101 N Greenville Ave, Richardson, TX 75081, USA",77,82,49
+fairfield,california,38.2491956,-122.04051509999998,"600 Texas St, Fairfield, CA 94533, USA",65,68,
+el monte,california,34.0686206,-118.02756670000001,"3400 Peck Rd, El Monte, CA 91731, USA",81,60,
+rochester,minnesota,44.0121221,-92.4801989,"Rochester Hotels, Rochester, MN 55902, USA",20,42,
+clearwater,florida,27.9658533,-82.8001026,"432 Cleveland St, Clearwater, FL 33755, USA",73,81,51
+carlsbad,california,33.158093300000004,-117.3505939,"3016 Carlsbad Blvd, Carlsbad, CA 92008, USA",88,75,35
+springfield,illinois,39.78172130000001,-89.6501481,"1733 S 5th St, Springfield, IL 62703, USA",59,62,
+temecula,california,33.4936391,-117.14836480000001,"41990 Main St, Temecula, CA 92590, USA",80,51,
+west jordan,utah,40.6096698,-111.9391031,"7794 S Redwood Rd, West Jordan, UT 84084, USA",71,57,54
+costa mesa,california,33.6412156,-117.91882209999999,"1209 Harbor Blvd, Costa Mesa, CA 92627, USA",93,68,45
+miami gardens,florida,25.942037699999997,-80.2456045,"18400 FL-817, Miami Gardens, FL 33056, USA",84,58,49
+cambridge,massachusetts,42.373615799999996,-71.10973349999998,"70 Raglan Rd ON, Cambridge, MA 02138, United States",94,99,77
+college station,texas,30.627977,-96.3344068,"501 Texas Ave, College Station, TX 77840, USA",58,79,
+murrieta,california,33.553914299999995,-117.21392320000001,"24792 Washington Ave, Murrieta, CA 92562, USA",61,50,
+downey,california,33.9401088,-118.13315929999999,"Firestone / Downey, Downey, CA 90241, USA",89,59,
+peoria,illinois,40.6936488,-89.58898640000001,"200 NE Jefferson St, Peoria, IL 61603, USA",81,59,
+westminster,colorado,39.836652799999996,-105.03720459999998,"7700-7730 Newton St, Westminster, CO 80030, USA",31,45,38
+elgin,illinois,42.035408399999994,-88.2825668,"113 S Grove Ave, Elgin, IL 60120, USA",88,83,50
+antioch,california,38.0049214,-121.80578899999999,"1715 E 18th St, Antioch, CA 94509, USA",81,62,
+palm bay,florida,28.034462100000006,-80.5886646,"2790 Palm Bay Rd NE, Palm Bay, FL 32905, USA",34,45,
+high point,north carolina,35.955692299999995,-80.0053176,"154 S Main St, High Point, NC 27260, USA",59,60,
+lowell,massachusetts,42.633424700000006,-71.31617179999998,"153 Hale St, Lowell, MA 01851, USA",77,56,54
+manchester,new hampshire,42.995639700000005,-71.4547891,"195 Bridge St, Manchester, NH 03104, USA",88,61,
+pueblo,colorado,38.2544472,-104.60914090000001,"CanAm Hwy, Pueblo, CO 81004, USA",25,60,
+gresham,oregon,45.5098388,-122.4347334,"390 NW Burnside Rd, Gresham, OR 97030, USA",80,79,61
+north charleston,south carolina,32.8771106,-80.01305140000001,"2500 City Hall Ln, North Charleston, SC 29406, USA",43,48,
+san buenaventura (ventura),california,34.28049229999999,-119.2945199,"404 E Main St, Ventura, CA 93001, USA",82,77,
+inglewood,california,33.9616801,-118.3531311,"202 E Manchester Blvd, Inglewood, CA 90301, USA",92,61,54
+pompano beach,florida,26.2378597,-80.1247667,"621 N Dixie Hwy, Pompano Beach, FL 33060, USA",64,75,39
+centennial,colorado,39.5807452,-104.87717260000001,"9445 E Dry Creek Rd, Centennial, CO 80112, USA",39,44,
+west palm beach,florida,26.7153424,-80.0533746,"294 N Dixie Hwy, West Palm Beach, FL 33401, USA",96,89,
+everett,washington,47.9789848,-122.2020795,"2000 Hewitt Ave, Everett, WA 98201, USA",91,59,
+richmond,california,37.9357576,-122.3477486,"2235 Macdonald Ave, Richmond, CA 94801, USA",87,87,
+clovis,california,36.8252277,-119.70291940000001,"508 4th St, Clovis, CA 93612, USA",73,79,
+billings,montana,45.783285600000006,-108.50069040000001,"2415 Montana Ave, Billings, MT 59101, USA",83,65,
+waterbury,connecticut,41.558152500000006,-73.0514965,"594 W Main St, Waterbury, CT 06702, USA",80,55,
+broken arrow,oklahoma,36.060949,-95.7974526,"919 N Elm Pl, Broken Arrow, OK 74012, USA",53,53,
+lakeland,florida,28.039465399999997,-81.9498042,"801 E Walnut St, Lakeland, FL 33801, USA",69,68,
+west covina,california,34.0686208,-117.93895259999998,"705 S Sunset Ave, West Covina, CA 91790, USA",73,59,
+boulder,colorado,40.0149856,-105.2705456,"1515 19th St, Boulder, CO 80302, USA",91,99,63
+daly city,california,37.687924100000004,-122.47020790000002,"95 Washington St, Daly City, CA 94014, USA",83,45,
+santa maria,california,34.953033700000006,-120.43571909999999,"2220 S Broadway, Santa Maria, CA 93454, USA",76,62,
+hillsboro,oregon,45.5200114,-122.9365835,"101 NE Brookwood Pkwy, Hillsboro, OR 97124, USA",22,65,44
+sandy springs,georgia,33.9304352,-84.3733147,"6395 Vernon Woods Dr NE, Atlanta, GA 30328, USA",37,27,37
+norwalk,california,33.9022367,-118.08173300000001,"1182 Rosecrans Ave, Norwalk, CA 90650, USA",83,61,42
+jurupa valley,california,33.9971974,-117.48548020000001,"3267 Van Buren Boulevard, Riverside, CA 92509, USA",46,40,
+lewisville,texas,33.046233,-96.994174,"102 W Main St, Lewisville, TX 75057, USA",65,51,
+greeley,colorado,40.42331420000001,-104.7091322,"909-919 19th Ave, Greeley, CO 80631, USA",55,67,
+davie town,florida,26.076478299999998,-80.25211569999998,"University D/SW 36 S, Davie, FL 33328, USA",47,46,
+green bay,wisconsin,44.51331879999999,-88.0132958,"414 E Walnut St, Green Bay, WI 54301, USA",82,93,44
+tyler,texas,32.351260100000005,-95.3010624,"100 W Ferguson St, Tyler, TX 75702, USA",75,61,
+league city,texas,29.5074538,-95.0949303,"111 FM518, League City, TX 77573, USA",55,57,
+burbank,california,34.18083920000001,-118.30896609999998,"Burbank airport, Burbank, CA 91502, USA",89,67,
+san mateo,california,37.562991700000005,-122.32552539999999,"2 E 3rd Ave, San Mateo, CA 94401, USA",96,77,
+wichita falls,texas,33.913708500000006,-98.49338730000001,"Camp Graham bell, 601 Scott Ave, Wichita Falls, TX 76301, USA",61,62,
+el cajon,california,32.7947731,-116.96252690000001,"124 S Magnolia Ave, El Cajon, CA 92020, USA",88,62,48
+rialto,california,34.1064001,-117.37032350000001,"Riverside @ Foothill Sb Fs, Rialto, CA 92376, USA",78,57,38
+davenport,iowa,41.5236437,-90.57763670000001,"416 N Harrison St, Davenport, IA 52801, USA",88,66,
+south bend,indiana,41.676354499999995,-86.25198979999998,"Southbend airport, South Bend, IN 46601, USA",82,91,
+las cruces,new mexico,32.3199396,-106.7636538,"1338 Lynx Trail, Las Cruces, NM 88001, USA",35,49,
+vista,california,33.2000368,-117.2425355,"223 S Santa Fe Ave, Vista, CA 92083, USA",56,48,51
+renton,washington,47.4796927,-122.2079218,"300 Burnett Ave S, Renton, WA 98055, USA",91,87,59
+sparks,nevada,39.5349112,-119.7526886,"250 Pyramid Way, Sparks, NV 89431, USA",82,75,
+allen,texas,33.1031744,-96.67055030000002,"112 W Main St, Allen, TX 75013, USA",62,71,
+tuscaloosa,alabama,33.2098407,-87.56917349999998,"2436 University Blvd, Tuscaloosa, AL 35401, USA",72,62,
+san angelo,texas,31.4637723,-100.4370375,"2 S Chadbourne St, San Angelo, TX 76903, USA",69,63,
+vacaville,california,38.3565773,-121.98774440000001,"300-328 Elizabeth St, Vacaville, CA 95688, USA",84,53,
+meridian,idaho,43.61210870000001,-116.39151310000001,"100 E Pine Ave, Meridian, ID 83642, USA",78,63,
+kenosha,wisconsin,42.5847425,-87.82118539999998,"800 56th St, Kenosha, WI 53140, USA",91,76,
+roanoke,virginia,37.270970399999996,-79.9414266,"18b Kirk Ave SW, Roanoke, VA 24018, USA",90,86,
+albany,new york,42.65257929999999,-73.7562317,"Washington Ave & Hawk St - Capitol/Hawk Station, Albany, NY 12207, USA",93,58,69
+boca raton,florida,26.3683064,-80.1289321,"2331 FL-808, Boca Raton, FL 33431, USA",48,63,
+spokane valley,washington,47.6732281,-117.2393748,"12321 E Mission Ave, Spokane Valley, WA 99216, USA",43,40,38
+orem,utah,40.2968979,-111.69464750000002,"15 State St, Orem, UT 84058, USA",82,68,
+compton,california,33.8958492,-118.2200712,"298 E Compton Blvd, Compton, CA 90221, USA",86,70,
+beaverton,oregon,45.4887993,-122.80133319999999,"12050 SW Canyon Rd, Beaverton, OR 97005, USA",94,85,71
+erie,pennsylvania,42.12922409999999,-80.085059,"600 State St, Erie, PA 16507, USA",92,67,
+lee's summit,missouri,38.9108408,-94.3821724,"210 SW 3rd St, Lee's Summit, MO 64063, USA",64,54,
+lawrence,kansas,38.971668900000004,-95.23525009999999,"636 Massachusetts St, Lawrence, KS 66044, USA",82,79,
+federal way,washington,47.3223221,-122.3126222,"S 312th St & Pacific Hwy S, Federal Way, WA 98003, USA",86,66,48
+flint,michigan,43.012527399999996,-83.6874562,"815 Saginaw St, Flint, MI 48502, USA",71,72,
+san marcos,california,33.1433723,-117.1661449,"236 W Mission Rd, San Marcos, CA 92069, USA",73,66,
+rio rancho,new mexico,35.2327544,-106.66304369999999,"1500 36th Cir SE, Rio Rancho, NM 87124, USA",45,64,
+sandy,utah,40.564978100000005,-111.8389726,"1853 E Sego Lily Dr, Sandy, UT 84092, USA",10,23,
+mission viejo,california,33.596891299999996,-117.6581562,"27000-27060 La Paz Rd, Mission Viejo, CA 92692, USA",76,70,
+brockton,massachusetts,42.083433500000005,-71.0183787,"34 School St, Brockton, MA 02301, USA",88,63,52
+yuma,arizona,32.6926512,-114.62769159999999,"647-699 W 19th St, Yuma, AZ 85364, USA",70,86,
+south gate,california,33.954737,-118.21201609999999,"Firestone / State, South Gate, CA 90280, USA",82,61,
+new bedford,massachusetts,41.6362152,-70.93420499999998,"44-68 Cedar St, New Bedford, MA 02740, USA",85,66,47
+hesperia,california,34.4263886,-117.3008784,"9646 Hesperia Rd, Hesperia, CA 92345, USA",57,47,
+roswell,georgia,34.0232431,-84.36155550000001,"890 Atlanta St, Roswell, GA 30075, USA",73,49,
+portsmouth,virginia,36.835425799999996,-76.29827420000001,"200 High St, Portsmouth, VA 23704, USA",69,60,
+bend,oregon,44.058172799999994,-121.31530959999999,"Franklin at Wall, Bend, OR 97703, USA",96,74,
+dearborn,michigan,42.3222599,-83.17631449999998,"13614 Michigan Ave, Dearborn, MI 48126, USA",95,62,
+longmont,colorado,40.167206799999995,-105.10192749999999,"565 5th Ave, Longmont, CO 80501, USA",90,62,
+sunrise,florida,26.1669711,-80.25659499999998,"7899 W Oakland Park Blvd, Sunrise, FL 33351, USA",61,66,
+quincy,massachusetts,42.25287720000001,-71.0022705,"44 Saville Ave, Quincy, MA 02169, USA",89,59,76
+livonia,michigan,42.36837,-83.35270969999998,"31441 Plymouth Rd, Livonia, MI 48150, USA",57,52,
+lynn,massachusetts,42.46676300000001,-70.9494938,"555 Essex St, Lynn, MA 01902, USA",93,65,49
+plantation,florida,26.1275862,-80.23310359999998,"480 Holly Ln, Plantation, FL 33317, USA",41,48,
+lawton,oklahoma,34.6035669,-98.3959291,"514-548 SW D Ave, Lawton, OK 73501, USA",69,73,
+yakima,washington,46.6020711,-120.5058987,"9 S 1st St, Yakima, WA 98901, USA",90,65,36
+nampa,idaho,43.5788175,-116.55978,"17 12th Ave S, Nampa, ID 83651, USA",82,65,
+chico,california,39.728494399999995,-121.8374777,"3199 plummer drive, Chico, CA 95928, USA",93,73,
+carson,california,33.8316745,-118.28169299999999,"Carson St at Moneta Av, Carson, CA 90745, USA",68,58,
+miami beach,florida,25.790654,-80.1300455,"1644 Collins Ave, Miami Beach, FL 33139, USA",94,73,60
+santa monica,california,34.01945429999999,-118.4911912,"802 Santa Monica Blvd, Santa Monica, CA 90401, USA",91,90,79
+carmel,indiana,39.978371,-86.1180435,"599 E Main St, Carmel, IN 46032, USA",41,69,
+greenville,north carolina,35.612660999999996,-77.3663538,"201 S Summit St, Greenville, NC 27858, USA",77,69,
+santa barbara,california,34.4208305,-119.69819009999999,"100 E De La Guerra St, Santa Barbara, CA 93101, USA",98,76,
+concord,north carolina,35.4087517,-80.579511,"92 Union St S, Concord, NC 28025, USA",80,53,
+edmond,oklahoma,35.6528323,-97.47809540000002,"200 S Blvd, Edmond, OK 73034, USA",85,62,
+asheville,north carolina,35.5950581,-82.5514869,"1 S Pack Square, Asheville, NC 28801, USA",87,75,50
+fishers,indiana,39.95675479999999,-86.01335,"8787 E 116th St, Fishers, IN 46038, USA",57,77,
+redding,california,40.5865396,-122.3916754,"1289 CA-273, Redding, CA 96001, USA",71,85,30
+westminster,california,33.75917570000001,-117.9897058,"14011 Beach Blvd, Westminster, CA 92683, USA",74,60,
+tracy,california,37.7396513,-121.42522269999999,"22 Eleventh St, Tracy, CA 95376, USA",88,61,
+deltona,florida,28.9005446,-81.26367379999998,"568 E Normandy Blvd, Deltona, FL 32725, USA",22,41,
+menifee,california,33.6971468,-117.185294,"27234 Pinehurst Rd, Sun City, CA 92586, USA",12,33,
+san leandro,california,37.7249296,-122.1560768,"1221 E 14th St, San Leandro, CA 94577, USA",94,70,
+livermore,california,37.6818745,-121.7680088,"2788 S Livermore Ave, Livermore, CA 94550, USA",95,83,
+edinburg,texas,26.3017374,-98.1633432,"100-146 N 10th Ave, Edinburg, TX 78539 N 10th Ave, Edinburg, TX 78539, USA",82,63,
+suffolk,virginia,36.7282054,-76.5835621,"111 W Washington St, Suffolk, VA 23434, USA",80,62,
+chino,california,34.0122346,-117.68894399999999,"13271 Central Ave, Chino, CA 91710, USA",76,56,
+indio,california,33.7205771,-116.2155619,"83100 Indio Blvd, Indio, CA 92201, USA",70,66,
+fall river,massachusetts,41.7014912,-71.1550451,"20 S Main St, Fall River, MA 02721, USA",93,60,48
+bellingham,washington,48.7519112,-122.4786854,"206 W Champion St, Bellingham, WA 98225, USA",97,92,56
+norwalk,connecticut,41.11774399999999,-73.4081575,"85 East Ave, Norwalk, CT 06851, USA",83,53,48
+newton,massachusetts,42.337041299999996,-71.20922139999998,"1000 Commonwealth Avenue, Newton, MA 02459, USA",49,50,25
+kirkland,washington,47.6768927,-122.20598329999999,"172 Central Way, Kirkland, WA 98033, USA",88,51,50
+sugar land,texas,29.6196787,-95.6349463,"8100 US-90 ALT, Sugar Land, TX 77478, USA",39,49,
+reading,pennsylvania,40.335648299999995,-75.9268747,"525 Penn St, Reading, PA 19601, USA",96,58,
+nashua,new hampshire,42.7653662,-71.46756599999998,"9 Main St, Nashua, NH 03064, USA",93,54,
+fort smith,arkansas,35.385924200000005,-94.3985475,"3103 Grand Ave, Fort Smith, AR 72904, USA",68,56,
+citrus heights,california,38.7071247,-121.2810611,"7754 Mariposa Ave, Citrus Heights, CA 95610, USA",47,57,
+hawthorne,california,33.9164032,-118.35257479999999,"El Segundo Bl & Hawthorne Bl, Hawthorne, CA 90250, USA",87,67,
+waukegan,illinois,42.3636331,-87.84479379999998,"Jackson/Oak Crest, Waukegan, IL 60085, USA",65,58,
+o'fallon,missouri,38.8106075,-90.6998477,"current location, O'Fallon, MO 63366, United States",57,51,
+champaign,illinois,40.116420399999996,-88.2433829,"Champaign City Building, 102 N Neil St, Champaign, IL 61820, USA",92,80,58
+ogden,utah,41.223,-111.9738304,"298 24th St, Ogden, UT 84401, USA",87,64,51
+whittier,california,33.97917929999999,-118.032844,"13363-13399 Philadelphia St, Whittier, CA 90601, USA",88,55,
+redwood city,california,37.485215200000006,-122.2363548,"1201 Brewster Ave, Redwood City, CA 94062, USA",87,88,
+mount pleasant town,south carolina,32.8323225,-79.82842579999998,"1902-1914 N Hwy 17, Mt Pleasant, SC 29464, USA",54,62,
+clifton,new jersey,40.858432799999996,-74.16375529999998,"169 Oak Ridge Rd, Clifton, NJ 07013, USA",35,34,
+palm coast,florida,29.584452399999996,-81.20786989999998,"3 Central Pl, Palm Coast, FL 32137, USA",8,46,
+newport beach,california,33.618882899999996,-117.9298493,"3600 Newport Blvd, Newport Beach, CA 92663, USA",83,68,
+duluth,minnesota,46.78667189999999,-92.10048520000001,"100 W 1st St, Duluth, MN 55802, USA",84,66,55
+bloomington,minnesota,44.840798,-93.29827990000001,"1498 W 90th St, Bloomington, MN 55431, USA",51,49,
+alhambra,california,34.095287,-118.1270146,"Main / Garfield, Alhambra, CA 91801, USA",94,59,
+fayetteville,arkansas,36.082156,-94.1718542,"896 W Lawson St, Fayetteville, AR 72703, USA",61,76,
+danbury,connecticut,41.394816999999996,-73.45401109999999,"10 Library Pl, Danbury, CT 06810, USA",92,58,
+hemet,california,33.7475203,-116.97196840000001,"172-100 S Inez St, Hemet, CA 92543, USA",72,65,
+bloomington,indiana,39.165325,-86.52638569999998,"IU Maurer School of Law, 211 S Indiana Ave, Bloomington, IN 47405, USA",87,65,39
+trenton,new jersey,40.2205824,-74.75971700000001,"300 E State St, Trenton, NJ 08608, USA",90,64,
+hoover,alabama,33.405386699999994,-86.8113781,"2 Chase Corporate Center Dr, Hoover, AL 35226, USA",46,43,
+largo,florida,27.909466499999997,-82.7873244,"716 Seminole Blvd, Largo, FL 33770, USA",63,59,
+mission,texas,26.2159066,-98.3252932,"1000 N Conway Ave, Mission, TX 78572, USA",85,61,
+st. george,utah,37.0965278,-113.5684164,"60 100 E, St. George, UT 84770, USA",64,77,25
+conroe,texas,30.311876899999998,-95.4560512,"101 E Davis St, Conroe, TX 77301, USA",78,64,
+johns creek,georgia,34.0289259,-84.19857900000001,"310 Morgan Hill Ct, Johns Creek, GA 30022, USA",16,13,
+lake forest,california,33.6469437,-117.6861023,"Lake Forest-Trabuco, Lake Forest, CA 92630, USA",69,58,
+avondale,arizona,33.4355977,-112.3496021,"14 E Western Ave, Avondale, AZ 85323, USA",78,65,
+bryan,texas,30.674364299999997,-96.3699632,"101 N Texas Ave, Bryan, TX 77803, USA",70,63,
+troy,michigan,42.6064095,-83.1497751,"5977 Livernois Rd, Troy, MI 48098, USA",36,43,
+santa fe,new mexico,35.686975200000006,-105.937799,"646 W San Francisco St, Santa Fe, NM 87501, USA",82,65,
+merced,california,37.3021632,-120.48296770000002,"1731 Canal St, Merced, CA 95340, USA",83,70,
+buena park,california,33.8674044,-117.99813870000001,"Beach-Auto Center Drive, Buena Park, CA 90621, USA",69,63,
+pleasanton,california,37.6624312,-121.8746789,"652 Main St, Pleasanton, CA 94566, USA",73,72,
+cicero town,illinois,41.8455877,-87.7539448,"2504 S Laramie Ave, Cicero, IL 60804, USA",81,69,62
+sioux city,iowa,42.4963416,-96.4049408,"600 Pierce St, Sioux City, IA 51101, USA",87,66,
+melbourne,florida,28.0836269,-80.60810889999998,"800 E Seminole Ave, Melbourne, FL 32901, USA",71,63,
+medford,oregon,42.3265152,-122.8755949,"161 N Fir St, Medford, OR 97501, USA",92,92,45
+westland,michigan,42.32420399999999,-83.400211,"36435 Ford Rd, Westland, MI 48185, USA",54,74,
+kennewick,washington,46.2086683,-119.119948,"127 W Kennewick Ave, Kennewick, WA 99336, USA",74,60,
+longview,texas,32.5007037,-94.7404891,"200 US-80, Longview, TX 75601, USA",73,49,
+mountain view,california,37.3860517,-122.08385109999999,"790 W El Camino Real, Mountain View, CA 94040, USA",85,92,53
+somerville,massachusetts,42.3875968,-71.0994968,"109 Highland Ave, Somerville, MA 02143, USA",84,85,55
+cranston,rhode island,41.7798226,-71.4372796,"899 Park Ave, Cranston, RI 02910, USA",86,60,34
+farmington hills,michigan,42.4989936,-83.3677168,"32224 West 12 Mile Road, Farmington Hills, MI 48334, USA",54,47,
+lynchburg,virginia,37.4137536,-79.14224639999998,"900 Church St, Lynchburg, VA 24504, USA",82,63,
+lakewood,california,33.853626899999995,-118.13395630000001,"5247 Clark Ave, Lakewood, CA 90712, USA",78,63,
+warwick,rhode island,41.700100899999995,-71.4161671,"181 Spring Grove Ave, Warwick, RI 02889, USA",38,52,21
+auburn,washington,47.30732279999999,-122.22845320000002,"102 E Main St, Auburn, WA 98002, USA",90,71,41
+brooklyn park,minnesota,45.0941315,-93.3563405,"Zane Ave N & Brooklyn Blvd, Brooklyn Park, MN 55443, USA",66,61,
+deerfield beach,florida,26.318412300000002,-80.09976569999998,"185 E Hillsboro Blvd, Deerfield Beach, FL 33441, USA",75,75,
+tustin,california,33.7420005,-117.82363909999998,"100 W Main St, Tustin, CA 92780, USA",84,63,
+chino hills,california,33.989818799999995,-117.7325848,"3316 Eucalyptus Ave, Chino Hills, CA 91709, USA",42,43,
+lawrence,massachusetts,42.7070354,-71.1631137,"370 Essex St, Lawrence, MA 01840, USA",94,59,
+new rochelle,new york,40.9114882,-73.78235490000002,"270 North Ave, New Rochelle, NY 10801, USA",96,69,59
+fort myers,florida,26.640628000000003,-81.87230840000001,"104 Tamiami Trail, Fort Myers, FL 33901, USA",75,63,
+goodyear,arizona,33.4353394,-112.3576567,"101 W Western Ave, Avondale, AZ 85323, USA",53,63,
+napa,california,38.2975381,-122.28686499999999,"853 Coombs St, Napa, CA 94559, USA",87,86,
+springdale,arkansas,36.18674420000001,-94.1288141,"208-298 E Johnson Ave, Springdale, AR 72764, USA",72,54,
+pharr,texas,26.1947962,-98.1836216,"100 W U.S. Hwy 83, Pharr, TX 78577, USA",84,61,
+manteca,california,37.797427299999995,-121.21605259999998,"127 E Yosemite Ave, Manteca, CA 95336, USA",89,81,
+alameda,california,37.7652065,-122.2416355,"Santa Clara Av:Park St, Alameda, CA 94501, USA",98,87,49
+parma,ohio,41.404774200000006,-81.72290859999998,"5403 Snow Rd, Parma, OH 44129, USA",45,52,
+new braunfels,texas,29.7030024,-98.1244531,"770 S Interstate 35, New Braunfels, TX 78130, USA",74,60,
+plymouth,minnesota,45.01051939999999,-93.4555093,"13888 Olson Memorial Hwy, Plymouth, MN 55441, USA",37,57,
+franklin,tennessee,35.9250637,-86.86888990000001,"106 3rd Ave N, Franklin, TN 37064, USA",70,63,
+milpitas,california,37.4323341,-121.8995741,"419 CA-237, Milpitas, CA 95035, USA",69,76,
+folsom,california,38.6779591,-121.17605829999998,"600-698 Sutter St, Folsom, CA 95630, USA",79,74,
+bloomington,illinois,40.4842027,-88.99368729999998,"615 N Main St, Bloomington, IL 61701, USA",88,70,
+perris,california,33.7825194,-117.22864779999999,"359-325 S D St, Perris, CA 92570, USA",83,56,
+bellflower,california,33.881681799999996,-118.1170117,"17053 Bellflower Bike Trail, Bellflower, CA 90706, USA",70,80,
+boynton beach,florida,26.531786600000004,-80.0905465,"1790 N Congress Ave, Boynton Beach, FL 33426, USA",55,52,
+scranton,pennsylvania,41.408969,-75.66241219999998,"200-298 N Washington Ave, Scranton, PA 18503, USA",94,68,
+racine,wisconsin,42.7261309,-87.78285230000002,"614 Main St, Racine, WI 53403, USA",89,85,
+lake charles,louisiana,30.226594899999995,-93.21737579999999,"949 Ryan St, Lake Charles, LA 70601, USA",56,60,
+upland,california,34.09751,-117.64838759999999,"308B N 2nd Ave, Upland, CA 91786, USA",83,76,
+baytown,texas,29.735504700000003,-94.9774274,"810 W Texas Ave, Baytown, TX 77520, USA",65,59,
+loveland,colorado,40.397761200000005,-105.0749801,"601 Cleveland Ave, Loveland, CO 80537, USA",66,74,
+layton,utah,41.0602216,-111.9710529,"280 W Gentile St, Layton, UT 84041, USA",58,62,
+flower mound town,texas,33.0145673,-97.0969552,"2200 Whispering Oaks, Flower Mound, TX 75022, USA",5,22,
+hammond,indiana,41.583368799999995,-87.5000412,"7141 Columbia Ave, Hammond, IN 46324, USA",49,64,
+gastonia,north carolina,35.262082,-81.18730049999998,"176 W Franklin Blvd, Gastonia, NC 28052, USA",68,56,
+st. joseph,missouri,39.767457799999995,-94.846681,"1001 Francis St, St Joseph, MO 64501, USA",81,48,
+baldwin park,california,34.0852868,-117.96089779999998,"3972 Maine Ave, Baldwin Park, CA 91706, USA",87,58,
+gary,indiana,41.6020403,-87.3371523,"10 E 5th Ave, Gary, IN 46402, USA",61,62,
+wyoming,michigan,42.9133602,-85.7053085,"2801 Burlingame Ave SW, Wyoming, MI 49519, USA",64,53,
+san ramon,california,37.7799273,-121.9780153,"San Ramon Valley Blvd Between Fostoria Way, San Ramon, CA 94583, USA",62,64,
+jonesboro,arkansas,35.84229670000001,-90.704279,"201-299 S Main St, Jonesboro, AR 72401, USA",66,58,
+kalamazoo,michigan,42.291706899999994,-85.5872286,"348 W Michigan Ave, Kalamazoo, MI 49007, USA",90,74,
+iowa city,iowa,41.6611277,-91.5301683,"10 S Gilbert St, Iowa City, IA 52240, USA",93,79,
+bethlehem,pennsylvania,40.6259316,-75.37045789999998,"833 Linden St, Bethlehem, PA 18018, USA",80,61,
+cedar park,texas,30.505197999999996,-97.82028879999999,"406 Old Mill Rd, Cedar Park, TX 78613, USA",47,47,
+arlington heights village,illinois,42.0883603,-87.98062650000001,"112 E Euclid Ave, Arlington Heights, IL 60004, USA",76,78,
+union city,california,37.59339179999999,-122.0438298,"Alvarado-Niles Rd & Dowe Av, Union City, CA 94587, USA",53,55,
+bolingbrook village,illinois,41.69864159999999,-88.0683955,"Rte 53 & Briarcliff Rd, Bolingbrook, IL 60440, USA",73,59,
+warner robins,georgia,32.6130007,-83.624201,"205 S Pleasant Hill Rd, Warner Robins, GA 31088, USA",43,51,
+evanston,illinois,42.0450722,-87.68769689999998,"1511 Ridge Ave, Evanston, IL 60201, USA",88,90,56
+appleton,wisconsin,44.2619309,-88.41538469999998,"638 W College Ave, Appleton, WI 54911, USA",87,67,
+camden,new jersey,39.9259463,-75.1196199,"1535 Broadway, Camden, NJ 08104, USA",72,61,
+temple,texas,31.0982344,-97.342782,"18 N 3rd St, Temple, TX 76501, USA",74,66,
+missouri city,texas,29.6185669,-95.5377215,"1531 Hwy 90 Alt, Missouri City, TX 77489, USA",30,44,
+rapid city,south dakota,44.0805434,-103.2310149,"803 St Joseph St, Rapid City, SD 57701, USA",83,91,
+rochester hills,michigan,42.65836609999999,-83.14993220000001,"805 Dickson Ln, Rochester Hills, MI 48307, USA",12,34,
+schaumburg village,illinois,42.0333607,-88.0834059,"314 N Pleasant Dr, Schaumburg, IL 60194, USA",38,77,
+rancho cordova,california,38.5890723,-121.302728,"10400-10416 Folsom Blvd, Rancho Cordova, CA 95670, USA",74,66,42
+turlock,california,37.494656799999994,-120.84659409999999,"111 N Golden State Blvd, Turlock, CA 95380, USA",81,65,34
+missoula,montana,46.8721284,-113.9940314,"248 N Higgins Ave, Missoula, MT 59802, USA",94,100,54
+southfield,michigan,42.473368799999996,-83.2218731,"18100-18130 W 10 Mile Rd, Southfield, MI 48075, USA",56,53,
+albany,georgia,31.578507399999996,-84.15574099999998,"323-399 Pine Ave, Albany, GA 31701, USA",59,61,
+apple valley town,california,34.5008311,-117.18587590000001,"21910 Outer Hwy 18 N, Apple Valley, CA 92307, USA",39,48,32
+rock hill,south carolina,34.9248667,-81.02507840000001,"223 E Main St, Rock Hill, SC 29730, USA",65,59,
+pasco,washington,46.2305049,-119.09223159999999,"430 W Lewis St, Pasco, WA 99301, USA",81,59,
+bismarck,north dakota,46.808326799999996,-100.7837392,"514 E Thayer Ave, Bismarck, ND 58501, USA",81,63,
+new britain,connecticut,41.6612104,-72.77954190000001,"110 Franklin Square, New Britain, CT 06051, USA",81,63,
+waukesha,wisconsin,43.0116784,-88.2314813,"294 W Main St, Waukesha, WI 53186, USA",74,84,
+jacksonville,north carolina,34.7540524,-77.43024140000001,"111 US-17 BUS, Jacksonville, NC 28540, USA",52,69,
+lafayette,indiana,40.4167022,-86.87528689999998,"12 Grant St, Lafayette, IN 47904, USA",65,66,41
+decatur,illinois,39.84031470000001,-88.9548001,"101-199 E Wood St, Decatur, IL 62523, USA",70,67,
+pittsburg,california,38.027976200000005,-121.88468059999998,"160 E 10th St, Pittsburg, CA 94565, USA",62,59,
+pawtucket,rhode island,41.878710999999996,-71.38255579999998,"119 Roosevelt Rd, Cumberland, RI 02864, USA",87,56,49
+flagstaff,arizona,35.1982836,-111.651302,"122 US-180, Flagstaff, AZ 86001, USA",91,99,
+lauderhill,florida,26.1403635,-80.2133808,"4721 NW 12th St, Lauderhill, FL 33313, USA",42,51,
+gulfport,mississippi,30.367419800000004,-89.0928155,"1300-1310 25th Ave, Gulfport, MS 39501, USA",61,62,
+redlands,california,34.055569299999995,-117.1825381,"18 E Citrus Ave, Redlands, CA 92373, USA",83,74,
+frederick,maryland,39.41426879999999,-77.41054090000002,"3 E Patrick St, Frederick, MD 21701, USA",97,86,
+passaic,new jersey,40.8567662,-74.12847640000001,"Passaic Ave at Paulison Ave, Passaic, NJ 07055, USA",95,52,58
+wilmington,delaware,39.744655,-75.54839090000002,"838 N Market St, Wilmington, DE 19801, USA",97,59,63
+kissimmee,florida,28.291955699999995,-81.40757099999998,"Robards Number Four Heliport, Kissimmee, FL 34746, USA",72,71,
+lynwood,california,33.930293,-118.21146029999998,"11171 Long Beach Blvd, Lynwood, CA 90262, USA",89,63,
+maple grove,minnesota,45.072464200000006,-93.4557877,"6439 Berkshire Ln N, Maple Grove, MN 55311, USA",30,67,
+south jordan,utah,40.5621704,-111.929658,"South Jordan Pkwy @ 1330 W, South Jordan, UT 84095, USA",45,58,25
+weston,florida,26.100365399999998,-80.3997748,"33332, Weston, FL 33327, United States",9,41,
+canton,ohio,40.79894729999999,-81.378447,"101-199 Mckinley Ave SW, Canton, OH 44702, USA",88,71,
+georgetown,texas,30.633261800000003,-97.67798420000001,"1202 S Austin Ave, Georgetown, TX 78626, USA",80,63,
+north richland hills,texas,32.8342952,-97.22890290000001,"4800 Blaney Ave, North Richland Hills, TX 76180, USA",28,49,
+union city,new jersey,40.779545500000005,-74.02375119999998,"4501 Bergenline Ave, Union City, NJ 07087, USA",97,60,85
+st. charles,missouri,38.7881062,-90.4974359,"1714 Watson St, St Charles, MO 63301, USA",53,41,
+homestead,florida,25.468722399999997,-80.4775569,"180 S Flagler Ave, Homestead, FL 33030, USA",86,85,43
+walnut creek,california,37.9100783,-122.06518190000001,"2225 N Main St, Walnut Creek, CA 94596, USA",83,61,
+woodbury,minnesota,44.923855200000006,-92.9593797,"1670 Queens Dr, Woodbury, MN 55125, USA",62,77,
+davis,california,38.5449065,-121.74051670000001,"615 3rd St, Davis, CA 95616, USA",77,100,44
+mansfield,texas,32.5631924,-97.1416768,"100 E Broad St, Mansfield, TX 76063, USA",53,48,
+marysville,washington,48.0517637,-122.1770818,"318 State Ave, Marysville, WA 98270, USA",77,84,
+delray beach,florida,26.4614625,-80.07282009999999,"4 E Atlantic Ave, Delray Beach, FL 33444, USA",92,63,
+gaithersburg,maryland,39.143440600000005,-77.2013705,"120 MD-355, Gaithersburg, MD 20877, USA",82,60,
+mount vernon,new york,40.9125992,-73.8370786,"9 Gramatan Ave, Mt Vernon, NY 10550, USA",96,59,59
+palatine village,illinois,42.1103041,-88.03424000000003,"10 E Northwest Hwy, Palatine, IL 60067, USA",65,57,
+muncie,indiana,40.1933767,-85.3863599,"105 E Main St, Muncie, IN 47305, USA",77,89,
+eau claire,wisconsin,44.811349,-91.4984941,"333 Gibson St, Eau Claire, WI 54701, USA",80,83,
+bossier city,louisiana,32.5159852,-93.7321228,"701 Barksdale Blvd, Bossier City, LA 71111, USA",41,54,
+buckeye,arizona,33.370319699999996,-112.58377659999998,"517 Monroe Ave, Buckeye, AZ 85326, USA",71,59,
+rockville,maryland,39.0839973,-77.1527578,"S Washington St & Court House Sq, Rockville, MD 20850, USA",90,67,74
+broomfield,colorado,39.9205411,-105.0866504,"300 Nickel St, Broomfield, CO 80020, USA",77,67,
+yorba linda,california,33.88850350000001,-117.8132571,"18992 Yorba Linda Blvd, Yorba Linda, CA 92886, USA",82,69,
+greenville,south carolina,34.85261759999999,-82.3940104,"304 N Church St, Greenville, SC 29601, USA",78,76,
+dothan,alabama,31.223231300000002,-85.39048879999999,"214 E Main St, Dothan, AL 36301, USA",68,59,
+daytona beach,florida,29.2108147,-81.02283309999999,"301 US-92, Daytona Beach, FL 32114, USA",74,79,
+st. cloud,minnesota,45.5579451,-94.1632404,"1010 10th Ave S, St Cloud, MN 56301, USA",86,73,
+redondo beach,california,33.8491816,-118.3884078,"501 Beryl St, Redondo Beach, CA 90277, USA",88,87,
+camarillo,california,34.216393700000005,-119.0376023,"2402 Ventura Blvd, Camarillo, CA 93010, USA",87,62,
+waterloo,iowa,42.492785999999995,-92.3425775,"503 W 4th St, Waterloo, IA 50701, USA",87,89,
+kenner,louisiana,29.9940924,-90.2417434,"Williams at 21st St., Kenner, LA 70062, USA",75,61,
+south san francisco,california,37.654656,-122.40774979999999,"296 Airport Blvd, South San Francisco, CA 94080, USA",88,53,
+bayonne,new jersey,40.6687141,-74.11430909999999,"631 Broadway, Bayonne, NJ 07002, USA",90,61,60
+palo alto,california,37.441883399999995,-122.14301950000001,"668 Coleridge Ave, Palo Alto, CA 94301, USA",51,78,30
+victoria,texas,28.805267399999998,-97.00359820000001,"210 N Main St, Victoria, TX 77901, USA",71,60,
+bowling green,kentucky,36.9685219,-86.48080429999999,"2401-2417 KY-80, Bowling Green, KY 42101, USA",47,51,
+portland,maine,43.659099299999994,-70.2568189,"Congress St +, Exchange St, Portland, ME 04101, United States",98,84,
+yuba city,california,39.1404477,-121.6169108,"444 Colusa Ave, Yuba City, CA 95991, USA",85,67,
+jackson,tennessee,35.6145169,-88.81394689999998,"457 E Main St, Jackson, TN 38301, USA",66,69,
+oshkosh,wisconsin,44.024706200000004,-88.5426136,"651 US-45, Oshkosh, WI 54901, USA",84,64,
+eagan,minnesota,44.804132200000005,-93.1668858,"4216 Pilot Knob Rd, Eagan, MN 55123, USA",25,52,
+ames,iowa,42.03078120000001,-93.6319131,"Brookside Park, 1325 6th St, Ames, IA 50010, USA",21,79,
+rogers,arkansas,36.3320196,-94.1185366,"214 W Elm St, Rogers, AR 72756, USA",70,66,
+lake elsinore,california,33.668077200000006,-117.3272615,"104 N Main St, Lake Elsinore, CA 92530, USA",53,34,
+johnson city,tennessee,36.3134397,-82.35347270000001,"385 Cherry St, Johnson City, TN 37615, USA",69,67,
+laguna niguel,california,33.5236744,-117.71494380000001,"30250 Crown Valley Pkwy, Laguna Niguel, CA 92677, USA",77,73,
+north port,florida,27.044224,-82.23592540000001,"14299 Tamiami Trail, North Port, FL 34287, USA",40,52,25
+north little rock,arkansas,34.769535999999995,-92.2670941,"1608 Main St, North Little Rock, AR 72114, USA",48,54,28
+lodi,california,38.1341477,-121.27221940000001,"1 E Pine St, Lodi, CA 95240, USA",93,63,
+alpharetta,georgia,34.07537620000001,-84.2940899,"10405 Old Roswell Rd, Alpharetta, GA 30022, USA",65,57,
+conway,arkansas,35.0886963,-92.44210109999999,"1319 Main St, Conway, AR 72034, USA",74,68,
+tamarac,florida,26.2128609,-80.2497707,"7272 Papaya Way, Tamarac, FL 33321, USA",57,67,
+schenectady,new york,42.8142432,-73.93956870000001,"105 Jay St, Schenectady, NY 12305, USA",94,74,
+west des moines,iowa,41.5638902,-93.7593841,"4200 Mills Civic Pkwy, West Des Moines, IA 50265, USA",18,32,
+shawnee,kansas,39.02284849999999,-94.7151865,"11115 Johnson Dr, Shawnee, KS 66203, USA",69,53,
+madera,california,36.961335600000005,-120.0607176,"100 N Gateway Dr, Madera, CA 93637, USA",88,64,
+harlingen,texas,26.190630600000002,-97.6961026,"302 S Commerce St, Harlingen, TX 78550, USA",80,63,
+east orange,new jersey,40.767323,-74.20486770000001,"23 Parkway Dr, East Orange, NJ 07017, USA",81,51,60
+san clemente,california,33.4273521,-117.61260039999999,"99 Avenida Del Mar, San Clemente, CA 92672, USA",86,45,
+santa cruz,california,36.9741171,-122.0307963,"598 Chestnut St, Santa Cruz, CA 95060, USA",97,94,47
+jupiter town,florida,26.934224600000004,-80.09420870000001,"100 W Indiantown Rd, Jupiter, FL 33458, USA",78,69,
+wellington village,florida,26.6617635,-80.2683571,"13998 Wellington Trace, Wellington, FL 33414, USA",63,57,
+rocklin,california,38.7907339,-121.2357828,"5175 Pacific St, Rocklin, CA 95677, USA",62,86,
+youngstown,ohio,41.0997803,-80.6495194,"3545 Market St, Youngstown, OH 44503, USA",69,65,
+blaine,minnesota,45.1607987,-93.2349489,"1400 105th Ave NE, Blaine, MN 55434, USA",39,44,
+sammamish,washington,47.61626829999999,-122.0355736,"740 228th Ave NE, Sammamish, WA 98074, USA",69,33,
+eden prairie,minnesota,44.8546856,-93.470786,"15201 Scenic Heights Rd, Eden Prairie, MN 55344, USA",16,50,
+janesville,wisconsin,42.6827885,-89.01872220000001,"51 S Main St, Janesville, WI 53545, USA",81,62,
+redmond,washington,47.6739881,-122.12151200000001,"16598-16412 NE 79th St, Redmond, WA 98052, USA",94,90,52
+skokie village,illinois,42.0324025,-87.7416246,"8320 Kolmar Ave, Skokie, IL 60076, USA",60,73,43
+auburn,alabama,32.6098566,-85.48078249999998,"224 N College St, Auburn, AL 36830, USA",83,67,
+tulare,california,36.20772879999999,-119.3473379,"115 E Tulare Ave, Tulare, CA 93274, USA",81,76,
+lorain,ohio,41.452819,-82.18237459999999,"1854 Hamilton Ave, Lorain, OH 44052, USA",47,51,
+lakeville,minnesota,44.6496868,-93.24272,"PO Box 1217 (see website, Lakeville, MN 55044, United States",47,52,
+haverhill,massachusetts,42.7762015,-71.0772796,"9 MA-125, Haverhill, MA 01830, USA",87,61,
+cheyenne,wyoming,41.1399814,-104.8202462,"2320 Capitol Ave, Cheyenne, WY 82001, USA",71,60,
+pico rivera,california,33.9830688,-118.09673500000001,"6750 Rosemead Blvd, Pico Rivera, CA 90660, USA",77,60,
+pflugerville,texas,30.4548451,-97.62226650000001,"806 Black Locust Drive East, Pflugerville, TX 78660, USA",12,34,
+eastvale,california,33.952463,-117.5848025,"7468 Sungold Ave, Eastvale, CA 92880, USA",25,37,
+port orange,florida,29.1383165,-80.9956105,"535 Locust St, Port Orange, FL 32127, USA",37,51,
+montebello,california,34.0165053,-118.11375349999999,"1301-1411 W Harding Ave, Montebello, CA 90640, USA",84,55,
+encinitas,california,33.0369867,-117.2919818,"1163 S Coast Hwy 101, Encinitas, CA 92024, USA",82,48,
+san marcos,texas,29.8832749,-97.9413941,"4015 IH 35 S STE# 328, San Marcos, TX 78666, USA",38,40,
+rowlett,texas,32.9029017,-96.56388000000001,"4011 Main St, Rowlett, TX 75088, USA",55,49,
+lehi,utah,40.3916172,-111.8507662,"86 W 300 N, Lehi, UT 84043, USA",61,59,
+coon rapids,minnesota,45.1732394,-93.3030063,"11155 Robinson Dr, Minneapolis, MN 55433, USA",16,45,
+grand junction,colorado,39.0638705,-108.5506486,"1301 Pitkin Ave, Grand Junction, CO 81501, USA",49,75,
+la habra,california,33.931859100000004,-117.94613700000001,"110 W La Habra Blvd, La Habra, CA 90631, USA",83,65,
+waltham,massachusetts,42.376485200000005,-71.2356113,"627 Main St, Waltham, MA 02452, USA",93,85,
+brentwood,california,37.931868,-121.6957863,"Brentwood Blvd & Oak St, Brentwood, CA 94513, USA",88,62,
+ankeny,iowa,41.7317884,-93.6001278,"101 S Ankeny Blvd, Ankeny, IA 50023, USA",77,60,
+springfield,oregon,44.0462362,-123.02202890000001,"141 Pioneer Pkwy E, Springfield, OR 97477, USA",82,81,
+council bluffs,iowa,41.2619444,-95.8608333,"1146-1198, US-6, Council Bluffs, IA 51501, United States",69,86,
+castle rock town,colorado,39.372212100000006,-104.8560902,"222 Cantril St, Castle Rock, CO 80104, USA",73,77,
+north miami,florida,25.890094899999998,-80.18671379999999,"NE 125 St & 6 Av, North Miami, FL 33161, USA",90,58,47
+hamilton,ohio,39.3995008,-84.5613355,"219 High St, Hamilton, OH 45011, USA",78,85,
+noblesville,indiana,40.0455917,-86.0085955,"1309 Conner St, Noblesville, IN 46060, USA",66,63,
+moore,oklahoma,35.339507899999994,-97.4867028,"200 N Broadway St, Moore, OK 73160, USA",52,56,
+burnsville,minnesota,44.7677424,-93.2777226,"Nicollet Av at 130 St SE corner, Burnsville, MN 55337, USA",58,66,
+national city,california,32.6781085,-117.0991967,"999-701 I Ave, National City, CA 91950, USA",87,54,
+taylor,michigan,42.240871999999996,-83.2696509,"Telegraph @ Wick Road, Taylor, MI 48180, USA",53,58,
+malden,massachusetts,42.4250964,-71.066163,"229 MA-60, Malden, MA 02148, USA",93,65,62
+doral,florida,25.8195424,-80.3553302,"9816 NW 51st Terrace, Doral, FL 33178, USA",16,48,39
+idaho falls,idaho,43.49266069999999,-112.0407584,"401 Park Ave, Idaho Falls, ID 83402, USA",88,65,
+marietta,georgia,33.95260200000001,-84.5499327,"99 S Park Square NE, Marietta, GA 30060, USA",79,60,
+monterey park,california,34.0625106,-118.1228476,"Garvey / Garfield, Monterey Park, CA, USA",92,63,
+coconut creek,florida,26.2517482,-80.17893509999998,"3205 Portofino Point, Coconut Creek, FL 33066, USA",24,39,
+dublin,california,37.7021521,-121.9357918,"7007 San Ramon Rd, Dublin, CA 94568, USA",74,67,
+petaluma,california,38.232417,-122.6366524,"201 Petaluma Blvd S, Petaluma, CA 94952, USA",91,64,
+cupertino,california,37.322997799999996,-122.03218229999999,"20451 Stevens Creek Blvd, Cupertino, CA 95014, USA",83,82,
+terre haute,indiana,39.4667034,-87.41390919999998,"201 Cherry St, Terre Haute, IN 47807, USA",75,78,
+utica,new york,43.100903,-75.232664,"200 Genesee St, Utica, NY 13501, USA",85,61,
+vineland,new jersey,39.4863773,-75.02596369999998,"1255 W Landis Ave, Vineland, NJ 08360, USA",81,59,
+lakewood,washington,47.1717649,-122.51845800000001,"9501-9509 Gravelly Lake Dr SW, Lakewood, WA 98499, USA",80,70,
+gardena,california,33.8883487,-118.30896240000001,"Redondo Beach Bl & Western Ave, Gardena, CA 90247, USA",89,61,
+bristol,connecticut,41.67176480000001,-72.9492703,"West St and School St, Bristol, CT 06010, USA",79,59,
+millcreek,utah,40.6868914,-111.87549070000001,"554 E 3900 S, Murray, UT 84107, USA",62,56,
+la mesa,california,32.7678287,-117.02308390000002,"8118 University Ave, La Mesa, CA 91942, USA",87,54,
+woodland,california,38.67851570000001,-121.7732971,"300 1st St, Woodland, CA 95695, USA",88,92,33
+taylorsville,utah,40.66772479999999,-111.93882579999999,"4700 S Redwood Rd, Salt Lake City, UT 84118, USA",67,57,
+west allis,wisconsin,43.0166806,-88.0070315,"Greenfield & S76 #1710, West Allis, WI 53214, USA",61,,
+meriden,connecticut,41.5381535,-72.80704349999998,"110 W Main St, Meriden, CT 06451, USA",86,51,
+chapel hill town,north carolina,35.913199600000006,-79.05584449999999,"22 S Columbia St, Chapel Hill, NC 27514, USA",90,75,62
+pontiac,michigan,42.6389216,-83.29104679999998,"50 N Perry St, Pontiac, MI 48342, USA",72,63,
+novi,michigan,42.48059,-83.47549129999999,"25972 Novi Rd, Novi, MI 48375, USA",45,49,
+lancaster,pennsylvania,40.0378755,-76.3055144,"2 E King St, Lancaster, PA 17602, USA",99,71,
+st. clair shores,michigan,42.4974085,-82.89636039999998,"27810 Gladstone St, St Clair Shores, MI 48081, USA",65,59,
+owensboro,kentucky,37.771907399999996,-87.1111676,"424 Allen St, Owensboro, KY 42303, USA",70,72,
+sanford,florida,28.802861199999995,-81.269453,"211 W 11th St, Sanford, FL 32771, USA",63,60,
+springfield,ohio,39.9242266,-83.8088171,"1 E Main St, Springfield, OH 45502, USA",74,81,
+porterville,california,36.06523,-119.0167679,"8 W Olive Ave, Porterville, CA 93257, USA",88,61,
+royal oak,michigan,42.4894801,-83.1446485,"108 S Main St, Royal Oak, MI 48067, USA",87,67,
+ocala,florida,29.187198600000002,-82.14009229999998,"333-399 W Silver Springs Blvd, Ocala, FL 34475, USA",74,66,
+bartlett,tennessee,35.204532799999996,-89.8739753,"5680 TN-15, Bartlett, TN 38134, USA",53,50,
+san rafael,california,37.9735346,-122.5310874,"1314 4th St, San Rafael, CA 94901, USA",96,73,
+white plains,new york,41.03398620000001,-73.76290970000001,"1133 Westchester Ave, White Plains, NY 10605, USA",95,41,64
+great falls,montana,47.5052849,-111.30077150000001,"410 Central Ave, Great Falls, MT 59401, USA",89,73,
+bowie,maryland,39.0067768,-76.77913649999998,"8602 Chestnut Ave, Bowie, MD 20715, USA",30,42,
+huntington park,california,33.981681200000004,-118.22507250000001,"Gage / Pacific, Huntington Park, CA 90255, USA",97,64,61
+arcadia,california,34.139729200000005,-118.0353449,"100 W Huntington Dr, Arcadia, CA 91007, USA",81,58,
+orland park village,illinois,41.6303103,-87.85394250000002,"14300 96th Ave, Orland Park, IL 60462, USA",75,58,
+margate,florida,26.244526300000004,-80.206436,"1301 E River Dr, Margate, FL 33063, USA",66,59,
+dubuque,iowa,42.5005583,-90.6645718,"698 Central Ave, Dubuque, IA 52001, USA",89,66,
+des plaines,illinois,42.03336229999999,-87.88339909999998,"1637 Henry Ave, Des Plaines, IL 60016, USA",43,64,
+santee,california,32.8383828,-116.97391670000002,"Mission Gorge Rd & Cottonwood Av, Santee, CA 92071, USA",63,49,
+corvallis,oregon,44.5645659,-123.2620435,"200 SW 4th St, Corvallis, OR 97330, USA",91,99,40
+kokomo,indiana,40.486427,-86.13360329999998,"217 W Sycamore St, Kokomo, IN 46901, USA",64,83,
+casper,wyoming,42.8500769,-106.32517490000001,"106 S Center St, Casper, WY 82601, USA",77,86,
+medford,massachusetts,42.4184296,-71.10616390000001,"85 George P Hassett Dr, Medford, MA 02155, USA",88,61,51
+gilroy,california,37.0057816,-121.5682751,"7353 Monterey Rd, Gilroy, CA 95020, USA",78,88,
+hendersonville,tennessee,36.304773499999996,-86.6199957,"239 W Main St, Hendersonville, TN 37075, USA",56,53,
+greenwood,indiana,39.6136578,-86.10665259999998,"1 West Main Street, Greenwood, IN 46142, USA",57,65,
+midwest city,oklahoma,35.4495065,-97.39670190000001,"SE 15th St @ Felix Pl, Midwest City, OK 73110, USA",43,56,
+st. peters,missouri,38.7874699,-90.6298922,"48 Plaza Ninety-Four Dr, St Peters, MO 63376, United States",48,45,
+taunton,massachusetts,41.900101,-71.08976740000001,"http://dhfo.org/, 33 Summer St, Taunton, MA 02780, USA",83,59,
+new brunswick,new jersey,40.4862157,-74.4518188,"239 Delavan St, New Brunswick, NJ 08901, USA",86,66,
+grand forks,north dakota,47.9252568,-97.0328547,"102 N 4th St, Grand Forks, ND 58203, USA",85,84,
+sarasota,florida,27.3364347,-82.53065269999998,"2005 Main St, Sarasota, FL 34237, USA",92,70,47
+smyrna,georgia,33.883992600000006,-84.51437609999998,"1323 Spring St, Smyrna, GA 30080, USA",74,81,
+tinley park village,illinois,41.5731442,-87.7932939,"17440 IL-43, Tinley Park, IL 60477, USA",43,53,
+diamond bar,california,34.028622600000006,-117.81033670000001,"504 N Diamond Bar Blvd, Diamond Bar, CA 91765, USA",58,25,
+weymouth town,massachusetts,42.2180724,-70.94103559999998,"490 Broad St, Weymouth, MA 02188, USA",44,37,
+bradenton,florida,27.4989278,-82.5748194,"1301 1st Ave W, Bradenton, FL 34205, USA",55,61,38
+hanford,california,36.3274502,-119.64568440000001,"219 N Douty St, Hanford, CA 93230, USA",92,62,
+fountain valley,california,33.7090212,-117.95440690000001,"Brookhurst-Slater, Fountain Valley, CA 92708, USA",63,64,
+richland,washington,46.28042000000001,-119.27519960000001,"590 Swift Blvd, Richland, WA 99352, USA",58,76,
+huntersville town,north carolina,35.410694,-80.84285040000002,"101 NC-115, Huntersville, NC 28078, USA",52,58,
+shoreline,washington,47.7559659,-122.3456972,"Aurora Ave N & N 175th St, Shoreline, WA 98133, USA",66,78,49
+bonita springs,florida,26.339806,-81.77869720000001,"10520 Reynolds St, Bonita Springs, FL 34135, USA",68,60,
+oak lawn village,illinois,41.719978000000005,-87.7479528,"5102 Museum Drive, Oak Lawn, IL 60453, USA",83,62,
+valdosta,georgia,30.8327022,-83.2784851,"205 N Ashley St, Valdosta, GA 31601, USA",66,73,
+novato,california,38.107419799999995,-122.5697032,"997 Grant Ave, Novato, CA 94945, USA",88,77,
+commerce city,colorado,39.8083196,-104.9338675,"6112-6290 Clermont St, Commerce City, CO 80022, USA",28,48,
+hempstead village,new york,40.706212799999996,-73.6187397,"145 Peninsula Blvd, Hempstead, NY 11550, USA",90,59,60
+dearborn heights,michigan,42.3369816,-83.27326269999998,"Telegraph @ Richardson, Dearborn Heights, MI 48127, USA",58,56,
+berwyn,illinois,41.85058739999999,-87.79366850000001,"6806 W Cermak Rd, Berwyn, IL 60402, USA",83,59,48
+chicopee,massachusetts,42.14870429999999,-72.6078672,"2 Springfield St, Chicopee, MA 01013, USA",84,58,
+port arthur,texas,29.884950399999997,-93.939947,"1228 15th St, Port Arthur, TX 77640, USA",46,55,
+casa grande,arizona,32.9110027,-111.7733902,"Sawgrass Ct, Casa Grande, AZ 85122, USA",1,38,
+highland,california,34.1283442,-117.2086513,"27265 Pacific St, Highland, CA 92346, USA",50,46,
+pocatello,idaho,42.862104200000005,-112.45061909999998,"100 N Main St, Pocatello, ID 83204, USA",84,66,
+kettering,ohio,39.68950359999999,-84.16882740000001,"2 W Stroop Rd, Kettering, OH 45429, USA",69,58,
+euless,texas,32.8370727,-97.0819541,"100 TX-10, Euless, TX 76040, USA",54,45,
+hoboken,new jersey,40.7439905,-74.0323626,"533 Willow Ave, Hoboken, NJ 07030, USA",98,86,70
+anderson,indiana,40.1053196,-85.6802541,"30 W 11th St, Anderson, IN 46016, USA",71,82,
+palm beach gardens,florida,26.8233946,-80.13865469999998,"1048 Diamond Head Way, Palm Beach Gardens, FL 33418, USA",1,36,
+blue springs,missouri,39.0169509,-94.2816148,"1405 SW Walnut St, Blue Springs, MO 64015, USA",62,53,
+paramount,california,33.8894598,-118.15979109999998,"15754 Paramount Blvd, Paramount, CA 90723, USA",85,61,
+west haven,connecticut,41.2705484,-72.94697109999998,"425 Washington Ave, West Haven, CT 06516, USA",81,60,
+manhattan,kansas,39.18360819999999,-96.5716694,"1000 Fremont St, Manhattan, KS 66502, USA",79,82,
+colton,california,34.0739016,-117.3136547,"816 Colton Ave, Colton, CA 92324, USA",79,76,
+carson,nevada,39.1637984,-119.76740339999999,"100 W 2nd St, Carson City, NV 89701, USA",79,81,
+caldwell,idaho,43.66293839999999,-116.6873596,"347 S 10th Ave, Caldwell, ID 83605, USA",80,66,
+cathedral city,california,33.780538799999995,-116.46680359999999,"68895 Perez Road Units 1-4, Cathedral City, CA 92234, United States",81,52,
+rosemead,california,34.0805651,-118.072846,"9000 Valley Blvd, Rosemead, CA 91770, USA",82,60,
+rocky mount,north carolina,35.938210299999994,-77.7905339,"375 E Raleigh Blvd, Rocky Mount, NC 27801, USA",69,62,
+stonecrest,georgia,33.7009727,-84.1718743,"Minola Dr @ Panola Rd, Stonecrest, GA 30038, USA",49,43,
+lake havasu city,arizona,34.483901,-114.32245479999999,"101 Mescal Loop, Lake Havasu City, AZ 86403, USA",43,44,
+decatur,alabama,34.605925299999996,-86.9833417,"477-499 Lee St NE, Decatur, AL 35601, USA",73,55,
+normal town,illinois,40.514202600000004,-88.99063120000001,"306 W Willow St, Normal, IL 61761, USA",67,59,
+west new york town,new jersey,40.787878799999994,-74.0143064,"400 60th St, West New York, NJ 07093, USA",97,61,74
+harrisonburg,virginia,38.449568799999994,-78.8689155,"80 Court Square, Harrisonburg, VA 22802, USA",87,64,
+leesburg town,virginia,39.1156615,-77.56360149999998,"Unnamed Road, Leesburg, VA 20176, USA",78,72,
+parker town,colorado,39.5186002,-104.76136329999999,"19594 Mainstreet, Parker, CO 80138, USA",81,73,
+watsonville,california,36.910231,-121.7568946,"5 E Beach St, Watsonville, CA 95076, USA",91,88,
+southaven,mississippi,34.99185870000001,-90.0022958,"700 Stateline Rd W, Southaven, MS 38671, USA",52,50,
+revere,massachusetts,42.408430200000005,-71.0119948,"39 Winthrop Ave, Revere, MA 02151, USA",85,67,57
+grapevine,texas,32.9342919,-97.07806540000001,"100-248 E Hudgins St, Grapevine, TX 76051, USA",78,63,
+mount prospect village,illinois,42.066416700000005,-87.9372908,"Mont, Mt Prospect, IL 60056, United States",69,71,
+elyria,ohio,41.36837979999999,-82.10764859999998,"501 Broad St, Elyria, OH 44035, USA",65,40,
+yucaipa,california,34.033625,-117.0430865,"34909 Yucaipa Blvd, Yucaipa, CA 92399, USA",64,52,
+desoto,texas,32.589699800000005,-96.8570738,"108 W Belt Line Rd, DeSoto, TX 75115, USA",65,49,
+lenexa,kansas,38.9536174,-94.7335709,"9620 Rosehill Rd, Lenexa, KS 66215, USA",45,51,
+brookhaven,georgia,33.8651033,-84.3365917,"Peachtree Rd NE @ Osborne Rd NE, Brookhaven, GA 30319, USA",70,47,
+west sacramento,california,38.5804609,-121.53023400000001,"1640 Lincoln Hwy, West Sacramento, CA 95691, USA",70,73,33
+albany,oregon,44.6365107,-123.10592820000001,"125 2nd Avenue, Albany, OR 97321, USA",66,84,
+bellevue,nebraska,41.154362299999995,-95.9145568,"701 Kayleen Dr, Bellevue, NE 68005, USA",70,51,
+kingsport,tennessee,36.548434,-82.5618186,"225 W Center St, Kingsport, TN 37660, USA",70,61,28
+wheaton,illinois,41.8661403,-88.1070127,"140 N Main St, Wheaton, IL 60187, USA",92,80,38
+tigard,oregon,45.41867979999999,-122.78725990000001,"SW Pacific Hwy & Gaarde/McDonald, Tigard, OR 97223, USA",75,79,33
+delano,california,35.7688425,-119.24705359999999,"998 S High St, Delano, CA 93215, USA",85,59,
+minnetonka,minnesota,44.9211836,-93.46874890000001,"4508 Williston Rd, Minnetonka, MN 55345, USA",29,23,
+burlington,north carolina,36.0956918,-79.43779909999998,"704 Chapel Hill Rd, Burlington, NC 27215, United States",70,74,
+peabody,massachusetts,42.5278731,-70.92866090000001,"20 Central St, Peabody, MA 01960, USA",84,57,
+milford city (balance),connecticut,41.2306979,-73.064036,"601 Boston Post Rd, Milford, CT 06460, USA",59,52,
+palm desert,california,33.7222445,-116.37445559999999,"73950 Alessandro Dr, Palm Desert, CA 92260, USA",65,59,
+pinellas park,florida,27.8428025,-82.6995443,"7751 49th St N, Pinellas Park, FL 33781, USA",79,63,
+perth amboy,new jersey,40.5067723,-74.2654234,"272 High St, Perth Amboy, NJ 08861, USA",95,58,
+pensacola,florida,30.42130899999999,-87.2169149,"Pensacola International Airport, Pensacola, FL 32501, USA",68,74,
+elkhart,indiana,41.6819935,-85.9766671,"418 W Marion St, Elkhart, IN 46516, USA",64,67,
+glendora,california,34.136118700000004,-117.86533899999999,"100 N Glendora Ave, Glendora, CA 91741, USA",84,62,
+apple valley,minnesota,44.7319094,-93.21772,"7501 150th St W, Apple Valley, MN 55124, USA",63,54,
+joplin,missouri,37.08422710000001,-94.513281,"49 E 7th St, Joplin, MO 64801, USA",76,67,
+oak park village,illinois,41.885031700000006,-87.7845025,"200 S Ridgeland Ave, Oak Park, IL 60302, USA",80,67,64
+placentia,california,33.8710729,-117.86275479999999,"Kraemer-Chapman, Placentia, CA 92870, USA",59,52,
+edina,minnesota,44.889686600000005,-93.3499489,"MN-100, Edina, MN 55435, USA",27,36,
+la crosse,wisconsin,43.8137751,-91.2519017,"307 State St, La Crosse, WI 54601, USA",78,89,
+kentwood,michigan,42.8694731,-85.64474919999998,"815 52nd St SE, Kentwood, MI 49508, USA",41,68,
+aliso viejo,california,33.5684605,-117.7262981,"36 Journey, Aliso Viejo, CA 92656, USA",78,74,
+burien,washington,47.46683839999999,-122.3405305,"431 SW 152nd St, Burien, WA 98166, USA",92,61,55
+olympia,washington,47.0378741,-122.9006951,"1100 Capitol Way S, Olympia, WA 98501, USA",84,67,55
+hoffman estates village,illinois,42.062991499999995,-88.12271989999998,"1760 Hassell Rd, Hoffman Estates, IL 60169, USA",36,64,
+apopka,florida,28.6934076,-81.53221490000001,"644 Lexington Pkwy, Apopka, FL 32712, USA",16,34,
+florissant,missouri,38.789217,-90.322614,"420 N New Florissant Rd, Florissant, MO 63031, USA",63,52,
+grand island,nebraska,40.92639570000001,-98.34201180000001,"204 W South Front St, Grand Island, NE 68801, USA",87,61,
+plainfield,new jersey,40.6337136,-74.40737359999999,"223 Leland Ave, Plainfield, NJ 07062, USA",69,58,
+battle creek,michigan,42.32115220000001,-85.17971419999998,"77 Capital Ave NE, Battle Creek, MI 49017, USA",82,66,
+st. cloud,florida,28.2489016,-81.2811801,"1025 10th St, St Cloud, FL 34769, USA",80,71,
+logan,utah,41.7369803,-111.83383590000001,"30 E 300 N, Logan, UT 84321, USA",82,67,
+coral gables,florida,25.7491968,-80.2635411,"405 Biltmore Way, Coral Gables, FL 33134, USA",96,66,42
+cerritos,california,33.858348299999996,-118.0647871,"12506 South St, Cerritos, CA 90703, USA",57,57,
+coeur d'alene,idaho,47.67346320000001,-116.78122250000001,"401 Sherman Ave, Coeur d'Alene, ID 83814, USA",82,88,
+galveston,texas,29.3013479,-94.7976958,"711 27th St, Galveston, TX 77550, USA",81,69,
+apex town,north carolina,35.732652,-78.85028559999998,"237 State Rd 1011, Apex, NC 27502, USA",57,65,
+summerville town,south carolina,33.0185039,-80.17564809999998,"201 S Main St, Summerville, SC 29483, USA",69,64,
+collierville town,tennessee,35.042035999999996,-89.66452659999999,"1-51 N Rowlett St, Collierville, TN 38017, USA",53,57,
+methuen town,massachusetts,42.7262016,-71.19089240000001,"24 Lowell St, Methuen, MA 01844, USA",78,50,
+lakewood,ohio,41.481993200000005,-81.7981908,"1515 St Charles Ave, Lakewood, OH 44107, USA",82,63,
+enid,oklahoma,36.3955891,-97.8783911,"152-198 US-64 BUS, Enid, OK 73701, USA",68,61,
+poway,california,32.9628232,-117.0358646,"13608 Putney Rd, Poway, CA 92064, USA",77,62,
+troy,new york,42.7284117,-73.69178509999998,"80 2nd St, Troy, NY 12180, USA",94,63,
+saginaw,michigan,43.419469899999996,-83.9508068,"92 Holland Ct, Saginaw, MI 48601, USA",39,49,
+niagara falls,new york,43.0962143,-79.03773879999999,"802 20th St, Niagara Falls, NY 14301, USA",77,69,
+charleston,west virginia,38.3498195,-81.6326234,"900 Lee St E, Charleston, WV 25301, USA",82,71,
