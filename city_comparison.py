@@ -5,6 +5,8 @@ from data_table_census import Census as census_data_table
 from data_table_fbi import Fbi as fbi_data_table
 from data_table_experian import Experian as experian_data_table
 from headers_cleanup import cleanup_headers
+from data_sources import CENSUS_POPULATION_2017_CSV_FILENAME, CENSUS_AREA_2010_CSV_FILENAME
+from data_sources import FBI_CRIME_2017_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
 
 
 def debug_print_dataframe(data, num_rows=2, debug=False):
@@ -23,7 +25,7 @@ def main():
 
   # import census data from 2010 (city area) to a panda table
   census_population_2017_table = census_data_table(
-    file_path='data/census/PEP_2017_PEPANNRSIP.US12A_with_ann.csv')
+    file_path=CENSUS_POPULATION_2017_CSV_FILENAME)
   cleanup_headers('census_2017', census_population_2017_table.data)
 
   print('census_population_2017_table.data:\n',
@@ -31,7 +33,7 @@ def main():
 
   # import census data from 2017 (city population) to a panda table
   census_geography_2010_table = census_data_table(
-    file_path='data/census/DEC_10_SF1_GCTPH1.US13PR_with_ann.csv')
+    file_path=CENSUS_AREA_2010_CSV_FILENAME)
   # Note, this mutates the panda dataframe headers on census_geography_2010_table.data.columns
   cleanup_headers('census_2010', census_geography_2010_table.data)
 
@@ -45,10 +47,8 @@ def main():
   debug_print_dataframe(combined_census_table.data, debug=debug)
 
   # import fbi crime data from 201y (by city) to a panda table
-  fbi_crime_table = fbi_data_table(
-    file_path=
-    'data/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2017.xls',
-    suffix='_fbi_crime')
+  fbi_crime_table = fbi_data_table(file_path=FBI_CRIME_2017_CSV_FILENAME,
+                                   suffix='_fbi_crime')
   print('fbi_crime_table.data: ', len(fbi_crime_table.data))
   debug_print_dataframe(fbi_crime_table.data, debug=debug)
 
@@ -59,8 +59,7 @@ def main():
 
   # import experian credit score data by city (2017) to a panda table
   experian_credit_score_table = experian_data_table(
-    file_path='data/experian/experian_combined_data.csv',
-    suffix='experian_2017')
+    file_path=EXPERIAN_FINAL_CSV_FILENAME, suffix='experian_2017')
   print('experian_credit_score_table.data: ',
         len(experian_credit_score_table.data))
   debug_print_dataframe(experian_credit_score_table.data, debug=debug)
@@ -72,7 +71,7 @@ def main():
   cleanup_headers('final_csv', combined_table.data)
 
   # Write the combined dataframe table to the final csv file.
-  combined_table.data.to_csv('city_comparison.csv')
+  combined_table.data.to_csv(MASTER_CSV_FILENAME)
 
 
 if __name__ == '__main__':

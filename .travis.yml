@@ -13,5 +13,5 @@ script:
   - find . -type f -name "*.py" ! -path "./py37-mac/*" ! -path "./tests/*" | xargs pylint
   - python -m data.geocode.write_geocodes_csv
   - python -m data.walkscore.write_walkscores_csv
-  - python join_cities_csv.py
+  - python city_comparison.py
   - python -m pytest --color=yes tests
