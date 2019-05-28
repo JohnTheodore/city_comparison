@@ -41,7 +41,7 @@ class Fbi(DataTable):
     for i, row in data.iterrows():
       if pandas.notnull(row['state']):
         state = row['state']
-      data.set_value(i, 'state', state)
+      data.at[i, 'state'] = state
 
     return data
 

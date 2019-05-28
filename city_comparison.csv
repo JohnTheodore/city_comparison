@@ -12,7 +12,7 @@
 10,mesa,0,669.0,arizona,1318.0,23.0,1878.0,mesa,mesa,Mesa city,136.45,7930.0,884.0,23.0,492268.0,440952,496401,10692.0,252.0,454.0,arizona,137.06,2047.0,0.61
 11,peoria,Maricopa,694.5496512,arizona,266.0,7.0,533.0,peoria,peoria,Peoria city,174.4,2615.0,237.0,4.0,165889.0,154896,168181,3385.0,66.0,78.0,arizona,177.97,414.0,3.57
 12,phoenix,0,646.0,arizona,7919.0,190.0,12801.0,phoenix,phoenix,Phoenix city,516.7,39899.0,7653.0,157.0,1644177.0,1449039,1626078,60353.0,1142.0,3293.0,arizona,517.95,12511.0,1.24
-13,scottsdale,Maricopa,724.6640497000002,arizona,188.0,23.0,878.0,scottsdale,scottsdale,Scottsdale city,183.92,4346.0,246.0,5.0,251840.0,217550,249950,5470.0,103.0,100.0,arizona,184.4,396.0,0.48
+13,scottsdale,Maricopa,724.6640497000003,arizona,188.0,23.0,878.0,scottsdale,scottsdale,Scottsdale city,183.92,4346.0,246.0,5.0,251840.0,217550,249950,5470.0,103.0,100.0,arizona,184.4,396.0,0.48
 14,surprise,Maricopa,696.3498205,arizona,53.0,6.0,228.0,surprise,surprise,Surprise city,105.75,2018.0,175.0,2.0,135345.0,117663,134085,2421.0,18.0,47.0,arizona,105.87,120.0,0.12
 15,tempe,Maricopa,669.9750697000002,arizona,498.0,20.0,1076.0,tempe,tempe,Tempe city,39.93,6120.0,473.0,5.0,186086.0,162297,185038,7669.0,151.0,229.0,arizona,40.19,883.0,0.26
 16,tucson,0,676.0,arizona,2293.0,156.0,4424.0,tucson,tucson,Tucson city,226.71,21125.0,2407.0,46.0,532323.0,523832,535677,27956.0,498.0,1431.0,arizona,227.03,4268.0,0.33
@@ -286,226 +286,227 @@
 284,springfield,0,615.0,massachusetts,884.0,37.0,1183.0,springfield,springfield,Springfield city,31.87,2902.0,509.0,14.0,154562.0,153604,154758,4594.0,73.0,380.0,massachusetts,33.07,1351.0,1.21
 285,ann arbor,Washtenaw County,739.0,michigan,149.0,7.0,278.0,ann arbor,ann arbor,Ann Arbor city,27.83,1731.0,99.0,0.0,121930.0,114093,121477,2108.0,57.0,53.0,michigan,28.7,259.0,0.87
 286,dearborn,Wayne County,688.0,michigan,167.0,11.0,218.0,dearborn,dearborn,Dearborn city,24.22,1776.0,278.0,0.0,93889.0,97845,94491,2272.0,38.0,51.0,michigan,24.47,256.0,0.25
-287,detroit,0,565.0,michigan,10193.0,869.0,8258.0,detroit,detroit,Detroit city,138.75,14045.0,8155.0,267.0,670792.0,711043,673104,30458.0,697.0,2639.0,michigan,142.87,13796.0,4.12
-288,farmington,Oakland County,714.0,michigan,61.0,8.0,119.0,farmington hills,farmington hills,Farmington Hills city,33.28,719.0,77.0,1.0,81359.0,79743,81050,915.0,15.0,16.0,michigan,33.31,93.0,0.03
-289,flint,0,599.0,michigan,1466.0,45.0,961.0,flint,flint,Flint city,33.42,1397.0,274.0,37.0,96605.0,102024,96448,2632.0,104.0,272.0,michigan,34.05,1879.0,0.64
-290,grand rapids,0,677.0,michigan,904.0,54.0,763.0,grand rapids,grand rapids,Grand Rapids city,44.4,2976.0,363.0,12.0,197868.0,187992,198829,4102.0,141.0,351.0,michigan,45.26,1408.0,0.87
-291,livonia,Wayne County,732.0,michigan,76.0,6.0,165.0,livonia,livonia,Livonia city,35.7,1137.0,129.0,0.0,93603.0,96705,94105,1431.0,16.0,16.0,michigan,35.85,108.0,0.16
-292,novi,Oakland County,737.0,michigan,26.0,0.0,42.0,novi,novi,Novi city,30.26,543.0,32.0,0.0,59895.0,55280,59715,617.0,11.0,6.0,michigan,31.29,43.0,1.02
-293,pontiac,0,573.0,michigan,482.0,25.0,468.0,pontiac,pontiac,Pontiac city,19.97,820.0,222.0,4.0,59731.0,59618,59792,1510.0,61.0,97.0,michigan,20.29,644.0,0.31
-294,rochester,Oakland County,744.0,michigan,23.0,1.0,50.0,rochester hills,rochester hills,Rochester Hills city,32.82,403.0,18.0,0.0,73827.0,71039,74205,471.0,13.0,3.0,michigan,32.91,39.0,0.09
-295,royal oak,Oakland County,729.0,michigan,40.0,4.0,46.0,royal oak,royal oak,Royal Oak city,11.78,446.0,51.0,0.0,59303.0,57253,59112,543.0,7.0,7.0,michigan,11.79,54.0,0.0
-296,saginaw,0,648.0,michigan,622.0,19.0,383.0,saginaw,saginaw,Saginaw city,17.34,455.0,75.0,15.0,48589.0,51387,48677,913.0,50.0,75.0,michigan,18.1,762.0,0.76
-297,southfield,0,647.0,michigan,95.0,7.0,315.0,southfield,southfield,Southfield city,26.27,1454.0,263.0,1.0,73324.0,71760,73208,2032.0,18.0,37.0,michigan,26.28,151.0,0.01
-298,sterling heights,Macomb County,715.0,michigan,180.0,6.0,164.0,sterling heights,sterling heights,Sterling Heights city,36.5,1233.0,107.0,4.0,132882.0,129704,132631,1504.0,42.0,19.0,michigan,36.8,245.0,0.29
-299,taylor,0,653.0,michigan,247.0,23.0,326.0,taylor,taylor,Taylor city,23.6,973.0,181.0,4.0,60882.0,62978,61276,1480.0,39.0,58.0,michigan,23.63,348.0,0.04
-300,troy,Oakland County,746.0,michigan,35.0,1.0,94.0,troy,troy,Troy city,33.47,1114.0,67.0,0.0,84086.0,81014,83813,1275.0,14.0,6.0,michigan,33.64,55.0,0.17
-301,burnsville,Dakota County,711.0686364000002,minnesota,62.0,6.0,184.0,burnsville,burnsville,Burnsville city,24.91,1465.0,104.0,0.0,61442.0,60379,61439,1753.0,11.0,28.0,minnesota,26.92,101.0,2.02
-302,duluth,St. Louis County,716.5723386,minnesota,181.0,10.0,506.0,duluth,duluth,Duluth city,67.79,3091.0,222.0,1.0,86306.0,86189,86066,3819.0,31.0,66.0,minnesota,87.43,279.0,19.64
-303,eden prairie,Hennepin County,754.4999921,minnesota,14.0,0.0,56.0,eden prairie,eden prairie,Eden Prairie city,32.45,739.0,29.0,2.0,64429.0,60900,64400,824.0,7.0,9.0,minnesota,35.18,32.0,2.73
-304,lakeville,Dakota County,750.0,minnesota,27.0,2.0,84.0,lakeville,lakeville,Lakeville city,36.05,494.0,20.0,0.0,62958.0,56160,63748,598.0,11.0,6.0,minnesota,37.82,44.0,1.77
-305,maple grove,Hennepin County,763.0,minnesota,27.0,3.0,115.0,maple grove,maple grove,Maple Grove city,32.63,1092.0,35.0,0.0,70966.0,61780,71066,1242.0,18.0,5.0,minnesota,35.03,50.0,2.39
-306,minneapolis,Hennepin County,710.4122334,minnesota,2239.0,107.0,3762.0,minneapolis,minneapolis,Minneapolis city,53.97,13296.0,2388.0,42.0,418971.0,383074,422331,19446.0,514.0,1819.0,minnesota,57.47,4614.0,3.5
-307,minnetonka,Hennepin County,764.0,minnesota,16.0,2.0,110.0,minnetonka,minnetonka,Minnetonka city,26.93,755.0,34.0,2.0,52811.0,49797,53085,899.0,13.0,4.0,minnesota,28.21,35.0,1.29
-308,rochester,Olmsted County,740.0789499,minnesota,116.0,5.0,288.0,rochester,rochester,Rochester city,54.59,1757.0,98.0,1.0,115228.0,107011,115733,2143.0,61.0,46.0,minnesota,54.75,224.0,0.16
-309,gulfport,0,645.0,mississippi,181.0,16.0,562.0,gulfport,gulfport,Gulfport city,55.59,2897.0,203.0,10.0,72792.0,67897,71822,3662.0,26.0,82.0,mississippi,63.99,299.0,8.4
-310,jackson,0,599.0,mississippi,591.0,75.0,2006.0,jackson,jackson,Jackson city,111.05,4696.0,747.0,60.0,168397.0,173728,166965,7449.0,0.0,542.0,mississippi,113.24,0.0,2.2
-311,southaven,0,647.0,mississippi,36.0,5.0,196.0,southaven,southaven,Southaven city,41.25,1219.0,64.0,5.0,53928.0,49119,54031,1479.0,8.0,26.0,mississippi,41.53,75.0,0.28
-312,kansas city,0,665.0,missouri,5909.0,201.0,4658.0,kansas city,kansas city,Kansas City city,314.95,12950.0,4427.0,150.0,484948.0,460734,488943,22035.0,445.0,1858.0,missouri,319.03,8362.0,4.08
-313,omaha,0,696.0,nebraska,1843.0,0.0,2088.0,omaha,omaha,Omaha city,127.09,11849.0,3500.0,31.0,449388.0,450044,466893,17437.0,410.0,625.0,nebraska,130.58,2909.0,3.49
-314,henderson,Clark,686.9322427999998,nevada,218.0,21.0,1089.0,henderson,henderson,Henderson city,107.73,3756.0,641.0,10.0,299285.0,257567,302539,5486.0,86.0,240.0,nevada,107.73,554.0,0.0
-315,north las vegas,0,628.0,nevada,1758.0,11.0,1950.0,north las vegas,north las vegas,North Las Vegas city,101.35,2516.0,1321.0,22.0,242537.0,216889,242975,5787.0,116.0,565.0,nevada,101.39,2461.0,0.04
-316,reno,0,666.0,nevada,1131.0,18.0,1347.0,reno,reno,Reno city,103.01,4890.0,1432.0,19.0,248531.0,225767,248853,7669.0,142.0,382.0,nevada,105.88,1674.0,2.87
-317,sparks,Washoe,673.424558,nevada,313.0,11.0,591.0,sparks,sparks,Sparks city,35.76,1684.0,417.0,2.0,99732.0,91209,100888,2692.0,54.0,105.0,nevada,35.93,474.0,0.17
-318,bayonne,Hudson County,672.0,new jersey,80.0,4.0,115.0,bayonne,bayonne,Bayonne city,5.8,624.0,71.0,0.0,67041.0,63125,67186,810.0,11.0,49.0,new jersey,11.08,140.0,5.28
-319,camden,0,547.0,new jersey,954.0,55.0,583.0,camden,camden county police department,Camden city,8.92,1393.0,550.0,23.0,74299.0,77010,74532,2526.0,75.0,410.0,new jersey,10.34,1462.0,1.42
-320,clifton,Passaic County,699.0,new jersey,103.0,4.0,191.0,clifton,clifton,Clifton city,11.26,1086.0,109.0,0.0,86472.0,84201,86607,1386.0,8.0,73.0,new jersey,11.4,184.0,0.14
-321,east orange,0,564.0,new jersey,245.0,13.0,271.0,east orange,east orange,East Orange city,3.92,552.0,236.0,9.0,65160.0,64203,65378,1059.0,20.0,199.0,new jersey,3.92,473.0,0.0
-322,elizabeth,0,633.0,new jersey,465.0,9.0,683.0,elizabeth,elizabeth,Elizabeth city,12.32,3017.0,895.0,7.0,129726.0,125343,130215,4595.0,47.0,515.0,new jersey,13.46,1034.0,1.15
-323,hoboken,0,744.0,new jersey,88.0,0.0,121.0,hoboken,hoboken,Hoboken city,1.28,911.0,32.0,1.0,55348.0,50100,55131,1064.0,10.0,32.0,new jersey,2.01,131.0,0.74
-324,jersey city,Hudson County,658.0,new jersey,687.0,38.0,1119.0,jersey city,jersey city,Jersey City city,14.79,3231.0,491.0,21.0,267906.0,248639,270753,4841.0,123.0,534.0,new jersey,21.08,1365.0,6.29
-325,new brunswick,0,578.0,new jersey,143.0,9.0,253.0,new brunswick,new brunswick,New Brunswick city,5.23,1001.0,87.0,4.0,57481.0,54925,57073,1341.0,22.0,191.0,new jersey,5.79,360.0,0.56
-326,newark,0,588.0,new jersey,1280.0,72.0,1202.0,newark,newark,Newark city,24.19,3200.0,2392.0,77.0,283673.0,277332,285154,6794.0,116.0,1070.0,new jersey,26.11,2543.0,1.92
-327,passaic,0,640.0,new jersey,214.0,1.0,193.0,passaic,passaic,Passaic city,3.15,842.0,128.0,1.0,71053.0,69906,71247,1163.0,10.0,165.0,new jersey,3.24,390.0,0.1
-328,paterson,0,601.0,new jersey,474.0,10.0,992.0,paterson,paterson,Paterson city,8.43,1776.0,631.0,21.0,147690.0,146499,148678,3399.0,45.0,488.0,new jersey,8.7,1028.0,0.28
-329,perth amboy,0,607.0,new jersey,108.0,2.0,151.0,perth amboy,perth amboy,Perth Amboy city,4.7,598.0,94.0,2.0,52978.0,50945,52823,843.0,5.0,56.0,new jersey,5.96,171.0,1.26
-330,plainfield,0,609.0,new jersey,129.0,4.0,232.0,plainfield,plainfield,Plainfield city,6.02,726.0,97.0,4.0,50983.0,49810,51327,1055.0,14.0,174.0,new jersey,6.03,321.0,0.01
-331,trenton,0,639.0,new jersey,654.0,16.0,792.0,trenton,trenton,Trenton city,7.65,1035.0,366.0,23.0,84231.0,85024,84964,2193.0,63.0,343.0,new jersey,8.16,1083.0,0.51
-332,union,Union County,690.0,new jersey,104.0,1.0,114.0,union city,union city,Union City city,1.28,1028.0,93.0,1.0,70053.0,66508,70387,1235.0,1.0,58.0,new jersey,1.28,164.0,0.0
-333,vineland,0,653.0,new jersey,179.0,12.0,472.0,vineland,vineland,Vineland city,68.42,1883.0,59.0,2.0,60477.0,60829,60392,2414.0,24.0,93.0,new jersey,69.03,298.0,0.61
-334,west new york,Hudson County,672.0,new jersey,61.0,2.0,87.0,west new york town,west new york,West New York town,1.01,409.0,29.0,0.0,54156.0,49897,54227,525.0,8.0,39.0,new jersey,1.33,108.0,0.32
-335,albuquerque,0,673.0,new mexico,4213.0,0.0,6996.0,albuquerque,albuquerque,Albuquerque city,187.73,26670.0,7684.0,70.0,561375.0,546866,558545,41350.0,473.0,2930.0,new mexico,189.55,7686.0,1.82
-336,buffalo,0,672.0,new york,1572.0,192.0,2356.0,buffalo,buffalo,Buffalo city,40.38,6638.0,833.0,40.0,256169.0,261385,258612,9827.0,142.0,857.0,new york,52.49,2611.0,12.11
-337,hempstead,0,637.0,new york,211.0,3.0,92.0,hempstead village,hempstead village,Hempstead village,3.68,393.0,108.0,6.0,55807.0,54074,55806,593.0,6.0,109.0,new york,3.69,332.0,0.0
-338,mount vernon,0,624.0,new york,286.0,11.0,159.0,mount vernon,mount vernon,Mount Vernon city,4.39,1001.0,134.0,6.0,68507.0,67416,68703,1294.0,22.0,123.0,new york,4.4,437.0,0.02
-339,new york,0,706.0,new york,29771.0,0.0,11104.0,new york,new york,New York city,302.64,107976.0,5735.0,292.0,8616333.0,8193703,8622698,124815.0,2375.0,13995.0,new york,468.48,46433.0,165.84
-340,rochester,0,673.0,new york,997.0,105.0,1337.0,rochester,rochester,Rochester city,35.78,5981.0,616.0,27.0,208591.0,210480,208046,7934.0,141.0,707.0,new york,37.15,1872.0,1.37
-341,apex,Wake,741.0,north carolina,16.0,4.0,81.0,apex town,apex,Apex town,15.37,548.0,14.0,1.0,49159.0,37803,50451,643.0,0.0,7.0,north carolina,15.43,0.0,0.06
-342,asheville,Buncombe,695.0,north carolina,363.0,7.0,733.0,asheville,asheville,Asheville city,44.93,3191.0,324.0,7.0,90103.0,83403,91902,4248.0,0.0,181.0,north carolina,45.23,0.0,0.3
-343,burlington,Alamance,653.0,north carolina,381.0,7.0,502.0,burlington,burlington,Burlington city,25.17,1402.0,112.0,4.0,52986.0,50977,53077,2016.0,0.0,114.0,north carolina,25.38,0.0,0.21
-344,cary,Wake,746.0,north carolina,63.0,10.0,285.0,cary town,cary,Cary town,54.35,1438.0,72.0,0.0,166986.0,136943,165904,1795.0,0.0,44.0,north carolina,55.44,0.0,1.09
-345,chapel hill,Orange,747.0,north carolina,38.0,5.0,251.0,chapel hill town,chapel hill,Chapel Hill town,21.12,980.0,53.0,1.0,59553.0,57395,59862,1284.0,0.0,40.0,north carolina,21.27,0.0,0.15
-346,charlotte,Mecklenburg,660.0,north carolina,3965.0,194.0,6416.0,charlotte,charlotte-mecklenburg,Charlotte city,297.68,25856.0,2622.0,86.0,914609.0,738500,859035,34894.0,0.0,2017.0,north carolina,299.67,0.0,1.99
-347,concord,Cabarrus,676.0,north carolina,62.0,4.0,293.0,concord,concord,Concord city,60.27,1433.0,65.0,1.0,91756.0,79482,92067,1791.0,0.0,31.0,north carolina,60.3,0.0,0.04
-348,durham,Durham,672.0,north carolina,1257.0,31.0,2334.0,durham,durham,Durham city,107.37,7200.0,762.0,23.0,269088.0,229177,267743,10296.0,0.0,852.0,north carolina,108.28,0.0,0.91
-349,fayetteville,0,650.0,north carolina,1105.0,39.0,1818.0,fayetteville,fayetteville,Fayetteville city,145.84,6578.0,415.0,24.0,205432.0,208318,209889,8811.0,0.0,292.0,north carolina,147.71,0.0,1.86
-350,gastonia,0,643.0,north carolina,405.0,22.0,587.0,gastonia,gastonia,Gastonia city,50.5,2865.0,262.0,4.0,76191.0,71725,76593,3714.0,0.0,158.0,north carolina,50.73,0.0,0.23
-351,greensboro,0,651.0,north carolina,1394.0,115.0,2062.0,greensboro,greensboro,Greensboro city,126.52,7424.0,846.0,46.0,290051.0,269581,290222,10332.0,0.0,664.0,north carolina,131.8,0.0,5.29
-352,greenville,0,635.0,north carolina,420.0,13.0,724.0,greenville,greenville,Greenville city,34.61,2566.0,104.0,4.0,92630.0,84950,92156,3394.0,0.0,154.0,north carolina,35.36,0.0,0.75
-353,high point,Guilford,656.0,north carolina,530.0,14.0,754.0,high point,high point,High Point city,53.8,3127.0,280.0,20.0,112368.0,104677,111513,4161.0,0.0,206.0,north carolina,55.45,0.0,1.64
-354,huntersville,Mecklenburg,723.0,north carolina,42.0,5.0,100.0,huntersville town,huntersville,Huntersville town,39.61,857.0,36.0,2.0,56279.0,46957,56212,993.0,0.0,17.0,north carolina,39.77,0.0,0.16
-355,jacksonville,Onslow,656.0,north carolina,142.0,9.0,380.0,jacksonville,jacksonville,Jacksonville city,46.51,1529.0,52.0,5.0,67293.0,77854,72447,1961.0,0.0,71.0,north carolina,50.71,0.0,4.2
-356,rocky mount,0,632.0,north carolina,270.0,16.0,554.0,rocky mount,rocky mount,Rocky Mount city,43.79,1310.0,120.0,15.0,55098.0,57696,54523,1984.0,0.0,95.0,north carolina,44.0,0.0,0.22
-357,wilmington,New Hanover,679.0,north carolina,535.0,6.0,998.0,wilmington,wilmington,Wilmington city,51.49,3039.0,281.0,18.0,119422.0,106713,119045,4318.0,0.0,195.0,north carolina,53.0,0.0,1.51
-358,bismarck,0,737.0,north dakota,178.0,5.0,322.0,bismarck,bismarck,Bismarck city,30.84,1884.0,232.0,0.0,74397.0,61562,72865,2438.0,45.0,33.0,north dakota,31.23,256.0,0.38
-359,cincinnati,0,677.0,ohio,1275.0,0.0,3448.0,cincinnati,cincinnati,Cincinnati city,77.94,10172.0,1485.0,70.0,299116.0,296794,301301,15105.0,292.0,1196.0,ohio,79.55,2833.0,1.6
-360,cleveland,0,645.0,ohio,2698.0,253.0,5853.0,cleveland,cleveland,Cleveland city,77.7,9696.0,3395.0,107.0,385351.0,395978,385525,18944.0,497.0,2697.0,ohio,82.47,5999.0,4.77
-361,columbus,0,654.0,ohio,1454.0,379.0,7111.0,columbus,columbus,Columbus city,217.17,23121.0,4176.0,142.0,872205.0,790812,879170,34408.0,919.0,1963.0,ohio,223.11,4478.0,5.94
-362,dayton,0,671.0,ohio,687.0,26.0,1779.0,dayton,dayton,Dayton city,55.65,3688.0,616.0,30.0,140171.0,142330,140371,6083.0,122.0,393.0,ohio,56.5,1232.0,0.85
-363,lorain,0,633.0,ohio,254.0,11.0,590.0,lorain,lorain,Lorain city,23.67,1335.0,94.0,2.0,63672.0,64071,63841,2019.0,30.0,87.0,ohio,24.15,373.0,0.47
-364,toledo,0,638.0,ohio,1834.0,0.0,3103.0,toledo,"toledo, , ",Toledo city,80.69,7247.0,745.0,35.0,277116.0,286994,276491,11095.0,0.0,780.0,ohio,84.12,0.0,3.43
-365,oklahoma city,0,646.0,oklahoma,3429.0,82.0,6105.0,oklahoma city,oklahoma city,Oklahoma City city,606.41,15421.0,2800.0,81.0,648260.0,582253,643648,24326.0,474.0,1120.0,oklahoma,620.82,5104.0,14.41
-366,tulsa,0,649.0,oklahoma,2757.0,144.0,5574.0,tulsa,tulsa,Tulsa city,196.75,13054.0,3460.0,70.0,404868.0,392403,401800,22088.0,423.0,964.0,oklahoma,200.99,4214.0,4.23
-367,albany,Linn County,693.0,oregon,28.0,10.0,158.0,albany,albany,Albany city,17.54,1137.0,111.0,0.0,53701.0,50337,53503,1406.0,8.0,20.0,oregon,17.75,56.0,0.21
-368,beaverton,Washington,715.3475338,oregon,79.0,14.0,157.0,beaverton,beaverton,Beaverton city,18.73,1396.0,207.0,1.0,98897.0,90146,97514,1760.0,60.0,32.0,oregon,18.73,172.0,0.0
-369,bend,Deschutes County,707.0,oregon,97.0,12.0,177.0,bend,bend,Bend city,33.01,1680.0,103.0,0.0,93786.0,76636,94520,1960.0,33.0,24.0,oregon,33.26,154.0,0.26
-370,corvallis,Benton,728.124151,oregon,40.0,26.0,153.0,corvallis,corvallis,Corvallis city,14.13,1229.0,58.0,2.0,57576.0,54393,57961,1440.0,20.0,13.0,oregon,14.3,75.0,0.17
-371,eugene,Lane County,705.0,oregon,370.0,55.0,1129.0,eugene,eugene,Eugene city,43.72,4602.0,545.0,3.0,168310.0,156506,168916,6276.0,101.0,177.0,oregon,43.75,651.0,0.02
-372,gresham,Multnomah County,685.0,oregon,215.0,23.0,424.0,gresham,gresham,Gresham city,23.2,2034.0,1255.0,9.0,112466.0,105993,111053,3713.0,76.0,86.0,oregon,23.43,386.0,0.23
-373,hillsboro,Washington County,707.0,oregon,127.0,26.0,209.0,hillsboro,hillsboro,Hillsboro city,23.9,1714.0,221.0,1.0,107433.0,92529,106894,2144.0,80.0,60.0,oregon,23.91,268.0,0.01
-374,medford,Jackson County,686.0,oregon,241.0,36.0,489.0,medford,medford,Medford city,25.73,4145.0,302.0,4.0,82792.0,74990,81780,4936.0,33.0,98.0,oregon,25.74,376.0,0.01
-375,portland,0,710.0,oregon,1842.0,307.0,4735.0,portland,portland,Portland city,133.43,24837.0,7295.0,24.0,649408.0,585340,647805,36867.0,438.0,1045.0,oregon,145.09,3349.0,11.66
-376,salem,Polk County,712.0,oregon,424.0,34.0,897.0,salem,salem,Salem city,47.9,5437.0,861.0,6.0,169565.0,155030,169798,7195.0,44.0,167.0,oregon,48.44,641.0,0.55
-377,springfield,Lane County,680.0,oregon,102.0,17.0,238.0,springfield,springfield,Springfield city,15.74,2063.0,165.0,1.0,62318.0,59411,62353,2466.0,25.0,41.0,oregon,15.75,169.0,0.01
-378,allentown,Lehigh County,651.0,pennsylvania,202.0,13.0,634.0,allentown,allentown,Allentown city,17.55,2362.0,306.0,16.0,120823.0,118111,121283,3302.0,70.0,269.0,pennsylvania,18.02,557.0,0.48
-379,bethlehem,Northampton County,697.0,pennsylvania,504.0,7.0,187.0,bethlehem,bethlehem,Bethlehem city,19.1,1124.0,48.0,0.0,75336.0,74995,75707,1359.0,29.0,61.0,pennsylvania,19.45,594.0,0.35
-380,erie,Erie County,676.0,pennsylvania,170.0,43.0,531.0,erie,erie,Erie city,19.08,1619.0,108.0,6.0,98071.0,101758,97369,2258.0,32.0,98.0,pennsylvania,19.28,306.0,0.2
-381,lancaster,Lancaster County,692.0,pennsylvania,287.0,20.0,205.0,lancaster,lancaster,Lancaster city,7.23,1689.0,105.0,5.0,59199.0,59335,59708,1999.0,97.0,141.0,pennsylvania,7.35,530.0,0.13
-382,philadelphia,Philadelphia County,631.0,pennsylvania,7406.0,413.0,6590.0,philadelphia,philadelphia,Philadelphia city,134.1,36195.0,5483.0,316.0,1575595.0,1528271,1580863,48268.0,1182.0,6026.0,pennsylvania,142.71,14930.0,8.61
-383,pittsburgh,Allegheny County,699.0,pennsylvania,1061.0,136.0,1610.0,pittsburgh,pittsburgh,Pittsburgh city,55.37,7238.0,680.0,55.0,305932.0,305405,302407,9528.0,90.0,802.0,pennsylvania,58.34,2008.0,2.97
-384,reading,Berks County,658.0,pennsylvania,336.0,11.0,631.0,reading,reading,Reading city,9.88,1278.0,197.0,9.0,87487.0,88123,88423,2106.0,60.0,219.0,pennsylvania,10.14,624.0,0.26
-385,scranton,Lackawanna County,666.0,pennsylvania,85.0,13.0,351.0,scranton,scranton,Scranton city,25.31,1215.0,132.0,1.0,77499.0,76089,77605,1698.0,22.0,90.0,pennsylvania,25.54,198.0,0.23
-386,pawtucket,0,650.0,rhode island,220.0,16.0,373.0,pawtucket,pawtucket,Pawtucket city,8.68,1224.0,191.0,1.0,71648.0,71208,72001,1788.0,45.0,45.0,rhode island,8.97,311.0,0.29
-387,providence,0,649.0,rhode island,589.0,16.0,1013.0,providence,providence,Providence city,18.4,4332.0,580.0,12.0,179854.0,178083,180393,5925.0,104.0,255.0,rhode island,20.57,960.0,2.17
-388,charleston,Charleston County,669.0,south carolina,232.0,12.0,399.0,charleston,charleston,Charleston city,108.98,2442.0,303.0,6.0,136845.0,120338,134875,3144.0,50.0,100.0,south carolina,127.49,388.0,18.51
-389,columbia,0,643.0,south carolina,642.0,17.0,954.0,columbia,columbia,Columbia city,132.21,5389.0,791.0,10.0,134957.0,130184,133114,7134.0,66.0,273.0,south carolina,134.93,991.0,2.72
-390,greenville,Greenville County,657.0,south carolina,292.0,6.0,393.0,greenville,greenville,Greenville city,28.67,2281.0,157.0,4.0,68922.0,59301,68219,2831.0,28.0,91.0,south carolina,28.82,415.0,0.15
-391,mount pleasant,Charleston,730.5690549999998,south carolina,119.0,2.0,169.0,mount pleasant town,mount pleasant,Mount Pleasant town,45.08,1076.0,87.0,2.0,87216.0,67965,86668,1332.0,20.0,24.0,south carolina,52.61,165.0,7.52
-392,north charleston,0,609.0,south carolina,612.0,18.0,919.0,north charleston,north charleston,North Charleston city,73.19,4687.0,685.0,35.0,111305.0,97963,110861,6291.0,74.0,305.0,south carolina,76.65,1026.0,3.46
-393,rock hill,York County,655.0,south carolina,314.0,4.0,365.0,rock hill,rock hill,Rock Hill city,35.72,2506.0,136.0,9.0,74053.0,66559,73068,3007.0,51.0,95.0,south carolina,35.88,469.0,0.16
-394,summerville,Dorchester County,673.0,south carolina,90.0,5.0,173.0,summerville town,summerville,Summerville town,18.04,1457.0,115.0,4.0,50498.0,42886,50388,1745.0,22.0,31.0,south carolina,18.16,147.0,0.11
-395,sioux falls,Lincoln,762.0,south dakota,576.0,47.0,655.0,sioux falls,sioux falls,Sioux Falls city,72.96,3959.0,469.0,4.0,177888.0,154542,176888,5083.0,121.0,100.0,south dakota,73.47,801.0,0.51
-396,chattanooga,0,643.0,tennessee,1424.0,17.0,1540.0,chattanooga,chattanooga,Chattanooga city,137.15,7818.0,1342.0,31.0,178753.0,170586,179139,10700.0,120.0,330.0,tennessee,144.55,1905.0,7.4
-397,collierville,Shelby,737.5,tennessee,54.0,1.0,67.0,collierville town,collierville,Collierville town,29.29,813.0,31.0,0.0,49790.0,45666,50286,911.0,11.0,10.0,tennessee,29.41,75.0,0.12
-398,franklin,Williamson,740.2997793999998,tennessee,113.0,3.0,78.0,franklin,franklin,Franklin city,41.23,940.0,30.0,1.0,76995.0,62849,78321,1048.0,18.0,14.0,tennessee,41.45,146.0,0.22
-399,hendersonville,Sumner,695.2,tennessee,85.0,3.0,71.0,hendersonville,hendersonville,Hendersonville city,31.37,902.0,44.0,0.0,58034.0,51468,57517,1017.0,6.0,11.0,tennessee,36.93,102.0,5.56
-400,jackson,0,651.0,tennessee,529.0,16.0,497.0,jackson,jackson,Jackson city,53.73,2271.0,149.0,7.0,67031.0,66841,66847,2917.0,28.0,91.0,tennessee,53.73,655.0,0.0
-401,knoxville,0,686.0,tennessee,1127.0,12.0,1665.0,knoxville,knoxville,Knoxville city,98.52,7510.0,1036.0,33.0,187539.0,178455,187347,10211.0,145.0,371.0,tennessee,104.17,1676.0,5.65
-402,memphis,0,607.0,tennessee,8849.0,365.0,9532.0,memphis,memphis,Memphis city,315.05,27576.0,4002.0,181.0,652765.0,652331,652236,41110.0,590.0,3457.0,tennessee,324.0,13077.0,8.95
-403,abilene,Taylor County,656.0,texas,394.0,20.0,0.0,abilene,"abilene, ",Abilene city,106.79,2605.0,260.0,4.0,122981.0,117807,121885,0.0,100.0,138.0,texas,112.21,636.0,5.41
-404,allen,Collin County,729.0,texas,44.0,0.0,155.0,allen,allen,Allen city,26.29,1061.0,52.0,2.0,101779.0,84925,100685,1268.0,24.0,30.0,texas,26.39,100.0,0.1
-405,amarillo,Randall County,682.0,texas,1082.0,46.0,1684.0,amarillo,amarillo,Amarillo city,99.48,6113.0,990.0,16.0,200993.0,191255,199826,8787.0,183.0,237.0,texas,101.16,1518.0,1.69
-406,arlington,Tarrant County,645.0,texas,1205.0,29.0,1801.0,arlington,arlington,Arlington city,95.88,9546.0,1360.0,19.0,397377.0,366125,396394,12707.0,254.0,576.0,texas,99.62,2054.0,3.74
-407,austin,Hays County,755.0,texas,2186.0,76.0,4380.0,austin,austin,Austin city,297.9,24542.0,2079.0,25.0,971949.0,806463,950715,31001.0,834.0,987.0,texas,305.06,4032.0,7.17
-408,baytown,Chambers County,689.0,texas,136.0,1.0,506.0,baytown,baytown,Baytown city,35.44,1846.0,326.0,6.0,76704.0,71865,76804,2678.0,38.0,108.0,texas,36.51,288.0,1.07
-409,beaumont,Jefferson County,654.0,texas,853.0,42.0,1259.0,beaumont,beaumont,Beaumont city,82.8,3472.0,405.0,16.0,118456.0,117364,119114,5136.0,86.0,304.0,texas,85.83,1259.0,3.03
-410,brownsville,Cameron County,619.0,texas,259.0,6.0,661.0,brownsville,brownsville,Brownsville city,132.33,4374.0,141.0,5.0,185216.0,175378,183299,5176.0,79.0,133.0,texas,146.28,476.0,13.95
-411,bryan,Brazos County,658.0,texas,237.0,16.0,348.0,bryan,bryan,Bryan city,44.41,1557.0,123.0,4.0,84438.0,76520,84021,2028.0,53.0,69.0,texas,44.5,363.0,0.09
-412,carrollton,Denton County,701.0,texas,67.0,0.0,463.0,carrollton,carrollton,Carrollton city,36.3,1690.0,227.0,2.0,135823.0,119437,135710,2380.0,36.0,61.0,texas,37.11,166.0,0.81
-413,cedar park,Williamson County,716.0,texas,60.0,3.0,109.0,cedar park,cedar park,Cedar Park city,22.85,846.0,51.0,0.0,72143.0,55755,75704,1006.0,51.0,14.0,texas,23.02,125.0,0.18
-414,college station,Brazos County,704.0,texas,127.0,0.0,300.0,college station,college station,College Station city,49.44,1887.0,117.0,1.0,115357.0,94655,113564,2304.0,53.0,49.0,texas,49.62,230.0,0.17
-415,conroe,Montgomery County,669.0,texas,126.0,3.0,276.0,conroe,conroe,Conroe city,52.71,1479.0,176.0,4.0,85534.0,65265,84378,1931.0,54.0,65.0,texas,53.17,249.0,0.45
-416,corpus christi,Nueces County,639.0,texas,1590.0,57.0,2232.0,corpus christi,corpus christi,Corpus Christi city,160.61,8776.0,731.0,21.0,329256.0,305331,325605,11739.0,232.0,470.0,texas,489.59,2313.0,328.98
-417,dallas,Collin County,708.0,texas,4994.0,351.0,9874.0,dallas,dallas,Dallas city,340.52,24847.0,7913.0,167.0,1338551.0,1200468,1341075,42634.0,831.0,4377.0,texas,385.84,10369.0,45.33
-418,denton,Denton County,667.0,texas,201.0,0.0,426.0,denton,denton,Denton city,87.95,2367.0,298.0,1.0,136836.0,117052,136268,3091.0,120.0,94.0,texas,89.32,416.0,1.36
-419,desoto,Dallas County,637.0,texas,112.0,1.0,257.0,desoto,desoto,DeSoto city,21.62,1009.0,158.0,3.0,53163.0,49345,53568,1424.0,28.0,73.0,texas,21.65,216.0,0.04
-420,edinburg,Hidalgo County,617.0,texas,202.0,8.0,472.0,edinburg,edinburg,Edinburg city,37.63,2793.0,108.0,2.0,89595.0,76807,90280,3373.0,51.0,44.0,texas,37.69,299.0,0.06
-421,el paso,El Paso County,650.0,texas,1819.0,38.0,1297.0,el paso,el paso,El Paso city,255.24,10429.0,800.0,19.0,688667.0,650586,683577,12526.0,371.0,400.0,texas,256.26,2609.0,1.02
-422,euless,Tarrant County,661.0,texas,53.0,2.0,214.0,euless,euless,Euless city,16.21,909.0,140.0,1.0,55345.0,51427,55174,1263.0,1.0,29.0,texas,16.29,84.0,0.08
-423,flower mound,Denton County,746.0,texas,31.0,4.0,79.0,flower mound town,flower mound,Flower Mound town,41.39,596.0,19.0,0.0,75101.0,64861,76681,694.0,9.0,4.0,texas,43.9,44.0,2.52
-424,fort worth,Tarrant County,634.0,texas,2966.0,151.0,5116.0,fort worth,fort worth,Fort Worth city,339.82,20250.0,2706.0,70.0,873069.0,748569,874168,28072.0,569.0,1286.0,texas,347.86,4891.0,8.04
-425,frisco,Collin County,732.0,texas,99.0,2.0,309.0,frisco,frisco,Frisco city,61.8,2178.0,84.0,2.0,172804.0,118116,177286,2571.0,39.0,36.0,texas,62.38,176.0,0.58
-426,galveston,Galveston County,661.0,texas,110.0,3.0,275.0,galveston,galveston,Galveston city,41.22,1231.0,284.0,2.0,51021.0,47795,50497,1790.0,63.0,82.0,texas,209.34,257.0,168.12
-427,garland,Dallas County,657.0,texas,292.0,15.0,1214.0,garland,garland,Garland city,57.08,5140.0,810.0,8.0,236243.0,227289,238002,7164.0,129.0,319.0,texas,57.22,748.0,0.13
-428,georgetown,Williamson County,724.0,texas,38.0,4.0,97.0,georgetown,georgetown,Georgetown city,47.86,564.0,35.0,0.0,71007.0,48000,70685,696.0,31.0,14.0,texas,50.11,83.0,2.25
-429,grand prairie,Tarrant County,693.0,texas,261.0,5.0,582.0,grand prairie,grand prairie,Grand Prairie city,72.1,3629.0,495.0,2.0,193249.0,175970,193837,4706.0,136.0,174.0,texas,81.09,573.0,8.99
-430,grapevine,Tarrant County,707.0,texas,73.0,4.0,114.0,grapevine,grapevine,Grapevine city,31.93,1066.0,85.0,1.0,52925.0,46608,53982,1265.0,14.0,19.0,texas,35.55,107.0,3.62
-431,harlingen,Cameron County,638.0,texas,183.0,15.0,523.0,harlingen,harlingen,Harlingen city,39.81,2079.0,91.0,0.0,65617.0,65062,65467,2693.0,18.0,32.0,texas,40.3,233.0,0.49
-432,houston,Harris County,642.0,texas,14201.0,665.0,17108.0,houston,houston,Houston city,599.59,67828.0,11596.0,269.0,2338235.0,2099256,2312717,96532.0,1366.0,9773.0,texas,627.5,25609.0,27.91
-433,irving,Dallas County,659.0,texas,259.0,23.0,969.0,irving,irving,Irving city,67.02,4467.0,711.0,8.0,242062.0,216852,240373,6147.0,54.0,228.0,texas,68.02,549.0,1.0
-434,killeen,Bell County,625.0,texas,636.0,29.0,1140.0,killeen,killeen,Killeen city,53.58,2403.0,566.0,18.0,145912.0,128983,145482,4109.0,151.0,313.0,texas,54.25,1118.0,0.67
-435,laredo,Webb County,623.0,texas,561.0,71.0,874.0,laredo,laredo,Laredo city,88.91,5430.0,170.0,10.0,260669.0,237047,260654,6474.0,114.0,154.0,texas,90.36,839.0,1.45
-436,league city,Galveston County,710.0,texas,42.0,3.0,218.0,league city,league city,League City city,51.29,1407.0,93.0,3.0,105351.0,84077,104903,1718.0,34.0,18.0,texas,53.0,97.0,1.71
-437,lewisville,Denton County,672.0,texas,155.0,6.0,340.0,lewisville,lewisville,Lewisville city,36.4,1565.0,229.0,3.0,106199.0,95855,106021,2134.0,51.0,71.0,texas,42.47,280.0,6.07
-438,longview,Gregg County,636.0,texas,229.0,6.0,614.0,longview,longview,Longview city,55.69,1947.0,242.0,6.0,82303.0,80565,81522,2803.0,62.0,99.0,texas,55.8,396.0,0.11
-439,mansfield,Tarrant County,680.0,texas,37.0,0.0,154.0,mansfield,mansfield,Mansfield city,36.38,612.0,42.0,0.0,67233.0,56860,68928,808.0,21.0,20.0,texas,36.43,78.0,0.04
-440,mcallen,Hidalgo County,650.0,texas,125.0,8.0,185.0,mcallen,mcallen,McAllen city,48.34,3776.0,46.0,7.0,144162.0,131558,142696,4007.0,27.0,49.0,texas,48.65,208.0,0.3
-441,mckinney,Collin County,701.0,texas,151.0,12.0,297.0,mckinney,mckinney,McKinney city,62.21,1965.0,155.0,2.0,179934.0,132950,181330,2417.0,46.0,68.0,texas,62.88,267.0,0.67
-442,mesquite,Dallas County,630.0,texas,292.0,6.0,773.0,mesquite,mesquite,Mesquite city,46.02,3642.0,849.0,6.0,144406.0,139775,143949,5264.0,74.0,244.0,texas,46.17,616.0,0.15
-443,midland,Midland County,660.0,texas,279.0,5.0,431.0,midland,midland,Midland city,72.07,2026.0,220.0,2.0,138954.0,111279,136089,2677.0,37.0,59.0,texas,72.24,377.0,0.17
-444,mission,Hidalgo County,631.0,texas,41.0,19.0,231.0,mission,mission,Mission city,33.99,1700.0,74.0,0.0,84511.0,78110,84424,2005.0,27.0,30.0,texas,34.06,98.0,0.07
-445,missouri city,Fort Bend County,681.0,texas,78.0,0.0,133.0,missouri city,missouri city,Missouri City city,28.42,767.0,69.0,2.0,75863.0,67065,74497,969.0,23.0,46.0,texas,29.8,149.0,1.38
-446,new braunfels,Comal County,687.0,texas,130.0,8.0,221.0,new braunfels,new braunfels,New Braunfels city,43.87,952.0,148.0,1.0,76993.0,58109,79152,1321.0,33.0,29.0,texas,44.28,193.0,0.4
-447,north richland hills,Tarrant County,685.0,texas,80.0,2.0,208.0,north richland hills,north richland hills,North Richland Hills city,18.17,1064.0,101.0,2.0,70910.0,63480,70441,1373.0,31.0,34.0,texas,18.22,147.0,0.04
-448,odessa,Ector County,623.0,texas,726.0,10.0,560.0,odessa,odessa,Odessa city,41.95,2386.0,273.0,7.0,121194.0,99825,116861,3219.0,78.0,101.0,texas,42.21,912.0,0.26
-449,pasadena,Harris County,647.0,texas,418.0,23.0,636.0,pasadena,pasadena,Pasadena city,42.76,2758.0,379.0,5.0,154000.0,149527,153520,3773.0,93.0,195.0,texas,44.27,711.0,1.51
-450,pflugerville,Travis County,676.0,texas,55.0,2.0,127.0,pflugerville,pflugerville,Pflugerville city,22.32,796.0,45.0,1.0,61212.0,48715,63359,968.0,31.0,15.0,texas,22.33,102.0,0.01
-451,pharr,Hidalgo County,618.0,texas,123.0,2.0,268.0,pharr,pharr,Pharr city,23.42,1343.0,62.0,4.0,78467.0,70788,79487,1673.0,44.0,33.0,texas,23.44,204.0,0.03
-452,plano,Collin County,719.0,texas,220.0,25.0,728.0,plano,plano,Plano city,71.58,3968.0,339.0,15.0,290413.0,261236,286143,5035.0,81.0,119.0,texas,71.94,435.0,0.36
-453,port arthur,Jefferson County,634.0,texas,247.0,5.0,767.0,port arthur,port arthur,Port Arthur city,76.9,1111.0,153.0,6.0,55583.0,54502,55498,2031.0,15.0,110.0,texas,144.04,378.0,67.14
-454,richards,Montgomery County,671.0,texas,68.0,5.0,389.0,richardson,richardson,Richardson city,28.56,1717.0,189.0,3.0,115824.0,99555,116783,2295.0,25.0,97.0,texas,28.66,193.0,0.09
-455,round rock,Williamson County,691.0,texas,90.0,4.0,232.0,round rock,round rock,Round Rock city,34.11,2405.0,64.0,2.0,124617.0,100759,123678,2701.0,33.0,44.0,texas,34.41,169.0,0.3
-456,rowlett,Dallas County,685.0,texas,97.0,1.0,133.0,rowlett,rowlett,Rowlett city,19.89,877.0,71.0,1.0,62998.0,56344,62868,1081.0,20.0,23.0,texas,19.96,141.0,0.07
-457,san angelo,Tom Green County,662.0,texas,165.0,10.0,802.0,san angelo,san angelo,San Angelo city,56.86,3425.0,272.0,3.0,101931.0,93625,100119,4499.0,74.0,40.0,texas,59.14,282.0,2.28
-458,san antonio,Comal County,750.0,texas,7067.0,207.0,11722.0,san antonio,san antonio,San Antonio city,460.93,55090.0,6864.0,124.0,1520712.0,1333413,1511946,73676.0,1270.0,2298.0,texas,466.71,10759.0,5.78
-459,san marcos,Hays County,642.0,texas,120.0,8.0,278.0,san marcos,san marcos,San Marcos city,30.22,1064.0,169.0,5.0,65327.0,45245,63071,1511.0,50.0,47.0,texas,30.35,222.0,0.13
-460,sugar land,Fort Bend County,735.0,texas,20.0,0.0,158.0,sugar land,sugar land,Sugar Land city,32.38,1075.0,56.0,0.0,89790.0,79096,88485,1289.0,15.0,36.0,texas,34.02,71.0,1.64
-461,temple,Bell County,664.0,texas,105.0,6.0,409.0,temple,temple,Temple city,69.01,1483.0,238.0,5.0,74794.0,66609,74503,2130.0,63.0,65.0,texas,69.42,238.0,0.42
-462,tyler,Smith County,655.0,texas,333.0,4.0,446.0,tyler,tyler,Tyler city,53.86,2745.0,146.0,6.0,106115.0,97171,104991,3337.0,65.0,60.0,texas,54.39,464.0,0.53
-463,victoria,Victoria County,648.0,texas,116.0,4.0,646.0,victoria,victoria,Victoria city,35.48,1680.0,110.0,4.0,68544.0,62676,67106,2436.0,48.0,49.0,texas,35.63,217.0,0.15
-464,waco,McLennan County,651.0,texas,460.0,15.0,957.0,waco,waco,Waco city,88.96,3741.0,191.0,5.0,135997.0,125405,136436,4889.0,117.0,108.0,texas,101.26,690.0,12.3
-465,wichita falls,Wichita County,651.0,texas,165.0,0.0,725.0,wichita falls,wichita falls,Wichita Falls city,72.14,2294.0,238.0,4.0,104706.0,104829,104747,3257.0,78.0,127.0,texas,72.16,374.0,0.02
-466,layton,Davis County,701.0,utah,52.0,11.0,250.0,layton,layton,Layton city,22.0,1397.0,83.0,1.0,77048.0,67821,76691,1730.0,42.0,11.0,utah,22.17,106.0,0.17
-467,lehi,Utah County,724.0,utah,18.0,1.0,142.0,lehi,lehi,Lehi city,26.34,697.0,56.0,0.0,63605.0,48156,62712,895.0,23.0,8.0,utah,26.68,49.0,0.34
-468,logan,Cache County,698.0,utah,23.0,0.0,94.0,logan,logan,Logan city,17.94,547.0,37.0,1.0,51059.0,48456,51115,678.0,23.0,1.0,utah,18.52,48.0,0.59
-469,ogden,Weber County,687.0,utah,317.0,23.0,546.0,ogden,ogden,Ogden city,27.09,2780.0,468.0,6.0,87323.0,83048,87031,3794.0,49.0,91.0,utah,27.1,463.0,0.0
-470,orem,Utah County,696.0,utah,33.0,2.0,191.0,orem,orem,Orem city,18.29,1696.0,129.0,0.0,99045.0,88720,97839,2016.0,14.0,22.0,utah,18.29,69.0,0.0
-471,provo,Utah County,699.0,utah,66.0,5.0,155.0,provo,provo,Provo city,41.67,1764.0,117.0,1.0,117540.0,112917,117335,2036.0,52.0,29.0,utah,44.17,148.0,2.5
-472,salt lake city,0,686.0,utah,861.0,27.0,1884.0,salt lake city,salt lake city,Salt Lake City city,111.11,11924.0,1886.0,10.0,194968.0,186567,200544,15694.0,334.0,508.0,utah,111.73,1713.0,0.62
-473,sandy,Salt Lake County,719.0,utah,101.0,4.0,541.0,sandy,sandy,Sandy city,22.87,2384.0,270.0,3.0,96957.0,90005,96145,3195.0,53.0,60.0,utah,22.88,217.0,0.01
-474,south jordan,0,734.0,utah,30.0,3.0,226.0,south jordan,south jordan,South Jordan city,22.05,1339.0,156.0,0.0,72533.0,51306,70954,1721.0,10.0,5.0,utah,22.13,45.0,0.08
-475,west jordan,Salt Lake County,683.0,utah,203.0,3.0,388.0,west jordan,west jordan,West Jordan city,32.46,2767.0,384.0,3.0,115390.0,104032,113905,3539.0,36.0,53.0,utah,32.46,295.0,0.0
-476,west valley city,0,648.0,utah,480.0,14.0,861.0,west valley city,west valley,West Valley City city,35.56,3830.0,1146.0,8.0,137762.0,129637,136170,5837.0,164.0,150.0,utah,35.61,802.0,0.05
-477,alexandria,Alexandria City,707.6032196000001,virginia,138.0,8.0,163.0,alexandria,alexandria,Alexandria city,15.03,2046.0,273.0,6.0,158256.0,140823,160035,2482.0,16.0,102.0,virginia,15.47,262.0,0.44
-478,hampton,0,648.0,virginia,179.0,18.0,551.0,hampton,hampton,Hampton city,51.41,3481.0,332.0,17.0,134929.0,137343,134669,4364.0,26.0,185.0,virginia,136.3,407.0,84.89
-479,harrisonburg,Rockingham,689.1863882,virginia,89.0,3.0,115.0,harrisonburg,harrisonburg,Harrisonburg city,17.42,739.0,43.0,3.0,53717.0,49015,54215,897.0,24.0,12.0,virginia,17.48,128.0,0.06
-480,newport news,0,636.0,virginia,551.0,46.0,829.0,newport news,newport news,Newport News city,68.71,4211.0,488.0,24.0,181738.0,180921,179388,5528.0,93.0,239.0,virginia,119.48,907.0,50.76
-481,norfolk,0,642.0,virginia,821.0,8.0,1156.0,norfolk,norfolk,Norfolk city,54.12,7318.0,718.0,36.0,245190.0,243027,244703,9192.0,135.0,371.0,virginia,96.35,1363.0,42.23
-482,portsmouth,0,627.0,virginia,400.0,6.0,1160.0,portsmouth,portsmouth,Portsmouth city,33.65,3903.0,384.0,17.0,95100.0,95449,94572,5447.0,36.0,224.0,virginia,46.73,677.0,13.08
-483,virginia beach,0,682.0,virginia,237.0,51.0,754.0,virginia beach,virginia beach,Virginia Beach city,249.02,7577.0,459.0,14.0,454353.0,438921,450435,8790.0,102.0,272.0,virginia,497.34,625.0,248.32
-484,auburn,King County,688.0,washington,192.0,19.0,0.0,auburn,auburn,Auburn city,29.62,2124.0,653.0,3.0,78718.0,70388,80776,0.0,64.0,117.0,washington,29.89,376.0,0.27
-485,bellevue,0,749.0,washington,65.0,20.0,592.0,bellevue,bellevue,Bellevue city,31.97,3274.0,309.0,0.0,143703.0,128294,144444,4175.0,24.0,55.0,washington,36.47,144.0,4.5
-486,bellingham,Whatcom,716.682865,washington,127.0,10.0,552.0,bellingham,bellingham,Bellingham city,27.08,3435.0,164.0,2.0,88652.0,81334,89045,4151.0,56.0,73.0,washington,28.9,258.0,1.82
-487,everett,Snohomish County,679.0,washington,309.0,13.0,869.0,everett,everett,Everett city,33.45,3292.0,938.0,5.0,110040.0,103255,110079,5099.0,52.0,131.0,washington,48.48,497.0,15.03
-488,federal way,King County,674.0,washington,224.0,10.0,679.0,federal way,federal way,Federal Way city,22.26,3716.0,944.0,7.0,98014.0,89518,96690,5339.0,39.0,170.0,washington,22.46,440.0,0.2
-489,kennewick,Benton County,696.0,washington,123.0,25.0,307.0,kennewick,kennewick,Kennewick city,26.93,1732.0,189.0,1.0,81499.0,74440,81607,2228.0,30.0,59.0,washington,28.36,213.0,1.43
-490,kent,King County,686.0,washington,185.0,17.0,948.0,kent,kent,Kent city,28.63,4666.0,1314.0,7.0,128990.0,119002,128458,6928.0,70.0,203.0,washington,29.18,465.0,0.56
-491,kirkland,0,742.0,washington,34.0,6.0,231.0,kirkland,kirkland,Kirkland city,10.79,1724.0,226.0,1.0,88898.0,80825,88630,2181.0,24.0,16.0,washington,11.12,75.0,0.33
-492,marysville,Snohomish County,682.0,washington,86.0,5.0,292.0,marysville,marysville,Marysville city,20.68,1206.0,301.0,3.0,68950.0,60180,68864,1799.0,32.0,30.0,washington,20.94,151.0,0.26
-493,olympia,Thurston County,709.0,washington,146.0,6.0,371.0,olympia,olympia,Olympia city,17.82,1596.0,204.0,1.0,51923.0,46950,51609,2171.0,42.0,67.0,washington,19.68,256.0,1.86
-494,pasco,Franklin County,682.0,washington,89.0,16.0,255.0,pasco,pasco,Pasco city,30.5,1009.0,167.0,1.0,72146.0,62939,73013,1431.0,21.0,43.0,washington,34.07,154.0,3.58
-495,redmond,0,755.0,washington,50.0,2.0,271.0,redmond,redmond,Redmond city,16.28,1695.0,111.0,2.0,63889.0,54504,64291,2077.0,11.0,33.0,washington,16.95,96.0,0.66
-496,renton,King County,713.0,washington,167.0,14.0,607.0,renton,renton,Renton city,23.12,3640.0,881.0,3.0,102470.0,92295,101379,5128.0,45.0,113.0,washington,23.54,328.0,0.42
-497,richland,Benton,721.3604752,washington,69.0,5.0,184.0,richland,richland,Richland city,35.72,1086.0,51.0,0.0,56151.0,48483,56243,1321.0,19.0,14.0,washington,39.11,102.0,3.39
-498,sammamish,0,765.0,washington,11.0,7.0,91.0,sammamish,sammamish,Sammamish city,18.22,312.0,39.0,3.0,64857.0,57622,64548,442.0,0.0,1.0,washington,18.47,0.0,0.25
-499,seattle,0,722.0,washington,2756.0,149.0,7805.0,seattle,seattle,Seattle city,83.94,26499.0,3630.0,27.0,721365.0,610333,724745,37934.0,266.0,1515.0,washington,142.65,4564.0,58.71
-500,spokane,0,689.0,washington,887.0,50.0,2221.0,spokane,spokane,Spokane city,59.25,11739.0,1737.0,6.0,217066.0,209488,217108,15697.0,238.0,229.0,washington,60.02,1360.0,0.77
-501,spokane,Spokane County,689.0,washington,121.0,5.0,606.0,spokane valley,spokane valley,Spokane Valley city,37.77,3376.0,435.0,2.0,97430.0,90030,97847,4417.0,48.0,29.0,washington,38.06,200.0,0.29
-502,tacoma,0,671.0,washington,1153.0,63.0,2073.0,tacoma,tacoma,Tacoma city,49.72,7742.0,2086.0,10.0,213504.0,198204,213418,11901.0,171.0,403.0,washington,62.34,1737.0,12.62
-503,vancouver,0,689.0,washington,367.0,52.0,749.0,vancouver,vancouver,Vancouver city,46.46,3657.0,1063.0,9.0,176884.0,162893,175673,5469.0,154.0,122.0,washington,49.85,652.0,3.4
-504,yakima,Yakima County,677.0,washington,360.0,15.0,901.0,yakima,yakima,Yakima city,27.18,2841.0,564.0,13.0,94375.0,91651,93667,4306.0,70.0,150.0,washington,27.69,593.0,0.51
-505,charleston,Kanawha,671.6212576,west virginia,421.0,26.0,736.0,charleston,charleston,Charleston city,31.52,2427.0,353.0,10.0,48788.0,51277,47929,3516.0,57.0,84.0,west virginia,32.66,572.0,1.14
-506,appleton,Outagamie,726.4867948,wisconsin,146.0,15.0,136.0,appleton,appleton,Appleton city,24.33,996.0,23.0,1.0,74660.0,72739,74653,1155.0,39.0,17.0,wisconsin,24.82,203.0,0.49
-507,madison,Dane,725.3928654,wisconsin,640.0,10.0,927.0,madison,madison,Madison city,76.79,5452.0,432.0,11.0,255850.0,233637,255214,6811.0,95.0,212.0,wisconsin,94.03,958.0,17.24
-508,milwaukee,0,643.0,wisconsin,6036.0,313.0,5518.0,milwaukee,milwaukee,Milwaukee city,96.12,11548.0,5503.0,118.0,595168.0,595141,595351,22569.0,434.0,2919.0,wisconsin,96.8,9507.0,0.68
-509,waukesha,Waukesha,724.9715672,wisconsin,51.0,2.0,126.0,waukesha,waukesha,Waukesha city,24.81,845.0,36.0,0.0,72565.0,71223,72489,1007.0,43.0,25.0,wisconsin,25.06,119.0,0.26
+287,dearborn,Wayne County,688.0,michigan,161.0,6.0,271.0,dearborn heights,dearborn heights,Dearborn Heights city,11.74,743.0,132.0,0.0,55454.0,57636,55758,1146.0,23.0,44.0,michigan,11.75,228.0,0.01
+288,detroit,0,565.0,michigan,10193.0,869.0,8258.0,detroit,detroit,Detroit city,138.75,14045.0,8155.0,267.0,670792.0,711043,673104,30458.0,697.0,2639.0,michigan,142.87,13796.0,4.12
+289,farmington,Oakland County,714.0,michigan,61.0,8.0,119.0,farmington hills,farmington hills,Farmington Hills city,33.28,719.0,77.0,1.0,81359.0,79743,81050,915.0,15.0,16.0,michigan,33.31,93.0,0.03
+290,flint,0,599.0,michigan,1466.0,45.0,961.0,flint,flint,Flint city,33.42,1397.0,274.0,37.0,96605.0,102024,96448,2632.0,104.0,272.0,michigan,34.05,1879.0,0.64
+291,grand rapids,0,677.0,michigan,904.0,54.0,763.0,grand rapids,grand rapids,Grand Rapids city,44.4,2976.0,363.0,12.0,197868.0,187992,198829,4102.0,141.0,351.0,michigan,45.26,1408.0,0.87
+292,livonia,Wayne County,732.0,michigan,76.0,6.0,165.0,livonia,livonia,Livonia city,35.7,1137.0,129.0,0.0,93603.0,96705,94105,1431.0,16.0,16.0,michigan,35.85,108.0,0.16
+293,novi,Oakland County,737.0,michigan,26.0,0.0,42.0,novi,novi,Novi city,30.26,543.0,32.0,0.0,59895.0,55280,59715,617.0,11.0,6.0,michigan,31.29,43.0,1.02
+294,pontiac,0,573.0,michigan,482.0,25.0,468.0,pontiac,pontiac,Pontiac city,19.97,820.0,222.0,4.0,59731.0,59618,59792,1510.0,61.0,97.0,michigan,20.29,644.0,0.31
+295,rochester,Oakland County,744.0,michigan,23.0,1.0,50.0,rochester hills,rochester hills,Rochester Hills city,32.82,403.0,18.0,0.0,73827.0,71039,74205,471.0,13.0,3.0,michigan,32.91,39.0,0.09
+296,royal oak,Oakland County,729.0,michigan,40.0,4.0,46.0,royal oak,royal oak,Royal Oak city,11.78,446.0,51.0,0.0,59303.0,57253,59112,543.0,7.0,7.0,michigan,11.79,54.0,0.0
+297,saginaw,0,648.0,michigan,622.0,19.0,383.0,saginaw,saginaw,Saginaw city,17.34,455.0,75.0,15.0,48589.0,51387,48677,913.0,50.0,75.0,michigan,18.1,762.0,0.76
+298,southfield,0,647.0,michigan,95.0,7.0,315.0,southfield,southfield,Southfield city,26.27,1454.0,263.0,1.0,73324.0,71760,73208,2032.0,18.0,37.0,michigan,26.28,151.0,0.01
+299,sterling heights,Macomb County,715.0,michigan,180.0,6.0,164.0,sterling heights,sterling heights,Sterling Heights city,36.5,1233.0,107.0,4.0,132882.0,129704,132631,1504.0,42.0,19.0,michigan,36.8,245.0,0.29
+300,taylor,0,653.0,michigan,247.0,23.0,326.0,taylor,taylor,Taylor city,23.6,973.0,181.0,4.0,60882.0,62978,61276,1480.0,39.0,58.0,michigan,23.63,348.0,0.04
+301,troy,Oakland County,746.0,michigan,35.0,1.0,94.0,troy,troy,Troy city,33.47,1114.0,67.0,0.0,84086.0,81014,83813,1275.0,14.0,6.0,michigan,33.64,55.0,0.17
+302,burnsville,Dakota County,711.0686364000002,minnesota,62.0,6.0,184.0,burnsville,burnsville,Burnsville city,24.91,1465.0,104.0,0.0,61442.0,60379,61439,1753.0,11.0,28.0,minnesota,26.92,101.0,2.02
+303,duluth,St. Louis County,716.5723386,minnesota,181.0,10.0,506.0,duluth,duluth,Duluth city,67.79,3091.0,222.0,1.0,86306.0,86189,86066,3819.0,31.0,66.0,minnesota,87.43,279.0,19.64
+304,eden prairie,Hennepin County,754.4999921,minnesota,14.0,0.0,56.0,eden prairie,eden prairie,Eden Prairie city,32.45,739.0,29.0,2.0,64429.0,60900,64400,824.0,7.0,9.0,minnesota,35.18,32.0,2.73
+305,lakeville,Dakota County,750.0,minnesota,27.0,2.0,84.0,lakeville,lakeville,Lakeville city,36.05,494.0,20.0,0.0,62958.0,56160,63748,598.0,11.0,6.0,minnesota,37.82,44.0,1.77
+306,maple grove,Hennepin County,763.0,minnesota,27.0,3.0,115.0,maple grove,maple grove,Maple Grove city,32.63,1092.0,35.0,0.0,70966.0,61780,71066,1242.0,18.0,5.0,minnesota,35.03,50.0,2.39
+307,minneapolis,Hennepin County,710.4122334,minnesota,2239.0,107.0,3762.0,minneapolis,minneapolis,Minneapolis city,53.97,13296.0,2388.0,42.0,418971.0,383074,422331,19446.0,514.0,1819.0,minnesota,57.47,4614.0,3.5
+308,minnetonka,Hennepin County,764.0,minnesota,16.0,2.0,110.0,minnetonka,minnetonka,Minnetonka city,26.93,755.0,34.0,2.0,52811.0,49797,53085,899.0,13.0,4.0,minnesota,28.21,35.0,1.29
+309,rochester,Olmsted County,740.0789499,minnesota,116.0,5.0,288.0,rochester,rochester,Rochester city,54.59,1757.0,98.0,1.0,115228.0,107011,115733,2143.0,61.0,46.0,minnesota,54.75,224.0,0.16
+310,gulfport,0,645.0,mississippi,181.0,16.0,562.0,gulfport,gulfport,Gulfport city,55.59,2897.0,203.0,10.0,72792.0,67897,71822,3662.0,26.0,82.0,mississippi,63.99,299.0,8.4
+311,jackson,0,599.0,mississippi,591.0,75.0,2006.0,jackson,jackson,Jackson city,111.05,4696.0,747.0,60.0,168397.0,173728,166965,7449.0,0.0,542.0,mississippi,113.24,0.0,2.2
+312,southaven,0,647.0,mississippi,36.0,5.0,196.0,southaven,southaven,Southaven city,41.25,1219.0,64.0,5.0,53928.0,49119,54031,1479.0,8.0,26.0,mississippi,41.53,75.0,0.28
+313,kansas city,0,665.0,missouri,5909.0,201.0,4658.0,kansas city,kansas city,Kansas City city,314.95,12950.0,4427.0,150.0,484948.0,460734,488943,22035.0,445.0,1858.0,missouri,319.03,8362.0,4.08
+314,omaha,0,696.0,nebraska,1843.0,0.0,2088.0,omaha,omaha,Omaha city,127.09,11849.0,3500.0,31.0,449388.0,450044,466893,17437.0,410.0,625.0,nebraska,130.58,2909.0,3.49
+315,henderson,Clark,686.9322427999998,nevada,218.0,21.0,1089.0,henderson,henderson,Henderson city,107.73,3756.0,641.0,10.0,299285.0,257567,302539,5486.0,86.0,240.0,nevada,107.73,554.0,0.0
+316,north las vegas,0,628.0,nevada,1758.0,11.0,1950.0,north las vegas,north las vegas,North Las Vegas city,101.35,2516.0,1321.0,22.0,242537.0,216889,242975,5787.0,116.0,565.0,nevada,101.39,2461.0,0.04
+317,reno,0,666.0,nevada,1131.0,18.0,1347.0,reno,reno,Reno city,103.01,4890.0,1432.0,19.0,248531.0,225767,248853,7669.0,142.0,382.0,nevada,105.88,1674.0,2.87
+318,sparks,Washoe,673.424558,nevada,313.0,11.0,591.0,sparks,sparks,Sparks city,35.76,1684.0,417.0,2.0,99732.0,91209,100888,2692.0,54.0,105.0,nevada,35.93,474.0,0.17
+319,bayonne,Hudson County,672.0,new jersey,80.0,4.0,115.0,bayonne,bayonne,Bayonne city,5.8,624.0,71.0,0.0,67041.0,63125,67186,810.0,11.0,49.0,new jersey,11.08,140.0,5.28
+320,camden,0,547.0,new jersey,954.0,55.0,583.0,camden,camden county police department,Camden city,8.92,1393.0,550.0,23.0,74299.0,77010,74532,2526.0,75.0,410.0,new jersey,10.34,1462.0,1.42
+321,clifton,Passaic County,699.0,new jersey,103.0,4.0,191.0,clifton,clifton,Clifton city,11.26,1086.0,109.0,0.0,86472.0,84201,86607,1386.0,8.0,73.0,new jersey,11.4,184.0,0.14
+322,east orange,0,564.0,new jersey,245.0,13.0,271.0,east orange,east orange,East Orange city,3.92,552.0,236.0,9.0,65160.0,64203,65378,1059.0,20.0,199.0,new jersey,3.92,473.0,0.0
+323,elizabeth,0,633.0,new jersey,465.0,9.0,683.0,elizabeth,elizabeth,Elizabeth city,12.32,3017.0,895.0,7.0,129726.0,125343,130215,4595.0,47.0,515.0,new jersey,13.46,1034.0,1.15
+324,hoboken,0,744.0,new jersey,88.0,0.0,121.0,hoboken,hoboken,Hoboken city,1.28,911.0,32.0,1.0,55348.0,50100,55131,1064.0,10.0,32.0,new jersey,2.01,131.0,0.74
+325,jersey city,Hudson County,658.0,new jersey,687.0,38.0,1119.0,jersey city,jersey city,Jersey City city,14.79,3231.0,491.0,21.0,267906.0,248639,270753,4841.0,123.0,534.0,new jersey,21.08,1365.0,6.29
+326,new brunswick,0,578.0,new jersey,143.0,9.0,253.0,new brunswick,new brunswick,New Brunswick city,5.23,1001.0,87.0,4.0,57481.0,54925,57073,1341.0,22.0,191.0,new jersey,5.79,360.0,0.56
+327,newark,0,588.0,new jersey,1280.0,72.0,1202.0,newark,newark,Newark city,24.19,3200.0,2392.0,77.0,283673.0,277332,285154,6794.0,116.0,1070.0,new jersey,26.11,2543.0,1.92
+328,passaic,0,640.0,new jersey,214.0,1.0,193.0,passaic,passaic,Passaic city,3.15,842.0,128.0,1.0,71053.0,69906,71247,1163.0,10.0,165.0,new jersey,3.24,390.0,0.1
+329,paterson,0,601.0,new jersey,474.0,10.0,992.0,paterson,paterson,Paterson city,8.43,1776.0,631.0,21.0,147690.0,146499,148678,3399.0,45.0,488.0,new jersey,8.7,1028.0,0.28
+330,perth amboy,0,607.0,new jersey,108.0,2.0,151.0,perth amboy,perth amboy,Perth Amboy city,4.7,598.0,94.0,2.0,52978.0,50945,52823,843.0,5.0,56.0,new jersey,5.96,171.0,1.26
+331,plainfield,0,609.0,new jersey,129.0,4.0,232.0,plainfield,plainfield,Plainfield city,6.02,726.0,97.0,4.0,50983.0,49810,51327,1055.0,14.0,174.0,new jersey,6.03,321.0,0.01
+332,trenton,0,639.0,new jersey,654.0,16.0,792.0,trenton,trenton,Trenton city,7.65,1035.0,366.0,23.0,84231.0,85024,84964,2193.0,63.0,343.0,new jersey,8.16,1083.0,0.51
+333,union,Union County,690.0,new jersey,104.0,1.0,114.0,union city,union city,Union City city,1.28,1028.0,93.0,1.0,70053.0,66508,70387,1235.0,1.0,58.0,new jersey,1.28,164.0,0.0
+334,vineland,0,653.0,new jersey,179.0,12.0,472.0,vineland,vineland,Vineland city,68.42,1883.0,59.0,2.0,60477.0,60829,60392,2414.0,24.0,93.0,new jersey,69.03,298.0,0.61
+335,west new york,Hudson County,672.0,new jersey,61.0,2.0,87.0,west new york town,west new york,West New York town,1.01,409.0,29.0,0.0,54156.0,49897,54227,525.0,8.0,39.0,new jersey,1.33,108.0,0.32
+336,albuquerque,0,673.0,new mexico,4213.0,0.0,6996.0,albuquerque,albuquerque,Albuquerque city,187.73,26670.0,7684.0,70.0,561375.0,546866,558545,41350.0,473.0,2930.0,new mexico,189.55,7686.0,1.82
+337,buffalo,0,672.0,new york,1572.0,192.0,2356.0,buffalo,buffalo,Buffalo city,40.38,6638.0,833.0,40.0,256169.0,261385,258612,9827.0,142.0,857.0,new york,52.49,2611.0,12.11
+338,hempstead,0,637.0,new york,211.0,3.0,92.0,hempstead village,hempstead village,Hempstead village,3.68,393.0,108.0,6.0,55807.0,54074,55806,593.0,6.0,109.0,new york,3.69,332.0,0.0
+339,mount vernon,0,624.0,new york,286.0,11.0,159.0,mount vernon,mount vernon,Mount Vernon city,4.39,1001.0,134.0,6.0,68507.0,67416,68703,1294.0,22.0,123.0,new york,4.4,437.0,0.02
+340,new york,0,706.0,new york,29771.0,0.0,11104.0,new york,new york,New York city,302.64,107976.0,5735.0,292.0,8616333.0,8193703,8622698,124815.0,2375.0,13995.0,new york,468.48,46433.0,165.84
+341,rochester,0,673.0,new york,997.0,105.0,1337.0,rochester,rochester,Rochester city,35.78,5981.0,616.0,27.0,208591.0,210480,208046,7934.0,141.0,707.0,new york,37.15,1872.0,1.37
+342,apex,Wake,741.0,north carolina,16.0,4.0,81.0,apex town,apex,Apex town,15.37,548.0,14.0,1.0,49159.0,37803,50451,643.0,0.0,7.0,north carolina,15.43,0.0,0.06
+343,asheville,Buncombe,695.0,north carolina,363.0,7.0,733.0,asheville,asheville,Asheville city,44.93,3191.0,324.0,7.0,90103.0,83403,91902,4248.0,0.0,181.0,north carolina,45.23,0.0,0.3
+344,burlington,Alamance,653.0,north carolina,381.0,7.0,502.0,burlington,burlington,Burlington city,25.17,1402.0,112.0,4.0,52986.0,50977,53077,2016.0,0.0,114.0,north carolina,25.38,0.0,0.21
+345,cary,Wake,746.0,north carolina,63.0,10.0,285.0,cary town,cary,Cary town,54.35,1438.0,72.0,0.0,166986.0,136943,165904,1795.0,0.0,44.0,north carolina,55.44,0.0,1.09
+346,chapel hill,Orange,747.0,north carolina,38.0,5.0,251.0,chapel hill town,chapel hill,Chapel Hill town,21.12,980.0,53.0,1.0,59553.0,57395,59862,1284.0,0.0,40.0,north carolina,21.27,0.0,0.15
+347,charlotte,Mecklenburg,660.0,north carolina,3965.0,194.0,6416.0,charlotte,charlotte-mecklenburg,Charlotte city,297.68,25856.0,2622.0,86.0,914609.0,738500,859035,34894.0,0.0,2017.0,north carolina,299.67,0.0,1.99
+348,concord,Cabarrus,676.0,north carolina,62.0,4.0,293.0,concord,concord,Concord city,60.27,1433.0,65.0,1.0,91756.0,79482,92067,1791.0,0.0,31.0,north carolina,60.3,0.0,0.04
+349,durham,Durham,672.0,north carolina,1257.0,31.0,2334.0,durham,durham,Durham city,107.37,7200.0,762.0,23.0,269088.0,229177,267743,10296.0,0.0,852.0,north carolina,108.28,0.0,0.91
+350,fayetteville,0,650.0,north carolina,1105.0,39.0,1818.0,fayetteville,fayetteville,Fayetteville city,145.84,6578.0,415.0,24.0,205432.0,208318,209889,8811.0,0.0,292.0,north carolina,147.71,0.0,1.86
+351,gastonia,0,643.0,north carolina,405.0,22.0,587.0,gastonia,gastonia,Gastonia city,50.5,2865.0,262.0,4.0,76191.0,71725,76593,3714.0,0.0,158.0,north carolina,50.73,0.0,0.23
+352,greensboro,0,651.0,north carolina,1394.0,115.0,2062.0,greensboro,greensboro,Greensboro city,126.52,7424.0,846.0,46.0,290051.0,269581,290222,10332.0,0.0,664.0,north carolina,131.8,0.0,5.29
+353,greenville,0,635.0,north carolina,420.0,13.0,724.0,greenville,greenville,Greenville city,34.61,2566.0,104.0,4.0,92630.0,84950,92156,3394.0,0.0,154.0,north carolina,35.36,0.0,0.75
+354,high point,Guilford,656.0,north carolina,530.0,14.0,754.0,high point,high point,High Point city,53.8,3127.0,280.0,20.0,112368.0,104677,111513,4161.0,0.0,206.0,north carolina,55.45,0.0,1.64
+355,huntersville,Mecklenburg,723.0,north carolina,42.0,5.0,100.0,huntersville town,huntersville,Huntersville town,39.61,857.0,36.0,2.0,56279.0,46957,56212,993.0,0.0,17.0,north carolina,39.77,0.0,0.16
+356,jacksonville,Onslow,656.0,north carolina,142.0,9.0,380.0,jacksonville,jacksonville,Jacksonville city,46.51,1529.0,52.0,5.0,67293.0,77854,72447,1961.0,0.0,71.0,north carolina,50.71,0.0,4.2
+357,rocky mount,0,632.0,north carolina,270.0,16.0,554.0,rocky mount,rocky mount,Rocky Mount city,43.79,1310.0,120.0,15.0,55098.0,57696,54523,1984.0,0.0,95.0,north carolina,44.0,0.0,0.22
+358,wilmington,New Hanover,679.0,north carolina,535.0,6.0,998.0,wilmington,wilmington,Wilmington city,51.49,3039.0,281.0,18.0,119422.0,106713,119045,4318.0,0.0,195.0,north carolina,53.0,0.0,1.51
+359,bismarck,0,737.0,north dakota,178.0,5.0,322.0,bismarck,bismarck,Bismarck city,30.84,1884.0,232.0,0.0,74397.0,61562,72865,2438.0,45.0,33.0,north dakota,31.23,256.0,0.38
+360,cincinnati,0,677.0,ohio,1275.0,0.0,3448.0,cincinnati,cincinnati,Cincinnati city,77.94,10172.0,1485.0,70.0,299116.0,296794,301301,15105.0,292.0,1196.0,ohio,79.55,2833.0,1.6
+361,cleveland,0,645.0,ohio,2698.0,253.0,5853.0,cleveland,cleveland,Cleveland city,77.7,9696.0,3395.0,107.0,385351.0,395978,385525,18944.0,497.0,2697.0,ohio,82.47,5999.0,4.77
+362,columbus,0,654.0,ohio,1454.0,379.0,7111.0,columbus,columbus,Columbus city,217.17,23121.0,4176.0,142.0,872205.0,790812,879170,34408.0,919.0,1963.0,ohio,223.11,4478.0,5.94
+363,dayton,0,671.0,ohio,687.0,26.0,1779.0,dayton,dayton,Dayton city,55.65,3688.0,616.0,30.0,140171.0,142330,140371,6083.0,122.0,393.0,ohio,56.5,1232.0,0.85
+364,lorain,0,633.0,ohio,254.0,11.0,590.0,lorain,lorain,Lorain city,23.67,1335.0,94.0,2.0,63672.0,64071,63841,2019.0,30.0,87.0,ohio,24.15,373.0,0.47
+365,toledo,0,638.0,ohio,1834.0,0.0,3103.0,toledo,"toledo, , ",Toledo city,80.69,7247.0,745.0,35.0,277116.0,286994,276491,11095.0,0.0,780.0,ohio,84.12,0.0,3.43
+366,oklahoma city,0,646.0,oklahoma,3429.0,82.0,6105.0,oklahoma city,oklahoma city,Oklahoma City city,606.41,15421.0,2800.0,81.0,648260.0,582253,643648,24326.0,474.0,1120.0,oklahoma,620.82,5104.0,14.41
+367,tulsa,0,649.0,oklahoma,2757.0,144.0,5574.0,tulsa,tulsa,Tulsa city,196.75,13054.0,3460.0,70.0,404868.0,392403,401800,22088.0,423.0,964.0,oklahoma,200.99,4214.0,4.23
+368,albany,Linn County,693.0,oregon,28.0,10.0,158.0,albany,albany,Albany city,17.54,1137.0,111.0,0.0,53701.0,50337,53503,1406.0,8.0,20.0,oregon,17.75,56.0,0.21
+369,beaverton,Washington,715.3475338,oregon,79.0,14.0,157.0,beaverton,beaverton,Beaverton city,18.73,1396.0,207.0,1.0,98897.0,90146,97514,1760.0,60.0,32.0,oregon,18.73,172.0,0.0
+370,bend,Deschutes County,707.0,oregon,97.0,12.0,177.0,bend,bend,Bend city,33.01,1680.0,103.0,0.0,93786.0,76636,94520,1960.0,33.0,24.0,oregon,33.26,154.0,0.26
+371,corvallis,Benton,728.124151,oregon,40.0,26.0,153.0,corvallis,corvallis,Corvallis city,14.13,1229.0,58.0,2.0,57576.0,54393,57961,1440.0,20.0,13.0,oregon,14.3,75.0,0.17
+372,eugene,Lane County,705.0,oregon,370.0,55.0,1129.0,eugene,eugene,Eugene city,43.72,4602.0,545.0,3.0,168310.0,156506,168916,6276.0,101.0,177.0,oregon,43.75,651.0,0.02
+373,gresham,Multnomah County,685.0,oregon,215.0,23.0,424.0,gresham,gresham,Gresham city,23.2,2034.0,1255.0,9.0,112466.0,105993,111053,3713.0,76.0,86.0,oregon,23.43,386.0,0.23
+374,hillsboro,Washington County,707.0,oregon,127.0,26.0,209.0,hillsboro,hillsboro,Hillsboro city,23.9,1714.0,221.0,1.0,107433.0,92529,106894,2144.0,80.0,60.0,oregon,23.91,268.0,0.01
+375,medford,Jackson County,686.0,oregon,241.0,36.0,489.0,medford,medford,Medford city,25.73,4145.0,302.0,4.0,82792.0,74990,81780,4936.0,33.0,98.0,oregon,25.74,376.0,0.01
+376,portland,0,710.0,oregon,1842.0,307.0,4735.0,portland,portland,Portland city,133.43,24837.0,7295.0,24.0,649408.0,585340,647805,36867.0,438.0,1045.0,oregon,145.09,3349.0,11.66
+377,salem,Polk County,712.0,oregon,424.0,34.0,897.0,salem,salem,Salem city,47.9,5437.0,861.0,6.0,169565.0,155030,169798,7195.0,44.0,167.0,oregon,48.44,641.0,0.55
+378,springfield,Lane County,680.0,oregon,102.0,17.0,238.0,springfield,springfield,Springfield city,15.74,2063.0,165.0,1.0,62318.0,59411,62353,2466.0,25.0,41.0,oregon,15.75,169.0,0.01
+379,allentown,Lehigh County,651.0,pennsylvania,202.0,13.0,634.0,allentown,allentown,Allentown city,17.55,2362.0,306.0,16.0,120823.0,118111,121283,3302.0,70.0,269.0,pennsylvania,18.02,557.0,0.48
+380,bethlehem,Northampton County,697.0,pennsylvania,504.0,7.0,187.0,bethlehem,bethlehem,Bethlehem city,19.1,1124.0,48.0,0.0,75336.0,74995,75707,1359.0,29.0,61.0,pennsylvania,19.45,594.0,0.35
+381,erie,Erie County,676.0,pennsylvania,170.0,43.0,531.0,erie,erie,Erie city,19.08,1619.0,108.0,6.0,98071.0,101758,97369,2258.0,32.0,98.0,pennsylvania,19.28,306.0,0.2
+382,lancaster,Lancaster County,692.0,pennsylvania,287.0,20.0,205.0,lancaster,lancaster,Lancaster city,7.23,1689.0,105.0,5.0,59199.0,59335,59708,1999.0,97.0,141.0,pennsylvania,7.35,530.0,0.13
+383,philadelphia,Philadelphia County,631.0,pennsylvania,7406.0,413.0,6590.0,philadelphia,philadelphia,Philadelphia city,134.1,36195.0,5483.0,316.0,1575595.0,1528271,1580863,48268.0,1182.0,6026.0,pennsylvania,142.71,14930.0,8.61
+384,pittsburgh,Allegheny County,699.0,pennsylvania,1061.0,136.0,1610.0,pittsburgh,pittsburgh,Pittsburgh city,55.37,7238.0,680.0,55.0,305932.0,305405,302407,9528.0,90.0,802.0,pennsylvania,58.34,2008.0,2.97
+385,reading,Berks County,658.0,pennsylvania,336.0,11.0,631.0,reading,reading,Reading city,9.88,1278.0,197.0,9.0,87487.0,88123,88423,2106.0,60.0,219.0,pennsylvania,10.14,624.0,0.26
+386,scranton,Lackawanna County,666.0,pennsylvania,85.0,13.0,351.0,scranton,scranton,Scranton city,25.31,1215.0,132.0,1.0,77499.0,76089,77605,1698.0,22.0,90.0,pennsylvania,25.54,198.0,0.23
+387,pawtucket,0,650.0,rhode island,220.0,16.0,373.0,pawtucket,pawtucket,Pawtucket city,8.68,1224.0,191.0,1.0,71648.0,71208,72001,1788.0,45.0,45.0,rhode island,8.97,311.0,0.29
+388,providence,0,649.0,rhode island,589.0,16.0,1013.0,providence,providence,Providence city,18.4,4332.0,580.0,12.0,179854.0,178083,180393,5925.0,104.0,255.0,rhode island,20.57,960.0,2.17
+389,charleston,Charleston County,669.0,south carolina,232.0,12.0,399.0,charleston,charleston,Charleston city,108.98,2442.0,303.0,6.0,136845.0,120338,134875,3144.0,50.0,100.0,south carolina,127.49,388.0,18.51
+390,columbia,0,643.0,south carolina,642.0,17.0,954.0,columbia,columbia,Columbia city,132.21,5389.0,791.0,10.0,134957.0,130184,133114,7134.0,66.0,273.0,south carolina,134.93,991.0,2.72
+391,greenville,Greenville County,657.0,south carolina,292.0,6.0,393.0,greenville,greenville,Greenville city,28.67,2281.0,157.0,4.0,68922.0,59301,68219,2831.0,28.0,91.0,south carolina,28.82,415.0,0.15
+392,mount pleasant,Charleston,730.5690549999998,south carolina,119.0,2.0,169.0,mount pleasant town,mount pleasant,Mount Pleasant town,45.08,1076.0,87.0,2.0,87216.0,67965,86668,1332.0,20.0,24.0,south carolina,52.61,165.0,7.52
+393,north charleston,0,609.0,south carolina,612.0,18.0,919.0,north charleston,north charleston,North Charleston city,73.19,4687.0,685.0,35.0,111305.0,97963,110861,6291.0,74.0,305.0,south carolina,76.65,1026.0,3.46
+394,rock hill,York County,655.0,south carolina,314.0,4.0,365.0,rock hill,rock hill,Rock Hill city,35.72,2506.0,136.0,9.0,74053.0,66559,73068,3007.0,51.0,95.0,south carolina,35.88,469.0,0.16
+395,summerville,Dorchester County,673.0,south carolina,90.0,5.0,173.0,summerville town,summerville,Summerville town,18.04,1457.0,115.0,4.0,50498.0,42886,50388,1745.0,22.0,31.0,south carolina,18.16,147.0,0.11
+396,sioux falls,Lincoln,762.0,south dakota,576.0,47.0,655.0,sioux falls,sioux falls,Sioux Falls city,72.96,3959.0,469.0,4.0,177888.0,154542,176888,5083.0,121.0,100.0,south dakota,73.47,801.0,0.51
+397,chattanooga,0,643.0,tennessee,1424.0,17.0,1540.0,chattanooga,chattanooga,Chattanooga city,137.15,7818.0,1342.0,31.0,178753.0,170586,179139,10700.0,120.0,330.0,tennessee,144.55,1905.0,7.4
+398,collierville,Shelby,737.5,tennessee,54.0,1.0,67.0,collierville town,collierville,Collierville town,29.29,813.0,31.0,0.0,49790.0,45666,50286,911.0,11.0,10.0,tennessee,29.41,75.0,0.12
+399,franklin,Williamson,740.2997793999998,tennessee,113.0,3.0,78.0,franklin,franklin,Franklin city,41.23,940.0,30.0,1.0,76995.0,62849,78321,1048.0,18.0,14.0,tennessee,41.45,146.0,0.22
+400,hendersonville,Sumner,695.2,tennessee,85.0,3.0,71.0,hendersonville,hendersonville,Hendersonville city,31.37,902.0,44.0,0.0,58034.0,51468,57517,1017.0,6.0,11.0,tennessee,36.93,102.0,5.56
+401,jackson,0,651.0,tennessee,529.0,16.0,497.0,jackson,jackson,Jackson city,53.73,2271.0,149.0,7.0,67031.0,66841,66847,2917.0,28.0,91.0,tennessee,53.73,655.0,0.0
+402,knoxville,0,686.0,tennessee,1127.0,12.0,1665.0,knoxville,knoxville,Knoxville city,98.52,7510.0,1036.0,33.0,187539.0,178455,187347,10211.0,145.0,371.0,tennessee,104.17,1676.0,5.65
+403,memphis,0,607.0,tennessee,8849.0,365.0,9532.0,memphis,memphis,Memphis city,315.05,27576.0,4002.0,181.0,652765.0,652331,652236,41110.0,590.0,3457.0,tennessee,324.0,13077.0,8.95
+404,abilene,Taylor County,656.0,texas,394.0,20.0,0.0,abilene,"abilene, ",Abilene city,106.79,2605.0,260.0,4.0,122981.0,117807,121885,0.0,100.0,138.0,texas,112.21,636.0,5.41
+405,allen,Collin County,729.0,texas,44.0,0.0,155.0,allen,allen,Allen city,26.29,1061.0,52.0,2.0,101779.0,84925,100685,1268.0,24.0,30.0,texas,26.39,100.0,0.1
+406,amarillo,Randall County,682.0,texas,1082.0,46.0,1684.0,amarillo,amarillo,Amarillo city,99.48,6113.0,990.0,16.0,200993.0,191255,199826,8787.0,183.0,237.0,texas,101.16,1518.0,1.69
+407,arlington,Tarrant County,645.0,texas,1205.0,29.0,1801.0,arlington,arlington,Arlington city,95.88,9546.0,1360.0,19.0,397377.0,366125,396394,12707.0,254.0,576.0,texas,99.62,2054.0,3.74
+408,austin,Hays County,755.0,texas,2186.0,76.0,4380.0,austin,austin,Austin city,297.9,24542.0,2079.0,25.0,971949.0,806463,950715,31001.0,834.0,987.0,texas,305.06,4032.0,7.17
+409,baytown,Chambers County,689.0,texas,136.0,1.0,506.0,baytown,baytown,Baytown city,35.44,1846.0,326.0,6.0,76704.0,71865,76804,2678.0,38.0,108.0,texas,36.51,288.0,1.07
+410,beaumont,Jefferson County,654.0,texas,853.0,42.0,1259.0,beaumont,beaumont,Beaumont city,82.8,3472.0,405.0,16.0,118456.0,117364,119114,5136.0,86.0,304.0,texas,85.83,1259.0,3.03
+411,brownsville,Cameron County,619.0,texas,259.0,6.0,661.0,brownsville,brownsville,Brownsville city,132.33,4374.0,141.0,5.0,185216.0,175378,183299,5176.0,79.0,133.0,texas,146.28,476.0,13.95
+412,bryan,Brazos County,658.0,texas,237.0,16.0,348.0,bryan,bryan,Bryan city,44.41,1557.0,123.0,4.0,84438.0,76520,84021,2028.0,53.0,69.0,texas,44.5,363.0,0.09
+413,carrollton,Denton County,701.0,texas,67.0,0.0,463.0,carrollton,carrollton,Carrollton city,36.3,1690.0,227.0,2.0,135823.0,119437,135710,2380.0,36.0,61.0,texas,37.11,166.0,0.81
+414,cedar park,Williamson County,716.0,texas,60.0,3.0,109.0,cedar park,cedar park,Cedar Park city,22.85,846.0,51.0,0.0,72143.0,55755,75704,1006.0,51.0,14.0,texas,23.02,125.0,0.18
+415,college station,Brazos County,704.0,texas,127.0,0.0,300.0,college station,college station,College Station city,49.44,1887.0,117.0,1.0,115357.0,94655,113564,2304.0,53.0,49.0,texas,49.62,230.0,0.17
+416,conroe,Montgomery County,669.0,texas,126.0,3.0,276.0,conroe,conroe,Conroe city,52.71,1479.0,176.0,4.0,85534.0,65265,84378,1931.0,54.0,65.0,texas,53.17,249.0,0.45
+417,corpus christi,Nueces County,639.0,texas,1590.0,57.0,2232.0,corpus christi,corpus christi,Corpus Christi city,160.61,8776.0,731.0,21.0,329256.0,305331,325605,11739.0,232.0,470.0,texas,489.59,2313.0,328.98
+418,dallas,Collin County,708.0,texas,4994.0,351.0,9874.0,dallas,dallas,Dallas city,340.52,24847.0,7913.0,167.0,1338551.0,1200468,1341075,42634.0,831.0,4377.0,texas,385.84,10369.0,45.33
+419,denton,Denton County,667.0,texas,201.0,0.0,426.0,denton,denton,Denton city,87.95,2367.0,298.0,1.0,136836.0,117052,136268,3091.0,120.0,94.0,texas,89.32,416.0,1.36
+420,desoto,Dallas County,637.0,texas,112.0,1.0,257.0,desoto,desoto,DeSoto city,21.62,1009.0,158.0,3.0,53163.0,49345,53568,1424.0,28.0,73.0,texas,21.65,216.0,0.04
+421,edinburg,Hidalgo County,617.0,texas,202.0,8.0,472.0,edinburg,edinburg,Edinburg city,37.63,2793.0,108.0,2.0,89595.0,76807,90280,3373.0,51.0,44.0,texas,37.69,299.0,0.06
+422,el paso,El Paso County,650.0,texas,1819.0,38.0,1297.0,el paso,el paso,El Paso city,255.24,10429.0,800.0,19.0,688667.0,650586,683577,12526.0,371.0,400.0,texas,256.26,2609.0,1.02
+423,euless,Tarrant County,661.0,texas,53.0,2.0,214.0,euless,euless,Euless city,16.21,909.0,140.0,1.0,55345.0,51427,55174,1263.0,1.0,29.0,texas,16.29,84.0,0.08
+424,flower mound,Denton County,746.0,texas,31.0,4.0,79.0,flower mound town,flower mound,Flower Mound town,41.39,596.0,19.0,0.0,75101.0,64861,76681,694.0,9.0,4.0,texas,43.9,44.0,2.52
+425,fort worth,Tarrant County,634.0,texas,2966.0,151.0,5116.0,fort worth,fort worth,Fort Worth city,339.82,20250.0,2706.0,70.0,873069.0,748569,874168,28072.0,569.0,1286.0,texas,347.86,4891.0,8.04
+426,frisco,Collin County,732.0,texas,99.0,2.0,309.0,frisco,frisco,Frisco city,61.8,2178.0,84.0,2.0,172804.0,118116,177286,2571.0,39.0,36.0,texas,62.38,176.0,0.58
+427,galveston,Galveston County,661.0,texas,110.0,3.0,275.0,galveston,galveston,Galveston city,41.22,1231.0,284.0,2.0,51021.0,47795,50497,1790.0,63.0,82.0,texas,209.34,257.0,168.12
+428,garland,Dallas County,657.0,texas,292.0,15.0,1214.0,garland,garland,Garland city,57.08,5140.0,810.0,8.0,236243.0,227289,238002,7164.0,129.0,319.0,texas,57.22,748.0,0.13
+429,georgetown,Williamson County,724.0,texas,38.0,4.0,97.0,georgetown,georgetown,Georgetown city,47.86,564.0,35.0,0.0,71007.0,48000,70685,696.0,31.0,14.0,texas,50.11,83.0,2.25
+430,grand prairie,Tarrant County,693.0,texas,261.0,5.0,582.0,grand prairie,grand prairie,Grand Prairie city,72.1,3629.0,495.0,2.0,193249.0,175970,193837,4706.0,136.0,174.0,texas,81.09,573.0,8.99
+431,grapevine,Tarrant County,707.0,texas,73.0,4.0,114.0,grapevine,grapevine,Grapevine city,31.93,1066.0,85.0,1.0,52925.0,46608,53982,1265.0,14.0,19.0,texas,35.55,107.0,3.62
+432,harlingen,Cameron County,638.0,texas,183.0,15.0,523.0,harlingen,harlingen,Harlingen city,39.81,2079.0,91.0,0.0,65617.0,65062,65467,2693.0,18.0,32.0,texas,40.3,233.0,0.49
+433,houston,Harris County,642.0,texas,14201.0,665.0,17108.0,houston,houston,Houston city,599.59,67828.0,11596.0,269.0,2338235.0,2099256,2312717,96532.0,1366.0,9773.0,texas,627.5,25609.0,27.91
+434,irving,Dallas County,659.0,texas,259.0,23.0,969.0,irving,irving,Irving city,67.02,4467.0,711.0,8.0,242062.0,216852,240373,6147.0,54.0,228.0,texas,68.02,549.0,1.0
+435,killeen,Bell County,625.0,texas,636.0,29.0,1140.0,killeen,killeen,Killeen city,53.58,2403.0,566.0,18.0,145912.0,128983,145482,4109.0,151.0,313.0,texas,54.25,1118.0,0.67
+436,laredo,Webb County,623.0,texas,561.0,71.0,874.0,laredo,laredo,Laredo city,88.91,5430.0,170.0,10.0,260669.0,237047,260654,6474.0,114.0,154.0,texas,90.36,839.0,1.45
+437,league city,Galveston County,710.0,texas,42.0,3.0,218.0,league city,league city,League City city,51.29,1407.0,93.0,3.0,105351.0,84077,104903,1718.0,34.0,18.0,texas,53.0,97.0,1.71
+438,lewisville,Denton County,672.0,texas,155.0,6.0,340.0,lewisville,lewisville,Lewisville city,36.4,1565.0,229.0,3.0,106199.0,95855,106021,2134.0,51.0,71.0,texas,42.47,280.0,6.07
+439,longview,Gregg County,636.0,texas,229.0,6.0,614.0,longview,longview,Longview city,55.69,1947.0,242.0,6.0,82303.0,80565,81522,2803.0,62.0,99.0,texas,55.8,396.0,0.11
+440,mansfield,Tarrant County,680.0,texas,37.0,0.0,154.0,mansfield,mansfield,Mansfield city,36.38,612.0,42.0,0.0,67233.0,56860,68928,808.0,21.0,20.0,texas,36.43,78.0,0.04
+441,mcallen,Hidalgo County,650.0,texas,125.0,8.0,185.0,mcallen,mcallen,McAllen city,48.34,3776.0,46.0,7.0,144162.0,131558,142696,4007.0,27.0,49.0,texas,48.65,208.0,0.3
+442,mckinney,Collin County,701.0,texas,151.0,12.0,297.0,mckinney,mckinney,McKinney city,62.21,1965.0,155.0,2.0,179934.0,132950,181330,2417.0,46.0,68.0,texas,62.88,267.0,0.67
+443,mesquite,Dallas County,630.0,texas,292.0,6.0,773.0,mesquite,mesquite,Mesquite city,46.02,3642.0,849.0,6.0,144406.0,139775,143949,5264.0,74.0,244.0,texas,46.17,616.0,0.15
+444,midland,Midland County,660.0,texas,279.0,5.0,431.0,midland,midland,Midland city,72.07,2026.0,220.0,2.0,138954.0,111279,136089,2677.0,37.0,59.0,texas,72.24,377.0,0.17
+445,mission,Hidalgo County,631.0,texas,41.0,19.0,231.0,mission,mission,Mission city,33.99,1700.0,74.0,0.0,84511.0,78110,84424,2005.0,27.0,30.0,texas,34.06,98.0,0.07
+446,missouri city,Fort Bend County,681.0,texas,78.0,0.0,133.0,missouri city,missouri city,Missouri City city,28.42,767.0,69.0,2.0,75863.0,67065,74497,969.0,23.0,46.0,texas,29.8,149.0,1.38
+447,new braunfels,Comal County,687.0,texas,130.0,8.0,221.0,new braunfels,new braunfels,New Braunfels city,43.87,952.0,148.0,1.0,76993.0,58109,79152,1321.0,33.0,29.0,texas,44.28,193.0,0.4
+448,north richland hills,Tarrant County,685.0,texas,80.0,2.0,208.0,north richland hills,north richland hills,North Richland Hills city,18.17,1064.0,101.0,2.0,70910.0,63480,70441,1373.0,31.0,34.0,texas,18.22,147.0,0.04
+449,odessa,Ector County,623.0,texas,726.0,10.0,560.0,odessa,odessa,Odessa city,41.95,2386.0,273.0,7.0,121194.0,99825,116861,3219.0,78.0,101.0,texas,42.21,912.0,0.26
+450,pasadena,Harris County,647.0,texas,418.0,23.0,636.0,pasadena,pasadena,Pasadena city,42.76,2758.0,379.0,5.0,154000.0,149527,153520,3773.0,93.0,195.0,texas,44.27,711.0,1.51
+451,pflugerville,Travis County,676.0,texas,55.0,2.0,127.0,pflugerville,pflugerville,Pflugerville city,22.32,796.0,45.0,1.0,61212.0,48715,63359,968.0,31.0,15.0,texas,22.33,102.0,0.01
+452,pharr,Hidalgo County,618.0,texas,123.0,2.0,268.0,pharr,pharr,Pharr city,23.42,1343.0,62.0,4.0,78467.0,70788,79487,1673.0,44.0,33.0,texas,23.44,204.0,0.03
+453,plano,Collin County,719.0,texas,220.0,25.0,728.0,plano,plano,Plano city,71.58,3968.0,339.0,15.0,290413.0,261236,286143,5035.0,81.0,119.0,texas,71.94,435.0,0.36
+454,port arthur,Jefferson County,634.0,texas,247.0,5.0,767.0,port arthur,port arthur,Port Arthur city,76.9,1111.0,153.0,6.0,55583.0,54502,55498,2031.0,15.0,110.0,texas,144.04,378.0,67.14
+455,richards,Montgomery County,671.0,texas,68.0,5.0,389.0,richardson,richardson,Richardson city,28.56,1717.0,189.0,3.0,115824.0,99555,116783,2295.0,25.0,97.0,texas,28.66,193.0,0.09
+456,round rock,Williamson County,691.0,texas,90.0,4.0,232.0,round rock,round rock,Round Rock city,34.11,2405.0,64.0,2.0,124617.0,100759,123678,2701.0,33.0,44.0,texas,34.41,169.0,0.3
+457,rowlett,Dallas County,685.0,texas,97.0,1.0,133.0,rowlett,rowlett,Rowlett city,19.89,877.0,71.0,1.0,62998.0,56344,62868,1081.0,20.0,23.0,texas,19.96,141.0,0.07
+458,san angelo,Tom Green County,662.0,texas,165.0,10.0,802.0,san angelo,san angelo,San Angelo city,56.86,3425.0,272.0,3.0,101931.0,93625,100119,4499.0,74.0,40.0,texas,59.14,282.0,2.28
+459,san antonio,Comal County,750.0,texas,7067.0,207.0,11722.0,san antonio,san antonio,San Antonio city,460.93,55090.0,6864.0,124.0,1520712.0,1333413,1511946,73676.0,1270.0,2298.0,texas,466.71,10759.0,5.78
+460,san marcos,Hays County,642.0,texas,120.0,8.0,278.0,san marcos,san marcos,San Marcos city,30.22,1064.0,169.0,5.0,65327.0,45245,63071,1511.0,50.0,47.0,texas,30.35,222.0,0.13
+461,sugar land,Fort Bend County,735.0,texas,20.0,0.0,158.0,sugar land,sugar land,Sugar Land city,32.38,1075.0,56.0,0.0,89790.0,79096,88485,1289.0,15.0,36.0,texas,34.02,71.0,1.64
+462,temple,Bell County,664.0,texas,105.0,6.0,409.0,temple,temple,Temple city,69.01,1483.0,238.0,5.0,74794.0,66609,74503,2130.0,63.0,65.0,texas,69.42,238.0,0.42
+463,tyler,Smith County,655.0,texas,333.0,4.0,446.0,tyler,tyler,Tyler city,53.86,2745.0,146.0,6.0,106115.0,97171,104991,3337.0,65.0,60.0,texas,54.39,464.0,0.53
+464,victoria,Victoria County,648.0,texas,116.0,4.0,646.0,victoria,victoria,Victoria city,35.48,1680.0,110.0,4.0,68544.0,62676,67106,2436.0,48.0,49.0,texas,35.63,217.0,0.15
+465,waco,McLennan County,651.0,texas,460.0,15.0,957.0,waco,waco,Waco city,88.96,3741.0,191.0,5.0,135997.0,125405,136436,4889.0,117.0,108.0,texas,101.26,690.0,12.3
+466,wichita falls,Wichita County,651.0,texas,165.0,0.0,725.0,wichita falls,wichita falls,Wichita Falls city,72.14,2294.0,238.0,4.0,104706.0,104829,104747,3257.0,78.0,127.0,texas,72.16,374.0,0.02
+467,layton,Davis County,701.0,utah,52.0,11.0,250.0,layton,layton,Layton city,22.0,1397.0,83.0,1.0,77048.0,67821,76691,1730.0,42.0,11.0,utah,22.17,106.0,0.17
+468,lehi,Utah County,724.0,utah,18.0,1.0,142.0,lehi,lehi,Lehi city,26.34,697.0,56.0,0.0,63605.0,48156,62712,895.0,23.0,8.0,utah,26.68,49.0,0.34
+469,logan,Cache County,698.0,utah,23.0,0.0,94.0,logan,logan,Logan city,17.94,547.0,37.0,1.0,51059.0,48456,51115,678.0,23.0,1.0,utah,18.52,48.0,0.59
+470,ogden,Weber County,687.0,utah,317.0,23.0,546.0,ogden,ogden,Ogden city,27.09,2780.0,468.0,6.0,87323.0,83048,87031,3794.0,49.0,91.0,utah,27.1,463.0,0.0
+471,orem,Utah County,696.0,utah,33.0,2.0,191.0,orem,orem,Orem city,18.29,1696.0,129.0,0.0,99045.0,88720,97839,2016.0,14.0,22.0,utah,18.29,69.0,0.0
+472,provo,Utah County,699.0,utah,66.0,5.0,155.0,provo,provo,Provo city,41.67,1764.0,117.0,1.0,117540.0,112917,117335,2036.0,52.0,29.0,utah,44.17,148.0,2.5
+473,salt lake city,0,686.0,utah,861.0,27.0,1884.0,salt lake city,salt lake city,Salt Lake City city,111.11,11924.0,1886.0,10.0,194968.0,186567,200544,15694.0,334.0,508.0,utah,111.73,1713.0,0.62
+474,sandy,Salt Lake County,719.0,utah,101.0,4.0,541.0,sandy,sandy,Sandy city,22.87,2384.0,270.0,3.0,96957.0,90005,96145,3195.0,53.0,60.0,utah,22.88,217.0,0.01
+475,south jordan,0,734.0,utah,30.0,3.0,226.0,south jordan,south jordan,South Jordan city,22.05,1339.0,156.0,0.0,72533.0,51306,70954,1721.0,10.0,5.0,utah,22.13,45.0,0.08
+476,west jordan,Salt Lake County,683.0,utah,203.0,3.0,388.0,west jordan,west jordan,West Jordan city,32.46,2767.0,384.0,3.0,115390.0,104032,113905,3539.0,36.0,53.0,utah,32.46,295.0,0.0
+477,west valley city,0,648.0,utah,480.0,14.0,861.0,west valley city,west valley,West Valley City city,35.56,3830.0,1146.0,8.0,137762.0,129637,136170,5837.0,164.0,150.0,utah,35.61,802.0,0.05
+478,alexandria,Alexandria City,707.6032196000001,virginia,138.0,8.0,163.0,alexandria,alexandria,Alexandria city,15.03,2046.0,273.0,6.0,158256.0,140823,160035,2482.0,16.0,102.0,virginia,15.47,262.0,0.44
+479,hampton,0,648.0,virginia,179.0,18.0,551.0,hampton,hampton,Hampton city,51.41,3481.0,332.0,17.0,134929.0,137343,134669,4364.0,26.0,185.0,virginia,136.3,407.0,84.89
+480,harrisonburg,Rockingham,689.1863882,virginia,89.0,3.0,115.0,harrisonburg,harrisonburg,Harrisonburg city,17.42,739.0,43.0,3.0,53717.0,49015,54215,897.0,24.0,12.0,virginia,17.48,128.0,0.06
+481,newport news,0,636.0,virginia,551.0,46.0,829.0,newport news,newport news,Newport News city,68.71,4211.0,488.0,24.0,181738.0,180921,179388,5528.0,93.0,239.0,virginia,119.48,907.0,50.76
+482,norfolk,0,642.0,virginia,821.0,8.0,1156.0,norfolk,norfolk,Norfolk city,54.12,7318.0,718.0,36.0,245190.0,243027,244703,9192.0,135.0,371.0,virginia,96.35,1363.0,42.23
+483,portsmouth,0,627.0,virginia,400.0,6.0,1160.0,portsmouth,portsmouth,Portsmouth city,33.65,3903.0,384.0,17.0,95100.0,95449,94572,5447.0,36.0,224.0,virginia,46.73,677.0,13.08
+484,virginia beach,0,682.0,virginia,237.0,51.0,754.0,virginia beach,virginia beach,Virginia Beach city,249.02,7577.0,459.0,14.0,454353.0,438921,450435,8790.0,102.0,272.0,virginia,497.34,625.0,248.32
+485,auburn,King County,688.0,washington,192.0,19.0,0.0,auburn,auburn,Auburn city,29.62,2124.0,653.0,3.0,78718.0,70388,80776,0.0,64.0,117.0,washington,29.89,376.0,0.27
+486,bellevue,0,749.0,washington,65.0,20.0,592.0,bellevue,bellevue,Bellevue city,31.97,3274.0,309.0,0.0,143703.0,128294,144444,4175.0,24.0,55.0,washington,36.47,144.0,4.5
+487,bellingham,Whatcom,716.682865,washington,127.0,10.0,552.0,bellingham,bellingham,Bellingham city,27.08,3435.0,164.0,2.0,88652.0,81334,89045,4151.0,56.0,73.0,washington,28.9,258.0,1.82
+488,everett,Snohomish County,679.0,washington,309.0,13.0,869.0,everett,everett,Everett city,33.45,3292.0,938.0,5.0,110040.0,103255,110079,5099.0,52.0,131.0,washington,48.48,497.0,15.03
+489,federal way,King County,674.0,washington,224.0,10.0,679.0,federal way,federal way,Federal Way city,22.26,3716.0,944.0,7.0,98014.0,89518,96690,5339.0,39.0,170.0,washington,22.46,440.0,0.2
+490,kennewick,Benton County,696.0,washington,123.0,25.0,307.0,kennewick,kennewick,Kennewick city,26.93,1732.0,189.0,1.0,81499.0,74440,81607,2228.0,30.0,59.0,washington,28.36,213.0,1.43
+491,kent,King County,686.0,washington,185.0,17.0,948.0,kent,kent,Kent city,28.63,4666.0,1314.0,7.0,128990.0,119002,128458,6928.0,70.0,203.0,washington,29.18,465.0,0.56
+492,kirkland,0,742.0,washington,34.0,6.0,231.0,kirkland,kirkland,Kirkland city,10.79,1724.0,226.0,1.0,88898.0,80825,88630,2181.0,24.0,16.0,washington,11.12,75.0,0.33
+493,marysville,Snohomish County,682.0,washington,86.0,5.0,292.0,marysville,marysville,Marysville city,20.68,1206.0,301.0,3.0,68950.0,60180,68864,1799.0,32.0,30.0,washington,20.94,151.0,0.26
+494,olympia,Thurston County,709.0,washington,146.0,6.0,371.0,olympia,olympia,Olympia city,17.82,1596.0,204.0,1.0,51923.0,46950,51609,2171.0,42.0,67.0,washington,19.68,256.0,1.86
+495,pasco,Franklin County,682.0,washington,89.0,16.0,255.0,pasco,pasco,Pasco city,30.5,1009.0,167.0,1.0,72146.0,62939,73013,1431.0,21.0,43.0,washington,34.07,154.0,3.58
+496,redmond,0,755.0,washington,50.0,2.0,271.0,redmond,redmond,Redmond city,16.28,1695.0,111.0,2.0,63889.0,54504,64291,2077.0,11.0,33.0,washington,16.95,96.0,0.66
+497,renton,King County,713.0,washington,167.0,14.0,607.0,renton,renton,Renton city,23.12,3640.0,881.0,3.0,102470.0,92295,101379,5128.0,45.0,113.0,washington,23.54,328.0,0.42
+498,richland,Benton,721.3604752,washington,69.0,5.0,184.0,richland,richland,Richland city,35.72,1086.0,51.0,0.0,56151.0,48483,56243,1321.0,19.0,14.0,washington,39.11,102.0,3.39
+499,sammamish,0,765.0,washington,11.0,7.0,91.0,sammamish,sammamish,Sammamish city,18.22,312.0,39.0,3.0,64857.0,57622,64548,442.0,0.0,1.0,washington,18.47,0.0,0.25
+500,seattle,0,722.0,washington,2756.0,149.0,7805.0,seattle,seattle,Seattle city,83.94,26499.0,3630.0,27.0,721365.0,610333,724745,37934.0,266.0,1515.0,washington,142.65,4564.0,58.71
+501,spokane,0,689.0,washington,887.0,50.0,2221.0,spokane,spokane,Spokane city,59.25,11739.0,1737.0,6.0,217066.0,209488,217108,15697.0,238.0,229.0,washington,60.02,1360.0,0.77
+502,spokane,Spokane County,689.0,washington,121.0,5.0,606.0,spokane valley,spokane valley,Spokane Valley city,37.77,3376.0,435.0,2.0,97430.0,90030,97847,4417.0,48.0,29.0,washington,38.06,200.0,0.29
+503,tacoma,0,671.0,washington,1153.0,63.0,2073.0,tacoma,tacoma,Tacoma city,49.72,7742.0,2086.0,10.0,213504.0,198204,213418,11901.0,171.0,403.0,washington,62.34,1737.0,12.62
+504,vancouver,0,689.0,washington,367.0,52.0,749.0,vancouver,vancouver,Vancouver city,46.46,3657.0,1063.0,9.0,176884.0,162893,175673,5469.0,154.0,122.0,washington,49.85,652.0,3.4
+505,yakima,Yakima County,677.0,washington,360.0,15.0,901.0,yakima,yakima,Yakima city,27.18,2841.0,564.0,13.0,94375.0,91651,93667,4306.0,70.0,150.0,washington,27.69,593.0,0.51
+506,charleston,Kanawha,671.6212576,west virginia,421.0,26.0,736.0,charleston,charleston,Charleston city,31.52,2427.0,353.0,10.0,48788.0,51277,47929,3516.0,57.0,84.0,west virginia,32.66,572.0,1.14
+507,appleton,Outagamie,726.4867948,wisconsin,146.0,15.0,136.0,appleton,appleton,Appleton city,24.33,996.0,23.0,1.0,74660.0,72739,74653,1155.0,39.0,17.0,wisconsin,24.82,203.0,0.49
+508,madison,Dane,725.3928654,wisconsin,640.0,10.0,927.0,madison,madison,Madison city,76.79,5452.0,432.0,11.0,255850.0,233637,255214,6811.0,95.0,212.0,wisconsin,94.03,958.0,17.24
+509,milwaukee,0,643.0,wisconsin,6036.0,313.0,5518.0,milwaukee,milwaukee,Milwaukee city,96.12,11548.0,5503.0,118.0,595168.0,595141,595351,22569.0,434.0,2919.0,wisconsin,96.8,9507.0,0.68
+510,waukesha,Waukesha,724.9715672,wisconsin,51.0,2.0,126.0,waukesha,waukesha,Waukesha city,24.81,845.0,36.0,0.0,72565.0,71223,72489,1007.0,43.0,25.0,wisconsin,25.06,119.0,0.26

@@ -21,3 +21,11 @@ def test_nyc_credit_score():
   """ We know the 2010 census area for nyc is 302.64, let's test this. """
   nyc_row = CC.loc[(CC['city'] == 'new york') & (CC['state'] == 'new york')]
   assert float(nyc_row.get('Credit Score')) == 706.0
+
+
+# def test_nyc_walkscores():
+#   """ We know the 2010 census area for nyc is 302.64, let's test this. """
+#   nyc_row = CC.loc[(CC['city'] == 'new york') & (CC['state'] == 'new york')]
+#   assert float(nyc_row.get('walkscore')) == 98.0
+#   assert float(nyc_row.get('bikescore')) == 90.0
+#   assert float(nyc_row.get('transitscore')) == 100.0
