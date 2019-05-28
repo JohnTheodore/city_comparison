@@ -45,7 +45,8 @@ def get_walkscores(city_row):
 
 
 def get_summary_scores_to_row(row, walkscore_json):
-  summary_scores_dict = get_summary_scores_dict(walkscore_json, get_state_city_name(row))
+  summary_scores_dict = get_summary_scores_dict(walkscore_json,
+                                                get_state_city_name(row))
   row[list(summary_scores_dict.keys())] = list(summary_scores_dict.values())
   return row
 
