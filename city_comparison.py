@@ -1,12 +1,14 @@
 """ Join Census and FBI data into one combined pandas DataFrame. """
 
 import pandas
+from headers_cleanup import drop_headers, rename_headers
+from data_sources import CENSUS_POPULATION_2017_CSV_FILENAME, CENSUS_AREA_2010_CSV_FILENAME
+from data_sources import FBI_CRIME_2017_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME
+from data_sources import WALKSCORE_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
 from data_table_census import Census as census_data_table
 from data_table_fbi import Fbi as fbi_data_table
 from data_table_experian import Experian as experian_data_table
-from headers_cleanup import cleanup_headers
-from data_sources import CENSUS_POPULATION_2017_CSV_FILENAME, CENSUS_AREA_2010_CSV_FILENAME
-from data_sources import FBI_CRIME_2017_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
+from data_table_walkscore import Walkscore as walkscore_data_table
 
 
 def debug_print_dataframe(data, num_rows=2, debug=False):
@@ -17,62 +19,69 @@ def debug_print_dataframe(data, num_rows=2, debug=False):
       print(data[:num_rows])
 
 
-def main():
+def get_normalized_data_table(table_metadata, debug=False):
+  """ Input a dict with csv filename, suffix if available, the document label,
+  and return a data_table. """
+  suffix = table_metadata.get('suffix', '')
+  data_table = table_metadata['table_class'](
+    file_path=table_metadata['csv_filename'], suffix=suffix)
+  drop_headers(table_metadata['document_label'], data_table.data)
+  rename_headers(table_metadata['document_label'], data_table.data)
+  print_data_table_length(table_metadata['document_label'],
+                          data_table.data,
+                          debug=debug)
+  return data_table
+
+
+def print_data_table_length(document_label, data_frame, debug=False):
+  """ A helper print function for seeing the table row length. """
+  print('{}\n'.format(document_label), len(data_frame))
+  debug_print_dataframe(data_frame, debug=debug)
+
+
+def get_dataframe_from_merged_csv_files(tables_metadata, debug=False):
   """ Join Census data with FBI data and write out CSV. """
-
-  # Set to True to print out 2 rows out of each dataframe.
-  debug = False
-
-  # import census data from 2010 (city area) to a panda table
-  census_population_2017_table = census_data_table(
-    file_path=CENSUS_POPULATION_2017_CSV_FILENAME)
-  cleanup_headers('census_2017', census_population_2017_table.data)
-
-  print('census_population_2017_table.data:\n',
-        len(census_population_2017_table.data))
-
-  # import census data from 2017 (city population) to a panda table
-  census_geography_2010_table = census_data_table(
-    file_path=CENSUS_AREA_2010_CSV_FILENAME)
-  # Note, this mutates the panda dataframe headers on census_geography_2010_table.data.columns
-  cleanup_headers('census_2010', census_geography_2010_table.data)
-
-  print('census_geography_2010_table.data:\n',
-        len(census_geography_2010_table.data))
-
-  # combine census 2010 city area panda table and census 2017 city population panda table
-  combined_census_table = (
-    census_population_2017_table.join(census_geography_2010_table))
-  print('combined_census_table.data:\n', len(combined_census_table.data))
-  debug_print_dataframe(combined_census_table.data, debug=debug)
-
-  # import fbi crime data from 201y (by city) to a panda table
-  fbi_crime_table = fbi_data_table(file_path=FBI_CRIME_2017_CSV_FILENAME,
-                                   suffix='_fbi_crime')
-  print('fbi_crime_table.data: ', len(fbi_crime_table.data))
-  debug_print_dataframe(fbi_crime_table.data, debug=debug)
-
-  # combine the census panda table with the fbi crime panda table
-  combined_table = combined_census_table.join(fbi_crime_table)
-  print('combined_table.data: ', len(combined_table.data))
-  debug_print_dataframe(combined_table.data, debug=debug)
-
-  # import experian credit score data by city (2017) to a panda table
-  experian_credit_score_table = experian_data_table(
-    file_path=EXPERIAN_FINAL_CSV_FILENAME, suffix='experian_2017')
-  print('experian_credit_score_table.data: ',
-        len(experian_credit_score_table.data))
-  debug_print_dataframe(experian_credit_score_table.data, debug=debug)
-
-  # combine the experian panda table with the combined census/fbi table
-  combined_table = combined_table.join(experian_credit_score_table)
-  print('combined_table.data: ', len(combined_table.data))
-  debug_print_dataframe(combined_table.data, debug=debug)
-  cleanup_headers('final_csv', combined_table.data)
-
-  # Write the combined dataframe table to the final csv file.
-  combined_table.data.to_csv(MASTER_CSV_FILENAME)
+  combined_table = None
+  for table_metadata in tables_metadata:
+    if combined_table is None:
+      combined_table = get_normalized_data_table(table_metadata)
+      continue
+    next_data_table = get_normalized_data_table(table_metadata)
+    combined_table = combined_table.join(next_data_table)
+    print_data_table_length('combined_table', combined_table.data, debug=debug)
+  drop_headers('final_csv', combined_table.data)
+  rename_headers('final_csv', combined_table.data)
+  return combined_table.data
 
 
 if __name__ == '__main__':
-  main()
+  CSV_FILES_TO_MERGE = [{
+    'csv_filename': CENSUS_POPULATION_2017_CSV_FILENAME,
+    'document_label': 'census_2017',
+    'table_class': census_data_table
+  }, {
+    'csv_filename': CENSUS_AREA_2010_CSV_FILENAME,
+    'document_label': 'census_2010',
+    'table_class': census_data_table
+  }, {
+    'csv_filename': WALKSCORE_FINAL_CSV_FILENAME,
+    'document_label': 'walkscore',
+    'table_class': walkscore_data_table,
+    'suffix': '_walkscore'
+  }, {
+    'csv_filename': FBI_CRIME_2017_CSV_FILENAME,
+    'document_label': 'fbi_2017',
+    'table_class': fbi_data_table,
+    'suffix': '_fbi_crime'
+  }, {
+    'csv_filename': EXPERIAN_FINAL_CSV_FILENAME,
+    'document_label': 'experian_2017',
+    'table_class': experian_data_table,
+    'suffix': 'experian_2017'
+  }]
+  # Set debug to True to print out 2 rows out of each dataframe.
+COMBINED_DATAFRAME = get_dataframe_from_merged_csv_files(CSV_FILES_TO_MERGE,
+                                                         debug=False)
+# Write the combined dataframe table to the final csv file.
+COMBINED_DATAFRAME.to_csv(MASTER_CSV_FILENAME, index_label=False)
+print('Wrote file: ', MASTER_CSV_FILENAME)
