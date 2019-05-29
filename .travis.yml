@@ -11,6 +11,7 @@ script:
   - flake8
   - yapf --parallel --verbose --recursive --style .style.yapf --exclude 'py37-mac' --diff .
   - find . -type f -name "*.py" ! -path "./py37-mac/*" ! -path "./tests/*" | xargs pylint
+  - python -m data.experian.merge_experian_data
   - python -m data.geocode.write_geocodes_csv
   - python -m data.walkscore.write_walkscores_csv
   - python city_comparison.py

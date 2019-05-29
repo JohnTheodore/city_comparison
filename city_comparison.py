@@ -83,5 +83,5 @@ if __name__ == '__main__':
 COMBINED_DATAFRAME = get_dataframe_from_merged_csv_files(CSV_FILES_TO_MERGE,
                                                          debug=False)
 # Write the combined dataframe table to the final csv file.
-COMBINED_DATAFRAME.to_csv(MASTER_CSV_FILENAME, index_label=False)
+COMBINED_DATAFRAME.to_csv(MASTER_CSV_FILENAME, index_label='delme')
 print('Wrote file: ', MASTER_CSV_FILENAME)

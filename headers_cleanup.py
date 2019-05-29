@@ -47,6 +47,7 @@ HEADERS_CHANGE = {
   'final_csv': {
     'rename_columns': {},
     'drop_columns': [
+      'delme',
       'city_fbi_crime',
       'city_walkscore',
       'City',
