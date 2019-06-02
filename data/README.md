@@ -1,9 +1,14 @@
 ## Data sources (that we already integrated):
 
-- census.gov (cities and populations, 2017): https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk
-- fbi.gov (cities and crime, 2017): https://ucr.fbi.gov/crime-in-the-u.s/2017/crime-in-the-u.s.-2017/tables/table-8/table-8.xls
-- census.gov (cities and area, 2010): https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk
-- experian (cities by credit score, 2017): https://lendedu.com/blog/best-credit-score/
+- census.gov
+  - (cities and populations, 2017): https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk
+  - (cities and area, 2010): https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?src=bkmk
+- fbi.gov
+  - (cities and crime, 2017): https://ucr.fbi.gov/crime-in-the-u.s/2017/crime-in-the-u.s.-2017/tables/table-8/table-8.xls
+  - (cities and crime, 2016): https://ucr.fbi.gov/crime-in-the-u.s/2016/crime-in-the-u.s.-2016/tables/table-8/table-8.xls
+  - (cities and crime, 2015): https://ucr.fbi.gov/crime-in-the-u.s/2015/crime-in-the-u.s.-2015/tables/table-8/table_8_offenses_known_to_law_enforcement_by_state_by_city_2015.xls
+- experian
+  - (cities by credit score, 2017): https://lendedu.com/blog/best-credit-score/
 - geo data (lat, long, and address of center of city)
 - walkability ( https://www.redfin.com/how-walk-score-works / walkscore )
 
@@ -25,3 +30,5 @@
 - age demography
 - ethnic demography
 - religion demography
+- marriage data?
+- tax data?
