@@ -25,12 +25,14 @@ class Census(DataTable):
     # Parse out 'state' and 'city' field from 'Geography.2' field.  There's a
     # '.2' because multiple fields in the header are called 'Geography'.  We
     # should clean that up sometime.
-    if 'Geography.2' in data:
+    if 'Geographic area' in data:
 
       def parse_city_and_state(row):
-        city, state = row['Geography.2'].lower().split(', ')
-        if city.endswith(' city'):
-          city = city[:-5]
+        city, state = ['NULL', 'NULL']
+        if row['Geographic area'].count(' - ') == 2:
+          city, state = row['Geographic area'].lower().split(' - ')[-2:]
+          if city.endswith(' city'):
+            city = city[:-5]
         return pandas.Series([city, state])
 
       data[['city', 'state']] = data.apply(parse_city_and_state, axis=1)
@@ -39,7 +41,9 @@ class Census(DataTable):
 
   @staticmethod
   def get_exact_matching_key():
-    return 'Target Geo Id2'
+    # By returning `None` as key, we use `index` as key.
+    # return None
+    return 'index'
 
   @staticmethod
   def get_state_key():
@@ -51,5 +55,4 @@ class Census(DataTable):
 
   @staticmethod
   def get_population_key():
-    return HEADERS_CHANGE['census_2017']['rename_columns'][
-      'Population Estimate (as of July 1) - 2017']
+    return None

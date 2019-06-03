@@ -65,27 +65,6 @@ HEADERS_CHANGE = {
       'Target Geo Id',
     ]
   },
-  'census_2017': {
-    'rename_columns': {
-      'Population Estimate (as of July 1) - 2010': 'population census_2010',
-      'Population Estimate (as of July 1) - 2017': 'population census_2017'
-    },
-    'drop_columns': [
-      'April 1, 2010 - Census',
-      'April 1, 2010 - Estimates Base',
-      'Geography',
-      'Id',
-      'Id2',
-      'Population Estimate (as of July 1) - 2011',
-      'Population Estimate (as of July 1) - 2012',
-      'Population Estimate (as of July 1) - 2013',
-      'Population Estimate (as of July 1) - 2014',
-      'Population Estimate (as of July 1) - 2015',
-      'Population Estimate (as of July 1) - 2016',
-      'Rank',
-      'Target Geo Id',
-    ]
-  },
   'final_csv': {
     'rename_columns': {},
     'drop_columns': [

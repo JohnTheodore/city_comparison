@@ -2,8 +2,8 @@
 
 import pandas
 from headers_cleanup import drop_headers, rename_headers
-from data_sources import FBI_CRIME_2014_CSV_FILENAME, FBI_CRIME_2015_CSV_FILENAME
-from data_sources import FBI_CRIME_2016_CSV_FILENAME, FBI_CRIME_2017_CSV_FILENAME
+from data_sources import FBI_CRIME_2014_XLS_FILENAME, FBI_CRIME_2015_XLS_FILENAME
+from data_sources import FBI_CRIME_2016_XLS_FILENAME, FBI_CRIME_2017_XLS_FILENAME
 from data_sources import FBI_CRIME_COMBINED_CSV_FILENAME
 from data_table_fbi import Fbi as fbi_data_table
 
@@ -55,28 +55,28 @@ def get_dataframe_from_merged_csv_files(tables_metadata, debug=False):
 if __name__ == '__main__':
 
   FBI_FILES_TO_MERGE = [{
-    'csv_filename': FBI_CRIME_2014_CSV_FILENAME,
+    'csv_filename': FBI_CRIME_2014_XLS_FILENAME,
     'document_label': 'fbi_2014',
     'table_class': fbi_data_table,
     'suffix': ' fbi_2014',
     'how': 'outer',
     'year': 2014,
   }, {
-    'csv_filename': FBI_CRIME_2015_CSV_FILENAME,
+    'csv_filename': FBI_CRIME_2015_XLS_FILENAME,
     'document_label': 'fbi_2015',
     'table_class': fbi_data_table,
     'suffix': ' fbi_2015',
     'how': 'outer',
     'year': 2015,
   }, {
-    'csv_filename': FBI_CRIME_2016_CSV_FILENAME,
+    'csv_filename': FBI_CRIME_2016_XLS_FILENAME,
     'document_label': 'fbi_2016',
     'table_class': fbi_data_table,
     'suffix': ' fbi_2016',
     'how': 'outer',
     'year': 2016,
   }, {
-    'csv_filename': FBI_CRIME_2017_CSV_FILENAME,
+    'csv_filename': FBI_CRIME_2017_XLS_FILENAME,
     'document_label': 'fbi_2017',
     'table_class': fbi_data_table,
     'suffix': ' fbi_2017',
@@ -84,6 +84,8 @@ if __name__ == '__main__':
     'year': 2017,
   }]
 
+  import ipdb
+  ipdb.set_trace()
   FBI_DATAFRAMES = {
     table_metadata['year']: get_normalized_data_table(table_metadata).data
     for table_metadata in FBI_FILES_TO_MERGE
@@ -99,4 +101,6 @@ if __name__ == '__main__':
   COMBINED = pandas.concat(FBI_DATAFRAMES.values()).sort_index()
   # Take average states over year.  Now index is (state, city).
   COMBINED_MEAN = COMBINED.mean(level=[0, 1])
+  import ipdb
+  ipdb.set_trace()
   COMBINED_MEAN.to_csv(FBI_CRIME_COMBINED_CSV_FILENAME, index=True)

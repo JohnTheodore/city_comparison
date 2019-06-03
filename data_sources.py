@@ -17,10 +17,10 @@ WALKSCORE_CACHED_JSON_FILENAME = './data/walkscore/walkscore_data.json'
 WALKSCORE_FINAL_CSV_FILENAME = './data/walkscore/cities_walkscores.csv'
 
 # ./data/fbi
-FBI_CRIME_2014_CSV_FILENAME = 'data/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2014.xls'
-FBI_CRIME_2015_CSV_FILENAME = 'data/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2015.xls'
-FBI_CRIME_2016_CSV_FILENAME = 'data/fbi/Table_6_Offenses_Known_to_Law_Enforcement_by_State_by_City_2016.xls'
-FBI_CRIME_2017_CSV_FILENAME = 'data/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2017.xls'
+FBI_CRIME_2014_XLS_FILENAME = 'data/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2014.xls'
+FBI_CRIME_2015_XLS_FILENAME = 'data/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2015.xls'
+FBI_CRIME_2016_XLS_FILENAME = 'data/fbi/Table_6_Offenses_Known_to_Law_Enforcement_by_State_by_City_2016.xls'
+FBI_CRIME_2017_XLS_FILENAME = 'data/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2017.xls'
 FBI_CRIME_COMBINED_CSV_FILENAME = './data/fbi/combined_fbi_mean.csv'
 
 # main compiled csv output
