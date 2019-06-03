@@ -50,12 +50,12 @@ class DataTable(ABC):
   def get_exact_matching_key():
     """Key to use for exact matching."""
 
-  def join_exact_matching(self, data_table):
+  def join_exact_matching(self, data_table, how='inner'):
     """Join with another DataTable of the same type using exact matching."""
     key = self.__class__.get_exact_matching_key()
     data = self.data.merge(data_table.data,
                            on=key,
-                           how='inner',
+                           how=how,
                            suffixes=[self.suffix, data_table.suffix])
     return self.__class__(data)
 
@@ -143,7 +143,7 @@ class DataTable(ABC):
       return 1
     return 0
 
-  def join_fuzzy_matching(self, data_table):
+  def join_fuzzy_matching(self, data_table, how='inner'):
     """Join with another DataTable of different type using fuzzy matching.
 
     We perform an 'inner' join, so rows that do not match will not be returned.
@@ -154,6 +154,7 @@ class DataTable(ABC):
     Returns:
       DataTable of same class as left hand table.
     """
+    assert how == 'inner'
     # pylint: disable=too-many-locals
     keys_a = [self.get_state_key(), self.get_city_key()]
     keys_b = [data_table.get_state_key(), data_table.get_city_key()]
@@ -211,7 +212,7 @@ class DataTable(ABC):
 
     return self.__class__(merged_result)
 
-  def join(self, data_table):
+  def join(self, data_table, how='inner'):
     """Join with another DataTable.
 
     Dispatches to use either "exact" or "fuzzy" matching based on whether
@@ -219,12 +220,15 @@ class DataTable(ABC):
 
     Args:
       data_table: DataTable.
+      how: {'left', 'right', 'outer', 'inner'}, default 'inner'.  Type of merge
+        to be performed.
 
     Returns:
       DataTable.
+
     """
 
     # If same class, join exact.
     if isinstance(data_table, self.__class__):
-      return self.join_exact_matching(data_table)
-    return self.join_fuzzy_matching(data_table)
+      return self.join_exact_matching(data_table, how=how)
+    return self.join_fuzzy_matching(data_table, how=how)
