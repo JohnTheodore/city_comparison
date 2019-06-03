@@ -47,8 +47,6 @@ def get_dataframe_from_merged_csv_files(tables_metadata, debug=False):
       combined_table = get_normalized_data_table(table_metadata)
       continue
     next_data_table = get_normalized_data_table(table_metadata)
-    import ipdb
-    ipdb.set_trace()
     combined_table = combined_table.join(next_data_table)
     print_data_table_length('combined_table', combined_table.data, debug=debug)
   drop_headers('final_csv', combined_table.data)

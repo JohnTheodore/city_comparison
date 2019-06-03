@@ -3,7 +3,6 @@ Module for parsing any Census related data in data/census.
 """
 import pandas
 from data_table import DataTable
-from headers_cleanup import HEADERS_CHANGE
 
 
 class Census(DataTable):
@@ -30,12 +29,13 @@ class Census(DataTable):
       def parse_city_and_state(row):
         city, state = ['NULL', 'NULL']
         if row['Geographic area'].count(' - ') == 2:
-          city, state = row['Geographic area'].lower().split(' - ')[-2:]
+          state, city = row['Geographic area'].lower().split(' - ')[-2:]
           if city.endswith(' city'):
             city = city[:-5]
         return pandas.Series([city, state])
 
       data[['city', 'state']] = data.apply(parse_city_and_state, axis=1)
+      data = data[data.state != "NULL"]
 
     return data
 

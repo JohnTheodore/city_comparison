@@ -10,7 +10,7 @@ class Fbi(DataTable):
 
   @staticmethod
   def read(file_path):
-    data = pandas.read_csv(file_path, encoding='ISO-8859-1')
+    data = pandas.read_csv(file_path)
     return data
 
   @staticmethod
