@@ -21,6 +21,7 @@ FBI_CRIME_2014_CSV_FILENAME = 'data/fbi/Table_8_Offenses_Known_to_Law_Enforcemen
 FBI_CRIME_2015_CSV_FILENAME = 'data/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2015.xls'
 FBI_CRIME_2016_CSV_FILENAME = 'data/fbi/Table_6_Offenses_Known_to_Law_Enforcement_by_State_by_City_2016.xls'
 FBI_CRIME_2017_CSV_FILENAME = 'data/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2017.xls'
+FBI_CRIME_COMBINED_CSV_FILENAME = './data/fbi/combined_fbi_mean.csv'
 
 # main compiled csv output
 MASTER_CSV_FILENAME = './city_comparison.csv'

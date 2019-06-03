@@ -11,6 +11,7 @@ class Fbi(DataTable):
   @staticmethod
   def read(file_path):
     data = pandas.read_excel(file_path, header=3)
+
     # Remove empty columns.
     # data.drop(data.columns[[13, 14, 15, 16, 17, 18]], axis=1, inplace=True)
 
@@ -44,8 +45,8 @@ class Fbi(DataTable):
       data.at[i, 'state'] = state
 
     # Normalize all numeric columns by population.
-    columns = data.columns.to_list()
-    numeric_columns = data.select_dtypes(include=['float64', 'int64']).columns.to_list()
+    numeric_columns = data.select_dtypes(
+      include=['float64', 'int64']).columns.to_list()
     # Don't normalize 'population' column.
     numeric_columns = [col for col in numeric_columns if col != 'population']
 
@@ -56,7 +57,7 @@ class Fbi(DataTable):
       # columns), normalize to crime per 100k population.
       new_columns = {}
       for column in numeric_columns:
-        assert isinstance(row[column], int) or isinstance(row[column], float)
+        assert isinstance(row[column], (float, int))
         if population > 0:
           new_columns[column] = row[column] / population * 1e5
         else:
@@ -72,7 +73,7 @@ class Fbi(DataTable):
   def get_exact_matching_key():
     # By returning `None` as key, we use `index` as key.
     # return None
-    return ['state', 'city']
+    return 'index'
 
   @staticmethod
   def get_state_key():
