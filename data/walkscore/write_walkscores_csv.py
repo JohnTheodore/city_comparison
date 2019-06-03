@@ -46,7 +46,8 @@ def get_walkscores(city_row):
   address = city_row['reverse_address']
   lat = city_row['latitude']
   long = city_row['longitude']
-  scheme = 'https://'
+  # I have no idea what is wrong with walkscore, but https doesn't work. only http.
+  scheme = 'http://'
   fqdn = 'api.walkscore.com'
   url = '{}{}/score?format=json&address={}&lat={}&lon={}&transit=1&bike=1&wsapikey={}'.format(
     scheme, fqdn, address, lat, long, WALKSCORE_API_KEY)
@@ -68,33 +69,47 @@ def get_state_city_name(row):
   return '{}, {}'.format(row['city'], row['state'])
 
 
+def remove_attributes_from_dict(walkscore_dict):
+  """ Make the dict smaller so we don't store too much data. """
+  attributes = [
+    'more_info_icon', 'logo_url', 'more_info_link', 'ws_link', 'help_link'
+  ]
+  for attribute in attributes:
+    if attribute in walkscore_dict:
+      walkscore_dict.pop(attribute)
+  return walkscore_dict
+
+
 def add_walkscore_to_cities(dataframe):
   """ Parse every city row from the geocode csv, add the walkscores cells to each. """
-  cached_json = read_json_file(WALKSCORE_CACHED_JSON_FILENAME)
+  cached_dict = read_json_file(WALKSCORE_CACHED_JSON_FILENAME)
   add_empty_columns(dataframe, ['walkscore', 'bikescore', 'transitscore'])
   api_count = 0
   for index, row in dataframe.iterrows():
     state_city_name = get_state_city_name(row)
     # make sure all 3 values are in the cache...
-    if state_city_name in cached_json:
+    if state_city_name in cached_dict:
       # add to dataframe from cache
-      if 'help_link' in cached_json[state_city_name]:
-        cached_json[state_city_name].pop('help_link')
-      walkscore_json = cached_json[state_city_name]
+      walkscore_dict = cached_dict[state_city_name]
+      cached_dict[state_city_name] = remove_attributes_from_dict(walkscore_dict)
       dataframe.loc[index] = get_dataframe_row_with_walkscores(
-        row, walkscore_json)
+        row, walkscore_dict)
       continue
-    walkscore_json = get_walkscores(row)
-    cached_json[state_city_name] = walkscore_json
+    walkscore_dict = get_walkscores(row)
+    remove_attributes_from_dict(walkscore_dict)
+    cached_dict[state_city_name] = walkscore_dict
     dataframe.loc[index] = get_dataframe_row_with_walkscores(
-      row, walkscore_json)
+      row, walkscore_dict)
     api_count += 2  # two api hits per loop, 1 for geocode, 1 for reverse address
     if api_count % 10 == 0:
-      print('cached_json count: ', str(len(cached_json.keys())))
-      write_json_file(WALKSCORE_CACHED_JSON_FILENAME, cached_json)
-  write_json_file(WALKSCORE_CACHED_JSON_FILENAME, cached_json)
+      print('cached_dict count: ', str(len(cached_dict.keys())))
+      write_json_file(WALKSCORE_CACHED_JSON_FILENAME, cached_dict)
+  write_json_file(WALKSCORE_CACHED_JSON_FILENAME, cached_dict)
 
 
-DATAFRAME = get_geocode_dataframe()
-add_walkscore_to_cities(DATAFRAME)
-DATAFRAME.to_csv(WALKSCORE_FINAL_CSV_FILENAME, index=False)
+if __name__ == '__main__':
+  print('Starting write_walkscores_csv.py with api key: ', WALKSCORE_API_KEY)
+  DATAFRAME = get_geocode_dataframe()
+  add_walkscore_to_cities(DATAFRAME)
+  DATAFRAME.to_csv(WALKSCORE_FINAL_CSV_FILENAME, index=False)
+  print('Finished write_walkscores_csv.py')
