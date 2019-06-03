@@ -60,7 +60,7 @@ class Fbi(DataTable):
       # columns), normalize to crime per 100k population.
       new_columns = {}
       for column in numeric_columns:
-        assert isinstance(row[column], int) or isinstance(row[column], float)
+        assert isinstance(row[column], (int, float))
         if population > 0:
           new_columns[column] = row[column] / population * 1e5
         else:

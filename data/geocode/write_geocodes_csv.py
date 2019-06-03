@@ -13,7 +13,6 @@ in secrets.py
 import ssl
 import time
 
-from data_sources import CENSUS_AREA_2010_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME
 from secrets import GEOCODE_API_KEY
 
 # pypi imports
@@ -24,8 +23,9 @@ from city_comparison import get_dataframe_from_merged_csv_files
 from data_table_census import Census as census_data_table
 from data_table_fbi import Fbi as fbi_data_table
 from data_table_experian import Experian as experian_data_table
-from utils import read_json_file, write_json_file
+from data_sources import CENSUS_AREA_2010_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME
 from data_sources import GEOCODE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILENAME
+from utils import read_json_file, write_json_file
 
 CSV_FILES_TO_MERGE = [{
   'csv_filename': CENSUS_AREA_2010_CSV_FILENAME,
