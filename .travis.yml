@@ -10,10 +10,10 @@ script:
   # test and validate all backend files
   - flake8
   - yapf --parallel --verbose --recursive --style .style.yapf --exclude 'py37-mac' --diff .
-  - find . -type f -name "*.py" ! -path "./py37-mac/*" ! -path "./tests/*" | xargs pylint
-  - python -m data.experian.merge_experian_data
-  - python -m data.geocode.write_geocodes_csv
-  - python -m data.walkscore.write_walkscores_csv
-  - python -m data.fbi.join_fbi
-  - python city_comparison.py
-  - python -m pytest --color=yes tests
+  - find . -type f -name "*.py" ! -path "./py37-mac/*" ! -path "./merging_tests/*" | xargs pylint
+  - python -m merging_code.normalize_experian
+  - python -m merging_code.normalize_fbi
+  - python -m merging_code.scrape_geocodes
+  - python -m merging_code.scrape_walkscores
+  - python -m merging_code.compile_city_comparison
+  - python -m pytest --color=yes merging_tests

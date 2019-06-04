@@ -1,6 +1,6 @@
-from data_table_census import Census as census_data_table
-from data_table_fbi import Fbi as fbi_data_table
-from data_table import FuzzyMatchingKey
+from merging_code.data_table_census import Census as census_data_table
+from merging_code.data_table_fbi import Fbi as fbi_data_table
+from merging_code.data_table import FuzzyMatchingKey
 
 import pandas
 import unittest

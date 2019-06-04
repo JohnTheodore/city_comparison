@@ -1,11 +1,11 @@
 """ Join Census and FBI data into one combined pandas DataFrame. """
 
 import pandas
-from headers_cleanup import drop_headers, rename_headers
-from data_sources import FBI_CRIME_2014_XLS_FILENAME, FBI_CRIME_2015_XLS_FILENAME
-from data_sources import FBI_CRIME_2016_XLS_FILENAME, FBI_CRIME_2017_XLS_FILENAME
-from data_sources import FBI_CRIME_COMBINED_CSV_FILENAME
-from data_table import DataTable
+from file_locations import FBI_CRIME_2014_XLS_FILENAME, FBI_CRIME_2015_XLS_FILENAME
+from file_locations import FBI_CRIME_2016_XLS_FILENAME, FBI_CRIME_2017_XLS_FILENAME
+from file_locations import FBI_CRIME_COMBINED_CSV_FILENAME
+from merging_code.data_table import DataTable
+from merging_code.headers_cleanup import drop_headers, rename_headers
 
 
 class Fbi(DataTable):

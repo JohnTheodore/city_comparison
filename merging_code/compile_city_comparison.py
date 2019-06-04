@@ -1,14 +1,14 @@
 """ Join Census and FBI data into one combined pandas DataFrame. """
 
 import pandas
-from headers_cleanup import drop_headers, rename_headers
-from data_sources import CENSUS_AREA_2010_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME
-from data_sources import EXPERIAN_FINAL_CSV_FILENAME
-from data_sources import WALKSCORE_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
-from data_table_census import Census as census_data_table
-from data_table_fbi import Fbi as fbi_data_table
-from data_table_experian import Experian as experian_data_table
-from data_table_walkscore import Walkscore as walkscore_data_table
+from file_locations import CENSUS_AREA_2010_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME
+from file_locations import EXPERIAN_FINAL_CSV_FILENAME
+from file_locations import WALKSCORE_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
+from merging_code.data_table_census import Census as census_data_table
+from merging_code.data_table_fbi import Fbi as fbi_data_table
+from merging_code.data_table_experian import Experian as experian_data_table
+from merging_code.data_table_walkscore import Walkscore as walkscore_data_table
+from merging_code.headers_cleanup import drop_headers, rename_headers
 
 
 def debug_print_dataframe(data, num_rows=2, debug=False):

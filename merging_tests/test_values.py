@@ -2,10 +2,11 @@
 Tests as a sanity check to make sure the data matches what we expect.
 """
 
-from headers_cleanup import HEADERS_CHANGE
+from file_locations import MASTER_CSV_FILENAME
+from merging_code.headers_cleanup import HEADERS_CHANGE
 from pandas import read_csv
 
-CC = read_csv('city_comparison.csv', encoding='ISO-8859-1')
+CC = read_csv(MASTER_CSV_FILENAME, encoding='ISO-8859-1')
 
 
 def test_nyc_area():

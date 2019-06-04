@@ -1,16 +1,18 @@
 """
-Module for parsing any Walkscore related data in data/walkscore.
+Module for parsing any Experian related data in data/experian.
 """
 import pandas
-from data_table import DataTable
+from merging_code.data_table import DataTable
 
 
-class Walkscore(DataTable):
+class Experian(DataTable):
   """ Table of Experian data. """
 
   @staticmethod
   def read(file_path):
     data = pandas.read_csv(file_path)
+    data['State'] = data['State'].str.lower()
+    data['City'] = data['City'].str.lower()
     return data
 
   @staticmethod
@@ -21,11 +23,11 @@ class Walkscore(DataTable):
 
   @staticmethod
   def get_state_key():
-    return 'state'
+    return 'State'
 
   @staticmethod
   def get_city_key():
-    return 'city'
+    return 'City'
 
   @staticmethod
   def get_population_key():
