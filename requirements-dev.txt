@@ -3,6 +3,7 @@ flake8
 pandas
 pylint
 pytest
+pytest-cov
 yapf
 xlrd
 geopy

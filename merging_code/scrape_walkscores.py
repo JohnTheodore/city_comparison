@@ -5,16 +5,16 @@ in the cache, and write the csv. We use the csv from geocode in order to have th
 right lat/long/address
 """
 import time
-from secrets import WALKSCORE_API_KEY
 import pandas
 import requests
-from utils import read_json_file, write_json_file
-from data_sources import WALKSCORE_FINAL_CSV_FILENAME, WALKSCORE_CACHED_JSON_FILENAME
+from merging_code.utils import read_json_file, write_json_file
+from merging_code.secrets import WALKSCORE_API_KEY
+from file_locations import WALKSCORE_FINAL_CSV_FILENAME, WALKSCORE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILENAME
 
 
 def get_geocode_dataframe():
   """ Get the geocode dataframe from the ./data/geocode final csv file. """
-  geo_table = pandas.read_csv('data/geocode/cities_geo_lat_long_address.csv')
+  geo_table = pandas.read_csv(GEOCODE_FINAL_CSV_FILENAME)
   return geo_table
 
 
@@ -111,5 +111,6 @@ if __name__ == '__main__':
   print('Starting write_walkscores_csv.py with api key: ', WALKSCORE_API_KEY)
   DATAFRAME = get_geocode_dataframe()
   add_walkscore_to_cities(DATAFRAME)
+  print('Writing row quantity: ', DATAFRAME['city'].count())
   DATAFRAME.to_csv(WALKSCORE_FINAL_CSV_FILENAME, index=False)
-  print('Finished write_walkscores_csv.py')
+  print('Finished writing: ', WALKSCORE_FINAL_CSV_FILENAME)

@@ -3,7 +3,7 @@
 
 import glob
 from pandas import read_csv
-from data_sources import EXPERIAN_FINAL_CSV_FILENAME, EXPERIAN_SOURCE_CSV_DIR
+from file_locations import EXPERIAN_FINAL_CSV_FILENAME, EXPERIAN_SOURCE_CSV_DIR
 
 
 def get_all_csv_files(directory):

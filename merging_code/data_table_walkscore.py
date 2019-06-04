@@ -1,12 +1,12 @@
 """
-Module for parsing any Fbi related data in data/fbi.
+Module for parsing any Walkscore related data in data/walkscore.
 """
 import pandas
-from data_table import DataTable
+from merging_code.data_table import DataTable
 
 
-class Fbi(DataTable):
-  """ Table of FBI data. """
+class Walkscore(DataTable):
+  """ Table of Experian data. """
 
   @staticmethod
   def read(file_path):

@@ -1,18 +1,16 @@
 """
-Module for parsing any Experian related data in data/experian.
+Module for parsing any Fbi related data in data/fbi.
 """
 import pandas
-from data_table import DataTable
+from merging_code.data_table import DataTable
 
 
-class Experian(DataTable):
-  """ Table of Experian data. """
+class Fbi(DataTable):
+  """ Table of FBI data. """
 
   @staticmethod
   def read(file_path):
     data = pandas.read_csv(file_path)
-    data['State'] = data['State'].str.lower()
-    data['City'] = data['City'].str.lower()
     return data
 
   @staticmethod
@@ -23,11 +21,11 @@ class Experian(DataTable):
 
   @staticmethod
   def get_state_key():
-    return 'State'
+    return 'state'
 
   @staticmethod
   def get_city_key():
-    return 'City'
+    return 'city'
 
   @staticmethod
   def get_population_key():

@@ -2,7 +2,7 @@
 Module for parsing any Census related data in data/census.
 """
 import pandas
-from data_table import DataTable
+from merging_code.data_table import DataTable
 
 
 class Census(DataTable):
