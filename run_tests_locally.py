@@ -18,6 +18,8 @@ TEST_COMMANDS = TRAVIS_CONFIG.get('script')
 
 EXIT_ERRORS = False
 for test_command in TEST_COMMANDS:
+  if 'codecov' in test_command:
+    continue
   try:
     subprocess.check_output(test_command, shell=True)
   except subprocess.CalledProcessError as process_error:
