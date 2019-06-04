@@ -6,7 +6,7 @@ This helps make the final product more human readable.
 HEADERS_CHANGE = {
   'fbi_2014': {
     'rename_columns': {
-      'rape (revised definition)1': 'rape revised',
+      'rape (revised definition)1': 'rape',
       'rape (legacy definition)2': 'rape legacy',
       'larceny- theft': 'larceny theft',
       'arson3': 'arson',
@@ -15,7 +15,7 @@ HEADERS_CHANGE = {
   },
   'fbi_2015': {
     'rename_columns': {
-      'rape (revised definition)1': 'rape revised',
+      'rape (revised definition)1': 'rape',
       'rape (legacy definition)2': 'rape legacy',
       'larceny- theft': 'larceny theft',
       'arson3': 'arson',
@@ -24,7 +24,7 @@ HEADERS_CHANGE = {
   },
   'fbi_2016': {
     'rename_columns': {
-      'rape (revised definition)1': 'rape revised',
+      'rape (revised definition)1': 'rape',
       'rape (legacy definition)2': 'rape legacy',
       'larceny- theft': 'larceny theft',
       'arson3': 'arson',
@@ -33,7 +33,7 @@ HEADERS_CHANGE = {
   },
   'fbi_2017': {
     'rename_columns': {
-      'rape1': 'rape revised',
+      'rape1': 'rape',
       'larceny- theft': 'larceny theft',
       'arson2': 'arson',
     },
@@ -76,6 +76,7 @@ HEADERS_CHANGE = {
       'Geography.1',
       'Geography.2',
       'reverse_address',
+      'rape_legacy',
       'state_fbi_crime',
       'state_fbi_crime',
       'state_walkscore',

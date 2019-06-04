@@ -32,3 +32,4 @@
 - religion demography
 - marriage data?
 - tax data?
+- use google maps as a proxy to search for certain places that are good or bad?
