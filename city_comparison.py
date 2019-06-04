@@ -2,8 +2,8 @@
 
 import pandas
 from headers_cleanup import drop_headers, rename_headers
-from data_sources import CENSUS_POPULATION_2017_CSV_FILENAME, CENSUS_AREA_2010_CSV_FILENAME
-from data_sources import FBI_CRIME_2017_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME
+from data_sources import CENSUS_AREA_2010_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME
+from data_sources import EXPERIAN_FINAL_CSV_FILENAME
 from data_sources import WALKSCORE_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
 from data_table_census import Census as census_data_table
 from data_table_fbi import Fbi as fbi_data_table
@@ -56,10 +56,6 @@ def get_dataframe_from_merged_csv_files(tables_metadata, debug=False):
 
 if __name__ == '__main__':
   CSV_FILES_TO_MERGE = [{
-    'csv_filename': CENSUS_POPULATION_2017_CSV_FILENAME,
-    'document_label': 'census_2017',
-    'table_class': census_data_table
-  }, {
     'csv_filename': CENSUS_AREA_2010_CSV_FILENAME,
     'document_label': 'census_2010',
     'table_class': census_data_table
@@ -69,7 +65,7 @@ if __name__ == '__main__':
     'table_class': walkscore_data_table,
     'suffix': '_walkscore'
   }, {
-    'csv_filename': FBI_CRIME_2017_CSV_FILENAME,
+    'csv_filename': FBI_CRIME_COMBINED_CSV_FILENAME,
     'document_label': 'fbi_2017',
     'table_class': fbi_data_table,
     'suffix': '_fbi_crime'
@@ -80,8 +76,8 @@ if __name__ == '__main__':
     'suffix': 'experian_2017'
   }]
   # Set debug to True to print out 2 rows out of each dataframe.
-COMBINED_DATAFRAME = get_dataframe_from_merged_csv_files(CSV_FILES_TO_MERGE,
-                                                         debug=False)
-# Write the combined dataframe table to the final csv file.
-COMBINED_DATAFRAME.to_csv(MASTER_CSV_FILENAME, index_label='delme')
-print('Wrote file: ', MASTER_CSV_FILENAME)
+  COMBINED_DATAFRAME = get_dataframe_from_merged_csv_files(CSV_FILES_TO_MERGE,
+                                                           debug=False)
+  # Write the combined dataframe table to the final csv file.
+  COMBINED_DATAFRAME.to_csv(MASTER_CSV_FILENAME, index_label='delme')
+  print('Wrote file: ', MASTER_CSV_FILENAME)

@@ -117,7 +117,7 @@ class DataTable(ABC):
       if not key1.population or not key2.population:
         # We can't perform sanity check with population.  Let's experiment with
         # being generous and allow the cities to match anyway.
-        print('assume match key1: ', key1, 'key2: ', key2)
+        # print('assume match key1: ', key1, 'key2: ', key2)
         return 0
 
       # Might be the same city.
@@ -137,7 +137,7 @@ class DataTable(ABC):
       # the same prefix, have about the same population.
       return 0
     if key1.city < key2.city:
-      print('Will pop off key1: ', key1, 'key2: ', key2)
+      # print('Will pop off key1: ', key1, 'key2: ', key2)
       return -1
     if key1.city > key2.city:
       return 1

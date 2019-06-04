@@ -11,6 +11,7 @@ in secrets.py
 """
 # standard imports
 import ssl
+import time
 
 from secrets import GEOCODE_API_KEY
 
@@ -18,16 +19,34 @@ from secrets import GEOCODE_API_KEY
 import certifi
 import geopy
 
+from city_comparison import get_dataframe_from_merged_csv_files
 from data_table_census import Census as census_data_table
+from data_table_fbi import Fbi as fbi_data_table
+from data_table_experian import Experian as experian_data_table
+from data_sources import CENSUS_AREA_2010_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME
+from data_sources import GEOCODE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILENAME
 from utils import read_json_file, write_json_file
-from data_sources import GEOCODE_CACHED_JSON_FILENAME, CENSUS_POPULATION_2017_CSV_FILENAME, GEOCODE_FINAL_CSV_FILENAME
+
+CSV_FILES_TO_MERGE = [{
+  'csv_filename': CENSUS_AREA_2010_CSV_FILENAME,
+  'document_label': 'census_2010',
+  'table_class': census_data_table
+}, {
+  'csv_filename': FBI_CRIME_COMBINED_CSV_FILENAME,
+  'document_label': 'fbi_2017',
+  'table_class': fbi_data_table,
+  'suffix': '_fbi_crime'
+}, {
+  'csv_filename': EXPERIAN_FINAL_CSV_FILENAME,
+  'document_label': 'experian_2017',
+  'table_class': experian_data_table,
+  'suffix': 'experian_2017'
+}]
 
 
 def get_census_cities_and_states_dataframe():
   """ Load the pandas dataframe from data_table_census. (2017) """
-  census_population_2017_table = census_data_table(
-    file_path=CENSUS_POPULATION_2017_CSV_FILENAME)
-  dataframe = census_population_2017_table.data
+  dataframe = get_dataframe_from_merged_csv_files(CSV_FILES_TO_MERGE)
   dataframe = dataframe[['city', 'state']]
   return dataframe
 
@@ -95,12 +114,17 @@ def set_geo_metadata_to_dataframe(dataframe):
     set_geo_metadata_to_dict(cached_json, location, reverse_address,
                              search_query)
     api_count += 2  # two api hits per loop, 1 for geocode, 1 for reverse address
+    time.sleep(1)
     if api_count % 50 == 0:
       print('API count: ', str(api_count))
       write_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
   write_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
 
 
-DATAFRAME = get_census_cities_and_states_dataframe()
-set_geo_metadata_to_dataframe(DATAFRAME)
-DATAFRAME.to_csv(GEOCODE_FINAL_CSV_FILENAME, index=False)
+if __name__ == '__main__':
+  print('Starting write_geocodes_csv.py...')
+  DATAFRAME = get_census_cities_and_states_dataframe()
+  set_geo_metadata_to_dataframe(DATAFRAME)
+  DATAFRAME.to_csv(GEOCODE_FINAL_CSV_FILENAME, index=False)
+  print('Finished write_geocodes_csv.py, wrote filename: ',
+        GEOCODE_FINAL_CSV_FILENAME)
