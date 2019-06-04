@@ -14,7 +14,7 @@ FuzzyMatchingKey = collections.namedtuple('FuzzyMatchingKey',
 class DataTable(ABC):
   """ Data table where each row is statistics for a city. """
 
-  def __init__(self, data=None, file_path=None, suffix=''):
+  def __init__(self, data=None, file_path=None, suffix='', header=0):
     """
     Create a DataTable containing rows of city data.
 
@@ -24,6 +24,7 @@ class DataTable(ABC):
     """
     self._file_path = file_path
     self._suffix = suffix
+    self._header = header
     if data is not None:
       self._data = data
     else:
@@ -223,8 +224,4 @@ class DataTable(ABC):
     Returns:
       DataTable.
     """
-
-    # If same class, join exact.
-    if isinstance(data_table, self.__class__):
-      return self.join_exact_matching(data_table)
     return self.join_fuzzy_matching(data_table)

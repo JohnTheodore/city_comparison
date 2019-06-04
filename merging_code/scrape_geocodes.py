@@ -17,35 +17,29 @@ import time
 import certifi
 import geopy
 
-from merging_code.compile_city_comparison import get_dataframe_from_merged_csv_files
-from merging_code.data_table_census import Census as census_data_table
-from merging_code.data_table_fbi import Fbi as fbi_data_table
-from merging_code.data_table_experian import Experian as experian_data_table
 from merging_code.secrets import GEOCODE_API_KEY
-from merging_code.utils import read_json_file, write_json_file
-from file_locations import CENSUS_AREA_2010_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME
+from merging_code.utils import read_json_file, write_json_file, get_dataframe_from_merged_table_metadata
+from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME
 from file_locations import GEOCODE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILENAME
 
 CSV_FILES_TO_MERGE = [{
-  'csv_filename': CENSUS_AREA_2010_CSV_FILENAME,
+  'csv_filename': CENSUS_FINAL_CSV_FILENAME,
   'document_label': 'census_2010',
-  'table_class': census_data_table
+  'header': 1
 }, {
   'csv_filename': FBI_CRIME_COMBINED_CSV_FILENAME,
   'document_label': 'fbi_2017',
-  'table_class': fbi_data_table,
   'suffix': '_fbi_crime'
 }, {
   'csv_filename': EXPERIAN_FINAL_CSV_FILENAME,
   'document_label': 'experian_2017',
-  'table_class': experian_data_table,
   'suffix': 'experian_2017'
 }]
 
 
 def get_census_cities_and_states_dataframe():
-  """ Load the pandas dataframe from data_table_census. (2017) """
-  dataframe = get_dataframe_from_merged_csv_files(CSV_FILES_TO_MERGE)
+  """ Load the pandas dataframe from table metadata. """
+  dataframe = get_dataframe_from_merged_table_metadata(CSV_FILES_TO_MERGE)
   dataframe = dataframe[['city', 'state']]
   return dataframe
 

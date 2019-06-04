@@ -68,7 +68,7 @@ HEADERS_CHANGE = {
   'final_csv': {
     'rename_columns': {},
     'drop_columns': [
-      'delme',
+      'cityexperian_2017',
       'city_fbi_crime',
       'city_walkscore',
       'City',
@@ -77,7 +77,7 @@ HEADERS_CHANGE = {
       'Geography.2',
       'reverse_address',
       'rape_legacy',
-      'state_fbi_crime',
+      'stateexperian_2017',
       'state_fbi_crime',
       'state_walkscore',
       'State',
