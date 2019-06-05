@@ -4,6 +4,9 @@ Helper functions that are used in multiple different classes or files.
 
 import json
 import os
+import pandas
+from merging_code.data_table_generic import ParseCsvData
+from merging_code.headers_cleanup import drop_headers, rename_headers
 
 
 def read_json_file(filename):
@@ -19,3 +22,53 @@ def write_json_file(filename, cached_json):
   """ Take a python dict, write it to a file as json.dumps. """
   with open(filename, 'w') as file_handler:
     file_handler.write(json.dumps(cached_json))
+
+
+def get_dataframe_from_csv(file_path, header=0, encoding='ISO-8859-1'):
+  """ Get the list of all csv filenames (from the repo root). """
+  data = pandas.read_csv(file_path, encoding=encoding, header=header)
+  return data
+
+
+def get_dataframe_from_merged_table_metadata(tables_metadata, debug=False):
+  """ Join Census data with FBI data and write out CSV. """
+  combined_table = None
+  for table_metadata in tables_metadata:
+    if combined_table is None:
+      combined_table = get_normalized_data_table(table_metadata)
+      continue
+    next_data_table = get_normalized_data_table(table_metadata)
+    combined_table = combined_table.join(next_data_table)
+    print_data_table_length('combined_table', combined_table.data, debug=debug)
+  drop_headers('final_csv', combined_table.data)
+  rename_headers('final_csv', combined_table.data)
+  return combined_table.data
+
+
+def get_normalized_data_table(table_metadata, debug=False):
+  """ Input a dict with csv filename, suffix if available, the document label,
+  and return a data_table. """
+  suffix = table_metadata.get('suffix', '')
+  data_table = ParseCsvData(file_path=table_metadata['csv_filename'],
+                            suffix=suffix,
+                            header=table_metadata.get('header', 0))
+  drop_headers(table_metadata['document_label'], data_table.data)
+  rename_headers(table_metadata['document_label'], data_table.data)
+  print_data_table_length(table_metadata['document_label'],
+                          data_table.data,
+                          debug=debug)
+  return data_table
+
+
+def print_data_table_length(document_label, data_frame, debug=False):
+  """ A helper print function for seeing the table row length. """
+  print('{}\n'.format(document_label), len(data_frame))
+  debug_print_dataframe(data_frame, debug=debug)
+
+
+def debug_print_dataframe(data, num_rows=2, debug=False):
+  """ If debug enabled, print a few rows from pandas DataFrame. """
+  if debug:
+    with pandas.option_context('display.max_rows', None, 'display.max_columns',
+                               None):
+      print(data[:num_rows])

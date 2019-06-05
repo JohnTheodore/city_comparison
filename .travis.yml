@@ -12,6 +12,7 @@ script:
   - flake8
   - yapf --parallel --verbose --recursive --style .style.yapf --exclude 'py37-mac' --diff .
   - find . -type f -name "*.py" ! -path "./py37-mac/*" ! -path "./merging_tests/*" | xargs pylint
+  - python -m merging_code.normalize_census
   - python -m merging_code.normalize_experian
   - python -m merging_code.normalize_fbi
   - python -m merging_code.scrape_geocodes

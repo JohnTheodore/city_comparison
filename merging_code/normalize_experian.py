@@ -2,8 +2,8 @@
 """ Merge all the csv files from experian city credit scores into one combined csv. """
 
 import glob
-from pandas import read_csv
 from file_locations import EXPERIAN_FINAL_CSV_FILENAME, EXPERIAN_SOURCE_CSV_DIR
+from merging_code.utils import get_dataframe_from_csv
 
 
 def get_all_csv_files(directory):
@@ -16,7 +16,7 @@ def get_dataframes_from_csvs(csv_files):
   """ Turn a list of csv filenames into a list of panda dataframe objects. """
   dataframes = []
   for csv_file in csv_files:
-    dataframe = read_csv(csv_file, encoding='ISO-8859-1')
+    dataframe = get_dataframe_from_csv(csv_file)
     # pylint: disable=W0212
     dataframe._metadata = {'filename': csv_file}
     dataframes.append(dataframe)
@@ -102,13 +102,20 @@ def drop_rows_missing_required_cells(dataframe, col_names):
   dataframe.dropna(axis=0, subset=col_names, inplace=True)
 
 
-# merge_experian_data()
-EXPERIAN_CSV_FILENAMES = get_all_csv_files(EXPERIAN_SOURCE_CSV_DIR)
-EXPERIAN_DATAFRAMES = get_dataframes_from_csvs(EXPERIAN_CSV_FILENAMES)
-normalize_headers(EXPERIAN_DATAFRAMES)
-change_credit_score_values_to_float(EXPERIAN_DATAFRAMES)
-FINAL_COMBINED_DATAFRAME = get_combined_dataframe(EXPERIAN_DATAFRAMES)
-# drop any rows with empty values in city/state/credit score
-drop_rows_missing_required_cells(FINAL_COMBINED_DATAFRAME,
-                                 ['City', 'State', 'Credit Score'])
-FINAL_COMBINED_DATAFRAME.to_csv(EXPERIAN_FINAL_CSV_FILENAME, index=False)
+if __name__ == '__main__':
+  # merge experian data
+  EXPERIAN_CSV_FILENAMES = get_all_csv_files(EXPERIAN_SOURCE_CSV_DIR)
+  EXPERIAN_DATAFRAMES = get_dataframes_from_csvs(EXPERIAN_CSV_FILENAMES)
+  normalize_headers(EXPERIAN_DATAFRAMES)
+  change_credit_score_values_to_float(EXPERIAN_DATAFRAMES)
+  FINAL_COMBINED_DATAFRAME = get_combined_dataframe(EXPERIAN_DATAFRAMES)
+  # drop any rows with empty values in city/state/credit score
+  drop_rows_missing_required_cells(FINAL_COMBINED_DATAFRAME,
+                                   ['City', 'State', 'Credit Score'])
+  FINAL_COMBINED_DATAFRAME['State'] = FINAL_COMBINED_DATAFRAME[
+    'State'].str.lower()
+  FINAL_COMBINED_DATAFRAME['City'] = FINAL_COMBINED_DATAFRAME['City'].str.lower(
+  )
+  FINAL_COMBINED_DATAFRAME.rename(columns={'City': 'city'}, inplace=True)
+  FINAL_COMBINED_DATAFRAME.rename(columns={'State': 'state'}, inplace=True)
+  FINAL_COMBINED_DATAFRAME.to_csv(EXPERIAN_FINAL_CSV_FILENAME, index=False)

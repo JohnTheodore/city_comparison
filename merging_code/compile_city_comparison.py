@@ -1,42 +1,10 @@
 """ Join Census and FBI data into one combined pandas DataFrame. """
 
-import pandas
-from file_locations import CENSUS_AREA_2010_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME
+from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME
 from file_locations import EXPERIAN_FINAL_CSV_FILENAME
 from file_locations import WALKSCORE_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
-from merging_code.data_table_census import Census as census_data_table
-from merging_code.data_table_fbi import Fbi as fbi_data_table
-from merging_code.data_table_experian import Experian as experian_data_table
-from merging_code.data_table_walkscore import Walkscore as walkscore_data_table
 from merging_code.headers_cleanup import drop_headers, rename_headers
-
-
-def debug_print_dataframe(data, num_rows=2, debug=False):
-  """ If debug enabled, print a few rows from pandas DataFrame. """
-  if debug:
-    with pandas.option_context('display.max_rows', None, 'display.max_columns',
-                               None):
-      print(data[:num_rows])
-
-
-def get_normalized_data_table(table_metadata, debug=False):
-  """ Input a dict with csv filename, suffix if available, the document label,
-  and return a data_table. """
-  suffix = table_metadata.get('suffix', '')
-  data_table = table_metadata['table_class'](
-    file_path=table_metadata['csv_filename'], suffix=suffix)
-  drop_headers(table_metadata['document_label'], data_table.data)
-  rename_headers(table_metadata['document_label'], data_table.data)
-  print_data_table_length(table_metadata['document_label'],
-                          data_table.data,
-                          debug=debug)
-  return data_table
-
-
-def print_data_table_length(document_label, data_frame, debug=False):
-  """ A helper print function for seeing the table row length. """
-  print('{}\n'.format(document_label), len(data_frame))
-  debug_print_dataframe(data_frame, debug=debug)
+from merging_code.utils import get_normalized_data_table, print_data_table_length
 
 
 def get_dataframe_from_merged_csv_files(tables_metadata, debug=False):
@@ -56,23 +24,19 @@ def get_dataframe_from_merged_csv_files(tables_metadata, debug=False):
 
 if __name__ == '__main__':
   CSV_FILES_TO_MERGE = [{
-    'csv_filename': CENSUS_AREA_2010_CSV_FILENAME,
+    'csv_filename': CENSUS_FINAL_CSV_FILENAME,
     'document_label': 'census_2010',
-    'table_class': census_data_table
   }, {
     'csv_filename': WALKSCORE_FINAL_CSV_FILENAME,
     'document_label': 'walkscore',
-    'table_class': walkscore_data_table,
     'suffix': '_walkscore'
   }, {
     'csv_filename': FBI_CRIME_COMBINED_CSV_FILENAME,
     'document_label': 'fbi_2017',
-    'table_class': fbi_data_table,
     'suffix': '_fbi_crime'
   }, {
     'csv_filename': EXPERIAN_FINAL_CSV_FILENAME,
     'document_label': 'experian_2017',
-    'table_class': experian_data_table,
     'suffix': 'experian_2017'
   }]
   # Set debug to True to print out 2 rows out of each dataframe.

@@ -5,8 +5,8 @@ GEOCODE_CACHED_JSON_FILENAME = './primary_sources/geocode/geo_data.json'
 GEOCODE_FINAL_CSV_FILENAME = './primary_sources/geocode/geocodes_scraped.csv'
 
 # ./primary_sources/census
-CENSUS_POPULATION_2017_CSV_FILENAME = './primary_sources/census/PEP_2017_PEPANNRSIP.US12A_with_ann.csv'
 CENSUS_AREA_2010_CSV_FILENAME = './primary_sources/census/DEC_10_SF1_GCTPH1.US13PR_with_ann.csv'
+CENSUS_FINAL_CSV_FILENAME = './primary_sources/census/census_normalized.csv'
 
 # ./primary_sources/experian
 EXPERIAN_SOURCE_CSV_DIR = './primary_sources/experian/csv_files/'

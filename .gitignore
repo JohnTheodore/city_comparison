@@ -2,3 +2,4 @@ py3*-mac
 .DS_Store
 .*.csv?
 __pycache__
+.coverage
