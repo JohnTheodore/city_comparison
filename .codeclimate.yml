@@ -1,0 +1,11 @@
+engines:
+  # ... CONFIG CONTENT ...
+  markdownlint:
+    enabled: true
+    # ... CONFIG CONTENT ...
+    checks:
+      MD013:
+        enabled: false
+  method-complexity:
+    config:
+      threshold: 8
