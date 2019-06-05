@@ -5,7 +5,6 @@ from file_locations import FBI_CRIME_2014_XLS_FILENAME, FBI_CRIME_2015_XLS_FILEN
 from file_locations import FBI_CRIME_2016_XLS_FILENAME, FBI_CRIME_2017_XLS_FILENAME
 from file_locations import FBI_CRIME_COMBINED_CSV_FILENAME
 from merging_code.headers_cleanup import drop_headers, rename_headers
-from merging_code.utils import get_dataframe_from_spreadsheet
 
 FBI_FILES_TO_MERGE = [{
   'xls_filename': FBI_CRIME_2014_XLS_FILENAME,
@@ -36,9 +35,7 @@ FBI_FILES_TO_MERGE = [{
 
 def get_dataframe_from_fbi_excel_file(table_metadata):
   """ Get the dataframe from an excel filename. """
-  dataframe = get_dataframe_from_spreadsheet(table_metadata['xls_filename'],
-                                             header=3,
-                                             sheet_type='xls')
+  dataframe = pandas.read_excel(table_metadata['xls_filename'], header=3)
 
   # Remove empty columns.
   # dataframe.drop(dataframe.columns[[13, 14, 15, 16, 17, 18]], axis=1, inplace=True)
@@ -68,6 +65,8 @@ def get_dataframe_from_fbi_excel_file(table_metadata):
 
   drop_headers(table_metadata['document_label'], dataframe)
   rename_headers(table_metadata['document_label'], dataframe)
+  # remove the crap / notes at the bottom of the dataframe.
+  dataframe = dataframe[dataframe.population.notnull()]
   # Propagate 'state' column.
   state = None
   for i, row in dataframe.iterrows():
@@ -101,20 +100,24 @@ def get_dataframe_from_fbi_excel_file(table_metadata):
   return dataframe
 
 
-if __name__ == '__main__':
-
-  FBI_DATAFRAMES = {
+def get_final_dataframe():
+  """ The main function which returns the final dataframe with all merged/meaned fbi xls files. """
+  fbi_dataframes = {
     table_metadata['year']: get_dataframe_from_fbi_excel_file(table_metadata)
     for table_metadata in FBI_FILES_TO_MERGE
   }
   # Add year column for each FBI dataframe.  Note that we're using a
   # "multi-index" of (state, city, year).
-  for year, df in FBI_DATAFRAMES.items():
-    df['year'] = year
-    df.set_index(['state', 'city', 'year'], inplace=True)
 
-  # Concatenate the data from years 2014-2017.
-  COMBINED = pandas.concat(FBI_DATAFRAMES.values(), sort=True)
+  for year, dataframe in fbi_dataframes.items():
+    dataframe['year'] = year
+    dataframe.set_index(['state', 'city', 'year'], inplace=True)
+
+  combined = pandas.concat(fbi_dataframes.values(), sort=True)
   # Take average states over year.  Now index is (state, city).
-  COMBINED_MEAN = COMBINED.mean(level=[0, 1])
-  COMBINED_MEAN.to_csv(FBI_CRIME_COMBINED_CSV_FILENAME, index=True)
+  combined_mean = combined.mean(level=[0, 1])
+  return combined_mean
+
+
+if __name__ == '__main__':
+  get_final_dataframe().to_csv(FBI_CRIME_COMBINED_CSV_FILENAME, index=True)

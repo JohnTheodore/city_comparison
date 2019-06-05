@@ -109,10 +109,15 @@ def set_geo_metadata_to_dataframe(dataframe):
   write_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
 
 
+def get_final_dataframe():
+  """ The main function which returns the final dataframe. """
+  dataframe = get_census_cities_and_states_dataframe()
+  set_geo_metadata_to_dataframe(dataframe)
+  return dataframe
+
+
 if __name__ == '__main__':
   print('Starting write_geocodes_csv.py...')
-  DATAFRAME = get_census_cities_and_states_dataframe()
-  set_geo_metadata_to_dataframe(DATAFRAME)
-  DATAFRAME.to_csv(GEOCODE_FINAL_CSV_FILENAME, index=False)
+  get_final_dataframe().to_csv(GEOCODE_FINAL_CSV_FILENAME, index=False)
   print('Finished write_geocodes_csv.py, wrote filename: ',
         GEOCODE_FINAL_CSV_FILENAME)

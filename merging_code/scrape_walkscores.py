@@ -94,10 +94,16 @@ def add_walkscore_to_cities(dataframe):
   write_json_file(WALKSCORE_CACHED_JSON_FILENAME, cached_dict)
 
 
+def get_final_dataframe():
+  """ The main function which returns the final dataframe. """
+  dataframe = get_dataframe_from_spreadsheet(GEOCODE_FINAL_CSV_FILENAME)
+  add_walkscore_to_cities(dataframe)
+  return dataframe
+
+
 if __name__ == '__main__':
   print('Starting write_walkscores_csv.py with api key: ', WALKSCORE_API_KEY)
-  DATAFRAME = get_dataframe_from_spreadsheet(GEOCODE_FINAL_CSV_FILENAME)
-  add_walkscore_to_cities(DATAFRAME)
+  DATAFRAME = get_final_dataframe()
   print('Writing row quantity: ', DATAFRAME['city'].count())
   DATAFRAME.to_csv(WALKSCORE_FINAL_CSV_FILENAME, index=False)
   print('Finished writing: ', WALKSCORE_FINAL_CSV_FILENAME)

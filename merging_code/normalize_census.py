@@ -24,10 +24,11 @@ def normalize_dataframe(dataframe):
 
 
 def get_final_dataframe():
-  CENSUS_2010_DATAFRAME = get_dataframe_from_spreadsheet(
+  """ The main function which returns the final dataframe. """
+  census_2010_dataframe = get_dataframe_from_spreadsheet(
     CENSUS_AREA_2010_CSV_FILENAME, header=1)
-  CENSUS_2010_DATAFRAME = normalize_dataframe(CENSUS_2010_DATAFRAME)
-  return (CENSUS_2010_DATAFRAME)
+  census_2010_dataframe = normalize_dataframe(census_2010_dataframe)
+  return census_2010_dataframe
 
 
 if __name__ == '__main__':

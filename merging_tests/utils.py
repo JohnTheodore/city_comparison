@@ -1,3 +1,3 @@
-def get_nyc_row(dataframe):
-  return dataframe.loc[(dataframe['city'] == 'new york') &
-                       (dataframe['state'] == 'new york')]
+def get_city_state_row(dataframe, city, state):
+  return dataframe.loc[(dataframe['city'] == city) &
+                       (dataframe['state'] == state)]
