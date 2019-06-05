@@ -95,8 +95,8 @@ def drop_rows_missing_required_cells(dataframe, col_names):
   dataframe.dropna(axis=0, subset=col_names, inplace=True)
 
 
-if __name__ == '__main__':
-  # merge experian data
+def get_final_dataframe():
+  """ Turn all the experian CSVs into dataframes, merge them, return the result. """
   EXPERIAN_CSV_FILENAMES = get_all_filenames_with_extension(
     EXPERIAN_SOURCE_CSV_DIR, 'csv')
   EXPERIAN_DATAFRAMES = get_dataframes_from_csvs(EXPERIAN_CSV_FILENAMES)
@@ -112,4 +112,8 @@ if __name__ == '__main__':
   )
   FINAL_COMBINED_DATAFRAME.rename(columns={'City': 'city'}, inplace=True)
   FINAL_COMBINED_DATAFRAME.rename(columns={'State': 'state'}, inplace=True)
-  FINAL_COMBINED_DATAFRAME.to_csv(EXPERIAN_FINAL_CSV_FILENAME, index=False)
+  return FINAL_COMBINED_DATAFRAME
+
+
+if __name__ == '__main__':
+  get_final_dataframe().to_csv(EXPERIAN_FINAL_CSV_FILENAME, index=False)

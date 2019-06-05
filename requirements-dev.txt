@@ -4,6 +4,7 @@ pandas
 pylint
 pytest
 pytest-cov
+pytest-parallel
 yapf
 xlrd
 geopy

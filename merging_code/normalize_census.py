@@ -23,8 +23,12 @@ def normalize_dataframe(dataframe):
   return dataframe
 
 
-if __name__ == '__main__':
+def get_final_dataframe():
   CENSUS_2010_DATAFRAME = get_dataframe_from_spreadsheet(
     CENSUS_AREA_2010_CSV_FILENAME, header=1)
   CENSUS_2010_DATAFRAME = normalize_dataframe(CENSUS_2010_DATAFRAME)
-  CENSUS_2010_DATAFRAME.to_csv(CENSUS_FINAL_CSV_FILENAME, index=False)
+  return (CENSUS_2010_DATAFRAME)
+
+
+if __name__ == '__main__':
+  get_final_dataframe().to_csv(CENSUS_FINAL_CSV_FILENAME, index=False)

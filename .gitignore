@@ -3,3 +3,4 @@ py3*-mac
 .*.csv?
 __pycache__
 .coverage
+.coverage.*
