@@ -9,6 +9,9 @@ import subprocess
 import time
 # pylint: disable=E0401
 import yaml
+from termcolor import cprint
+
+START_TIME = time.time()
 
 START_TIME = time.time()
 

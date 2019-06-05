@@ -10,11 +10,9 @@ hammering the API. Note, you need the GEOCODE_API_KEY
 in secrets.py
 """
 # standard imports
-import ssl
 import time
 
 # pypi imports
-import certifi
 import geopy
 
 from merging_code.secrets import GEOCODE_API_KEY
@@ -26,7 +24,6 @@ from file_locations import GEOCODE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILEN
 CSV_FILES_TO_MERGE = [{
   'csv_filename': CENSUS_FINAL_CSV_FILENAME,
   'document_label': 'census_2010',
-  'header': 1
 }, {
   'csv_filename': FBI_CRIME_COMBINED_CSV_FILENAME,
   'document_label': 'fbi_2017',
@@ -49,8 +46,6 @@ def get_goog_geolocator(geocode_api_key):
   """ Get the geopy geolocator object, setup with goog auth. """
   if geocode_api_key == '':
     return None
-  ctx = ssl.create_default_context(cafile=certifi.where())
-  geopy.geocoders.options.default_ssl_context = ctx
   geolocator = geopy.GoogleV3(user_agent='where should I live next',
                               api_key=geocode_api_key,
                               timeout=3)
