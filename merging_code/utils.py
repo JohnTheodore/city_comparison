@@ -49,7 +49,7 @@ def remove_substring_from_end_of_string(input_string, substring_list):
 
 
 def get_dataframe_from_merged_table_metadata(tables_metadata, debug=False):
-  """ Join Census data with FBI data and write out CSV. """
+  """ Take table metadata, and return a merged panda datatable. """
   combined_table = None
   for table_metadata in tables_metadata:
     if combined_table is None:
