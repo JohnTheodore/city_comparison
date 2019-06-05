@@ -23,3 +23,4 @@ pip install -r requirements-dev.txt
 |codeclimate|[![Maintainability](https://api.codeclimate.com/v1/badges/197b6ac7279063135428/maintainability)](https://codeclimate.com/github/JohnTheodore/city_comparison/maintainability)|
 |codecov|[![codecov](https://codecov.io/gh/JohnTheodore/city_comparison/branch/master/graph/badge.svg)](https://codecov.io/gh/JohnTheodore/city_comparison)|
 |gitter|[![Join the chat at https://gitter.im/city_comparison/](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/city_comparison/)|
+|requirements|[![Requirements Status](https://requires.io/github/JohnTheodore/city_comparison/requirements.svg?branch=pytest-xdist)](https://requires.io/github/JohnTheodore/city_comparison/requirements/?branch=master)|
