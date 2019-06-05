@@ -1,22 +1,15 @@
 #!/usr/bin/env python3
 """ Merge all the csv files from experian city credit scores into one combined csv. """
 
-import glob
 from file_locations import EXPERIAN_FINAL_CSV_FILENAME, EXPERIAN_SOURCE_CSV_DIR
-from merging_code.utils import get_dataframe_from_csv
-
-
-def get_all_csv_files(directory):
-  """ Get the list of all csv filenames (from the repo root). """
-  all_csv_files = glob.glob('{}{}'.format(directory, '*.csv'))
-  return all_csv_files
+from merging_code.utils import get_dataframe_from_spreadsheet, get_all_filenames_with_extension
 
 
 def get_dataframes_from_csvs(csv_files):
   """ Turn a list of csv filenames into a list of panda dataframe objects. """
   dataframes = []
   for csv_file in csv_files:
-    dataframe = get_dataframe_from_csv(csv_file)
+    dataframe = get_dataframe_from_spreadsheet(csv_file, sheet_type='csv')
     # pylint: disable=W0212
     dataframe._metadata = {'filename': csv_file}
     dataframes.append(dataframe)
@@ -102,9 +95,10 @@ def drop_rows_missing_required_cells(dataframe, col_names):
   dataframe.dropna(axis=0, subset=col_names, inplace=True)
 
 
-if __name__ == '__main__':
-  # merge experian data
-  EXPERIAN_CSV_FILENAMES = get_all_csv_files(EXPERIAN_SOURCE_CSV_DIR)
+def get_final_dataframe():
+  """ Turn all the experian CSVs into dataframes, merge them, return the result. """
+  EXPERIAN_CSV_FILENAMES = get_all_filenames_with_extension(
+    EXPERIAN_SOURCE_CSV_DIR, 'csv')
   EXPERIAN_DATAFRAMES = get_dataframes_from_csvs(EXPERIAN_CSV_FILENAMES)
   normalize_headers(EXPERIAN_DATAFRAMES)
   change_credit_score_values_to_float(EXPERIAN_DATAFRAMES)
@@ -118,4 +112,8 @@ if __name__ == '__main__':
   )
   FINAL_COMBINED_DATAFRAME.rename(columns={'City': 'city'}, inplace=True)
   FINAL_COMBINED_DATAFRAME.rename(columns={'State': 'state'}, inplace=True)
-  FINAL_COMBINED_DATAFRAME.to_csv(EXPERIAN_FINAL_CSV_FILENAME, index=False)
+  return FINAL_COMBINED_DATAFRAME
+
+
+if __name__ == '__main__':
+  get_final_dataframe().to_csv(EXPERIAN_FINAL_CSV_FILENAME, index=False)
