@@ -8,7 +8,6 @@ install:
   - pip install codecov
 # commands to run, must exit 0 to pass
 script:
-  # test and validate all backend files
   - flake8
   - yapf --parallel --verbose --recursive --style .style.yapf --exclude 'py37-mac' --diff .
   - find . -type f -name "*.py" ! -path "./py37-mac/*" ! -path "./merging_tests/*" | xargs pylint

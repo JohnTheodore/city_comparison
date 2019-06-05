@@ -7,7 +7,7 @@ import json
 import os
 import pandas
 from merging_code.data_table import DataTable
-from merging_code.headers_cleanup import drop_headers, rename_headers
+from merging_code.headers_cleanup import HEADERS_CHANGE
 
 
 def read_json_file(filename):
@@ -23,6 +23,13 @@ def write_json_file(filename, cached_json):
   """ Take a python dict, write it to a file as json.dumps. """
   with open(filename, 'w') as file_handler:
     file_handler.write(json.dumps(cached_json))
+
+
+def drop_empty_rows_from_dataframes(dataframes, col_names):
+  """ If we're missing any required information, we drop the row entirely. """
+  for dataframe in dataframes:
+    dataframe.dropna(axis=0, subset=col_names, inplace=True)
+  return dataframes
 
 
 def get_dataframe_from_spreadsheet(file_path,
@@ -42,8 +49,6 @@ def remove_substring_from_end_of_string(input_string, substring_list):
   new_string = input_string
   for substring in substring_list:
     if new_string.endswith(substring):
-      # import ipdb
-      # ipdb.set_trace()
       new_string = new_string[:(-1 * (len(substring)))]
   return new_string
 
@@ -63,6 +68,27 @@ def get_dataframe_from_merged_table_metadata(tables_metadata, debug=False):
   return combined_table.data
 
 
+def get_combined_dataframe(dataframes,
+                           how='outer',
+                           merge_on='city',
+                           optional_merge_on='county'):
+  """ Combined all the CSV files, then return the combined dataframe. """
+  combined_dataframe = None
+  for dataframe in dataframes:
+    if combined_dataframe is None:
+      combined_dataframe = dataframe
+      continue
+    merge_on = ['city', 'state', 'credit score']
+    for optional_merge in optional_merge_on:
+      if optional_merge in dataframe:
+        merge_on.append(optional_merge)
+    combined_dataframe = combined_dataframe.merge(dataframe,
+                                                  on=merge_on,
+                                                  how=how)
+    print('row quantity: ', str(combined_dataframe.shape[0]))
+  return combined_dataframe
+
+
 def get_normalized_data_table(table_metadata, debug=False):
   """ Input a dict with csv filename, suffix if available, the document label,
   and return a data_table. """
@@ -78,10 +104,10 @@ def get_normalized_data_table(table_metadata, debug=False):
   return data_table
 
 
-def print_data_table_length(document_label, data_frame, debug=False):
+def print_data_table_length(document_label, dataframe, debug=False):
   """ A helper print function for seeing the table row length. """
-  print('{}\n'.format(document_label), len(data_frame))
-  debug_print_dataframe(data_frame, debug=debug)
+  print('{}\n'.format(document_label), len(dataframe))
+  debug_print_dataframe(dataframe, debug=debug)
 
 
 def debug_print_dataframe(data, num_rows=2, debug=False):
@@ -96,12 +122,81 @@ def add_empty_columns(dataframe, column_names):
   """ Add column headers with empty row values. This lets use set the values later. """
   for column_name in column_names:
     dataframe[column_name] = [''] * dataframe.shape[0]
+  return dataframe
 
 
 def get_all_filenames_with_extension(directory, file_ext):
   """ Get the list of all csv filenames (from the repo root). """
   all_csv_files = glob.glob('{}*{}'.format(directory, file_ext))
   return all_csv_files
+
+
+def drop_headers(data_source, dataframe):
+  """ Mutate the dataframe and drop the headers from HEADERS_CHANGE """
+  no_headers_change = data_source not in HEADERS_CHANGE
+  if no_headers_change or 'drop_columns' not in HEADERS_CHANGE[data_source]:
+    return dataframe
+  drop_columns = HEADERS_CHANGE[data_source]['drop_columns']
+  df_columns_not_in_drop_columns = set(drop_columns) - set(dataframe.columns)
+  columns_to_drop = list(set(drop_columns) - (df_columns_not_in_drop_columns))
+  return dataframe.drop(labels=columns_to_drop, axis=1)
+
+
+def rename_headers(data_source, dataframe):
+  """ Mutate the dataframe and rename the headers from HEADERS_CHANGE """
+  no_headers_change = data_source not in HEADERS_CHANGE
+  if no_headers_change or 'rename_columns' not in HEADERS_CHANGE[data_source]:
+    return dataframe
+  return dataframe.rename(columns=HEADERS_CHANGE[data_source]['rename_columns'])
+
+
+def lower_case_headers_in_dataframes(dataframe):
+  """ Lower case all the strings in all the headers of the dataframes. """
+  for column in dataframe.columns:
+    dataframe = dataframe.rename(columns={column: column.lower()})
+  return dataframe
+
+
+def normalize_headers_in_dataframe(data_source, dataframe):
+  """ meta function, take a single dataframe, and run the various normalizing functions on it. """
+  # note, removing new lines happens _before_ renames.
+  new_dataframe = remove_new_lines_from_headers_dataframes(dataframe)
+  new_dataframe = lower_case_headers_in_dataframes(new_dataframe)
+  new_dataframe = rename_headers(data_source, new_dataframe)
+  new_dataframe = drop_headers(data_source, new_dataframe)
+  return new_dataframe
+
+
+def normalize_headers_in_dataframes(data_source, dataframes):
+  """ Take a list of dataframes, and run normalize_headers_in_dataframe on each dataframe. """
+  new_dataframes = []
+  for dataframe in dataframes:
+    new_dataframes.append(normalize_headers_in_dataframe(
+      data_source, dataframe))
+  return new_dataframes
+
+
+def remove_new_lines_from_headers_dataframes(dataframe):
+  """ Remove all the new lines from headers in the dataframes. """
+  for column in dataframe.columns:
+    dataframe = dataframe.rename(columns={column: column.replace('\n', ' ')})
+  return dataframe
+
+
+def lower_case_dataframes_columns(dataframes, columns):
+  """ lowercase all the cells in the columns for all dataframes. """
+  new_dataframes = []
+  for dataframe in dataframes:
+    new_dataframes.append(lower_case_columns(dataframe, columns))
+  return new_dataframes
+
+
+def lower_case_columns(dataframe, columns):
+  """ lowercase all the cells in the columns for a single dataframe. """
+  for column in columns:
+    if column in dataframe:
+      dataframe[column] = dataframe[column].str.lower()
+  return dataframe
 
 
 class ParseCsvData(DataTable):

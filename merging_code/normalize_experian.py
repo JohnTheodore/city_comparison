@@ -3,9 +3,11 @@
 
 from file_locations import EXPERIAN_FINAL_CSV_FILENAME, EXPERIAN_SOURCE_CSV_DIR
 from merging_code.utils import get_dataframe_from_spreadsheet, get_all_filenames_with_extension
+from merging_code.utils import normalize_headers_in_dataframes, drop_empty_rows_from_dataframes
+from merging_code.utils import get_combined_dataframe, lower_case_dataframes_columns
 
 
-def get_dataframes_from_csvs(csv_files):
+def get_dataframes_from_csv_filenames(csv_files):
   """ Turn a list of csv filenames into a list of panda dataframe objects. """
   dataframes = []
   for csv_file in csv_files:
@@ -24,94 +26,39 @@ def get_filename_root(dataframe):
     EXPERIAN_SOURCE_CSV_DIR)[1].split('.csv')[0]
 
 
-def normalize_headers(dataframes):
-  """ Rename headers, drop headers, normalize like header names.. """
-  header_renames = {
-    'City ': 'City',
-    'city': 'City',
-    'VantageScore 3.0 Credit Score': 'Credit Score',
-    'Avg VantageScore 3.0': 'Credit Score',
-    'Average VantageScore 3.0 Credit Score': 'Credit Score',
-    'Avg. VantageScore 3.0': 'Credit Score',
-    'Weighted Vantage Score': 'Credit Score',
-    'Sum of Adjusted Credit Score': 'Credit Score',
-    ' Average VantageScore 3.0 Credit Score': 'Credit Score',
-    'Vantage Score': 'Credit Score',
-    'County Name': 'County'
-  }
-  drop_headers = ['Rank', 'Population', 'Unnamed: 5', 'Unnamed: 4']
+def add_missing_state_column_to_dataframes(dataframes):
+  """ If 'state' and 'State' are missing, we'll add those columns using the filename. """
   for dataframe in dataframes:
-    # Rename headers
-    for header in dataframe.columns:
-      if header in header_renames:
-        dataframe.rename(columns={header: header_renames[header]}, inplace=True)
-    # Add 'State' column if missing, based on filename.
-
-    if 'State' not in dataframe.columns:
-      state_name = get_filename_root(dataframe)
-      non_header_row_qty = dataframe['City'].count()
-      state_list = [state_name] * non_header_row_qty
-      dataframe['State'] = state_list
-    # Drop headers
-    for drop_header in drop_headers:
-      if drop_header in dataframe:
-        dataframe.drop(drop_header, 1, inplace=True)
+    if 'state' not in dataframe.columns and 'State' not in dataframe.columns:
+      dataframe['state'] = [get_filename_root(dataframe)] * dataframe.shape[0]
+  return dataframes
 
 
-def change_credit_score_values_to_float(dataframes):
+def change_credit_score_values_to_int(dataframes):
   """ Make sure all the credit score cell values are normalized as floats. """
   for dataframe in dataframes:
-    dataframe['Credit Score'] = dataframe['Credit Score'].astype(float)
-
-
-def get_combined_dataframe(dataframes):
-  """ Combined all the CSV files, then return the combined dataframe. """
-
-  def print_dataframe_row_qty(dataframe, file_source):
-    """ Helper print function, so we know how many rows we're gaining over time. """
-    print('File: ', file_source, 'Row Quantity: ',
-          str(dataframe['City'].count()))
-
-  combined_dataframe = None
-  for dataframe in dataframes:
-    print_dataframe_row_qty(dataframe, dataframe['State'][0])
-    if combined_dataframe is None:
-      combined_dataframe = dataframe
-      # pylint: disable=W0212
-      combined_dataframe._metadata['filename'] = EXPERIAN_FINAL_CSV_FILENAME
-      continue
-    merge_on = ['City', 'State', 'Credit Score']
-    if 'County' in dataframe:
-      merge_on.append('County')
-    combined_dataframe = combined_dataframe.merge(dataframe,
-                                                  on=merge_on,
-                                                  how='outer')
-    print_dataframe_row_qty(combined_dataframe, EXPERIAN_FINAL_CSV_FILENAME)
-  return combined_dataframe
-
-
-def drop_rows_missing_required_cells(dataframe, col_names):
-  """ If we're missing any required information, we drop the row entirely. """
-  dataframe.dropna(axis=0, subset=col_names, inplace=True)
+    dataframe['credit score'] = dataframe['credit score'].astype(int)
+  return dataframes
 
 
 def get_final_dataframe():
   """ Turn all the experian CSVs into dataframes, merge them, return the result. """
   experian_csv_filenames = get_all_filenames_with_extension(
     EXPERIAN_SOURCE_CSV_DIR, 'csv')
-  experian_dataframes = get_dataframes_from_csvs(experian_csv_filenames)
-  normalize_headers(experian_dataframes)
-  change_credit_score_values_to_float(experian_dataframes)
-  final_combined_dataframe = get_combined_dataframe(experian_dataframes)
+  dataframes = get_dataframes_from_csv_filenames(experian_csv_filenames)
+  dataframes = add_missing_state_column_to_dataframes(dataframes)
+  dataframes = normalize_headers_in_dataframes('experian', dataframes)
   # drop any rows with empty values in city/state/credit score
-  drop_rows_missing_required_cells(final_combined_dataframe,
-                                   ['City', 'State', 'Credit Score'])
-  final_combined_dataframe['State'] = final_combined_dataframe[
-    'State'].str.lower()
-  final_combined_dataframe['City'] = final_combined_dataframe['City'].str.lower(
-  )
-  final_combined_dataframe.rename(columns={'City': 'city'}, inplace=True)
-  final_combined_dataframe.rename(columns={'State': 'state'}, inplace=True)
+  dataframes = drop_empty_rows_from_dataframes(
+    dataframes, ['city', 'state', 'credit score'])
+  dataframes = lower_case_dataframes_columns(dataframes,
+                                             ['city', 'state', 'county'])
+  dataframes = change_credit_score_values_to_int(dataframes)
+  final_combined_dataframe = get_combined_dataframe(
+    dataframes,
+    how='outer',
+    merge_on=['city', 'state', 'credit score'],
+    optional_merge_on=['county'])
   return final_combined_dataframe
 
 

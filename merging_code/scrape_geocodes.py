@@ -33,7 +33,7 @@ CSV_FILES_TO_MERGE = [{
   'suffix': '_fbi_crime'
 }, {
   'csv_filename': EXPERIAN_FINAL_CSV_FILENAME,
-  'document_label': 'experian_2017',
+  'document_label': 'experian',
   'suffix': 'experian_2017'
 }]
 
