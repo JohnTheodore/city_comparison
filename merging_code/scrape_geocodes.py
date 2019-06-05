@@ -47,6 +47,8 @@ def get_census_cities_and_states_dataframe():
 
 def get_goog_geolocator(geocode_api_key):
   """ Get the geopy geolocator object, setup with goog auth. """
+  if geocode_api_key == '':
+    return None
   ctx = ssl.create_default_context(cafile=certifi.where())
   geopy.geocoders.options.default_ssl_context = ctx
   geolocator = geopy.GoogleV3(user_agent='where should I live next',
