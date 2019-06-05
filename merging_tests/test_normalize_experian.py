@@ -1,11 +1,11 @@
 """ All the code in merging_code.normalize_experian should get tested here. """
 
-from merging_tests.utils import get_nyc_row
+from merging_tests.utils import get_city_state_row
 from merging_code.normalize_experian import get_final_dataframe
 
 
 def test_nyc_area():
-  """ We know the 2010 census area for nyc is 302.64, let's test this. """
+  """ We know the nyc credit score is 706.0 let's test this. """
   dataframe = get_final_dataframe()
-  nyc_row = get_nyc_row(dataframe)
+  nyc_row = get_city_state_row(dataframe, 'new york', 'new york')
   assert float(nyc_row.get('Credit Score')) == 706.0

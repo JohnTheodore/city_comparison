@@ -97,22 +97,22 @@ def drop_rows_missing_required_cells(dataframe, col_names):
 
 def get_final_dataframe():
   """ Turn all the experian CSVs into dataframes, merge them, return the result. """
-  EXPERIAN_CSV_FILENAMES = get_all_filenames_with_extension(
+  experian_csv_filenames = get_all_filenames_with_extension(
     EXPERIAN_SOURCE_CSV_DIR, 'csv')
-  EXPERIAN_DATAFRAMES = get_dataframes_from_csvs(EXPERIAN_CSV_FILENAMES)
-  normalize_headers(EXPERIAN_DATAFRAMES)
-  change_credit_score_values_to_float(EXPERIAN_DATAFRAMES)
-  FINAL_COMBINED_DATAFRAME = get_combined_dataframe(EXPERIAN_DATAFRAMES)
+  experian_dataframes = get_dataframes_from_csvs(experian_csv_filenames)
+  normalize_headers(experian_dataframes)
+  change_credit_score_values_to_float(experian_dataframes)
+  final_combined_dataframe = get_combined_dataframe(experian_dataframes)
   # drop any rows with empty values in city/state/credit score
-  drop_rows_missing_required_cells(FINAL_COMBINED_DATAFRAME,
+  drop_rows_missing_required_cells(final_combined_dataframe,
                                    ['City', 'State', 'Credit Score'])
-  FINAL_COMBINED_DATAFRAME['State'] = FINAL_COMBINED_DATAFRAME[
+  final_combined_dataframe['State'] = final_combined_dataframe[
     'State'].str.lower()
-  FINAL_COMBINED_DATAFRAME['City'] = FINAL_COMBINED_DATAFRAME['City'].str.lower(
+  final_combined_dataframe['City'] = final_combined_dataframe['City'].str.lower(
   )
-  FINAL_COMBINED_DATAFRAME.rename(columns={'City': 'city'}, inplace=True)
-  FINAL_COMBINED_DATAFRAME.rename(columns={'State': 'state'}, inplace=True)
-  return FINAL_COMBINED_DATAFRAME
+  final_combined_dataframe.rename(columns={'City': 'city'}, inplace=True)
+  final_combined_dataframe.rename(columns={'State': 'state'}, inplace=True)
+  return final_combined_dataframe
 
 
 if __name__ == '__main__':
