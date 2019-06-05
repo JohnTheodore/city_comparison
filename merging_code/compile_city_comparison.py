@@ -3,8 +3,7 @@
 from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME
 from file_locations import EXPERIAN_FINAL_CSV_FILENAME
 from file_locations import WALKSCORE_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
-from merging_code.headers_cleanup import drop_headers, rename_headers
-from merging_code.utils import get_normalized_data_table, print_data_table_length
+from merging_code.utils import get_dataframe_from_merged_table_metadata
 
 CSV_FILES_TO_MERGE = [{
   'csv_filename': CENSUS_FINAL_CSV_FILENAME,
@@ -23,25 +22,10 @@ CSV_FILES_TO_MERGE = [{
   'suffix': 'experian_2017'
 }]
 
-
-def get_final_dataframe(debug=False):
-  """ Join Census data with FBI data and write out CSV. """
-  combined_table = None
-  for table_metadata in CSV_FILES_TO_MERGE:
-    if combined_table is None:
-      combined_table = get_normalized_data_table(table_metadata)
-      continue
-    next_data_table = get_normalized_data_table(table_metadata)
-    combined_table = combined_table.join(next_data_table)
-    print_data_table_length('combined_table', combined_table.data, debug=debug)
-  drop_headers('final_csv', combined_table.data)
-  rename_headers('final_csv', combined_table.data)
-  return combined_table.data
-
-
 if __name__ == '__main__':
   # Set debug to True to print out 2 rows out of each dataframe.
-  COMBINED_DATAFRAME = get_final_dataframe(debug=False)
+  COMBINED_DATAFRAME = get_dataframe_from_merged_table_metadata(
+    CSV_FILES_TO_MERGE, debug=False)
   # Write the combined dataframe table to the final csv file.
   COMBINED_DATAFRAME.to_csv(MASTER_CSV_FILENAME, index_label='delme')
   print('Wrote file: ', MASTER_CSV_FILENAME)

@@ -1,4 +1,6 @@
+from merging_code.compile_city_comparison import get_dataframe_from_merged_table_metadata, CSV_FILES_TO_MERGE
 from merging_code.utils import remove_substring_from_end_of_string
+from merging_tests.utils import get_city_state_row
 
 
 def test_remove_substring_from_end_of_string():
@@ -8,3 +10,11 @@ def test_remove_substring_from_end_of_string():
   new_string2 = remove_substring_from_end_of_string(input_string,
                                                     [' baz', ' bar'])
   assert new_string2 == 'foo'
+
+
+def test_madison_row():
+  """ We know the lat, long and reverse address for madison, let's test this. """
+  dataframe = get_dataframe_from_merged_table_metadata(CSV_FILES_TO_MERGE)
+  madison = get_city_state_row(dataframe, 'madison', 'wisconsin')
+  madison_violent_crime = round(float(madison.get('violent crime')), 2)
+  assert madison_violent_crime == 351.57

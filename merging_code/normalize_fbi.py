@@ -5,6 +5,7 @@ from file_locations import FBI_CRIME_2014_XLS_FILENAME, FBI_CRIME_2015_XLS_FILEN
 from file_locations import FBI_CRIME_2016_XLS_FILENAME, FBI_CRIME_2017_XLS_FILENAME
 from file_locations import FBI_CRIME_COMBINED_CSV_FILENAME
 from merging_code.headers_cleanup import drop_headers, rename_headers
+from merging_code.utils import get_dataframe_from_spreadsheet
 
 FBI_FILES_TO_MERGE = [{
   'xls_filename': FBI_CRIME_2014_XLS_FILENAME,
@@ -35,7 +36,9 @@ FBI_FILES_TO_MERGE = [{
 
 def get_dataframe_from_fbi_excel_file(table_metadata):
   """ Get the dataframe from an excel filename. """
-  dataframe = pandas.read_excel(table_metadata['xls_filename'], header=3)
+  dataframe = get_dataframe_from_spreadsheet(table_metadata['xls_filename'],
+                                             header=3,
+                                             sheet_type='xls')
 
   # Remove empty columns.
   # dataframe.drop(dataframe.columns[[13, 14, 15, 16, 17, 18]], axis=1, inplace=True)
