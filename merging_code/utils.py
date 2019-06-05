@@ -72,3 +72,9 @@ def debug_print_dataframe(data, num_rows=2, debug=False):
     with pandas.option_context('display.max_rows', None, 'display.max_columns',
                                None):
       print(data[:num_rows])
+
+
+def add_empty_columns(dataframe, column_names):
+  """ Add column headers with empty row values. This lets use set the values later. """
+  for column_name in column_names:
+    dataframe[column_name] = [''] * dataframe['city'].count()

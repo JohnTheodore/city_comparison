@@ -7,7 +7,7 @@ right lat/long/address
 import time
 import pandas
 import requests
-from merging_code.utils import read_json_file, write_json_file
+from merging_code.utils import read_json_file, write_json_file, add_empty_columns
 from merging_code.secrets import WALKSCORE_API_KEY
 from file_locations import WALKSCORE_FINAL_CSV_FILENAME, WALKSCORE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILENAME
 
@@ -18,24 +18,18 @@ def get_geocode_dataframe():
   return geo_table
 
 
-def add_empty_columns(dataframe, column_names):
-  """ Add empty columns so we can set the values of individual cells later. """
-  for column_name in column_names:
-    dataframe[column_name] = [''] * dataframe['city'].count()
-
-
 def get_summary_scores_dict(walkscore_json, state_city_name):
   """ Take raw walkscore json response and return a simple dictionary
   of the 3 scores for each city. When missing we use ''. """
   summary_scores_dict = {'walkscore': '', 'bikescore': '', 'transitscore': ''}
   if walkscore_json['status'] == 1:
     summary_scores_dict['walkscore'] = walkscore_json['walkscore']
-    if 'transit' in walkscore_json:
-      summary_scores_dict['transitscore'] = walkscore_json['transit']['score']
-    if 'bike' in walkscore_json:
-      summary_scores_dict['bikescore'] = walkscore_json['bike']['score']
   else:
     print(state_city_name, ': missing walkscore.')
+  for score in ['transit', 'bike']:
+    if score in walkscore_json:
+      summary_scores_dict['{}score'.format(
+        score)] = walkscore_json[score]['score']
   return summary_scores_dict
 
 

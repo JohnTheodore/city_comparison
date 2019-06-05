@@ -1,15 +1,22 @@
 # Utilities for analyzing and comparing statistics of different cities.
 
-Automatically pull data from different online sources (e.g. Census, FBI Crime, etc) for list of cities.
+## Datasets Included in city_comparison.csv
 
-# Development Setup
+- census 2010 city geography
+- fbi crime stats (averaged on a per 100k for last 4 years)
+- geocode data for each city (lat, long and reverse address)
+- credit scores for eacha city
+- walkscores for each city
+
+## Development Setup
 
 ```
 python3.7 -m virtualenv py37-mac
 pip install -r requirements-dev.txt
 ```
 
-# Badges
+## Badges
+
 |||
 | ------ | ------ |
 | travis-ci | [![Build Status](https://travis-ci.org/JohnTheodore/city_comparison.svg?branch=master)](https://travis-ci.org/JohnTheodore/city_comparison) |

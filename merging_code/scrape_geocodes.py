@@ -18,7 +18,8 @@ import certifi
 import geopy
 
 from merging_code.secrets import GEOCODE_API_KEY
-from merging_code.utils import read_json_file, write_json_file, get_dataframe_from_merged_table_metadata
+from merging_code.utils import read_json_file, write_json_file
+from merging_code.utils import get_dataframe_from_merged_table_metadata, add_empty_columns
 from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME
 from file_locations import GEOCODE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILENAME
 
@@ -52,12 +53,6 @@ def get_goog_geolocator(geocode_api_key):
                               api_key=geocode_api_key,
                               timeout=3)
   return geolocator
-
-
-def add_empty_columns(dataframe, column_names):
-  """ Instantiate column headers with empty row values. This lets use set the values later. """
-  for column_name in column_names:
-    dataframe[column_name] = [''] * dataframe['city'].count()
 
 
 def set_geo_metadata_to_dict(cached_json, location, reverse_address,
