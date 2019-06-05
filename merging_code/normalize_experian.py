@@ -1,22 +1,15 @@
 #!/usr/bin/env python3
 """ Merge all the csv files from experian city credit scores into one combined csv. """
 
-import glob
 from file_locations import EXPERIAN_FINAL_CSV_FILENAME, EXPERIAN_SOURCE_CSV_DIR
-from merging_code.utils import get_dataframe_from_csv
-
-
-def get_all_csv_files(directory):
-  """ Get the list of all csv filenames (from the repo root). """
-  all_csv_files = glob.glob('{}{}'.format(directory, '*.csv'))
-  return all_csv_files
+from merging_code.utils import get_dataframe_from_spreadsheet, get_all_filenames_with_extension
 
 
 def get_dataframes_from_csvs(csv_files):
   """ Turn a list of csv filenames into a list of panda dataframe objects. """
   dataframes = []
   for csv_file in csv_files:
-    dataframe = get_dataframe_from_csv(csv_file)
+    dataframe = get_dataframe_from_spreadsheet(csv_file, sheet_type='csv')
     # pylint: disable=W0212
     dataframe._metadata = {'filename': csv_file}
     dataframes.append(dataframe)
@@ -104,7 +97,8 @@ def drop_rows_missing_required_cells(dataframe, col_names):
 
 if __name__ == '__main__':
   # merge experian data
-  EXPERIAN_CSV_FILENAMES = get_all_csv_files(EXPERIAN_SOURCE_CSV_DIR)
+  EXPERIAN_CSV_FILENAMES = get_all_filenames_with_extension(
+    EXPERIAN_SOURCE_CSV_DIR, 'csv')
   EXPERIAN_DATAFRAMES = get_dataframes_from_csvs(EXPERIAN_CSV_FILENAMES)
   normalize_headers(EXPERIAN_DATAFRAMES)
   change_credit_score_values_to_float(EXPERIAN_DATAFRAMES)

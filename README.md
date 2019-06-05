@@ -1,6 +1,6 @@
-# Utilities for analyzing and comparing statistics of different cities.
+# Utilities for analyzing and comparing statistics of different cities
 
-## Datasets Included in city_comparison.csv
+## Datasets Included in the main city_comparison csv
 
 - census 2010 city geography
 - fbi crime stats (averaged on a per 100k for last 4 years)

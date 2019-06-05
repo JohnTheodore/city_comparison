@@ -2,10 +2,11 @@
 Helper functions that are used in multiple different classes or files.
 """
 
+import glob
 import json
 import os
 import pandas
-from merging_code.data_table_generic import ParseCsvData
+from merging_code.data_table import DataTable
 from merging_code.headers_cleanup import drop_headers, rename_headers
 
 
@@ -24,10 +25,27 @@ def write_json_file(filename, cached_json):
     file_handler.write(json.dumps(cached_json))
 
 
-def get_dataframe_from_csv(file_path, header=0, encoding='ISO-8859-1'):
+def get_dataframe_from_spreadsheet(file_path,
+                                   header=0,
+                                   encoding='ISO-8859-1',
+                                   sheet_type='csv'):
   """ Get the list of all csv filenames (from the repo root). """
-  data = pandas.read_csv(file_path, encoding=encoding, header=header)
-  return data
+  if sheet_type == 'xls':
+    return pandas.read_excel(file_path, encoding=encoding, header=header)
+  if sheet_type == 'csv':
+    return pandas.read_csv(file_path, encoding=encoding, header=header)
+  return None
+
+
+def remove_substring_from_end_of_string(input_string, substring_list):
+  """ func('foo bar baz', [' baz', ' bar']) outputs 'foo'. """
+  new_string = input_string
+  for substring in substring_list:
+    if new_string.endswith(substring):
+      # import ipdb
+      # ipdb.set_trace()
+      new_string = new_string[:(-1 * (len(substring)))]
+  return new_string
 
 
 def get_dataframe_from_merged_table_metadata(tables_metadata, debug=False):
@@ -77,4 +95,37 @@ def debug_print_dataframe(data, num_rows=2, debug=False):
 def add_empty_columns(dataframe, column_names):
   """ Add column headers with empty row values. This lets use set the values later. """
   for column_name in column_names:
-    dataframe[column_name] = [''] * dataframe['city'].count()
+    dataframe[column_name] = [''] * dataframe.shape[0]
+
+
+def get_all_filenames_with_extension(directory, file_ext):
+  """ Get the list of all csv filenames (from the repo root). """
+  all_csv_files = glob.glob('{}*{}'.format(directory, file_ext))
+  return all_csv_files
+
+
+class ParseCsvData(DataTable):
+  """ Table of csv data. """
+
+  @staticmethod
+  def read(file_path):
+    data = get_dataframe_from_spreadsheet(file_path)
+    return data
+
+  @staticmethod
+  def get_exact_matching_key():
+    # By returning `None` as key, we use `index` as key.
+    # return None
+    return 'index'
+
+  @staticmethod
+  def get_state_key():
+    return 'state'
+
+  @staticmethod
+  def get_city_key():
+    return 'city'
+
+  @staticmethod
+  def get_population_key():
+    return None
