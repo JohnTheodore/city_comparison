@@ -8,4 +8,4 @@ def test_nyc_area():
   """ We know the nyc credit score is 706.0 let's test this. """
   dataframe = get_final_dataframe()
   nyc_row = get_city_state_row(dataframe, 'new york', 'new york')
-  assert float(nyc_row.get('Credit Score')) == 706.0
+  assert int(nyc_row.get('credit score')) == 706

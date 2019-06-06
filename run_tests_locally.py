@@ -4,9 +4,13 @@ A helper script to run test commands from the .travis.yml file locally
 in the dev environment.
 """
 
+from termcolor import cprint
 import subprocess
+import time
 # pylint: disable=E0401
 import yaml
+
+START_TIME = time.time()
 
 with open('.travis.yml', 'r') as filehandler:
   try:
@@ -17,14 +21,29 @@ with open('.travis.yml', 'r') as filehandler:
 TEST_COMMANDS = TRAVIS_CONFIG.get('script')
 
 EXIT_ERRORS = False
+PROCESSES = []
+print('')
 for test_command in TEST_COMMANDS:
-  try:
-    subprocess.check_output(test_command, shell=True)
-  except subprocess.CalledProcessError as process_error:
-    print(test_command)
-    print(process_error.output.decode())
-    EXIT_ERRORS = True
-    print('')
+  PROCESSES.append(
+    subprocess.Popen(test_command,
+                     shell=True,
+                     stderr=subprocess.PIPE,
+                     stdout=subprocess.PIPE))
 
+for process in PROCESSES:
+  exit_code = process.wait()
+  if exit_code == 0:
+    cprint('PASSED: {}'.format(process.args), 'green')
+    print('')
+    continue
+  EXIT_ERRORS = True
+  cprint('FAILED: {}'.format(process.args), 'red')
+  print(process.stdout.read().decode('ascii'))
+  print(process.stderr.read().decode('ascii'))
+  print('')
+
+MINUTES_TO_COMPLETE = round((time.time() - START_TIME) / 60, 1)
+cprint('All tests ran in: {} minutes.'.format(MINUTES_TO_COMPLETE), 'green')
+print('')
 if EXIT_ERRORS:
   exit(1)

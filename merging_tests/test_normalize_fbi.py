@@ -8,4 +8,4 @@ def test_boulder_area():
   dataframe = get_final_dataframe()
   boulder_poperty_crime = dataframe.loc[('colorado',
                                          'boulder'), 'property crime']
-  assert round(boulder_poperty_crime, 2) == round(2768.956145, 2)
+  assert round(boulder_poperty_crime, 2) == 2769.0
