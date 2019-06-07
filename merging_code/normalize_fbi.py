@@ -29,28 +29,6 @@ def get_fbi_table_metadata():
   }]
 
 
-def remove_integers_from_cells_by_column(dataframe, column_names):
-  """ Remove integers from 'city' and 'state' column values.  Also make everything lowercase. """
-
-  def remove_integers(str_val):
-    """ remove integers from string, and lower. """
-    if isinstance(str_val, str):
-      return ''.join([i for i in str_val if not i.isdigit()]).lower()
-    return str_val
-
-  def remove_integers_from_row(row):
-    """ remove integers from a row for city/state. """
-    return pandas.Series(
-      [remove_integers(row['city']),
-       remove_integers(row['state'])])
-
-  for column_name in column_names:
-    dataframe[column_name] = dataframe.apply(remove_integers_from_row,
-                                             args=column_name,
-                                             axis=1)
-  return dataframe
-
-
 def normalize_row_by_pop100k(row, numeric_columns):
   """ Normalize a row of FBI crime data by 100k for the year population. """
   # Divide by 100k.

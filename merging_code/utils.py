@@ -93,9 +93,9 @@ def get_normalized_data_table(table_metadata, debug=False):
   """ Input a dict with csv filename, suffix if available, the document label,
   and return a data_table. """
   suffix = table_metadata.get('suffix', '')
-  data_table = ParseCsvData(file_path=table_metadata['csv_filename'],
-                            suffix=suffix,
-                            header=table_metadata.get('header', 0))
+  data_table = DataTable(file_path=table_metadata['csv_filename'],
+                         suffix=suffix,
+                         header=table_metadata.get('header', 0))
   drop_headers(table_metadata['document_label'], data_table.data)
   rename_headers(table_metadata['document_label'], data_table.data)
   print_data_table_length(table_metadata['document_label'],
@@ -164,6 +164,8 @@ def normalize_headers_in_dataframe(data_source, dataframe):
   new_dataframe = lower_case_headers_in_dataframes(new_dataframe)
   new_dataframe = rename_headers(data_source, new_dataframe)
   new_dataframe = drop_headers(data_source, new_dataframe)
+  new_dataframe = remove_integers_from_dataframe_by_columns(
+    new_dataframe, ['city', 'state', 'county'])
   return new_dataframe
 
 
@@ -174,6 +176,28 @@ def normalize_headers_in_dataframes(data_source, dataframes):
     new_dataframes.append(normalize_headers_in_dataframe(
       data_source, dataframe))
   return new_dataframes
+
+
+def remove_integers_from_dataframe_by_columns(dataframe, column_names):
+  """ Remove integers from 'city' and 'state' column values.  Also make everything lowercase. """
+
+  def remove_integers(str_val):
+    """ remove integers from string, and lower. """
+    if isinstance(str_val, str):
+      return ''.join([i for i in str_val if not i.isdigit()]).lower()
+    return str_val
+
+  def remove_integers_from_row(row, column_name):
+    """ remove integers from a row for city/state. """
+    return pandas.Series([remove_integers(row[column_name])])
+
+  for column_name in column_names:
+    if column_name not in dataframe:
+      continue
+    dataframe[column_name] = dataframe.apply(remove_integers_from_row,
+                                             column_name=column_name,
+                                             axis=1)
+  return dataframe
 
 
 def remove_new_lines_from_headers_dataframes(dataframe):
@@ -197,30 +221,3 @@ def lower_case_columns(dataframe, columns):
     if column in dataframe:
       dataframe[column] = dataframe[column].str.lower()
   return dataframe
-
-
-class ParseCsvData(DataTable):
-  """ Table of csv data. """
-
-  @staticmethod
-  def read(file_path):
-    data = get_dataframe_from_spreadsheet(file_path)
-    return data
-
-  @staticmethod
-  def get_exact_matching_key():
-    # By returning `None` as key, we use `index` as key.
-    # return None
-    return 'index'
-
-  @staticmethod
-  def get_state_key():
-    return 'state'
-
-  @staticmethod
-  def get_city_key():
-    return 'city'
-
-  @staticmethod
-  def get_population_key():
-    return None

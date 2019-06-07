@@ -3,7 +3,7 @@ Utilities to join FBI and Census data.
 We'll generalize to support joining other data tables in the future.
 """
 
-from abc import ABC, abstractmethod
+from abc import ABC
 import collections
 import pandas
 
@@ -29,7 +29,7 @@ class DataTable(ABC):
       self._data = data
     else:
       assert self._file_path is not None
-      self._data = self.__class__.read(self._file_path)
+      self._data = self.read(self._file_path, self._header)
 
   @property
   def suffix(self):
@@ -42,38 +42,24 @@ class DataTable(ABC):
     return self._data
 
   @staticmethod
-  @abstractmethod
-  def read(file_path):
-    """Read data from file and return as pandas DataFrame."""
+  def read(file_path, header):
+    """ Read data from file and return as pandas DataFrame. """
+    return pandas.read_csv(file_path, header=header, encoding='ISO-8859-1')
 
   @staticmethod
-  @abstractmethod
-  def get_exact_matching_key():
-    """Key to use for exact matching."""
-
-  def join_exact_matching(self, data_table):
-    """Join with another DataTable of the same type using exact matching."""
-    key = self.__class__.get_exact_matching_key()
-    data = self.data.merge(data_table.data,
-                           on=key,
-                           how='inner',
-                           suffixes=[self.suffix, data_table.suffix])
-    return self.__class__(data)
-
-  @staticmethod
-  @abstractmethod
   def get_state_key():
-    """Key for `state` name."""
+    """ Key for `state` name. """
+    return 'state'
 
   @staticmethod
-  @abstractmethod
   def get_city_key():
-    """Key for `city` name."""
+    """ Key for `city` name. """
+    return 'city'
 
   @staticmethod
-  @abstractmethod
   def get_population_key():
-    """Key for `population`."""
+    """ Key for `population`. """
+    return None
 
   @classmethod
   def get_fuzzy_matching_key(cls, row):
