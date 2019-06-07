@@ -3,7 +3,7 @@
 from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME
 from file_locations import EXPERIAN_FINAL_CSV_FILENAME
 from file_locations import WALKSCORE_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
-from merging_code.utils import get_dataframe_from_merged_table_metadata
+from merging_code.utils import get_dataframe_from_merged_table_metadata, move_columns_to_left_of_dataframe
 
 CSV_FILES_TO_MERGE = [{
   'csv_filename': CENSUS_FINAL_CSV_FILENAME,
@@ -26,6 +26,8 @@ if __name__ == '__main__':
   # Set debug to True to print out 2 rows out of each dataframe.
   COMBINED_DATAFRAME = get_dataframe_from_merged_table_metadata(
     CSV_FILES_TO_MERGE, debug=False)
+  COMBINED_DATAFRAME = move_columns_to_left_of_dataframe(
+    COMBINED_DATAFRAME, ['city', 'state'])
   # Write the combined dataframe table to the final csv file.
-  COMBINED_DATAFRAME.to_csv(MASTER_CSV_FILENAME, index_label='delme')
+  COMBINED_DATAFRAME.to_csv(MASTER_CSV_FILENAME, index=False)
   print('Wrote file: ', MASTER_CSV_FILENAME)
