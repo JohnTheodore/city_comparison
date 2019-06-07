@@ -4,7 +4,6 @@ A helper script to run test commands from the .travis.yml file locally
 in the dev environment.
 """
 
-from termcolor import cprint
 import subprocess
 import time
 # pylint: disable=E0401
