@@ -1,12 +1,11 @@
 version: "2"
-engines:
-  checks:
-    similar-code:
-      config:
-        threshold: 39
-    identical-code:
-      config:
-        threshold: 39
+plugins:
+  duplication:
+    enabled: true
+    config:
+      languages:
+        python:
+          mass_threshold: 39
   markdownlint:
     enabled: true
     checks:
