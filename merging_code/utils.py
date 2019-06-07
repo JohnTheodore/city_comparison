@@ -125,6 +125,23 @@ def add_empty_columns(dataframe, column_names):
   return dataframe
 
 
+def divide_two_columns(dataframe,
+                       new_col_name,
+                       numerator_col,
+                       divisor_col,
+                       round_param=None):
+  """ Divide two columns in a series. optional round_param amount. """
+  divided_column = dataframe[numerator_col] / dataframe[divisor_col]
+  if round_param is None:
+    rounded_divided_column = divided_column.apply(lambda cell_value: round(
+      cell_value, None))
+  else:
+    rounded_divided_column = divided_column.apply(lambda cell_value: round(
+      cell_value, round_param))
+  dataframe[new_col_name] = rounded_divided_column
+  return dataframe
+
+
 def get_all_filenames_with_extension(directory, file_ext):
   """ Get the list of all csv filenames (from the repo root). """
   all_csv_files = glob.glob('{}*{}'.format(directory, file_ext))
