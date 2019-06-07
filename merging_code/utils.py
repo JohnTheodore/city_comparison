@@ -207,6 +207,19 @@ def remove_new_lines_from_headers_dataframes(dataframe):
   return dataframe
 
 
+def move_columns_to_left_of_dataframe(dataframe, new_columns_order):
+  """ Helper method to take certain columns and move them to the beginning. """
+  old_columns_order = list(dataframe)
+  col_index = 0
+  for column in new_columns_order:
+    # move the column to head of list using index, pop and insert
+    old_columns_order.insert(
+      col_index, old_columns_order.pop(old_columns_order.index(column)))
+    col_index += 1
+    dataframe = dataframe.ix[:, old_columns_order]
+  return dataframe
+
+
 def lower_case_dataframes_columns(dataframes, columns):
   """ lowercase all the cells in the columns for all dataframes. """
   new_dataframes = []
