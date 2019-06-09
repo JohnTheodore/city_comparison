@@ -3,6 +3,12 @@
 from fuzzywuzzy import fuzz
 
 
+def _state_set(state_city_index):
+  """Given index of ('state', 'city'), return set of 'states' in index."""
+  return set(
+    state_city_index.get_level_values('state').unique().values.tolist())
+
+
 def _cities_from_state(city_index, state):
   """Array of cities from state."""
   return city_index.to_frame().loc[state, :].index.values.tolist()
@@ -26,8 +32,12 @@ def fuzzy_match(name, list_names, min_score=0):
 
 def _get_row_dataframe(dataframe, key):
   """Get a row of DataFrame as type DataFrame with index 0."""
-  # Drop the indices for the columns, so row has index `0`.
-  return dataframe.loc[key].to_frame().T.reset_index(drop=True)
+  row = dataframe.loc[key].to_frame().T
+  # Drop index containing 'state' and 'city'.
+  # We'll add those fields back after joining.
+  row = row.reset_index(drop=True)
+  # return row.T.reset_index(drop=True)
+  return row
 
 
 def join_on_state_and_city(left_df, right_df, min_score=0):
@@ -35,8 +45,10 @@ def join_on_state_and_city(left_df, right_df, min_score=0):
   # pylint: disable=too-many-locals
   state_city = ['state', 'city']
   # Using index is faster.
-  left_df.set_index(state_city, inplace=True)
-  right_df.set_index(state_city, inplace=True)
+  left_df = left_df.reset_index()
+  right_df = right_df.reset_index()
+  left_df = left_df.set_index(state_city)
+  right_df = right_df.set_index(state_city)
   # First, join exact.
   common_df = left_df.merge(right_df,
                             how='inner',
@@ -49,16 +61,24 @@ def join_on_state_and_city(left_df, right_df, min_score=0):
 
   # Now perform "fuzzy matching" inner join between the left and right keys that
   # don't already have a match.  The `state` *must* match.
-  states = left_missing_keys.get_level_values('state').unique().values.tolist()
+  # List of states that are in both left and right sides.
+  states = _state_set(left_missing_keys) & _state_set(right_missing_keys)
+  # Reset index to make it easier to append new rows.
   common_df.reset_index(inplace=True)
   # Iterate by state.
-  for state in states:
+  for state in sorted(states):
+    print('state: ', state)
     # Create list of cities in dataframes to match against.
     left_cities = _cities_from_state(left_missing_keys, state)
     right_cities = _cities_from_state(right_missing_keys, state)
     for city in left_cities:
       max_city, max_score = fuzzy_match(city, right_cities, min_score=min_score)
-      if max_score > 0:
+      if max_score > 0 and (city.startswith(max_city) or
+                            max_city.startswith(city)):
+        print('state: {}, city: {}, max_city: {}, max_score: {}'.format(
+          state, city, max_city, max_score))
+        # Gets data for (state, city); returns a row DataFrame
+        # without the 'state' and 'city' fields.
         left_row = _get_row_dataframe(left_df, (state, city))
         right_row = _get_row_dataframe(right_df, (state, max_city))
         merge_rows = left_row.merge(right_row,
@@ -70,5 +90,6 @@ def join_on_state_and_city(left_df, right_df, min_score=0):
         merge_rows.insert(1, 'city', [city])
         common_df = common_df.append(merge_rows, ignore_index=True, sort=True)
 
+  common_df = common_df.drop(labels=['index_x', 'index_y'], axis=1)
   common_df.set_index(state_city, inplace=True)
   return common_df

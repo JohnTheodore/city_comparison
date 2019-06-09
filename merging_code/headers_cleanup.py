@@ -4,6 +4,12 @@ This helps make the final product more human readable.
 """
 
 HEADERS_CHANGE = {
+  'zillow_city_codes': {
+    'rename_columns': {
+      'code': 'city_code'
+    },
+    'drop_columns': ['area']
+  },
   'experian': {
     'rename_columns': {
       'city ': 'city',

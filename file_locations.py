@@ -16,6 +16,10 @@ EXPERIAN_FINAL_CSV_FILENAME = './primary_sources/experian/experian_normalized.cs
 WALKSCORE_CACHED_JSON_FILENAME = './primary_sources/walkscore/walkscore_data.json'
 WALKSCORE_FINAL_CSV_FILENAME = './primary_sources/walkscore/walkscores_scraped.csv'
 
+# ./primary_sources/willow
+ZILLOW_FINAL_CSV_FILENAME = './primary_sources/zillow/zillow_scraped.csv'
+CITY_CODES_CSV_FILENAME = './primary_sources/zillow/zillow_city_codes.csv'
+
 # ./primary_sources/fbi
 # pylint: disable=line-too-long
 FBI_CRIME_2014_XLS_FILENAME = './primary_sources/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2014.xls'

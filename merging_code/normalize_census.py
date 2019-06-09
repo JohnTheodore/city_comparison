@@ -26,7 +26,7 @@ def add_city_state_to_dataframe(dataframe):
 def get_final_dataframe():
   """ The main function which returns the final dataframe. """
   census_2010_dataframe = get_dataframe_from_spreadsheet(
-    CENSUS_AREA_2010_CSV_FILENAME, header=1)
+    CENSUS_AREA_2010_CSV_FILENAME, header=1, encoding='ISO-8859-1')
   census_2010_dataframe = add_city_state_to_dataframe(census_2010_dataframe)
   census_2010_dataframe = normalize_headers_in_dataframes(
     'census_2010', [census_2010_dataframe])[0]
