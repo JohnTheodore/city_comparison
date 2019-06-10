@@ -13,7 +13,7 @@ script:
   - find . -type f -name "*.py" ! -path "./py37-mac/*" ! -path "./merging_tests/*" | xargs pylint
   - vulture --exclude "*py37-mac*" .
   - xenon --max-absolute C --max-modules A --max-average A --ignore '*py37-mac*' .
-  - python -m pytest
+  - python -m pytest --color=yes --cov=./ -n auto merging_tests
 # Push the results back to codecov
 after_success:
   - codecov
