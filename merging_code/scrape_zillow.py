@@ -67,8 +67,7 @@ US_STATES_DICT = {
 }
 
 ZILLOW_PRICE_CODES = {
-  'ZRIFAH': 'Zillow Rental Index Per Square Foot - All Homes',
-  'MSPFAH': 'Median Sold Price Per Square Foot - All Homes'
+  'ZRIFAH': 'Zillow Rental Index Per Square Foot - All Homes'
 }
 
 
