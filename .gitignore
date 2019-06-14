@@ -4,3 +4,4 @@ py3*-mac
 __pycache__
 .coverage
 .coverage.*
+*.cache

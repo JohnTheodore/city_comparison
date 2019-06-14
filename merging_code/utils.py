@@ -32,15 +32,12 @@ def drop_empty_rows_from_dataframes(dataframes, col_names):
   return dataframes
 
 
-def get_dataframe_from_spreadsheet(file_path,
-                                   header=0,
-                                   encoding='ISO-8859-1',
-                                   sheet_type='csv'):
+def get_dataframe_from_spreadsheet(file_path, sheet_type='csv', **kwargs):
   """ Get the list of all csv filenames (from the repo root). """
   if sheet_type == 'xls':
-    return pandas.read_excel(file_path, encoding=encoding, header=header)
+    return pandas.read_excel(file_path, **kwargs)
   if sheet_type == 'csv':
-    return pandas.read_csv(file_path, encoding=encoding, header=header)
+    return pandas.read_csv(file_path, **kwargs)
   return None
 
 

@@ -5,13 +5,15 @@
 - census 2010 city geography
 - fbi crime stats (averaged on a per 100k for last 4 years)
 - geocode data for each city (lat, long and reverse address)
-- credit scores for eacha city
+- credit scores for each city
 - walkscores for each city
+- zillow rental index per square foot dollar values for each city.
 
 ## Development Setup
 
 ```
 python3.7 -m virtualenv py37-mac
+source py37-mac/bin/activate
 pip install -r requirements-dev.txt
 ```
 
