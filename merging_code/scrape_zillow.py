@@ -8,7 +8,7 @@ from termcolor import cprint
 import quandl
 from file_locations import GEOCODE_FINAL_CSV_FILENAME
 from file_locations import CITY_CODES_CSV_FILENAME, ZILLOW_FINAL_CSV_FILENAME
-from merging_code.join_on_state_and_city import join_on_state_and_city
+from merging_code.merge_dataframes import join_on_state_and_city
 from merging_code.utils import get_dataframe_from_spreadsheet, add_empty_columns, normalize_headers_in_dataframe
 from merging_code.secrets import QUANDL_API_KEY
 
@@ -172,7 +172,6 @@ def get_final_dataframe():
   combined_dataframe = add_empty_columns(combined_dataframe,
                                          ZILLOW_PRICE_CODES.keys())
   combined_dataframe = combined_dataframe.reset_index()
-  # combined_dataframe = pandas.read_csv('/tmp/combined_dataframe')
   final_dataframe = add_housing_data_to_dataframe(combined_dataframe)
   return final_dataframe
 

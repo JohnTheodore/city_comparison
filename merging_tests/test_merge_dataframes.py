@@ -1,5 +1,5 @@
 import pandas
-from merging_code.join_on_state_and_city import fuzzy_match, join_on_state_and_city
+from merging_code.merge_dataframes import fuzzy_match, join_on_state_and_city
 
 
 def test_fuzzy_match():

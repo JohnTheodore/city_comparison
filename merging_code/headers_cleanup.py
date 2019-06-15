@@ -80,19 +80,12 @@ HEADERS_CHANGE = {
   'final_csv': {
     'rename_columns': {},
     'drop_columns': [
-      'city_fbi_crime',
-      'city_walkscore',
-      'city',
-      'geography census_2010',
-      'geography.1',
-      'geography.2',
-      'reverse_address',
-      'rape_legacy',
-      'state_fbi_crime',
-      'state_fbi_crime',
-      'state_walkscore',
-      'state',
-      'target geo id2',
+      'city_code', 'city_fbi_crime', 'city_walkscore', 'cityexperian_2017',
+      'cityzillow', 'geography census_2010', 'geography.1', 'geography.2',
+      'latitudezillow', 'longitudezillow', 'rape_legacy', 'reverse_address',
+      'reverse_addresszillow', 'state_fbi_crime', 'state_fbi_crime',
+      'state_walkscore', 'state_walkscore', 'stateexperian_2017', 'statezillow',
+      'target geo id2'
     ]
   }
 }
