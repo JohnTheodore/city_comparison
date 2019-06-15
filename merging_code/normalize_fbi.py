@@ -128,8 +128,7 @@ def annual_percent_change(dataframe):
   return dataframe
 
 
-def get_final_dataframe():
-  """ The main function which returns the final dataframe with all merged/meaned fbi xls files. """
+def get_normalized_fbi_crime_dataframes():
   fbi_table_metadata = get_fbi_table_metadata()
   normalized_fbi_dataframes = []
   for table_metadata in fbi_table_metadata:
@@ -144,22 +143,31 @@ def get_final_dataframe():
     dataframe['year'] = table_metadata['year']
     dataframe.set_index(['state', 'city', 'year'], inplace=True)
     normalized_fbi_dataframes.append(dataframe)
-
   # There are some rows in the FBI xls spreadsheet that are notes, and not
   # actually data from cities.  Drop these rows by only keeping rows that have
   # population field defined.
   normalized_fbi_dataframes = drop_empty_rows_from_dataframes(
     normalized_fbi_dataframes, ['population'])
+  return normalized_fbi_dataframes
 
-  combined = pandas.concat(normalized_fbi_dataframes, sort=True)
 
+def average_and_round_combined_fbi_dataframe(concatenated_fbi_dataframe):
   # Take average states over year.  Now index is (state, city).
-  combined_mean = combined.mean(level=[0, 1])
+  combined_mean = concatenated_fbi_dataframe.mean(level=[0, 1])
   combined_mean_rounded = combined_mean.round(1)
+  return combined_mean_rounded
 
+
+def get_final_dataframe():
+  """ The main function which returns the final dataframe with all merged/meaned fbi xls files. """
+  normalized_fbi_dataframes = get_normalized_fbi_crime_dataframes()
+  concatenated_fbi_dataframe = pandas.concat(normalized_fbi_dataframes,
+                                             sort=True)
+  combined_mean_rounded = average_and_round_combined_fbi_dataframe(
+    concatenated_fbi_dataframe)
   # Compute annualized percent change in population, based on the
   # first and last years we have data.
-  first, last = first_and_last(combined)
+  first, last = first_and_last(concatenated_fbi_dataframe)
   diff_year = last['year'].to_frame().subtract(first['year'].to_frame())
   # Add epsilon to values in order to avoid dividing by zero.
   epsilon = 0.01
