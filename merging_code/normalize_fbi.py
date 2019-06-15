@@ -53,8 +53,9 @@ def normalize_dataframe_by_100k(dataframe):
   numeric_columns = dataframe.select_dtypes(
     include=['float64', 'int64']).columns.to_list()
   # Don't normalize 'population' or 'year' column.
-  numeric_columns = [col for col in numeric_columns
-                     if col not in ('population', 'year')]
+  numeric_columns = [
+    col for col in numeric_columns if col not in ('population', 'year')
+  ]
 
   dataframe[numeric_columns] = dataframe.apply(normalize_row_by_pop100k,
                                                numeric_columns=numeric_columns,
@@ -79,12 +80,13 @@ def first_and_last(dataframe):
   """Take the data from the latest year it was defined."""
   dataframe = dataframe.reset_index()
   dataframe = dataframe.set_index(['state', 'city'])
+
   # Transform the integer 'year' column to type `datetime`.  'datetime' column
   # will allow us to use `pandas.DataFrame.first` and `pandas.DataFrame.last`.
   def year_to_datetime(row):
     return datetime.datetime(int(row['year']), 12, 31)
-  dataframe['datetime'] = dataframe.apply(
-    year_to_datetime, axis=1)
+
+  dataframe['datetime'] = dataframe.apply(year_to_datetime, axis=1)
   groupby = dataframe.groupby(['state', 'city'])
   first = groupby.first()
   last = groupby.last()
@@ -100,6 +102,7 @@ def percent_change_per_year(diff, years):
 
 
 def annual_percent_change_for_row(row, numeric_columns):
+  """ Show the annual change for a list of columns in a row. """
   years = row['year']
   new_columns = {}
   for column in numeric_columns:
@@ -116,8 +119,9 @@ def annual_percent_change(dataframe):
   numeric_columns = dataframe.select_dtypes(
     include=['float64', 'int64']).columns.to_list()
   # Don't calculate annual percent change on 'year' column.
-  numeric_columns = [col for col in numeric_columns
-                     if not col.startswith('year')]
+  numeric_columns = [
+    col for col in numeric_columns if not col.startswith('year')
+  ]
   dataframe[numeric_columns] = dataframe.apply(annual_percent_change_for_row,
                                                numeric_columns=numeric_columns,
                                                axis=1)
@@ -162,22 +166,29 @@ def get_final_dataframe():
   last_population = last['population'].to_frame()
   first_population = first['population'].to_frame()
   population_ratio = (last_population + epsilon).div(first_population + epsilon)
-  population_ratio = population_ratio.merge(
-    diff_year, how='inner', left_index=True, right_index=True,
-    suffixes=('_ratio', '_diff'))
+  population_ratio = population_ratio.merge(diff_year,
+                                            how='inner',
+                                            left_index=True,
+                                            right_index=True,
+                                            suffixes=('_ratio', '_diff'))
   population_percent_change = annual_percent_change(population_ratio)
   population_percent_change = population_percent_change.drop(['year'], axis=1)
-  import ipdb; ipdb.set_trace()
 
-  result = population_percent_change.merge(
-    combined_mean_rounded, how='inner', left_index=True, right_index=True,
-    suffixes=('_percent_change', '_mean'))
-  result = result.merge(
-    last_population, how='inner', left_index=True, right_index=True,
-    suffixes=('_mean', ''))
+  result = population_percent_change.merge(combined_mean_rounded,
+                                           how='inner',
+                                           left_index=True,
+                                           right_index=True,
+                                           suffixes=('_percent_change',
+                                                     '_mean'))
+  result = result.merge(last_population,
+                        how='inner',
+                        left_index=True,
+                        right_index=True,
+                        suffixes=('_mean', ''))
 
   # Drop the mean population, it won't be used.
   result = result.drop(['population_mean'], axis=1)
+  result = result.sort_values(by=['city', 'state'])
   return result
 
 
