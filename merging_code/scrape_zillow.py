@@ -172,7 +172,6 @@ def get_final_dataframe():
   combined_dataframe = add_empty_columns(combined_dataframe,
                                          ZILLOW_PRICE_CODES.keys())
   combined_dataframe = combined_dataframe.reset_index()
-  # combined_dataframe = pandas.read_csv('/tmp/combined_dataframe')
   final_dataframe = add_housing_data_to_dataframe(combined_dataframe)
   return final_dataframe
 
