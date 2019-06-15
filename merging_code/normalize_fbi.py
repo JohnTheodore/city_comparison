@@ -128,7 +128,39 @@ def annual_percent_change(dataframe):
   return dataframe
 
 
-def get_normalized_fbi_crime_dataframes():
+def annual_population_percent_change(first, last):
+  """Compute annualized percent change in population.
+
+  Based on the first and last years we have data.
+
+  Args:
+    first: `pandas.DataFrame` indexed by ('state', 'city'), with population data
+      from earliest year we have data for.
+    last: `pandas.DataFrame` indexed by ('state', 'city'), with population data
+      from latest year we have data for.
+
+  Returns:
+    `pandas.DataFrame` with column 'population' representing the annual percent
+    change in population.  Indexed by ('state', 'city').
+
+  """
+  diff_year = last['year'].to_frame().subtract(first['year'].to_frame())
+  # Add epsilon to values in order to avoid dividing by zero.
+  epsilon = 0.01
+  last_population = last['population'].to_frame()
+  first_population = first['population'].to_frame()
+  population_ratio = (last_population + epsilon).div(first_population + epsilon)
+  population_ratio = population_ratio.merge(diff_year,
+                                            how='inner',
+                                            left_index=True,
+                                            right_index=True,
+                                            suffixes=('_ratio', '_diff'))
+  population_percent_change = annual_percent_change(population_ratio)
+  population_percent_change = population_percent_change.drop(['year'], axis=1)
+  return population_percent_change
+
+
+def get_normalized_fbi_crime_dataframe():
   """ Take the FBI Table 8 XLS files, normalize them, then return a list of them all. """
   fbi_table_metadata = get_fbi_table_metadata()
   normalized_fbi_dataframes = []
@@ -149,7 +181,7 @@ def get_normalized_fbi_crime_dataframes():
   # population field defined.
   normalized_fbi_dataframes = drop_empty_rows_from_dataframes(
     normalized_fbi_dataframes, ['population'])
-  return normalized_fbi_dataframes
+  return pandas.concat(normalized_fbi_dataframes, sort=True)
 
 
 def average_and_round_combined_fbi_dataframe(concatenated_fbi_dataframe):
@@ -161,35 +193,25 @@ def average_and_round_combined_fbi_dataframe(concatenated_fbi_dataframe):
 
 def get_final_dataframe():
   """ The main function which returns the final dataframe with all merged/meaned fbi xls files. """
-  normalized_fbi_dataframes = get_normalized_fbi_crime_dataframes()
-  concatenated_fbi_dataframe = pandas.concat(normalized_fbi_dataframes,
-                                             sort=True)
+  combined_fbi_dataframe = get_normalized_fbi_crime_dataframe()
   combined_mean_rounded = average_and_round_combined_fbi_dataframe(
-    concatenated_fbi_dataframe)
+    combined_fbi_dataframe)
   # Compute annualized percent change in population, based on the
   # first and last years we have data.
-  first, last = first_and_last(concatenated_fbi_dataframe)
-  diff_year = last['year'].to_frame().subtract(first['year'].to_frame())
-  # Add epsilon to values in order to avoid dividing by zero.
-  epsilon = 0.01
-  last_population = last['population'].to_frame()
-  first_population = first['population'].to_frame()
-  population_ratio = (last_population + epsilon).div(first_population + epsilon)
-  population_ratio = population_ratio.merge(diff_year,
-                                            how='inner',
-                                            left_index=True,
-                                            right_index=True,
-                                            suffixes=('_ratio', '_diff'))
-  population_percent_change = annual_percent_change(population_ratio)
-  population_percent_change = population_percent_change.drop(['year'], axis=1)
+  first, last = first_and_last(combined_fbi_dataframe)
+  population_percent_change = annual_population_percent_change(first, last)
 
+  # Add 'population_percent_change' column to `combined_mean_rounded`.
+  # Adds '_mean' suffix to the columns in `combined_mean_rounded`.
   result = population_percent_change.merge(combined_mean_rounded,
                                            how='inner',
                                            left_index=True,
                                            right_index=True,
                                            suffixes=('_percent_change',
                                                      '_mean'))
-  result = result.merge(last_population,
+  # Add 'population' column to `result`.  'population' column contains
+  # population data from the latest year we have data for.
+  result = result.merge(last['population'].to_frame(),
                         how='inner',
                         left_index=True,
                         right_index=True,
