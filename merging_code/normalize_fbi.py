@@ -129,6 +129,7 @@ def annual_percent_change(dataframe):
 
 
 def get_normalized_fbi_crime_dataframes():
+  """ Take the FBI Table 8 XLS files, normalize them, then return a list of them all. """
   fbi_table_metadata = get_fbi_table_metadata()
   normalized_fbi_dataframes = []
   for table_metadata in fbi_table_metadata:
@@ -152,7 +153,7 @@ def get_normalized_fbi_crime_dataframes():
 
 
 def average_and_round_combined_fbi_dataframe(concatenated_fbi_dataframe):
-  # Take average states over year.  Now index is (state, city).
+  """ Average and round all the the crime numbers for the concatenated fbi dataframe. """
   combined_mean = concatenated_fbi_dataframe.mean(level=[0, 1])
   combined_mean_rounded = combined_mean.round(1)
   return combined_mean_rounded
