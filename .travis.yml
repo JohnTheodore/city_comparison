@@ -5,7 +5,7 @@ python:
   - "3.6"
 install:
   - pip install -r requirements-dev.txt
-  - pip install codecov
+  - pip install codecov python-Levenshtein
 # commands to run, must exit 0 to pass
 script:
   - flake8
