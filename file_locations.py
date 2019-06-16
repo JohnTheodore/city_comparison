@@ -18,6 +18,7 @@ WALKSCORE_FINAL_CSV_FILENAME = './primary_sources/walkscore/walkscores_scraped.c
 
 # ./primary_sources/willow
 ZILLOW_FINAL_CSV_FILENAME = './primary_sources/zillow/zillow_scraped.csv'
+ZILLOW_CACHED_JSON_FILENAME = './primary_sources/zillow/zillow_data.json'
 CITY_CODES_CSV_FILENAME = './primary_sources/zillow/zillow_city_codes.csv'
 
 # ./primary_sources/fbi

@@ -56,7 +56,7 @@ def get_state_city_name(row):
   return '{}, {}'.format(row['city'], row['state'])
 
 
-def remove_attributes_from_dict(walkscore_dict):
+def filter_scores_only(walkscore_dict):
   """ Make the dict smaller so we don't store too much data. """
   attributes = [
     'more_info_icon', 'logo_url', 'more_info_link', 'ws_link', 'help_link'
@@ -78,12 +78,12 @@ def add_walkscore_to_cities(dataframe):
     if state_city_name in cached_dict:
       # add to dataframe from cache
       walkscore_dict = cached_dict[state_city_name]
-      cached_dict[state_city_name] = remove_attributes_from_dict(walkscore_dict)
+      cached_dict[state_city_name] = filter_scores_only(walkscore_dict)
       dataframe.loc[index] = get_dataframe_row_with_walkscores(
         row, walkscore_dict)
       continue
     walkscore_dict = get_walkscores(row)
-    remove_attributes_from_dict(walkscore_dict)
+    filter_scores_only(walkscore_dict)
     cached_dict[state_city_name] = walkscore_dict
     dataframe.loc[index] = get_dataframe_row_with_walkscores(
       row, walkscore_dict)

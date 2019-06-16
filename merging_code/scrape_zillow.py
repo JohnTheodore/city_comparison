@@ -6,10 +6,11 @@ import time
 import pandas
 from termcolor import cprint
 import quandl
-from file_locations import GEOCODE_FINAL_CSV_FILENAME
+from file_locations import GEOCODE_FINAL_CSV_FILENAME, ZILLOW_CACHED_JSON_FILENAME
 from file_locations import CITY_CODES_CSV_FILENAME, ZILLOW_FINAL_CSV_FILENAME
 from merging_code.merge_dataframes import join_on_state_and_city
 from merging_code.utils import get_dataframe_from_spreadsheet, add_empty_columns, normalize_headers_in_dataframe
+from merging_code.utils import read_json_file, write_json_file
 from merging_code.secrets import QUANDL_API_KEY
 
 US_STATES_DICT = {
@@ -70,20 +71,28 @@ ZILLOW_PRICE_CODES = {
   'ZRIFAH': 'Zillow Rental Index Per Square Foot - All Homes'
 }
 
+ZILLOW_CACHE = read_json_file(ZILLOW_CACHED_JSON_FILENAME)
 
-def add_zillow_price_code_to_row(row, city_code, zillow_price_code):
+
+def add_zillow_price_code_to_row(row, city_code, zillow_price_code, api_count):
   """ Take a row, add the zillow price code, return the row. """
   quandl_get_value = 'ZILLOW/C{}_{}'.format(city_code, zillow_price_code)
-  zillow_dataframe = quandl.get(quandl_get_value,
-                                collapse='annual',
-                                order='desc',
-                                api_key=QUANDL_API_KEY)
+  if quandl_get_value in ZILLOW_CACHE:
+    zillow_dict = ZILLOW_CACHE[quandl_get_value]
+    zillow_dataframe = pandas.DataFrame(zillow_dict)
+  else:
+    zillow_dataframe = quandl.get(quandl_get_value,
+                                  collapse='annual',
+                                  order='desc',
+                                  api_key=QUANDL_API_KEY)
+    api_count += 1
+    ZILLOW_CACHE[quandl_get_value] = zillow_dataframe.to_dict()
   value = zillow_dataframe['Value'].iloc[0]
   row[zillow_price_code] = value
-  return row
+  return [row, api_count]
 
 
-def add_housing_data_to_row(row):
+def add_housing_data_to_row(row, api_count):
   """ Query quandl for all the housing data we want for each city/state. return pandas dataframe. """
   city_codes = row.get('city_code').split('|')
   working_city_code = False
@@ -94,7 +103,9 @@ def add_housing_data_to_row(row):
       log_msg = '{}, {} {{yesno}} {} found for city code: {}'.format(
         row.get('city'), row.get('state'), description, city_code)
       try:
-        row = add_zillow_price_code_to_row(row, city_code, zillow_price_code)
+        row, api_count = add_zillow_price_code_to_row(row, city_code,
+                                                      zillow_price_code,
+                                                      api_count)
         cprint(log_msg.format(yesno=''), 'green')
         working_city_code = True
       # There are many duplicate city codes for each city, and a lot of the city codes
@@ -106,22 +117,21 @@ def add_housing_data_to_row(row):
         continue
     # if we got one working city_code for a city, we skip the rest.
     if working_city_code:
-      return row
-  return row
+      return [row, api_count]
+  return [row, api_count]
 
 
 def add_housing_data_to_dataframe(dataframe):
   """ Parse every city row from the geocode csv, add the walkscores cells to each. """
   api_count = 0
   for index, row in dataframe.iterrows():
-    new_row = add_housing_data_to_row(row)
+    new_row, api_count = add_housing_data_to_row(row, api_count)
     dataframe.loc[index] = new_row
-    city_code_count = len(row.get('city_code').split('|'))
-    api_count += (len(ZILLOW_PRICE_CODES) * city_code_count)
     if api_count % 20 == 0:
-      dataframe.to_csv('./primary_sources/zillow/housing.cache')
-      log_msg = '### API_COUNT: {} ###'.format(api_count)
+      log_msg = '### api_count: {}, cache_count: {} ###'.format(
+        api_count, len(ZILLOW_CACHE))
       cprint(log_msg, 'yellow')
+      write_json_file(ZILLOW_CACHED_JSON_FILENAME, ZILLOW_CACHE)
       time.sleep(8)
   return dataframe
 

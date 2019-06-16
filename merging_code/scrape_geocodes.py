@@ -42,7 +42,7 @@ def get_census_cities_and_states_dataframe():
   return dataframe
 
 
-def get_goog_geolocator(geocode_api_key):
+def get_geopy_googlev3_locator(geocode_api_key):
   """ Get the geopy geolocator object, setup with goog auth. """
   if geocode_api_key == '':
     return None
@@ -80,7 +80,7 @@ def set_geo_metadata_to_dataframe_row(row, location, reverse_address):
 
 def set_geo_metadata_to_dataframe(dataframe):
   """ Iterate over all cities in the dataframe, then add geo metadata to all of them """
-  geolocator = get_goog_geolocator(GEOCODE_API_KEY)
+  geolocator = get_geopy_googlev3_locator(GEOCODE_API_KEY)
   cached_json = read_json_file(GEOCODE_CACHED_JSON_FILENAME)
   add_empty_columns(dataframe, ['latitude', 'longitude', 'reverse_address'])
   api_count = 0

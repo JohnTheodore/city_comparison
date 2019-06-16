@@ -18,7 +18,7 @@ def get_dataframes_from_csv_filenames(csv_files):
   return dataframes
 
 
-def get_filename_root(dataframe):
+def get_state_name_from_filename(dataframe):
   """ Helper function to take the filename attribute from the panda dataframe object
   and to strip away """
   # pylint: disable=W0212
@@ -30,7 +30,8 @@ def add_missing_state_column_to_dataframes(dataframes):
   """ If 'state' and 'State' are missing, we'll add those columns using the filename. """
   for dataframe in dataframes:
     if 'state' not in dataframe.columns and 'State' not in dataframe.columns:
-      dataframe['state'] = [get_filename_root(dataframe)] * dataframe.shape[0]
+      state_name = get_state_name_from_filename(dataframe)
+      dataframe['state'] = [state_name] * dataframe.shape[0]
   return dataframes
 
 
