@@ -10,7 +10,7 @@ from file_locations import GEOCODE_FINAL_CSV_FILENAME, ZILLOW_CACHED_JSON_FILENA
 from file_locations import CITY_CODES_CSV_FILENAME, ZILLOW_FINAL_CSV_FILENAME
 from merging_code.merge_dataframes import join_on_state_and_city
 from merging_code.utils import get_dataframe_from_spreadsheet, add_empty_columns, normalize_headers_in_dataframe
-from merging_code.utils import read_json_file, write_json_file
+from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file
 from merging_code.secrets import QUANDL_API_KEY
 
 US_STATES_DICT = {
@@ -71,54 +71,66 @@ ZILLOW_PRICE_CODES = {
   'ZRIFAH': 'Zillow Rental Index Per Square Foot - All Homes'
 }
 
-ZILLOW_CACHE = read_json_file(ZILLOW_CACHED_JSON_FILENAME)
+ZILLOW_CACHE = get_dict_from_json_file(ZILLOW_CACHED_JSON_FILENAME)
+
+
+def quandl_get_dataframe(quandl_get_value, api_count):
+  """ Wrapper for quandl.get, to avoid the exception raising. and use caching. """
+  # get the value from the cache
+  if quandl_get_value in ZILLOW_CACHE:
+    quandl_value = ZILLOW_CACHE[quandl_get_value]
+    if quandl_value is not None:
+      quandl_value = pandas.DataFrame(quandl_value)
+  # query quandl
+  else:
+    api_count += 1
+    try:
+      quandl_value = quandl.get(quandl_get_value,
+                                collapse='annual',
+                                order='desc',
+                                api_key=QUANDL_API_KEY)
+      quandl_value = quandl_value.reset_index()
+      quandl_value['Date'] = quandl_value['Date'].dt.strftime('%Y-%m-%d')
+    except quandl.errors.quandl_error.NotFoundError:
+      quandl_value = None
+  if quandl_value is None:
+    # write the value to the cache
+    ZILLOW_CACHE[quandl_get_value] = None
+    return (None, api_count)
+  zillow_dataframe = quandl_value.sort_values(by=['Date'], ascending=False)
+  ZILLOW_CACHE[quandl_get_value] = zillow_dataframe.to_dict()
+  return (zillow_dataframe, api_count)
 
 
 def add_zillow_price_code_to_row(row, city_code, zillow_price_code, api_count):
   """ Take a row, add the zillow price code, return the row. """
   quandl_get_value = 'ZILLOW/C{}_{}'.format(city_code, zillow_price_code)
-  if quandl_get_value in ZILLOW_CACHE:
-    zillow_dict = ZILLOW_CACHE[quandl_get_value]
-    zillow_dataframe = pandas.DataFrame(zillow_dict)
-  else:
-    zillow_dataframe = quandl.get(quandl_get_value,
-                                  collapse='annual',
-                                  order='desc',
-                                  api_key=QUANDL_API_KEY)
-    api_count += 1
-    ZILLOW_CACHE[quandl_get_value] = zillow_dataframe.to_dict()
-  value = zillow_dataframe['Value'].iloc[0]
+  quandl_value, api_count = quandl_get_dataframe(quandl_get_value, api_count)
+  if quandl_value is None:
+    return (row, api_count, False)
+  value = quandl_value['Value'].iloc[0]
   row[zillow_price_code] = value
-  return [row, api_count]
+  return (row, api_count, True)
 
 
 def add_housing_data_to_row(row, api_count):
   """ Query quandl for all the housing data we want for each city/state. return pandas dataframe. """
   city_codes = row.get('city_code').split('|')
   working_city_code = False
-  city_codes_len = len(city_codes)
-  city_codes_not_working_counter = 0
   for city_code in city_codes:
     for zillow_price_code, description in ZILLOW_PRICE_CODES.items():
       log_msg = '{}, {} {{yesno}} {} found for city code: {}'.format(
         row.get('city'), row.get('state'), description, city_code)
-      try:
-        row, api_count = add_zillow_price_code_to_row(row, city_code,
-                                                      zillow_price_code,
-                                                      api_count)
+      row, api_count, working_city_code = add_zillow_price_code_to_row(
+        row, city_code, zillow_price_code, api_count)
+      if working_city_code:
         cprint(log_msg.format(yesno=''), 'green')
-        working_city_code = True
-      # There are many duplicate city codes for each city, and a lot of the city codes
-      # do not work.
-      except quandl.errors.quandl_error.NotFoundError:
-        city_codes_not_working_counter += 1
-        if city_codes_not_working_counter == city_codes_len:
-          cprint(log_msg.format(yesno=''), 'red')
-        continue
+      else:
+        cprint(log_msg.format(yesno=''), 'red')
     # if we got one working city_code for a city, we skip the rest.
     if working_city_code:
-      return [row, api_count]
-  return [row, api_count]
+      return (row, api_count)
+  return (row, api_count)
 
 
 def add_housing_data_to_dataframe(dataframe):
@@ -127,12 +139,15 @@ def add_housing_data_to_dataframe(dataframe):
   for index, row in dataframe.iterrows():
     new_row, api_count = add_housing_data_to_row(row, api_count)
     dataframe.loc[index] = new_row
-    if api_count % 20 == 0:
+    api_pause = 20
+    if api_count > 0 and api_count % api_pause == 0:
       log_msg = '### api_count: {}, cache_count: {} ###'.format(
         api_count, len(ZILLOW_CACHE))
       cprint(log_msg, 'yellow')
-      write_json_file(ZILLOW_CACHED_JSON_FILENAME, ZILLOW_CACHE)
-      time.sleep(8)
+      write_dict_to_json_file(ZILLOW_CACHED_JSON_FILENAME, ZILLOW_CACHE)
+      # the quandl api limit is 2,000 calls per 10 minutes
+      # That's ~3.3 calls per second. We'll sleep so we don't get throttled.
+      time.sleep(api_pause / 3.3)
   return dataframe
 
 

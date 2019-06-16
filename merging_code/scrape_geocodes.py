@@ -16,7 +16,7 @@ import time
 import geopy
 
 from merging_code.secrets import GEOCODE_API_KEY
-from merging_code.utils import read_json_file, write_json_file
+from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file
 from merging_code.utils import get_dataframe_from_merged_table_metadata, add_empty_columns
 from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME
 from file_locations import GEOCODE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILENAME
@@ -81,7 +81,7 @@ def set_geo_metadata_to_dataframe_row(row, location, reverse_address):
 def set_geo_metadata_to_dataframe(dataframe):
   """ Iterate over all cities in the dataframe, then add geo metadata to all of them """
   geolocator = get_geopy_googlev3_locator(GEOCODE_API_KEY)
-  cached_json = read_json_file(GEOCODE_CACHED_JSON_FILENAME)
+  cached_json = get_dict_from_json_file(GEOCODE_CACHED_JSON_FILENAME)
   add_empty_columns(dataframe, ['latitude', 'longitude', 'reverse_address'])
   api_count = 0
   # pylint: disable=W0612
@@ -102,8 +102,8 @@ def set_geo_metadata_to_dataframe(dataframe):
     time.sleep(1)
     if api_count % 50 == 0:
       print('API count: ', str(api_count))
-      write_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
-  write_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
+      write_dict_to_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
+  write_dict_to_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
 
 
 def get_final_dataframe():
