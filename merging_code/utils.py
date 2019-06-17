@@ -58,7 +58,7 @@ def get_dataframe_from_merged_table_metadata(tables_metadata, debug=False):
       combined_table = get_normalized_data_table(table_metadata)
       continue
     next_data_table = get_normalized_data_table(table_metadata)
-    join_on_state_and_city(combined_table, next_data_table)
+    combined_table = join_on_state_and_city(combined_table, next_data_table)
     print_data_table_length('combined_table', combined_table, debug=debug)
   drop_headers('final_csv', combined_table)
   rename_headers('final_csv', combined_table)

@@ -13,16 +13,16 @@
   - (cities by credit score, 2017) <https://lendedu.com/blog/best-credit-score/> , and other lendedu links.
 - geo data (lat, long, and address of center of city)
 - walkability ( <https://www.redfin.com/how-walk-score-works> / walkscore )
+- zillow rent per square foot
 
 ## Data sources that I want, but can't access (yet)
 
 - sat scores <https://blog.prepscholar.com/sat-scores-by-high-school-and-district>
 - social ties <https://www.marketwatch.com/press-release/sharecare-names-americas-top-10-cities-with-the-strongest-social-ties-2013-11-20>
 - median income
-- real estate cost per sqft
 - happiness score
 - social trust
-- walkability
+- sentiment analysis of all yelp reviews for the city?
 - income inequality
 - unemployment
 - hud building permits

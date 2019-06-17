@@ -9,8 +9,6 @@ which is stored in the json file. You can rerun this without
 hammering the API. Note, you need the GEOCODE_API_KEY
 in secrets.py
 """
-# standard imports
-import time
 
 # pypi imports
 import ssl
@@ -105,9 +103,10 @@ def set_geo_metadata_to_dataframe(dataframe):
     set_geo_metadata_to_dict(cached_json, location, reverse_address,
                              search_query)
     api_count += 2  # two api hits per loop, 1 for geocode, 1 for reverse address
-    time.sleep(1)
     if api_count % 50 == 0:
-      print('API count: ', str(api_count))
+      log_msg = '### api_count: {}, cache_count: {} ###'.format(
+        api_count, len(cached_json))
+      print(log_msg)
       write_dict_to_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
   write_dict_to_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
 
