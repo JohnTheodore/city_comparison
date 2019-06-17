@@ -27,7 +27,7 @@ def get_summary_scores_dict(walkscore_json, state_city_name):
   return summary_scores_dict
 
 
-def get_walkscores(city_row):
+def get_walkscores_from_api(city_row):
   """ Get the walkscore json result from the walkscore api. """
   # We hardcode a sleep time of 3 between every request, this works.
   time.sleep(3)
@@ -44,17 +44,12 @@ def get_walkscores(city_row):
   return result.json()
 
 
-def get_dataframe_row_with_walkscores(row, walkscore_json):
+def get_dataframe_row_with_walkscores(row, walkscore_json, city_state_string):
   """ Input a dataframe row without walkscores. Output a dataframe row with walkscores. """
   summary_scores_dict = get_summary_scores_dict(walkscore_json,
-                                                get_state_city_name(row))
+                                                city_state_string)
   row[list(summary_scores_dict.keys())] = list(summary_scores_dict.values())
   return row
-
-
-def get_state_city_name(row):
-  """ A helper to get the california_sunnyvale string from a dataframe row. """
-  return '{}, {}'.format(row['city'], row['state'])
 
 
 def filter_scores_only(walkscore_dict):
@@ -68,26 +63,26 @@ def filter_scores_only(walkscore_dict):
   return walkscore_dict
 
 
-def add_walkscore_to_cities(dataframe):
+def add_walkscore_to_dataframe(dataframe):
   """ Parse every city row from the geocode csv, add the walkscores cells to each. """
   cached_dict = get_dict_from_json_file(WALKSCORE_CACHED_JSON_FILENAME)
   add_empty_columns(dataframe, ['walkscore', 'bikescore', 'transitscore'])
   api_count = 0
   for index, row in dataframe.iterrows():
-    state_city_name = get_state_city_name(row)
+    city_state_string = '{}, {}'.format(row['city'], row['state'])
     # make sure all 3 values are in the cache...
-    if state_city_name in cached_dict:
+    if city_state_string in cached_dict:
       # add to dataframe from cache
-      walkscore_dict = cached_dict[state_city_name]
-      cached_dict[state_city_name] = filter_scores_only(walkscore_dict)
+      walkscore_dict = cached_dict[city_state_string]
+      cached_dict[city_state_string] = filter_scores_only(walkscore_dict)
       dataframe.loc[index] = get_dataframe_row_with_walkscores(
-        row, walkscore_dict)
+        row, walkscore_dict, city_state_string)
       continue
-    walkscore_dict = get_walkscores(row)
+    walkscore_dict = get_walkscores_from_api(row)
     filter_scores_only(walkscore_dict)
-    cached_dict[state_city_name] = walkscore_dict
+    cached_dict[city_state_string] = walkscore_dict
     dataframe.loc[index] = get_dataframe_row_with_walkscores(
-      row, walkscore_dict)
+      row, walkscore_dict, city_state_string)
     api_count += 2  # two api hits per loop, 1 for geocode, 1 for reverse address
     if api_count % 10 == 0:
       print('cached_dict count: ', str(len(cached_dict.keys())))
@@ -98,7 +93,7 @@ def add_walkscore_to_cities(dataframe):
 def get_final_dataframe():
   """ The main function which returns the final dataframe. """
   dataframe = get_dataframe_from_spreadsheet(GEOCODE_FINAL_CSV_FILENAME)
-  add_walkscore_to_cities(dataframe)
+  add_walkscore_to_dataframe(dataframe)
   return dataframe
 
 

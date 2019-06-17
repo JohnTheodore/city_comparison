@@ -7,7 +7,7 @@ from merging_code.utils import get_dataframe_from_spreadsheet, normalize_headers
 from merging_code.utils import remove_substring_from_end_of_string
 
 
-def parse_city_and_state(row):
+def add_city_state_to_row(row):
   """ Take a row, add the city/state cells to the row if available. """
   city, state = ['NULL', 'NULL']
   if row['Geographic area'].count(' - ') == 2:
@@ -18,7 +18,7 @@ def parse_city_and_state(row):
 
 def add_city_state_to_dataframe(dataframe):
   """ Clean up the census 2010 csv. """
-  dataframe[['city', 'state']] = dataframe.apply(parse_city_and_state, axis=1)
+  dataframe[['city', 'state']] = dataframe.apply(add_city_state_to_row, axis=1)
   dataframe = dataframe[dataframe.state != "NULL"]
   return dataframe
 

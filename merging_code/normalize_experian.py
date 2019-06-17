@@ -7,30 +7,26 @@ from merging_code.utils import normalize_headers_in_dataframes, drop_empty_rows_
 from merging_code.utils import get_combined_dataframe, lower_case_dataframes_columns
 
 
-def get_dataframes_from_csv_filenames(csv_files):
+def get_dict_of_all_experian_dataframes(csv_files):
   """ Turn a list of csv filenames into a list of panda dataframe objects. """
-  dataframes = []
+  dataframes = {}
   for csv_file in csv_files:
     dataframe = get_dataframe_from_spreadsheet(csv_file, sheet_type='csv')
-    # pylint: disable=W0212
-    dataframe._metadata = {'filename': csv_file}
-    dataframes.append(dataframe)
+    dataframes[csv_file] = dataframe
   return dataframes
 
 
-def get_state_name_from_filename(dataframe):
+def get_state_name_from_filename(file_name):
   """ Helper function to take the filename attribute from the panda dataframe object
   and to strip away """
-  # pylint: disable=W0212
-  return dataframe._metadata['filename'].split(
-    EXPERIAN_SOURCE_CSV_DIR)[1].split('.csv')[0]
+  return file_name.split(EXPERIAN_SOURCE_CSV_DIR)[1].split('.csv')[0]
 
 
 def add_missing_state_column_to_dataframes(dataframes):
   """ If 'state' and 'State' are missing, we'll add those columns using the filename. """
-  for dataframe in dataframes:
+  for filename, dataframe in dataframes.items():
     if 'state' not in dataframe.columns and 'State' not in dataframe.columns:
-      state_name = get_state_name_from_filename(dataframe)
+      state_name = get_state_name_from_filename(filename)
       dataframe['state'] = [state_name] * dataframe.shape[0]
   return dataframes
 
@@ -46,9 +42,9 @@ def get_final_dataframe():
   """ Turn all the experian CSVs into dataframes, merge them, return the result. """
   experian_csv_filenames = get_all_filenames_with_extension(
     EXPERIAN_SOURCE_CSV_DIR, 'csv')
-  dataframes = get_dataframes_from_csv_filenames(experian_csv_filenames)
+  dataframes = get_dict_of_all_experian_dataframes(experian_csv_filenames)
   dataframes = add_missing_state_column_to_dataframes(dataframes)
-  dataframes = normalize_headers_in_dataframes('experian', dataframes)
+  dataframes = normalize_headers_in_dataframes('experian', dataframes.values())
   # drop any rows with empty values in city/state/credit score
   dataframes = drop_empty_rows_from_dataframes(
     dataframes, ['city', 'state', 'credit score'])
