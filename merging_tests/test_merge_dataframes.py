@@ -1,17 +1,27 @@
 import pandas
-from merging_code.merge_dataframes import fuzzy_match, join_on_state_and_city
+from merging_code.merge_dataframes import fuzzywuzzy_match, prefix_match, join_on_state_and_city
 
 
-def test_fuzzy_match():
+def test_fuzzywuzzy_match():
   name = 'a'
   list_names = ['ab', 'ba']
-  max_name, max_score = fuzzy_match(name, list_names)
+  max_name, max_score = fuzzywuzzy_match(name, list_names)
   assert max_name == 'ab'
   assert max_score == 67
   list_names.reverse()
-  max_name, max_score = fuzzy_match(name, list_names)
+  max_name, max_score = fuzzywuzzy_match(name, list_names)
   assert max_name == 'ba'
   assert max_score == 67
+
+
+def test_prefix_match():
+  name = 'a'
+  list_names = ['ab', 'ba']
+  max_name = prefix_match(name, list_names)
+  assert max_name == 'ab'
+  list_names.reverse()
+  max_name = prefix_match(name, list_names)
+  assert max_name == 'ab'
 
 
 def test_join_on_state_and_city():
