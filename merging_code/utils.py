@@ -6,8 +6,8 @@ import glob
 import json
 import os
 import pandas
-from merging_code.data_table import DataTable
 from merging_code.headers_cleanup import HEADERS_CHANGE
+from merging_code.merge_dataframes import join_on_state_and_city
 
 
 def get_dict_from_json_file(filename):
@@ -58,12 +58,12 @@ def get_dataframe_from_merged_table_metadata(tables_metadata, debug=False):
       combined_table = get_normalized_data_table(table_metadata)
       continue
     next_data_table = get_normalized_data_table(table_metadata)
-    combined_table = combined_table.join(next_data_table)
-    print_data_table_length('combined_table', combined_table.data, debug=debug)
-  drop_headers('final_csv', combined_table.data)
-  rename_headers('final_csv', combined_table.data)
+    join_on_state_and_city(combined_table, next_data_table)
+    print_data_table_length('combined_table', combined_table, debug=debug)
+  drop_headers('final_csv', combined_table)
+  rename_headers('final_csv', combined_table)
 
-  return combined_table.data
+  return combined_table
 
 
 def get_combined_dataframe(dataframes,
@@ -90,15 +90,16 @@ def get_combined_dataframe(dataframes,
 def get_normalized_data_table(table_metadata, debug=False):
   """ Input a dict with csv filename, suffix if available, the document label,
   and return a data_table. """
-  data_table = DataTable(file_path=table_metadata['csv_filename'],
-                         header=table_metadata.get('header', 0))
-  drop_headers(table_metadata['document_label'], data_table.data)
-  rename_headers(table_metadata['document_label'], data_table.data)
+  data_table = pandas.read_csv(table_metadata['csv_filename'],
+                               header=table_metadata.get('header', 0),
+                               encoding='ISO-8859-1')
+  drop_headers(table_metadata['document_label'], data_table)
+  rename_headers(table_metadata['document_label'], data_table)
   print_data_table_length(table_metadata['document_label'],
-                          data_table.data,
+                          data_table,
                           debug=debug)
   # Deduplicate by ('state', 'city').
-  data_table.data.drop_duplicates(['state', 'city'], inplace=True)
+  data_table.drop_duplicates(['state', 'city'], inplace=True)
   return data_table
 
 

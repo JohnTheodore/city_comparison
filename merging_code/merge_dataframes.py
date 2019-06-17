@@ -88,7 +88,6 @@ def join_on_state_and_city(left_df, right_df):
     for city in left_cities:
       max_city = prefix_match(city, right_cities)
       if max_city is not None:
-        # print('state: {}, city: {}, max_city: {}'.format(state, city, max_city))
         # Gets data for (state, city); returns a row DataFrame
         # without the 'state' and 'city' fields.
         left_row = _get_row_dataframe(left_df, (state, city))
@@ -103,8 +102,5 @@ def join_on_state_and_city(left_df, right_df):
         assert 'index' not in common_df.columns.values
         common_df = common_df.append(merge_rows, ignore_index=True, sort=True)
 
-  # common_df = common_df.drop(labels=['index_x', 'index_y'], axis=1)
-  # common_df.set_index(state_city, inplace=True)
-  # common_df = common_df.reset_index()
   assert 'index' not in common_df.columns.values
   return common_df
