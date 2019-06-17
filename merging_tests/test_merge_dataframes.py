@@ -46,7 +46,7 @@ def test_join_on_state_and_city():
     'city': ['1', '4'],
     'data_x': [1, 4],
     'data_y': [1, 4]
-  })
-  expected.set_index(['state', 'city'], inplace=True)
-  actual = join_on_state_and_city(left_df, right_df)
+  }).set_index(['state', 'city'])
+  actual = join_on_state_and_city(left_df,
+                                  right_df).set_index(['state', 'city'])
   assert actual.equals(expected)

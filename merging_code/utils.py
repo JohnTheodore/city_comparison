@@ -62,6 +62,7 @@ def get_dataframe_from_merged_table_metadata(tables_metadata, debug=False):
     print_data_table_length('combined_table', combined_table.data, debug=debug)
   drop_headers('final_csv', combined_table.data)
   rename_headers('final_csv', combined_table.data)
+
   return combined_table.data
 
 
@@ -89,15 +90,15 @@ def get_combined_dataframe(dataframes,
 def get_normalized_data_table(table_metadata, debug=False):
   """ Input a dict with csv filename, suffix if available, the document label,
   and return a data_table. """
-  suffix = table_metadata.get('suffix', '')
   data_table = DataTable(file_path=table_metadata['csv_filename'],
-                         suffix=suffix,
                          header=table_metadata.get('header', 0))
   drop_headers(table_metadata['document_label'], data_table.data)
   rename_headers(table_metadata['document_label'], data_table.data)
   print_data_table_length(table_metadata['document_label'],
                           data_table.data,
                           debug=debug)
+  # Deduplicate by ('state', 'city').
+  data_table.data.drop_duplicates(['state', 'city'], inplace=True)
   return data_table
 
 

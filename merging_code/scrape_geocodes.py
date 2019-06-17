@@ -13,6 +13,8 @@ in secrets.py
 import time
 
 # pypi imports
+import ssl
+import certifi
 import geopy
 
 from merging_code.secrets import GEOCODE_API_KEY
@@ -44,6 +46,10 @@ def get_census_cities_and_states_dataframe():
 
 def get_geopy_googlev3_locator(geocode_api_key):
   """ Get the geopy geolocator object, setup with goog auth. """
+  ctx = ssl.create_default_context(cafile=certifi.where())
+  geopy.geocoders.options.default_ssl_context = ctx
+  # To prevent vulture complaining about unused attribute.
+  assert geopy.geocoders.options.default_ssl_context == ctx
   if geocode_api_key == '':
     return None
   geolocator = geopy.GoogleV3(user_agent='where should I live next',

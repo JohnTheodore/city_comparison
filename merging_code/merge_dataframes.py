@@ -40,7 +40,11 @@ def prefix_match(name, list_names):
 
 def _get_row_dataframe(dataframe, key):
   """Get a row of DataFrame as type DataFrame with index 0."""
-  row = dataframe.loc[key].to_frame().T
+  # row = dataframe.loc[[key]].to_frame().T
+
+  # In order to have pandas return a dataframe all the time, pass a *list* of
+  # `key`, instead of key directly.
+  row = dataframe.loc[[key]]
   # Drop index containing 'state' and 'city'.
   # We'll add those fields back after joining.
   row = row.reset_index(drop=True)
@@ -57,6 +61,8 @@ def join_on_state_and_city(left_df, right_df):
   right_df = right_df.reset_index()
   left_df = left_df.set_index(state_city)
   right_df = right_df.set_index(state_city)
+  left_df = left_df.drop(['index'], axis=1)
+  right_df = right_df.drop(['index'], axis=1)
   # First, join exact.
   common_df = left_df.merge(right_df,
                             how='inner',
@@ -72,7 +78,7 @@ def join_on_state_and_city(left_df, right_df):
   # List of states that are in both left and right sides.
   states = _state_set(left_missing_keys) & _state_set(right_missing_keys)
   # Reset index to make it easier to append new rows.
-  common_df.reset_index(inplace=True)
+  common_df = common_df.reset_index()
   # Iterate by state.
   for state in sorted(states):
     print('state: ', state)
@@ -82,7 +88,7 @@ def join_on_state_and_city(left_df, right_df):
     for city in left_cities:
       max_city = prefix_match(city, right_cities)
       if max_city is not None:
-        print('state: {}, city: {}, max_city: {}'.format(state, city, max_city))
+        # print('state: {}, city: {}, max_city: {}'.format(state, city, max_city))
         # Gets data for (state, city); returns a row DataFrame
         # without the 'state' and 'city' fields.
         left_row = _get_row_dataframe(left_df, (state, city))
@@ -94,8 +100,11 @@ def join_on_state_and_city(left_df, right_df):
         # Add `state` and `city`.
         merge_rows.insert(0, 'state', [state])
         merge_rows.insert(1, 'city', [city])
+        assert 'index' not in common_df.columns.values
         common_df = common_df.append(merge_rows, ignore_index=True, sort=True)
 
-  common_df = common_df.drop(labels=['index_x', 'index_y'], axis=1)
-  common_df.set_index(state_city, inplace=True)
+  # common_df = common_df.drop(labels=['index_x', 'index_y'], axis=1)
+  # common_df.set_index(state_city, inplace=True)
+  # common_df = common_df.reset_index()
+  assert 'index' not in common_df.columns.values
   return common_df
