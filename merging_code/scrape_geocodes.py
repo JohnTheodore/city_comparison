@@ -9,10 +9,10 @@ which is stored in the json file. You can rerun this without
 hammering the API. Note, you need the GEOCODE_API_KEY
 in secrets.py
 """
-# standard imports
-import time
 
 # pypi imports
+import ssl
+import certifi
 import geopy
 
 from merging_code.secrets import GEOCODE_API_KEY
@@ -44,6 +44,10 @@ def get_census_cities_and_states_dataframe():
 
 def get_geopy_googlev3_locator(geocode_api_key):
   """ Get the geopy geolocator object, setup with goog auth. """
+  ctx = ssl.create_default_context(cafile=certifi.where())
+  geopy.geocoders.options.default_ssl_context = ctx
+  # To prevent vulture complaining about unused attribute.
+  assert geopy.geocoders.options.default_ssl_context == ctx
   if geocode_api_key == '':
     return None
   geolocator = geopy.GoogleV3(user_agent='where should I live next',
@@ -99,9 +103,10 @@ def set_geo_metadata_to_dataframe(dataframe):
     set_geo_metadata_to_dict(cached_json, location, reverse_address,
                              search_query)
     api_count += 2  # two api hits per loop, 1 for geocode, 1 for reverse address
-    time.sleep(1)
     if api_count % 50 == 0:
-      print('API count: ', str(api_count))
+      log_msg = '### api_count: {}, cache_count: {} ###'.format(
+        api_count, len(cached_json))
+      print(log_msg)
       write_dict_to_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
   write_dict_to_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
 
@@ -110,6 +115,7 @@ def get_final_dataframe():
   """ The main function which returns the final dataframe. """
   dataframe = get_census_cities_and_states_dataframe()
   set_geo_metadata_to_dataframe(dataframe)
+  dataframe = dataframe.sort_values(by=['state', 'city'])
   return dataframe
 
 

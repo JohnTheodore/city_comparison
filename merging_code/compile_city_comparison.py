@@ -40,6 +40,7 @@ def get_final_dataframe():
   dataframe = move_columns_to_left_of_dataframe(
     dataframe, ['city', 'state', 'population density'])
   dataframe = drop_headers('final_csv', dataframe)
+  dataframe = dataframe.sort_values(by=['state', 'city'])
   return dataframe
 
 

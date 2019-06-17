@@ -8,6 +8,7 @@ def test_sunnyvale_geo():
   """ We know the lat, long and reverse address for sunnyvale, let's test this. """
   dataframe = get_final_dataframe()
   sunnyvale = get_city_state_row(dataframe, 'sunnyvale', 'california')
+  assert len(sunnyvale) == 1
   assert float(sunnyvale.get('latitude')) == 37.36883
   assert float(sunnyvale.get('longitude')) == -122.0363496
   sunnyvale_address = '390 W El Camino Real, Sunnyvale, CA 94087, USA'
