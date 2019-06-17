@@ -174,7 +174,7 @@ def get_normalized_fbi_crime_dataframe():
     dataframe = normalize_dataframe_by_100k(dataframe)
     dataframe = lower_case_columns(dataframe, ['city', 'state'])
     dataframe['year'] = table_metadata['year']
-    dataframe.set_index(['state', 'city', 'year'], inplace=True)
+    dataframe = dataframe.set_index(['state', 'city', 'year'])
     normalized_fbi_dataframes.append(dataframe)
   # There are some rows in the FBI xls spreadsheet that are notes, and not
   # actually data from cities.  Drop these rows by only keeping rows that have

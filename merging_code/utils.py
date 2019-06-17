@@ -27,9 +27,10 @@ def write_dict_to_json_file(filename, cached_json):
 
 def drop_empty_rows_from_dataframes(dataframes, col_names):
   """ If we're missing any required information, we drop the row entirely. """
+  new_dataframes = []
   for dataframe in dataframes:
-    dataframe.dropna(axis=0, subset=col_names, inplace=True)
-  return dataframes
+    new_dataframes.append(dataframe.dropna(axis=0, subset=col_names))
+  return new_dataframes
 
 
 def get_dataframe_from_spreadsheet(file_path, sheet_type='csv', **kwargs):
@@ -99,7 +100,7 @@ def get_normalized_data_table(table_metadata, debug=False):
                           data_table,
                           debug=debug)
   # Deduplicate by ('state', 'city').
-  data_table.drop_duplicates(['state', 'city'], inplace=True)
+  data_table = data_table.drop_duplicates(['state', 'city'])
   return data_table
 
 
