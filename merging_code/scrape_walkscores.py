@@ -105,6 +105,7 @@ def get_final_dataframe():
 if __name__ == '__main__':
   print('Starting write_walkscores_csv.py with api key: ', WALKSCORE_API_KEY)
   DATAFRAME = get_final_dataframe()
+  DATAFRAME = DATAFRAME.sort_values(by=['state', 'city'])
   print('Writing row quantity: ', DATAFRAME['city'].count())
   DATAFRAME.to_csv(WALKSCORE_FINAL_CSV_FILENAME, index=False)
   print('Finished writing: ', WALKSCORE_FINAL_CSV_FILENAME)
