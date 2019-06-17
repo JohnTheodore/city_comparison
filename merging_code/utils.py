@@ -10,7 +10,7 @@ from merging_code.data_table import DataTable
 from merging_code.headers_cleanup import HEADERS_CHANGE
 
 
-def read_json_file(filename):
+def get_dict_from_json_file(filename):
   """ Read json file, loads it, and return the dict """
   if os.path.isfile(filename):
     with open(filename) as file_handler:
@@ -19,7 +19,7 @@ def read_json_file(filename):
   return {}
 
 
-def write_json_file(filename, cached_json):
+def write_dict_to_json_file(filename, cached_json):
   """ Take a python dict, write it to a file as json.dumps. """
   with open(filename, 'w') as file_handler:
     file_handler.write(json.dumps(cached_json))

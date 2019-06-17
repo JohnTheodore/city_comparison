@@ -6,7 +6,8 @@ right lat/long/address
 """
 import time
 import requests
-from merging_code.utils import read_json_file, write_json_file, add_empty_columns, get_dataframe_from_spreadsheet
+from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file
+from merging_code.utils import add_empty_columns, get_dataframe_from_spreadsheet
 from merging_code.secrets import WALKSCORE_API_KEY
 from file_locations import WALKSCORE_FINAL_CSV_FILENAME, WALKSCORE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILENAME
 
@@ -56,7 +57,7 @@ def get_state_city_name(row):
   return '{}, {}'.format(row['city'], row['state'])
 
 
-def remove_attributes_from_dict(walkscore_dict):
+def filter_scores_only(walkscore_dict):
   """ Make the dict smaller so we don't store too much data. """
   attributes = [
     'more_info_icon', 'logo_url', 'more_info_link', 'ws_link', 'help_link'
@@ -69,7 +70,7 @@ def remove_attributes_from_dict(walkscore_dict):
 
 def add_walkscore_to_cities(dataframe):
   """ Parse every city row from the geocode csv, add the walkscores cells to each. """
-  cached_dict = read_json_file(WALKSCORE_CACHED_JSON_FILENAME)
+  cached_dict = get_dict_from_json_file(WALKSCORE_CACHED_JSON_FILENAME)
   add_empty_columns(dataframe, ['walkscore', 'bikescore', 'transitscore'])
   api_count = 0
   for index, row in dataframe.iterrows():
@@ -78,20 +79,20 @@ def add_walkscore_to_cities(dataframe):
     if state_city_name in cached_dict:
       # add to dataframe from cache
       walkscore_dict = cached_dict[state_city_name]
-      cached_dict[state_city_name] = remove_attributes_from_dict(walkscore_dict)
+      cached_dict[state_city_name] = filter_scores_only(walkscore_dict)
       dataframe.loc[index] = get_dataframe_row_with_walkscores(
         row, walkscore_dict)
       continue
     walkscore_dict = get_walkscores(row)
-    remove_attributes_from_dict(walkscore_dict)
+    filter_scores_only(walkscore_dict)
     cached_dict[state_city_name] = walkscore_dict
     dataframe.loc[index] = get_dataframe_row_with_walkscores(
       row, walkscore_dict)
     api_count += 2  # two api hits per loop, 1 for geocode, 1 for reverse address
     if api_count % 10 == 0:
       print('cached_dict count: ', str(len(cached_dict.keys())))
-      write_json_file(WALKSCORE_CACHED_JSON_FILENAME, cached_dict)
-  write_json_file(WALKSCORE_CACHED_JSON_FILENAME, cached_dict)
+      write_dict_to_json_file(WALKSCORE_CACHED_JSON_FILENAME, cached_dict)
+  write_dict_to_json_file(WALKSCORE_CACHED_JSON_FILENAME, cached_dict)
 
 
 def get_final_dataframe():
