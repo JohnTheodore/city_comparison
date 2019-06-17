@@ -1,16 +1,29 @@
 version: "2"
-plugins:
-  duplication:
-    enabled: true
+checks:
+  argument-count:
     config:
-      languages:
-        python:
-          mass_threshold: 39
-  markdownlint:
-    enabled: true
-    checks:
-      MD013:
-        enabled: false
+      threshold: 4
+  complex-logic:
+    config:
+      threshold: 3
+  file-lines:
+    config:
+      threshold: 254
   method-complexity:
     config:
       threshold: 8
+  method-count:
+    config:
+      threshold: 15
+  method-lines:
+    config:
+      threshold: 30
+  nested-control-flow:
+    config:
+      threshold: 3
+  return-statements:
+    config:
+      threshold: 4
+  similar-code:
+    config:
+      threshold: 40

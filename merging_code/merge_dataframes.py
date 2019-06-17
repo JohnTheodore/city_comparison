@@ -52,9 +52,8 @@ def _get_row_dataframe(dataframe, key):
   return row
 
 
-def join_on_state_and_city(left_df, right_df):
-  """Join two dataframes on 'state' and 'city' columns."""
-  # pylint: disable=too-many-locals
+def normalize_left_right_indices(left_df, right_df):
+  """ Setup the indices for faster performance on the dataframes. """
   state_city = ['state', 'city']
   # Using index is faster.
   left_df = left_df.reset_index()
@@ -63,6 +62,12 @@ def join_on_state_and_city(left_df, right_df):
   right_df = right_df.set_index(state_city)
   left_df = left_df.drop(['index'], axis=1)
   right_df = right_df.drop(['index'], axis=1)
+  return (left_df, right_df)
+
+
+def join_on_state_and_city(left_df, right_df):
+  """Join two dataframes on 'state' and 'city' columns."""
+  left_df, right_df = normalize_left_right_indices(left_df, right_df)
   # First, join exact.
   common_df = left_df.merge(right_df,
                             how='inner',
