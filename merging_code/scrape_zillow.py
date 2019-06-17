@@ -198,6 +198,8 @@ def get_final_dataframe():
                                          ZILLOW_PRICE_CODES.keys())
   combined_dataframe = combined_dataframe.reset_index()
   final_dataframe = add_housing_data_to_dataframe(combined_dataframe)
+  final_dataframe = final_dataframe.drop(['index'], axis=1)
+  final_dataframe = final_dataframe.sort_values(by=['state', 'city'])
   return final_dataframe
 
 
