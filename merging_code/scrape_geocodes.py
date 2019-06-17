@@ -116,6 +116,7 @@ def get_final_dataframe():
   """ The main function which returns the final dataframe. """
   dataframe = get_census_cities_and_states_dataframe()
   set_geo_metadata_to_dataframe(dataframe)
+  dataframe = dataframe.sort_values(by=['state', 'city'])
   return dataframe
 
 
