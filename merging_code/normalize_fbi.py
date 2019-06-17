@@ -47,7 +47,7 @@ def normalize_row_by_pop100k(row, numeric_columns):
   return pandas.Series(new_columns)
 
 
-def normalize_dataframe_by_100k(dataframe):
+def normalize_dataframe_by_pop100k(dataframe):
   """ Normalize a dataframe of FBI crime data by 100k for the year population. """
   # Normalize all numeric columns by population.
   numeric_columns = dataframe.select_dtypes(
@@ -63,7 +63,7 @@ def normalize_dataframe_by_100k(dataframe):
   return dataframe
 
 
-def propagate_state_column_to_dataframe(dataframe):
+def add_state_to_missing_state_col_cells(dataframe):
   """ FBI xls files are messed up, this adds the state where missing on the first column. """
   # Propagate 'state' column.
   state = None
@@ -76,17 +76,18 @@ def propagate_state_column_to_dataframe(dataframe):
   return dataframe
 
 
-def first_and_last(dataframe):
+def get_earliest_and_latest_fbi_dataframe(dataframe):
   """Take the data from the latest year it was defined."""
   dataframe = dataframe.reset_index()
   dataframe = dataframe.set_index(['state', 'city'])
 
   # Transform the integer 'year' column to type `datetime`.  'datetime' column
   # will allow us to use `pandas.DataFrame.first` and `pandas.DataFrame.last`.
-  def year_to_datetime(row):
+  def convert_row_year_str_to_datetime_object(row):
     return datetime.datetime(int(row['year']), 12, 31)
 
-  dataframe['datetime'] = dataframe.apply(year_to_datetime, axis=1)
+  dataframe['datetime'] = dataframe.apply(
+    convert_row_year_str_to_datetime_object, axis=1)
   groupby = dataframe.groupby(['state', 'city'])
   first = groupby.first()
   last = groupby.last()
@@ -96,40 +97,41 @@ def first_and_last(dataframe):
   return (first, last)
 
 
-def percent_change_per_year(diff, years):
+def get_annualized_percent_change_per_year(diff, years):
   """Calculate annualized percent change."""
   return math.exp(math.log(diff) / years) - 1
 
 
-def annual_percent_change_for_row(row, numeric_columns):
+def get_series_with_annual_percent_change_for_columns(row, numeric_columns):
   """ Show the annual change for a list of columns in a row. """
   years = row['year']
   new_columns = {}
   for column in numeric_columns:
     diff = row[column]
     if years > 0 and diff != 0:
-      new_columns[column] = percent_change_per_year(diff, years)
+      new_columns[column] = get_annualized_percent_change_per_year(diff, years)
     else:
       new_columns[column] = 0
   return pandas.Series(new_columns)
 
 
-def annual_percent_change(dataframe):
-  """Calculate annual percent change for numeric fields in Dataframe."""
+def get_dataframe_with_all_numeric_fields_change_percent(dataframe):
+  """ Calculate annual percent change for numeric fields in Dataframe. """
   numeric_columns = dataframe.select_dtypes(
     include=['float64', 'int64']).columns.to_list()
   # Don't calculate annual percent change on 'year' column.
   numeric_columns = [
     col for col in numeric_columns if not col.startswith('year')
   ]
-  dataframe[numeric_columns] = dataframe.apply(annual_percent_change_for_row,
-                                               numeric_columns=numeric_columns,
-                                               axis=1)
+  dataframe[numeric_columns] = dataframe.apply(
+    get_series_with_annual_percent_change_for_columns,
+    numeric_columns=numeric_columns,
+    axis=1)
   return dataframe
 
 
-def annual_population_percent_change(first, last):
-  """Compute annualized percent change in population.
+def get_dataframe_with_annual_pop_percent_chg(first, last):
+  """ Compute annualized percent change in population.
 
   Based on the first and last years we have data.
 
@@ -142,7 +144,6 @@ def annual_population_percent_change(first, last):
   Returns:
     `pandas.DataFrame` with column 'population' representing the annual percent
     change in population.  Indexed by ('state', 'city').
-
   """
   diff_year = last['year'].to_frame().subtract(first['year'].to_frame())
   # Add epsilon to values in order to avoid dividing by zero.
@@ -155,14 +156,14 @@ def annual_population_percent_change(first, last):
                                             left_index=True,
                                             right_index=True,
                                             suffixes=('_ratio', '_diff'))
-  population_percent_change = annual_percent_change(population_ratio)
+  population_percent_change = get_dataframe_with_all_numeric_fields_change_percent(
+    population_ratio)
   population_percent_change = population_percent_change.drop(['year'], axis=1)
   return population_percent_change
 
 
-def get_normalized_fbi_crime_dataframe():
-  """ Take the FBI Table 8 XLS files, normalize them, then return a list of them all. """
-  fbi_table_metadata = get_fbi_table_metadata()
+def get_concatenated_fbi_dataframe_from_xls_files(fbi_table_metadata):
+  """ Take the FBI Table 8 xls files, normalize them, then return a list of them all. """
   normalized_fbi_dataframes = []
   for table_metadata in fbi_table_metadata:
     document_label = table_metadata['document_label']
@@ -170,8 +171,8 @@ def get_normalized_fbi_crime_dataframe():
                                                header=3,
                                                sheet_type='xls')
     dataframe = normalize_headers_in_dataframe(document_label, dataframe)
-    dataframe = propagate_state_column_to_dataframe(dataframe)
-    dataframe = normalize_dataframe_by_100k(dataframe)
+    dataframe = add_state_to_missing_state_col_cells(dataframe)
+    dataframe = normalize_dataframe_by_pop100k(dataframe)
     dataframe = lower_case_columns(dataframe, ['city', 'state'])
     dataframe['year'] = table_metadata['year']
     dataframe = dataframe.set_index(['state', 'city', 'year'])
@@ -193,13 +194,16 @@ def average_and_round_combined_fbi_dataframe(concatenated_fbi_dataframe):
 
 def get_final_dataframe():
   """ The main function which returns the final dataframe with all merged/meaned fbi xls files. """
-  combined_fbi_dataframe = get_normalized_fbi_crime_dataframe()
+  fbi_table_metadata = get_fbi_table_metadata()
+  combined_fbi_dataframe = get_concatenated_fbi_dataframe_from_xls_files(
+    fbi_table_metadata)
   combined_mean_rounded = average_and_round_combined_fbi_dataframe(
     combined_fbi_dataframe)
   # Compute annualized percent change in population, based on the
   # first and last years we have data.
-  first, last = first_and_last(combined_fbi_dataframe)
-  population_percent_change = annual_population_percent_change(first, last)
+  first, last = get_earliest_and_latest_fbi_dataframe(combined_fbi_dataframe)
+  population_percent_change = get_dataframe_with_annual_pop_percent_chg(
+    first, last)
 
   # Add 'population_percent_change' column to `combined_mean_rounded`.
   # Adds '_mean' suffix to the columns in `combined_mean_rounded`.
