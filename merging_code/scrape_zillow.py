@@ -5,13 +5,15 @@ Get the housing data for each row in GEOCODE_FINAL_CSV_FILENAME.
 import time
 import pandas
 import quandl
-from termcolor import cprint
 from file_locations import GEOCODE_FINAL_CSV_FILENAME, ZILLOW_CACHED_JSON_FILENAME
 from file_locations import CITY_CODES_CSV_FILENAME, ZILLOW_FINAL_CSV_FILENAME
 from merging_code.merge_dataframes import join_on_state_and_city
 from merging_code.normalize_dataframes import add_empty_columns, normalize_headers_in_dataframe
 from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file, get_dataframe_from_spreadsheet
+from merging_code.utils import get_logger, write_final_dataframe
 from merging_code.secrets import QUANDL_API_KEY
+
+LOGGER = get_logger('scrape_zillow')
 
 US_STATES_DICT = {
   'al': 'alabama',
@@ -124,9 +126,9 @@ def add_zillow_price_codes_to_row(row, api_count):
       row, api_count, working_city_code = add_zillow_price_code_to_row(
         row, city_code, zillow_price_code, api_count)
       if working_city_code:
-        cprint(log_msg.format(yesno=''), 'green')
+        LOGGER.debug(log_msg.format(yesno=''))
       else:
-        cprint(log_msg.format(yesno=''), 'red')
+        LOGGER.debug(log_msg.format(yesno='NOT'))
     # if we got one working city_code for a city, we skip the rest.
     if working_city_code:
       return (row, api_count)
@@ -143,7 +145,7 @@ def add_zillow_price_codes_to_dataframe(dataframe):
     if api_count > 0 and api_count % api_pause == 0:
       log_msg = '### api_count: {}, cache_count: {} ###'.format(
         api_count, len(ZILLOW_CACHE))
-      cprint(log_msg, 'yellow')
+      LOGGER.debug(log_msg)
       write_dict_to_json_file(ZILLOW_CACHED_JSON_FILENAME, ZILLOW_CACHE)
       # the quandl api limit is 2,000 calls per 10 minutes
       # That's ~3.3 calls per second. We'll sleep so we don't get throttled.
@@ -182,14 +184,15 @@ def normalize_city_codes_dataframe(dataframe):
   return dataframe
 
 
-def get_final_dataframe():
+def get_final_zillow_dataframe():
   """ The main function which returns the final dataframe. """
-  city_codes_dataframe = get_dataframe_from_spreadsheet(CITY_CODES_CSV_FILENAME,
+  city_codes_dataframe = get_dataframe_from_spreadsheet(LOGGER,
+                                                        CITY_CODES_CSV_FILENAME,
                                                         delimiter='|')
   city_codes_dataframe = normalize_city_codes_dataframe(city_codes_dataframe)
   geocodes_dataframe = get_dataframe_from_spreadsheet(
-    GEOCODE_FINAL_CSV_FILENAME)
-  combined_dataframe = join_on_state_and_city(geocodes_dataframe,
+    LOGGER, GEOCODE_FINAL_CSV_FILENAME)
+  combined_dataframe = join_on_state_and_city(LOGGER, geocodes_dataframe,
                                               city_codes_dataframe)
   combined_dataframe = add_empty_columns(combined_dataframe,
                                          ZILLOW_PRICE_CODES.keys())
@@ -201,8 +204,7 @@ def get_final_dataframe():
 
 
 if __name__ == '__main__':
-  print('Starting to scrape housing data from quandl.')
-  DATAFRAME = get_final_dataframe()
-  print('Writing row quantity: ', DATAFRAME['city'].count())
-  DATAFRAME.to_csv(ZILLOW_FINAL_CSV_FILENAME, index=False)
-  print('Finished writing: ', ZILLOW_FINAL_CSV_FILENAME)
+  write_final_dataframe(LOGGER,
+                        get_final_zillow_dataframe,
+                        ZILLOW_FINAL_CSV_FILENAME,
+                        index=False)

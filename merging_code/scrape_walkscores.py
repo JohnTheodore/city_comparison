@@ -8,8 +8,11 @@ import time
 import requests
 from merging_code.normalize_dataframes import add_empty_columns
 from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file, get_dataframe_from_spreadsheet
+from merging_code.utils import get_logger, write_final_dataframe
 from merging_code.secrets import WALKSCORE_API_KEY
 from file_locations import WALKSCORE_FINAL_CSV_FILENAME, WALKSCORE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILENAME
+
+LOGGER = get_logger('scrape_walkscores')
 
 
 def get_mobility_scores_dict(walkscore_json, state_city_name):
@@ -19,7 +22,7 @@ def get_mobility_scores_dict(walkscore_json, state_city_name):
   if walkscore_json['status'] == 1:
     summary_scores_dict['walkscore'] = walkscore_json['walkscore']
   else:
-    print(state_city_name, ': missing walkscore.')
+    LOGGER.debug('Missing walkscore for: {}'.format(state_city_name))
   for score in ['transit', 'bike']:
     if score in walkscore_json:
       summary_scores_dict['{}score'.format(
@@ -88,22 +91,20 @@ def add_mobility_scores_to_dataframe(dataframe):
                                                       city_state_string)
     api_count += 2  # two api hits per loop, 1 for geocode, 1 for reverse address
     if api_count % 10 == 0:
-      print('cached_dict count: ', str(len(cached_dict.keys())))
+      LOGGER.debug('cached_dict count: {}'.format(str(len(cached_dict.keys()))))
       write_dict_to_json_file(WALKSCORE_CACHED_JSON_FILENAME, cached_dict)
   write_dict_to_json_file(WALKSCORE_CACHED_JSON_FILENAME, cached_dict)
 
 
-def get_final_dataframe():
+def get_final_walkscores_dataframe():
   """ The main function which returns the final dataframe. """
-  dataframe = get_dataframe_from_spreadsheet(GEOCODE_FINAL_CSV_FILENAME)
+  dataframe = get_dataframe_from_spreadsheet(LOGGER, GEOCODE_FINAL_CSV_FILENAME)
   add_mobility_scores_to_dataframe(dataframe)
   return dataframe
 
 
 if __name__ == '__main__':
-  print('Starting write_walkscores_csv.py with api key: ', WALKSCORE_API_KEY)
-  DATAFRAME = get_final_dataframe()
-  DATAFRAME = DATAFRAME.sort_values(by=['state', 'city'])
-  print('Writing row quantity: ', DATAFRAME['city'].count())
-  DATAFRAME.to_csv(WALKSCORE_FINAL_CSV_FILENAME, index=False)
-  print('Finished writing: ', WALKSCORE_FINAL_CSV_FILENAME)
+  write_final_dataframe(LOGGER,
+                        get_final_walkscores_dataframe,
+                        WALKSCORE_FINAL_CSV_FILENAME,
+                        index=False)

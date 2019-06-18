@@ -2,7 +2,6 @@
 
 import pandas
 from merging_code.normalize_dataframes import drop_headers, rename_headers
-from merging_code.utils import print_data_table_length
 
 
 def get_all_states_from_index(state_city_index):
@@ -45,7 +44,7 @@ def set_index_as_state_and_city(dataframe):
   return dataframe
 
 
-def join_on_state_and_city(left_df, right_df):
+def join_on_state_and_city(logger, left_df, right_df):
   """ Join two dataframes on 'state' and 'city' columns. """
   left_df = set_index_as_state_and_city(left_df)
   right_df = set_index_as_state_and_city(right_df)
@@ -68,7 +67,7 @@ def join_on_state_and_city(left_df, right_df):
   common_df = common_df.reset_index()
   # Iterate by state.
   for state in sorted(states):
-    print('state: ', state)
+    logger.debug('state: {}'.format(state))
     # Create list of cities in dataframes to match against.
     left_cities = get_all_cities_from_state(left_missing_keys, state)
     right_cities = get_all_cities_from_state(right_missing_keys, state)
@@ -96,23 +95,24 @@ def join_on_state_and_city(left_df, right_df):
 # remove everything below this line, or rewrite it.
 
 
-def get_dataframe_from_merged_table_metadata(tables_metadata, debug=False):
+def get_dataframe_from_merged_table_metadata(logger, tables_metadata):
   """ Take table metadata, and return a merged panda datatable. """
   combined_table = None
   for table_metadata in tables_metadata:
     if combined_table is None:
-      combined_table = get_normalized_data_table(table_metadata)
+      combined_table = get_normalized_data_table(logger, table_metadata)
       continue
-    next_data_table = get_normalized_data_table(table_metadata)
-    combined_table = join_on_state_and_city(combined_table, next_data_table)
-    print_data_table_length('combined_table', combined_table, debug=debug)
+    next_data_table = get_normalized_data_table(logger, table_metadata)
+    combined_table = join_on_state_and_city(logger, combined_table,
+                                            next_data_table)
+    logger.info('Dataframe length: {}'.format(str(len(combined_table))))
   drop_headers('final_csv', combined_table)
   rename_headers('final_csv', combined_table)
-
   return combined_table
 
 
-def get_combined_dataframe(dataframes,
+def get_combined_dataframe(logger,
+                           dataframes,
                            how='outer',
                            merge_on='city',
                            optional_merge_on='county'):
@@ -129,11 +129,13 @@ def get_combined_dataframe(dataframes,
     combined_dataframe = combined_dataframe.merge(dataframe,
                                                   on=merge_on,
                                                   how=how)
-    print('row quantity: ', str(combined_dataframe.shape[0]))
+    log_msg = 'Row quantity for combined_dataframe: {}'.format(
+      str(len(combined_dataframe)))
+    logger.debug(log_msg)
   return combined_dataframe
 
 
-def get_normalized_data_table(table_metadata, debug=False):
+def get_normalized_data_table(logger, table_metadata):
   """ Input a dict with csv filename, suffix if available, the document label,
   and return a data_table. """
   data_table = pandas.read_csv(table_metadata['csv_filename'],
@@ -141,9 +143,9 @@ def get_normalized_data_table(table_metadata, debug=False):
                                encoding='ISO-8859-1')
   drop_headers(table_metadata['document_label'], data_table)
   rename_headers(table_metadata['document_label'], data_table)
-  print_data_table_length(table_metadata['document_label'],
-                          data_table,
-                          debug=debug)
+  log_msg = 'Normalized document_label: {} Dataframe length: {}'.format(
+    table_metadata['document_label'], str(len(data_table)))
+  logger.info(log_msg)
   # Deduplicate by ('state', 'city').
   data_table = data_table.drop_duplicates(['state', 'city'])
   return data_table

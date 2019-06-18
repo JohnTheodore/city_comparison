@@ -1,5 +1,6 @@
 import pandas
 from merging_code.merge_dataframes import prefix_match, join_on_state_and_city
+from merging_code.utils import get_logger
 
 
 def test_prefix_match():
@@ -35,6 +36,6 @@ def test_join_on_state_and_city():
     'data_x': [1, 4],
     'data_y': [1, 4]
   }).set_index(['state', 'city'])
-  actual = join_on_state_and_city(left_df,
+  actual = join_on_state_and_city(get_logger('test'), left_df,
                                   right_df).set_index(['state', 'city'])
   assert actual.equals(expected)

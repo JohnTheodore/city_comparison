@@ -19,8 +19,11 @@ from merging_code.merge_dataframes import get_dataframe_from_merged_table_metada
 from merging_code.normalize_dataframes import add_empty_columns
 from merging_code.secrets import GEOCODE_API_KEY
 from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file
+from merging_code.utils import get_logger, write_final_dataframe
 from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME
 from file_locations import GEOCODE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILENAME
+
+LOGGER = get_logger('scrape_geocodes')
 
 CSV_FILES_TO_MERGE = [{
   'csv_filename': CENSUS_FINAL_CSV_FILENAME,
@@ -99,15 +102,16 @@ def add_geo_metadata_to_dataframe(dataframe):
     if api_count % 50 == 0:
       log_msg = '### api_count: {}, cache_count: {} ###'.format(
         api_count, len(cached_json))
-      print(log_msg)
+      LOGGER.debug(log_msg)
       write_dict_to_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
   write_dict_to_json_file(GEOCODE_CACHED_JSON_FILENAME, cached_json)
   return dataframe
 
 
-def get_final_dataframe():
+def get_final_geocodes_dataframe():
   """ The main function which returns the final dataframe. """
-  dataframe = get_dataframe_from_merged_table_metadata(CSV_FILES_TO_MERGE)
+  dataframe = get_dataframe_from_merged_table_metadata(LOGGER,
+                                                       CSV_FILES_TO_MERGE)
   dataframe = dataframe[['city', 'state']]
   dataframe = add_geo_metadata_to_dataframe(dataframe)
   dataframe = dataframe.sort_values(by=['state', 'city'])
@@ -115,7 +119,7 @@ def get_final_dataframe():
 
 
 if __name__ == '__main__':
-  print('Starting write_geocodes_csv.py...')
-  get_final_dataframe().to_csv(GEOCODE_FINAL_CSV_FILENAME, index=False)
-  print('Finished write_geocodes_csv.py, wrote filename: ',
-        GEOCODE_FINAL_CSV_FILENAME)
+  write_final_dataframe(LOGGER,
+                        get_final_geocodes_dataframe,
+                        GEOCODE_FINAL_CSV_FILENAME,
+                        index=False)

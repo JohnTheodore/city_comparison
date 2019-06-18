@@ -4,10 +4,11 @@ Tests as a sanity check to make sure the data matches what we expect.
 
 from file_locations import MASTER_CSV_FILENAME
 from merging_code.headers_cleanup import HEADERS_CHANGE
-from merging_code.utils import get_dataframe_from_spreadsheet
+from merging_code.utils import get_dataframe_from_spreadsheet, get_logger
 from merging_tests.utils import get_city_state_row
 
-DATAFRAME = get_dataframe_from_spreadsheet(MASTER_CSV_FILENAME)
+DATAFRAME = get_dataframe_from_spreadsheet(get_logger('test'),
+                                           MASTER_CSV_FILENAME)
 
 
 def test_nyc_area():
