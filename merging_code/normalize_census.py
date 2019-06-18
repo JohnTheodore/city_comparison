@@ -3,11 +3,11 @@
 import pandas
 
 from file_locations import CENSUS_AREA_2010_CSV_FILENAME, CENSUS_FINAL_CSV_FILENAME
-from merging_code.utils import get_dataframe_from_spreadsheet, normalize_headers_in_dataframes
-from merging_code.utils import remove_substring_from_end_of_string
+from merging_code.utils import get_dataframe_from_spreadsheet, remove_substring_from_end_of_string
+from merging_code.normalize_dataframes import normalize_headers_in_dataframes
 
 
-def add_city_state_to_row(row):
+def parse_city_state_from_row(row):
   """ Take a row, add the city/state cells to the row if available. """
   city, state = ['NULL', 'NULL']
   if row['Geographic area'].count(' - ') == 2:
@@ -18,7 +18,8 @@ def add_city_state_to_row(row):
 
 def add_city_state_to_dataframe(dataframe):
   """ Clean up the census 2010 csv. """
-  dataframe[['city', 'state']] = dataframe.apply(add_city_state_to_row, axis=1)
+  dataframe[['city', 'state']] = dataframe.apply(parse_city_state_from_row,
+                                                 axis=1)
   dataframe = dataframe[dataframe.state != "NULL"]
   return dataframe
 

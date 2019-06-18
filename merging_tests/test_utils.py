@@ -1,4 +1,5 @@
-from merging_code.compile_city_comparison import get_dataframe_from_merged_table_metadata, CSV_FILES_TO_MERGE
+from merging_code.compile_city_comparison import CSV_FILES_TO_MERGE
+from merging_code.merge_dataframes import get_dataframe_from_merged_table_metadata
 from merging_code.utils import remove_substring_from_end_of_string
 from merging_tests.utils import get_city_state_row
 

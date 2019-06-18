@@ -2,9 +2,10 @@
 """ Merge all the csv files from experian city credit scores into one combined csv. """
 
 from file_locations import EXPERIAN_FINAL_CSV_FILENAME, EXPERIAN_SOURCE_CSV_DIR
+from merging_code.normalize_dataframes import drop_empty_rows_from_dataframes, normalize_headers_in_dataframes
+from merging_code.normalize_dataframes import lower_case_dataframes_columns
 from merging_code.utils import get_dataframe_from_spreadsheet, get_all_filenames_with_extension
-from merging_code.utils import normalize_headers_in_dataframes, drop_empty_rows_from_dataframes
-from merging_code.utils import get_combined_dataframe, lower_case_dataframes_columns
+from merging_code.merge_dataframes import get_combined_dataframe
 
 
 def get_dict_of_all_experian_dataframes(csv_files):

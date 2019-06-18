@@ -4,8 +4,8 @@ from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FIL
 from file_locations import EXPERIAN_FINAL_CSV_FILENAME, ZILLOW_FINAL_CSV_FILENAME
 from file_locations import WALKSCORE_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
 from merging_code.headers_cleanup import HEADERS_CHANGE
-from merging_code.utils import get_dataframe_from_merged_table_metadata, move_columns_to_left_of_dataframe
-from merging_code.utils import divide_two_columns, drop_headers
+from merging_code.merge_dataframes import get_dataframe_from_merged_table_metadata
+from merging_code.normalize_dataframes import move_columns_to_left_of_dataframe, divide_two_columns, drop_headers
 
 CSV_FILES_TO_MERGE = [{
   'csv_filename': CENSUS_FINAL_CSV_FILENAME,
