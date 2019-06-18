@@ -6,8 +6,9 @@ import pandas
 from file_locations import FBI_CRIME_2014_XLS_FILENAME, FBI_CRIME_2015_XLS_FILENAME
 from file_locations import FBI_CRIME_2016_XLS_FILENAME, FBI_CRIME_2017_XLS_FILENAME
 from file_locations import FBI_CRIME_COMBINED_CSV_FILENAME
-from merging_code.utils import get_dataframe_from_spreadsheet, normalize_headers_in_dataframe
-from merging_code.utils import drop_empty_rows_from_dataframes, lower_case_columns
+from merging_code.utils import get_dataframe_from_spreadsheet
+from merging_code.normalize_dataframes import drop_empty_rows_from_dataframes, lower_case_columns
+from merging_code.normalize_dataframes import normalize_headers_in_dataframe
 
 
 def get_fbi_table_metadata():
@@ -64,7 +65,7 @@ def normalize_dataframe_by_pop100k(dataframe):
 
 
 def add_state_to_missing_state_col_cells(dataframe):
-  """ FBI xls files are messed up, this adds the state where missing on the first column. """
+  """ FBI xls files are messed up, this adds the state where missing on the state column. """
   # Propagate 'state' column.
   state = None
   for index, row in dataframe.iterrows():
@@ -115,7 +116,7 @@ def get_series_with_annual_percent_change_for_columns(row, numeric_columns):
   return pandas.Series(new_columns)
 
 
-def get_dataframe_with_all_numeric_fields_change_percent(dataframe):
+def add_annual_percent_change_for_numeric_fields(dataframe):
   """ Calculate annual percent change for numeric fields in Dataframe. """
   numeric_columns = dataframe.select_dtypes(
     include=['float64', 'int64']).columns.to_list()
@@ -156,7 +157,7 @@ def get_dataframe_with_annual_pop_percent_chg(first, last):
                                             left_index=True,
                                             right_index=True,
                                             suffixes=('_ratio', '_diff'))
-  population_percent_change = get_dataframe_with_all_numeric_fields_change_percent(
+  population_percent_change = add_annual_percent_change_for_numeric_fields(
     population_ratio)
   population_percent_change = population_percent_change.drop(['year'], axis=1)
   return population_percent_change

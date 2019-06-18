@@ -4,13 +4,13 @@ Get the housing data for each row in GEOCODE_FINAL_CSV_FILENAME.
 """
 import time
 import pandas
-from termcolor import cprint
 import quandl
+from termcolor import cprint
 from file_locations import GEOCODE_FINAL_CSV_FILENAME, ZILLOW_CACHED_JSON_FILENAME
 from file_locations import CITY_CODES_CSV_FILENAME, ZILLOW_FINAL_CSV_FILENAME
 from merging_code.merge_dataframes import join_on_state_and_city
-from merging_code.utils import get_dataframe_from_spreadsheet, add_empty_columns, normalize_headers_in_dataframe
-from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file
+from merging_code.normalize_dataframes import add_empty_columns, normalize_headers_in_dataframe
+from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file, get_dataframe_from_spreadsheet
 from merging_code.secrets import QUANDL_API_KEY
 
 US_STATES_DICT = {
@@ -113,7 +113,7 @@ def add_zillow_price_code_to_row(row, city_code, zillow_price_code, api_count):
   return (row, api_count, True)
 
 
-def add_housing_data_to_row(row, api_count):
+def add_zillow_price_codes_to_row(row, api_count):
   """ Query quandl for all the housing data we want for each city/state. return pandas dataframe. """
   city_codes = row.get('city_code').split('|')
   working_city_code = False
@@ -133,11 +133,11 @@ def add_housing_data_to_row(row, api_count):
   return (row, api_count)
 
 
-def add_housing_data_to_dataframe(dataframe):
+def add_zillow_price_codes_to_dataframe(dataframe):
   """ Parse every city row from the geocode csv, add the walkscores cells to each. """
   api_count = 0
   for index, row in dataframe.iterrows():
-    new_row, api_count = add_housing_data_to_row(row, api_count)
+    new_row, api_count = add_zillow_price_codes_to_row(row, api_count)
     dataframe.loc[index] = new_row
     api_pause = 20
     if api_count > 0 and api_count % api_pause == 0:
@@ -152,10 +152,13 @@ def add_housing_data_to_dataframe(dataframe):
 
 
 def normalize_city_codes_dataframe(dataframe):
-  """ Cleanup the csv from quandl/zillow with city codes so it's ready for joining later. """
+  """ Add city, state and county columns, fill in the values. Lowercase everything.
+  When we find duplicate cities with multiple rows, we merge them, and join the
+  city code with a |. """
 
-  def get_city_and_state_columns(area):
-    """ return a pandas series with the city, count and state, this is used by apply. """
+  def parse_city_county_state(area):
+    """ Return a pandas series with the city, county and state, this is used by apply.
+    eg, area could be:  'Amesbury, Essex, MA' """
     area = area.strip().lower()
     area_list = area.split(', ')
     assert len(area_list) < 4
@@ -168,7 +171,7 @@ def normalize_city_codes_dataframe(dataframe):
     return pandas.Series([city, county, state])
 
   new_cols = ['city', 'county', 'state']
-  dataframe[new_cols] = dataframe['AREA'].apply(get_city_and_state_columns)
+  dataframe[new_cols] = dataframe['AREA'].apply(parse_city_county_state)
   # unfortunately, there are multiple codes for the same city
   # and some of them don't work.
   dataframe['CODE'] = dataframe['CODE'].apply(str)
@@ -179,17 +182,11 @@ def normalize_city_codes_dataframe(dataframe):
   return dataframe
 
 
-def get_normalized_city_codes_dataframe():
-  """ This is the dataframe zillow provides for mapping cities to their city code. """
-  dataframe = get_dataframe_from_spreadsheet(CITY_CODES_CSV_FILENAME,
-                                             delimiter='|')
-  dataframe = normalize_city_codes_dataframe(dataframe)
-  return dataframe
-
-
 def get_final_dataframe():
   """ The main function which returns the final dataframe. """
-  city_codes_dataframe = get_normalized_city_codes_dataframe()
+  city_codes_dataframe = get_dataframe_from_spreadsheet(CITY_CODES_CSV_FILENAME,
+                                                        delimiter='|')
+  city_codes_dataframe = normalize_city_codes_dataframe(city_codes_dataframe)
   geocodes_dataframe = get_dataframe_from_spreadsheet(
     GEOCODE_FINAL_CSV_FILENAME)
   combined_dataframe = join_on_state_and_city(geocodes_dataframe,
@@ -197,7 +194,7 @@ def get_final_dataframe():
   combined_dataframe = add_empty_columns(combined_dataframe,
                                          ZILLOW_PRICE_CODES.keys())
   combined_dataframe = combined_dataframe.reset_index()
-  final_dataframe = add_housing_data_to_dataframe(combined_dataframe)
+  final_dataframe = add_zillow_price_codes_to_dataframe(combined_dataframe)
   final_dataframe = final_dataframe.drop(['index'], axis=1)
   final_dataframe = final_dataframe.sort_values(by=['state', 'city'])
   return final_dataframe
