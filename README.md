@@ -17,6 +17,8 @@ source py37-mac/bin/activate
 pip install -r requirements-dev.txt
 ```
 
+Run python run_tests_locally.py _before_ you make a pull request.
+
 ## Badges
 
 |||
