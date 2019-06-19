@@ -6,9 +6,11 @@ import pandas
 from file_locations import FBI_CRIME_2014_XLS_FILENAME, FBI_CRIME_2015_XLS_FILENAME
 from file_locations import FBI_CRIME_2016_XLS_FILENAME, FBI_CRIME_2017_XLS_FILENAME
 from file_locations import FBI_CRIME_COMBINED_CSV_FILENAME
-from merging_code.utils import get_dataframe_from_spreadsheet
+from merging_code.utils import get_dataframe_from_spreadsheet, get_logger, write_final_dataframe
 from merging_code.normalize_dataframes import drop_empty_rows_from_dataframes, lower_case_columns
 from merging_code.normalize_dataframes import normalize_headers_in_dataframe
+
+LOGGER = get_logger('normalize_fbi')
 
 
 def get_fbi_table_metadata():
@@ -168,7 +170,8 @@ def get_concatenated_fbi_dataframe_from_xls_files(fbi_table_metadata):
   normalized_fbi_dataframes = []
   for table_metadata in fbi_table_metadata:
     document_label = table_metadata['document_label']
-    dataframe = get_dataframe_from_spreadsheet(table_metadata['xls_filename'],
+    dataframe = get_dataframe_from_spreadsheet(LOGGER,
+                                               table_metadata['xls_filename'],
                                                header=3,
                                                sheet_type='xls')
     dataframe = normalize_headers_in_dataframe(document_label, dataframe)
@@ -193,7 +196,7 @@ def average_and_round_combined_fbi_dataframe(concatenated_fbi_dataframe):
   return combined_mean_rounded
 
 
-def get_final_dataframe():
+def get_final_fbi_dataframe():
   """ The main function which returns the final dataframe with all merged/meaned fbi xls files. """
   fbi_table_metadata = get_fbi_table_metadata()
   combined_fbi_dataframe = get_concatenated_fbi_dataframe_from_xls_files(
@@ -225,8 +228,13 @@ def get_final_dataframe():
   # Drop the mean population, it won't be used.
   result = result.drop(['population_mean'], axis=1)
   result = result.sort_values(by=['city', 'state'])
+  LOGGER.info('FBI Crime dataframe normalized. Total row count: {}'.format(
+    str(len(result))))
   return result
 
 
 if __name__ == '__main__':
-  get_final_dataframe().to_csv(FBI_CRIME_COMBINED_CSV_FILENAME, index=True)
+  write_final_dataframe(LOGGER,
+                        get_final_fbi_dataframe,
+                        FBI_CRIME_COMBINED_CSV_FILENAME,
+                        index=True)

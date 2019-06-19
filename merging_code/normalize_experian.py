@@ -5,14 +5,19 @@ from file_locations import EXPERIAN_FINAL_CSV_FILENAME, EXPERIAN_SOURCE_CSV_DIR
 from merging_code.normalize_dataframes import drop_empty_rows_from_dataframes, normalize_headers_in_dataframes
 from merging_code.normalize_dataframes import lower_case_dataframes_columns
 from merging_code.utils import get_dataframe_from_spreadsheet, get_all_filenames_with_extension
+from merging_code.utils import get_logger, write_final_dataframe
 from merging_code.merge_dataframes import get_combined_dataframe
+
+LOGGER = get_logger('normalize_experian')
 
 
 def get_dict_of_all_experian_dataframes(csv_files):
   """ Turn a list of csv filenames into a list of panda dataframe objects. """
   dataframes = {}
   for csv_file in csv_files:
-    dataframe = get_dataframe_from_spreadsheet(csv_file, sheet_type='csv')
+    dataframe = get_dataframe_from_spreadsheet(LOGGER,
+                                               csv_file,
+                                               sheet_type='csv')
     dataframes[csv_file] = dataframe
   return dataframes
 
@@ -39,7 +44,7 @@ def change_credit_score_values_to_int(dataframes):
   return dataframes
 
 
-def get_final_dataframe():
+def get_final_experian_dataframe():
   """ Turn all the experian CSVs into dataframes, merge them, return the result. """
   experian_csv_filenames = get_all_filenames_with_extension(
     EXPERIAN_SOURCE_CSV_DIR, 'csv')
@@ -53,6 +58,7 @@ def get_final_dataframe():
                                              ['city', 'state', 'county'])
   dataframes = change_credit_score_values_to_int(dataframes)
   final_combined_dataframe = get_combined_dataframe(
+    LOGGER,
     dataframes,
     how='outer',
     merge_on=['city', 'state', 'credit score'],
@@ -61,4 +67,7 @@ def get_final_dataframe():
 
 
 if __name__ == '__main__':
-  get_final_dataframe().to_csv(EXPERIAN_FINAL_CSV_FILENAME, index=False)
+  write_final_dataframe(LOGGER,
+                        get_final_experian_dataframe,
+                        EXPERIAN_FINAL_CSV_FILENAME,
+                        index=False)

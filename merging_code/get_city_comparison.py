@@ -6,6 +6,9 @@ from file_locations import WALKSCORE_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
 from merging_code.headers_cleanup import HEADERS_CHANGE
 from merging_code.merge_dataframes import get_dataframe_from_merged_table_metadata
 from merging_code.normalize_dataframes import move_columns_to_left_of_dataframe, divide_two_columns, drop_headers
+from merging_code.utils import get_logger, write_final_dataframe
+
+LOGGER = get_logger('get_city_comparison')
 
 CSV_FILES_TO_MERGE = [{
   'csv_filename': CENSUS_FINAL_CSV_FILENAME,
@@ -29,10 +32,10 @@ CSV_FILES_TO_MERGE = [{
 }]
 
 
-def get_final_dataframe():
+def get_final_city_comparison_dataframe():
   """ The main function which returns the final dataframe. """
-  dataframe = get_dataframe_from_merged_table_metadata(CSV_FILES_TO_MERGE,
-                                                       debug=False)
+  dataframe = get_dataframe_from_merged_table_metadata(LOGGER,
+                                                       CSV_FILES_TO_MERGE)
   land_area_key = HEADERS_CHANGE['census_2010']['rename_columns'][
     'area in square miles - land area']
   dataframe = divide_two_columns(dataframe, 'population density', 'population',
@@ -46,5 +49,7 @@ def get_final_dataframe():
 
 if __name__ == '__main__':
   # Write the combined dataframe table to the final csv file.
-  get_final_dataframe().to_csv(MASTER_CSV_FILENAME, index=False)
-  print('Wrote file: ', MASTER_CSV_FILENAME)
+  write_final_dataframe(LOGGER,
+                        get_final_city_comparison_dataframe,
+                        MASTER_CSV_FILENAME,
+                        index=False)
