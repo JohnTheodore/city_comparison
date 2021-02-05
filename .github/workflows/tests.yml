@@ -26,5 +26,4 @@ jobs:
         vulture --exclude "*py37-mac*" .
         xenon --max-absolute B --max-modules A --max-average A --ignore '*py38-mac*' .
         python -m pytest --color=yes --cov=./merging_code -n auto merging_tests
-
-# add codecov
+        codecov
