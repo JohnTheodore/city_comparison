@@ -6,6 +6,7 @@ in the dev environment.
 
 import subprocess
 # pylint: disable=E0401
+import sys
 import yaml
 from merging_code.utils import get_logger, stop_watch_function
 
@@ -49,7 +50,7 @@ def check_and_report_on_test_commands(ran_commands):
     print(process.stdout.read().decode('ascii'))
     print(process.stderr.read().decode('ascii'))
   if exit_errors:
-    exit(1)
+    sys.exit(1)
 
 
 def run_tests_locally():
