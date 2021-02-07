@@ -9,6 +9,11 @@
 - walkscores for each city
 - zillow rental index per square foot dollar values for each city.
 
+## Compile the CSV from the various primary sources yourself
+```
+PYTHONPATH=. python merging_code/get_city_comparison.py
+```
+
 ## Development Setup
 
 ```

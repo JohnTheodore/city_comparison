@@ -115,7 +115,7 @@ def move_columns_to_left_of_dataframe(dataframe, new_columns_order):
     old_columns_order.insert(
       col_index, old_columns_order.pop(old_columns_order.index(column)))
     col_index += 1
-    dataframe = dataframe.ix[:, old_columns_order]
+    dataframe = dataframe.loc[:, old_columns_order]
   return dataframe
 
 
