@@ -12,6 +12,7 @@ in secrets.py
 
 # pypi imports
 import ssl
+import sys
 import certifi
 import geopy
 
@@ -30,7 +31,7 @@ CSV_FILES_TO_MERGE = [{
   'document_label': 'census_2010',
 }, {
   'csv_filename': FBI_CRIME_COMBINED_CSV_FILENAME,
-  'document_label': 'fbi_2017',
+  'document_label': 'fbi',
   'suffix': '_fbi_crime'
 }, {
   'csv_filename': EXPERIAN_FINAL_CSV_FILENAME,
@@ -46,7 +47,9 @@ def get_geopy_googlev3_locator(geocode_api_key):
   # To prevent vulture complaining about unused attribute.
   assert geopy.geocoders.options.default_ssl_context == ctx
   if geocode_api_key == '':
-    return None
+    sys.exit(
+      'Missing geocode_api_key. Please go here -> https://console.cloud.google.com/apis/credentials and add the code as export GEOCODE_API_KEY="secret_code"'
+    )
   geolocator = geopy.GoogleV3(user_agent='where should I live next',
                               api_key=geocode_api_key,
                               timeout=3)

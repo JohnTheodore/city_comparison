@@ -19,7 +19,7 @@ CSV_FILES_TO_MERGE = [{
   'suffix': '_walkscore'
 }, {
   'csv_filename': FBI_CRIME_COMBINED_CSV_FILENAME,
-  'document_label': 'fbi_2017',
+  'document_label': 'fbi',
   'suffix': '_fbi_crime'
 }, {
   'csv_filename': EXPERIAN_FINAL_CSV_FILENAME,
