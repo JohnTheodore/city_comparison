@@ -15,12 +15,12 @@ LOGGER = get_logger('run_tests_locally')
 
 def get_test_commands_to_run():
   """ Get a list of all commands from script on .travis.yml """
-  with open('.travis.yml', 'r') as filehandler:
+  with open('.github/workflows/tests.yml', 'r') as filehandler:
     try:
-      travis_config = yaml.safe_load(filehandler)
+      test_config = yaml.safe_load(filehandler)
     except yaml.YAMLError as exc:
       LOGGER.error(exc)
-  return travis_config.get('script')
+  return test_config['jobs']['build']['steps'][3]['run'].split('\n')
 
 
 def run_commands(test_commands):
@@ -55,8 +55,8 @@ def check_and_report_on_test_commands(ran_commands):
 
 def run_tests_locally():
   """ Run all the travis script test commands locally. """
-  travis_test_commands = get_test_commands_to_run()
-  commands_ran = run_commands(travis_test_commands)
+  test_commands = get_test_commands_to_run()
+  commands_ran = run_commands(test_commands)
   check_and_report_on_test_commands(commands_ran)
 
 

@@ -23,7 +23,7 @@ jobs:
         flake8
         yapf --parallel --verbose --recursive --style .style.yapf --exclude 'py38-mac' --diff .
         find . -type f -name "*.py" ! -path "./py38-mac/*" ! -path "./merging_tests/*" | xargs pylint
-        vulture --exclude "*py37-mac*" .
+        vulture --exclude "*py38-mac*" .
         xenon --max-absolute B --max-modules A --max-average A --ignore '*py38-mac*' .
         python -m pytest --color=yes --cov=./merging_code -n auto merging_tests
         codecov
