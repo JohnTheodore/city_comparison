@@ -18,7 +18,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements-dev.txt
         pip install codecov python-Levenshtein
-    - name: run tests 
+    - name: run tests
+      env:
+        GEOCODE_API_KEY: ${{ secrets.GEOCODE_API_KEY }}
+        QUANDL_API_KEY: ${{ secrets.GEOCODE_API_KEY }}
       run: |
         flake8
         yapf --parallel --verbose --recursive --style .style.yapf --exclude 'py38-mac' --diff .
