@@ -3,6 +3,7 @@
 Get the housing data for each row in GEOCODE_FINAL_CSV_FILENAME.
 """
 import time
+import sys
 import pandas
 import quandl
 from file_locations import GEOCODE_FINAL_CSV_FILENAME, ZILLOW_CACHED_JSON_FILENAME
@@ -10,7 +11,7 @@ from file_locations import CITY_CODES_CSV_FILENAME, ZILLOW_FINAL_CSV_FILENAME
 from merging_code.merge_dataframes import join_on_state_and_city
 from merging_code.normalize_dataframes import add_empty_columns, normalize_headers_in_dataframe
 from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file, get_dataframe_from_spreadsheet
-from merging_code.utils import get_logger, write_final_dataframe
+from merging_code.utils import get_logger, write_final_dataframe, is_github_actions
 from merging_code.secrets import QUANDL_API_KEY
 
 LOGGER = get_logger('scrape_zillow')
@@ -87,6 +88,11 @@ def quandl_get_dataframe(quandl_get_value, api_count):
   else:
     api_count += 1
     try:
+      if QUANDL_API_KEY == '' and not is_github_actions():
+        sys.exit(
+          'Missing zillow [quandl] API key. Go here -> https://www.quandl.com/account/profile. \
+                Then set environment variable, export QUANDL_API_KEY="api_key".'
+        )
       quandl_value = quandl.get(quandl_get_value,
                                 collapse='annual',
                                 order='desc',

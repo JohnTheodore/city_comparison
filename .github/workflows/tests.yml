@@ -21,12 +21,12 @@ jobs:
     - name: run tests
       env:
         GEOCODE_API_KEY: ${{ secrets.GEOCODE_API_KEY }}
-        QUANDL_API_KEY: ${{ secrets.GEOCODE_API_KEY }}
+        QUANDL_API_KEY: ${{ secrets.QUANDL_API_KEY }}
       run: |
-        flake8
-        yapf --parallel --verbose --recursive --style .style.yapf --exclude 'py38-mac' --diff .
-        find . -type f -name "*.py" ! -path "./py38-mac/*" ! -path "./merging_tests/*" | xargs pylint
-        vulture --exclude "*py38-mac*" .
-        xenon --max-absolute B --max-modules A --max-average A --ignore '*py38-mac*' .
+        flake8 -v --exclude py3*-*
+        yapf --parallel --verbose --recursive --style .style.yapf --exclude 'py3*-*' --diff .
+        find . -type f -name "*.py" ! -path "./py3*-*/*" ! -path "./merging_tests/*" | xargs pylint
+        vulture --exclude "*py3*-*" .
+        xenon --max-absolute B --max-modules A --max-average A --ignore '*py3*-*' .
         python -m pytest --color=yes --cov=./merging_code -n auto merging_tests
         codecov

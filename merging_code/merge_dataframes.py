@@ -125,6 +125,10 @@ def get_combined_dataframe(logger,
     merge_on = ['city', 'state', 'credit score']
     for optional_merge in optional_merge_on:
       if optional_merge in dataframe:
+        # We can only perform an outer merge if both the
+        # `combined_dataframe` and `dataframe` have the same columns
+        # we want to merge on.
+        assert optional_merge in combined_dataframe
         merge_on.append(optional_merge)
     combined_dataframe = combined_dataframe.merge(dataframe,
                                                   on=merge_on,
