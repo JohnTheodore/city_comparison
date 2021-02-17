@@ -7,6 +7,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      GEOCODE_API_KEY: ${{ secrets.GEOCODE_API_KEY }}
+      QUANDL_API_KEY: ${{ secrets.QUANDL_API_KEY }}
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
@@ -19,9 +22,6 @@ jobs:
         pip install -r requirements-dev.txt
         pip install codecov python-Levenshtein
     - name: run tests
-      env:
-        GEOCODE_API_KEY: ${{ secrets.GEOCODE_API_KEY }}
-        QUANDL_API_KEY: ${{ secrets.QUANDL_API_KEY }}
       run: |
         flake8 -v --exclude py3*-*
         yapf --parallel --verbose --recursive --style .style.yapf --exclude 'py3*-*' --diff .
