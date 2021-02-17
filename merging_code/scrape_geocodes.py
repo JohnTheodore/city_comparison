@@ -12,6 +12,7 @@ in secrets.py
 
 # pypi imports
 import ssl
+import sys
 import certifi
 import geopy
 
@@ -19,7 +20,7 @@ from merging_code.merge_dataframes import get_dataframe_from_merged_table_metada
 from merging_code.normalize_dataframes import add_empty_columns
 from merging_code.secrets import GEOCODE_API_KEY
 from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file
-from merging_code.utils import get_logger, write_final_dataframe
+from merging_code.utils import get_logger, write_final_dataframe, is_github_actions
 from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME
 from file_locations import GEOCODE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILENAME
 
@@ -30,7 +31,7 @@ CSV_FILES_TO_MERGE = [{
   'document_label': 'census_2010',
 }, {
   'csv_filename': FBI_CRIME_COMBINED_CSV_FILENAME,
-  'document_label': 'fbi_2017',
+  'document_label': 'fbi',
   'suffix': '_fbi_crime'
 }, {
   'csv_filename': EXPERIAN_FINAL_CSV_FILENAME,
@@ -45,8 +46,10 @@ def get_geopy_googlev3_locator(geocode_api_key):
   geopy.geocoders.options.default_ssl_context = ctx
   # To prevent vulture complaining about unused attribute.
   assert geopy.geocoders.options.default_ssl_context == ctx
-  if geocode_api_key == '':
-    return None
+  if geocode_api_key == '' and not is_github_actions():
+    sys.exit(
+      'Missing geocode_api_key. Please go here -> https://console.cloud.google.com/apis/credentials. \
+      Then add the API key as export GEOCODE_API_KEY="secret_code"')
   geolocator = geopy.GoogleV3(user_agent='where should I live next',
                               api_key=geocode_api_key,
                               timeout=3)

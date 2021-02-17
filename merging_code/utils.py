@@ -29,6 +29,14 @@ def get_logger(logger_name):
   return logger
 
 
+def is_github_actions():
+  """ Helper function to determine if we're in a github actions vm or not """
+  github_actions = bool(os.environ.get('GITHUB_ACTIONS'))
+  if github_actions:
+    return True
+  return False
+
+
 def stop_watch_function(logger, function):
   """ Run a function, log how long it took, then return it's value. """
   logger.info('Starting {}'.format(function.__name__))

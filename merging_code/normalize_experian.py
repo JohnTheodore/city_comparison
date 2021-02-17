@@ -57,12 +57,13 @@ def get_final_experian_dataframe():
   dataframes = lower_case_dataframes_columns(dataframes,
                                              ['city', 'state', 'county'])
   dataframes = change_credit_score_values_to_int(dataframes)
+  # We used to perform `optional_merge_on=['county']`, however 3 of
+  # our primary sources, '100_biggest_cities*', '500_cities_best*',
+  # '500_cities_worst*', don't have the 'county' column, while the
+  # rest of the Experian CSV files do.  So we will drop merging on
+  # 'county' for now.
   final_combined_dataframe = get_combined_dataframe(
-    LOGGER,
-    dataframes,
-    how='outer',
-    merge_on=['city', 'state', 'credit score'],
-    optional_merge_on=['county'])
+    LOGGER, dataframes, how='outer', merge_on=['city', 'state', 'credit score'])
   return final_combined_dataframe
 
 

@@ -19,4 +19,4 @@ def test_madison_row():
                                                        CSV_FILES_TO_MERGE)
   madison = get_city_state_row(dataframe, 'madison', 'wisconsin')
   madison_violent_crime = round(float(madison.get('violent crime')), 2)
-  assert madison_violent_crime == 351.6
+  assert madison_violent_crime == 365.1

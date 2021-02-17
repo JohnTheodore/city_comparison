@@ -3,9 +3,9 @@
 import datetime
 import math
 import pandas
-from file_locations import FBI_CRIME_2014_XLS_FILENAME, FBI_CRIME_2015_XLS_FILENAME
+from file_locations import FBI_CRIME_2018_XLS_FILENAME, FBI_CRIME_2015_XLS_FILENAME
 from file_locations import FBI_CRIME_2016_XLS_FILENAME, FBI_CRIME_2017_XLS_FILENAME
-from file_locations import FBI_CRIME_COMBINED_CSV_FILENAME
+from file_locations import FBI_CRIME_2019_XLS_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME
 from merging_code.utils import get_dataframe_from_spreadsheet, get_logger, write_final_dataframe
 from merging_code.normalize_dataframes import drop_empty_rows_from_dataframes, lower_case_columns
 from merging_code.normalize_dataframes import normalize_headers_in_dataframe
@@ -16,21 +16,25 @@ LOGGER = get_logger('normalize_fbi')
 def get_fbi_table_metadata():
   """ This table_metadata is used to iterate over all 4 fbi xls crime files. """
   return [{
-    'xls_filename': FBI_CRIME_2014_XLS_FILENAME,
+    'xls_filename': FBI_CRIME_2015_XLS_FILENAME,
     'document_label': 'fbi_2014',
     'year': 2014,
   }, {
-    'xls_filename': FBI_CRIME_2015_XLS_FILENAME,
+    'xls_filename': FBI_CRIME_2016_XLS_FILENAME,
     'document_label': 'fbi_2015',
     'year': 2015,
   }, {
-    'xls_filename': FBI_CRIME_2016_XLS_FILENAME,
+    'xls_filename': FBI_CRIME_2017_XLS_FILENAME,
     'document_label': 'fbi_2016',
     'year': 2016,
   }, {
-    'xls_filename': FBI_CRIME_2017_XLS_FILENAME,
+    'xls_filename': FBI_CRIME_2018_XLS_FILENAME,
     'document_label': 'fbi_2017',
     'year': 2017,
+  }, {
+    'xls_filename': FBI_CRIME_2019_XLS_FILENAME,
+    'document_label': 'fbi_2019',
+    'year': 2019,
   }]
 
 

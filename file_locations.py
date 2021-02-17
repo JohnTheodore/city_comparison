@@ -23,10 +23,11 @@ CITY_CODES_CSV_FILENAME = './primary_sources/zillow/zillow_city_codes.csv'
 
 # ./primary_sources/fbi
 # pylint: disable=line-too-long
-FBI_CRIME_2014_XLS_FILENAME = './primary_sources/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2014.xls'
 FBI_CRIME_2015_XLS_FILENAME = './primary_sources/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2015.xls'
 FBI_CRIME_2016_XLS_FILENAME = './primary_sources/fbi/Table_6_Offenses_Known_to_Law_Enforcement_by_State_by_City_2016.xls'
 FBI_CRIME_2017_XLS_FILENAME = './primary_sources/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2017.xls'
+FBI_CRIME_2018_XLS_FILENAME = './primary_sources/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2018.xls'
+FBI_CRIME_2019_XLS_FILENAME = './primary_sources/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2019.xls'
 FBI_CRIME_COMBINED_CSV_FILENAME = './primary_sources/fbi/fbi_normalized.csv'
 
 # master compiled csv output
