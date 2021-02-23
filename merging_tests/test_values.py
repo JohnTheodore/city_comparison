@@ -30,5 +30,4 @@ def test_nyc_walkscores():
   """ We know the 2010 census area for nyc is 302.64, let's test this. """
   nyc_row = get_city_state_row(DATAFRAME, 'new york', 'new york')
   assert float(nyc_row.get('walkscore')) == 98.0
-  assert float(nyc_row.get('bikescore')) == 89.0
   assert float(nyc_row.get('transitscore')) == 100.0

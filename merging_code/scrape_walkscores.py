@@ -5,6 +5,7 @@ in the cache, and write the csv. We use the csv from geocode in order to have th
 right lat/long/address
 """
 import time
+import sys
 import requests
 from merging_code.normalize_dataframes import add_empty_columns
 from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file, get_dataframe_from_spreadsheet
@@ -34,15 +35,20 @@ def get_mobility_scores_from_api(city_row):
   """ Get the walkscore json result from the walkscore api. """
   # We hardcode a sleep time of 3 between every request, this works.
   time.sleep(3)
-  address = city_row['reverse_address']
   lat = city_row['latitude']
   long = city_row['longitude']
   # I have no idea what is wrong with walkscore, but https doesn't work. only http.
   scheme = 'http://'
   fqdn = 'api.walkscore.com'
-  url = '{}{}/score?format=json&address={}&lat={}&lon={}&transit=1&bike=1&wsapikey={}'.format(
-    scheme, fqdn, address, lat, long, WALKSCORE_API_KEY)
+  url = '{}{}/score?format=json&lat={}&lon={}&transit=1&bike=1&wsapikey={}'.format(
+    scheme, fqdn, lat, long, WALKSCORE_API_KEY)
   result = requests.get(url)
+  json_value = result.json()
+  if json_value['status'] == 40:
+    print("export WALKSCORE_API_KEY='secret_key'")
+    sys.exit(
+      'Misisng walkscore api key, get one here: https://www.walkscore.com/professional/api-sign-up.php'
+    )
   result.raise_for_status()
   return result.json()
 
