@@ -66,7 +66,10 @@ def get_final_experian_dataframe():
   # 2021-02-23: I put the optional_merge_on back, and decided to comment out the
   # 3 files mentioned above instead.
   final_combined_dataframe = get_combined_dataframe(
-    LOGGER, dataframes, how='outer', merge_on=['city', 'state', 'credit score'],
+    LOGGER,
+    dataframes,
+    how='outer',
+    merge_on=['city', 'state', 'credit score'],
     optional_merge_on=['county'])
   return final_combined_dataframe
 
