@@ -1,7 +1,7 @@
 """ Join Census and FBI data into one combined pandas DataFrame. """
 
 from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME
-from file_locations import EXPERIAN_FINAL_CSV_FILENAME, ZILLOW_FINAL_CSV_FILENAME
+from file_locations import ZILLOW_FINAL_CSV_FILENAME
 from file_locations import WALKSCORE_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
 from merging_code.headers_cleanup import HEADERS_CHANGE
 from merging_code.merge_dataframes import get_dataframe_from_merged_table_metadata
@@ -21,10 +21,6 @@ CSV_FILES_TO_MERGE = [{
   'csv_filename': FBI_CRIME_COMBINED_CSV_FILENAME,
   'document_label': 'fbi',
   'suffix': '_fbi_crime'
-}, {
-  'csv_filename': EXPERIAN_FINAL_CSV_FILENAME,
-  'document_label': 'experian_2017',
-  'suffix': 'experian_2017'
 }, {
   'csv_filename': ZILLOW_FINAL_CSV_FILENAME,
   'document_label': 'zillow_final',

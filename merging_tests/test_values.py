@@ -20,10 +20,10 @@ def test_nyc_area():
   assert float(nyc_area) == 302.64
 
 
-def test_nyc_credit_score():
-  """ We know the 2010 census area for nyc is 302.64, let's test this. """
-  nyc_row = get_city_state_row(DATAFRAME, 'new york', 'new york')
-  assert int(nyc_row.get('credit score')) == 706
+# def test_nyc_credit_score():
+#   """ We know the 2010 census area for nyc is 302.64, let's test this. """
+#   nyc_row = get_city_state_row(DATAFRAME, 'new york', 'new york')
+#   assert int(nyc_row.get('credit score')) == 706
 
 
 def test_nyc_walkscores():
