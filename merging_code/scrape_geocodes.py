@@ -21,7 +21,7 @@ from merging_code.normalize_dataframes import add_empty_columns
 from merging_code.secrets import GEOCODE_API_KEY
 from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file
 from merging_code.utils import get_logger, write_final_dataframe, is_github_actions
-from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME, EXPERIAN_FINAL_CSV_FILENAME
+from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME
 from file_locations import GEOCODE_CACHED_JSON_FILENAME, GEOCODE_FINAL_CSV_FILENAME
 
 LOGGER = get_logger('scrape_geocodes')
@@ -33,10 +33,6 @@ CSV_FILES_TO_MERGE = [{
   'csv_filename': FBI_CRIME_COMBINED_CSV_FILENAME,
   'document_label': 'fbi',
   'suffix': '_fbi_crime'
-}, {
-  'csv_filename': EXPERIAN_FINAL_CSV_FILENAME,
-  'document_label': 'experian',
-  'suffix': 'experian_2017'
 }]
 
 

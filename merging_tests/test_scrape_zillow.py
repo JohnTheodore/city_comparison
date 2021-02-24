@@ -9,4 +9,4 @@ def test_cambridge_rent_price_per_sqft():
   """ We know the lat, long and reverse address for sunnyvale, let's test this. """
   dataframe = get_final_zillow_dataframe()
   cambridge = get_city_state_row(dataframe, 'cambridge', 'massachusetts')
-  assert round(cambridge.iloc[0].get('ZRIFAH'), 1) == 2.7
+  assert round(cambridge.iloc[0].get('ZRIFAH'), 1) == 2.9
