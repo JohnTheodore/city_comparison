@@ -23,7 +23,7 @@ jobs:
         pip install codecov python-Levenshtein
     - name: run tests
       run: |
-        flake8 -v --exclude py3*-*
+        flake8 -v --exclude py3*-*,py3**-*
         yapf --parallel --verbose --recursive --style .style.yapf --exclude 'py3*-*' --diff .
         find . -type f -name "*.py" ! -path "./py3*-*/*" ! -path "./merging_tests/*" | xargs pylint
         vulture --exclude "*py3*-*" .
