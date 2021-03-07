@@ -141,7 +141,8 @@ disable=print-statement,
         comprehension-escape,
         R0801,
         R0914, # Too many local variables
-        W1202 # Use % formatting in logging functions and pass the % parameters as arguments (logging-format-interpolation)
+        W1202, # Use % formatting in logging functions and pass the % parameters as arguments (logging-format-interpolation)
+        R0913 # too many arguments
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option

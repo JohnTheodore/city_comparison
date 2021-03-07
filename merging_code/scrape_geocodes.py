@@ -15,6 +15,7 @@ import ssl
 import sys
 import certifi
 import geopy
+import requests
 
 from merging_code.merge_dataframes import get_dataframe_from_merged_table_metadata
 from merging_code.normalize_dataframes import add_empty_columns
@@ -52,12 +53,16 @@ def get_geopy_googlev3_locator(geocode_api_key):
   return geolocator
 
 
-def cache_geo_metadata(cached_json, location, reverse_address, search_query):
+def cache_geo_metadata(cached_json, location, reverse_address, search_query,
+                       county_fips, block_fips, county_name):
   """ Set single city geo metadata values into the main cache dict, and return the dict. """
   cached_json[search_query] = {
     'latitude': location.latitude,
     'longitude': location.longitude,
-    'reverse_address': reverse_address
+    'reverse_address': reverse_address,
+    'county_fips': county_fips,
+    'block_fips': block_fips,
+    'county_name': county_name
   }
   return cached_json
 
@@ -70,19 +75,51 @@ def get_reverse_address(geolocator, location):
   return reverse.address
 
 
-def add_geo_metadata_to_row(row, location, reverse_address):
+def add_geo_metadata_to_row(row, location, reverse_address, county_fips,
+                            block_fips, county_name):
   """ Overwrite empty cell values in a dataframe, to add geo metadata """
   row['latitude'] = location.latitude
   row['longitude'] = location.longitude
   row['reverse_address'] = reverse_address
+  row['county_fips'] = county_fips
+  row['block_fips'] = block_fips
+  row['county_name'] = county_name
   return row
+
+
+def get_county_and_block_fips(latitude, longitude):
+  """ Get the latitude, longitude, county/block fips, and county name """
+  response = requests.get('https://geo.fcc.gov/api/census/block/find',
+                          params={
+                            'latitude': latitude,
+                            'longitude': longitude,
+                            'showall': True,
+                            'format': 'json'
+                          })
+  response.raise_for_status()
+  json_response = response.json()
+  if json_response.get('status') == 'OK':
+
+    county_fips = json_response.get('County').get('FIPS')
+    county_name = json_response.get('County').get('name')
+    block_fips = json_response.get('Block').get('FIPS')
+    return {
+      'county': county_fips,
+      'block': block_fips,
+      'county_name': county_name
+    }
+  print(response.json())
+  sys.exit('FCC api call failed')
 
 
 def add_geo_metadata_to_dataframe(dataframe):
   """ Iterate over all cities in the dataframe, then add geo metadata to all of them """
   geolocator = get_geopy_googlev3_locator(GEOCODE_API_KEY)
   cached_json = get_dict_from_json_file(GEOCODE_CACHED_JSON_FILENAME)
-  add_empty_columns(dataframe, ['latitude', 'longitude', 'reverse_address'])
+  add_empty_columns(dataframe, [
+    'latitude', 'longitude', 'reverse_address', 'county_fips', 'block_fips',
+    'county_name'
+  ])
   api_count = 0
   # pylint: disable=W0612
   for index, row in dataframe.iterrows():
@@ -91,12 +128,20 @@ def add_geo_metadata_to_dataframe(dataframe):
     if search_query in cached_json:
       # add to dataframe from cache
       city_geo_dict = cached_json[search_query]
-      row[list(city_geo_dict.keys())] = list(city_geo_dict.values())
+      for dict_key in city_geo_dict.keys():
+        row[dict_key] = city_geo_dict[dict_key]
       continue
     location = geolocator.geocode(search_query)
+    if location is None:
+      print('Skipping: %s' % search_query)
+      continue
     reverse_address = get_reverse_address(geolocator, location)
-    row = add_geo_metadata_to_row(row, location, reverse_address)
-    cache_geo_metadata(cached_json, location, reverse_address, search_query)
+    fips = get_county_and_block_fips(location.latitude, location.longitude)
+    row = add_geo_metadata_to_row(row, location, reverse_address,
+                                  fips['county'], fips['block'],
+                                  fips['county_name'])
+    cache_geo_metadata(cached_json, location, reverse_address, search_query,
+                       fips['county'], fips['block'], fips['county_name'])
     api_count += 2  # two api hits per loop, 1 for geocode, 1 for reverse address
     if api_count % 50 == 0:
       log_msg = '### api_count: {}, cache_count: {} ###'.format(
