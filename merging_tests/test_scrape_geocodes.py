@@ -11,5 +11,5 @@ def test_sunnyvale_geo():
   assert len(sunnyvale) == 1
   assert float(sunnyvale.get('latitude')) == 37.36883
   assert float(sunnyvale.get('longitude')) == -122.0363496
-  sunnyvale_address = '390 W El Camino Real, Sunnyvale, CA 94087, USA'
+  sunnyvale_address = 'El Camino & Mathilda, Sunnyvale, CA 94087, USA'
   assert sunnyvale.get('reverse_address').iloc[0] == sunnyvale_address
