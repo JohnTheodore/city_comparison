@@ -69,12 +69,13 @@ HEADERS_CHANGE = {
       'area in square miles - land area': 'land area sqmi census_2010',
       'area in square miles - total area': 'total area sqmi census_2010',
       'area in square miles - water area': 'water area sqmi census_2010',
+      'target geo id2': 'geoid'
     },
     'drop_columns': [
       'density per square mile of land area - housing units',
       'density per square mile of land area - population', 'geographic area',
       'geographic area.1', 'geography', 'housing units', 'id', 'id2',
-      'population', 'target geo id', 'target geo id2'
+      'population', 'target geo id'
     ]
   },
   'final_csv': {
