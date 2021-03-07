@@ -7,8 +7,8 @@ HEADERS_CHANGE = {
   'cdc': {
     'rename_columns': {
       'fips county code': 'county_fips',
-      'deaths involving covid-19': 'covid19_deaths',
-      'deaths from all causes': 'all_cause_deaths',
+      'deaths involving covid-19': 'county_covid19_deaths',
+      'deaths from all causes': 'county_all_cause_deaths',
     },
     'drop_columns': [
       'date as of',
