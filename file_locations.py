@@ -30,5 +30,9 @@ FBI_CRIME_2018_XLS_FILENAME = './primary_sources/fbi/Table_8_Offenses_Known_to_L
 FBI_CRIME_2019_XLS_FILENAME = './primary_sources/fbi/Table_8_Offenses_Known_to_Law_Enforcement_by_State_by_City_2019.xls'
 FBI_CRIME_COMBINED_CSV_FILENAME = './primary_sources/fbi/fbi_normalized.csv'
 
+# ./primary_sources/cdc
+CDC_PROVISIONAL_COVID19_DEATHS_2020_FILENAME = './primary_sources/cdc/Provisional_COVID-19_Death_Counts_in_the_United_States_by_County.csv'
+CDC_FINAL_CSV_FILENAME = './primary_sources/cdc/cdc_normalized.csv'
+
 # master compiled csv output
 MASTER_CSV_FILENAME = './city_comparison.csv'

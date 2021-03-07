@@ -1,8 +1,8 @@
 """Use fuzzy matching to join DataFrames on 'state' and 'city'."""
 
+from enum import Enum
 import pandas
 from merging_code.normalize_dataframes import drop_headers, rename_headers
-
 
 def get_all_states_from_index(state_city_index):
   """ Given index of ('state', 'city'), return set of 'states' in index. """
@@ -92,6 +92,39 @@ def join_on_state_and_city(logger, left_df, right_df):
   return common_df
 
 
+def join_on_county(logger, left_df, right_df, how='left', on='county_fips'):
+  """ Left merge on 'county_fips' column. """
+  common_df = left_df.merge(right_df,
+                            how=how,
+                            on=on,
+                            left_index=False,
+                            right_index=False)
+  return common_df
+
+
+class JoinColumn(Enum):
+  """ The kinds of joins we perform when merging different sources of data. """
+  STATE_CITY = 1
+  COUNTY_FIPS = 2
+
+  @classmethod
+  def join_with_combined_table(cls, logger, left_df, right_df, right_table_metadata):
+    join_column = right_table_metadata['join_column']
+    assert join_column in cls
+    if join_column == cls.STATE_CITY:
+      return join_on_state_and_city(logger, left_df, right_df)
+    if join_column == cls.COUNTY_FIPS:
+      return join_on_county(logger, left_df, right_df)
+
+  @classmethod
+  def keys(cls, table_metadata):
+    join_column = table_metadata['join_column']
+    if join_column == JoinColumn.STATE_CITY:
+      keys = ['state', 'city']
+    if join_column == JoinColumn.COUNTY_FIPS:
+      keys = ['county_fips']
+    return keys
+
 # remove everything below this line, or rewrite it.
 
 
@@ -103,8 +136,10 @@ def get_dataframe_from_merged_table_metadata(logger, tables_metadata):
       combined_table = get_normalized_data_table(logger, table_metadata)
       continue
     next_data_table = get_normalized_data_table(logger, table_metadata)
-    combined_table = join_on_state_and_city(logger, combined_table,
-                                            next_data_table)
+    # combined_table = join_on_state_and_city(logger, combined_table,
+    #                                         next_data_table)
+    combined_table = JoinColumn.join_with_combined_table(
+      logger, combined_table, next_data_table, table_metadata)
     logger.info('Dataframe length: {}'.format(str(len(combined_table))))
   drop_headers('final_csv', combined_table)
   rename_headers('final_csv', combined_table)
@@ -150,6 +185,6 @@ def get_normalized_data_table(logger, table_metadata):
   log_msg = 'Normalized document_label: {} Dataframe length: {}'.format(
     table_metadata['document_label'], str(len(data_table)))
   logger.info(log_msg)
-  # Deduplicate by ('state', 'city').
-  data_table = data_table.drop_duplicates(['state', 'city'])
+  # Deduplicate by the table key: ('state', 'city') or 'county_fips'.
+  data_table = data_table.drop_duplicates(JoinColumn.keys(table_metadata))
   return data_table

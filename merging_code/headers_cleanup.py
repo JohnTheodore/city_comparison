@@ -4,6 +4,21 @@ This helps make the final product more human readable.
 """
 
 HEADERS_CHANGE = {
+  'cdc': {
+    'rename_columns': {
+      'fips county code': 'county_fips',
+      'deaths involving covid-19': 'covid19_deaths',
+      'deaths from all causes': 'all_cause_deaths',
+    },
+    'drop_columns': [
+      'date as of',
+      'start date',
+      'end date',
+      'state',
+      'county name',
+      'urban rural code',
+      'footnote']
+  },
   'zillow_city_codes': {
     'rename_columns': {
       'code': 'city_code'
