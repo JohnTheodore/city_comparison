@@ -18,6 +18,7 @@ import geopy
 import requests
 
 from merging_code.merge_dataframes import get_dataframe_from_merged_table_metadata
+from merging_code.merge_dataframes import JoinColumn
 from merging_code.normalize_dataframes import add_empty_columns
 from merging_code.secrets import GEOCODE_API_KEY
 from merging_code.utils import get_dict_from_json_file, write_dict_to_json_file
@@ -30,10 +31,12 @@ LOGGER = get_logger('scrape_geocodes')
 CSV_FILES_TO_MERGE = [{
   'csv_filename': CENSUS_FINAL_CSV_FILENAME,
   'document_label': 'census_2010',
+  'join_column': JoinColumn.STATE_CITY
 }, {
   'csv_filename': FBI_CRIME_COMBINED_CSV_FILENAME,
   'document_label': 'fbi',
-  'suffix': '_fbi_crime'
+  'suffix': '_fbi_crime',
+  'join_column': JoinColumn.STATE_CITY
 }]
 
 

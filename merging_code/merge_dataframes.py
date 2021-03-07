@@ -4,6 +4,7 @@ from enum import Enum
 import pandas
 from merging_code.normalize_dataframes import drop_headers, rename_headers
 
+
 def get_all_states_from_index(state_city_index):
   """ Given index of ('state', 'city'), return set of 'states' in index. """
   return set(
@@ -92,38 +93,43 @@ def join_on_state_and_city(logger, left_df, right_df):
   return common_df
 
 
-def join_on_county(logger, left_df, right_df, how='left', on='county_fips'):
+def join_on_county(left_df, right_df, how='left'):
   """ Left merge on 'county_fips' column. """
   common_df = left_df.merge(right_df,
                             how=how,
-                            on=on,
+                            on='county_fips',
                             left_index=False,
                             right_index=False)
   return common_df
 
 
 class JoinColumn(Enum):
-  """ The kinds of joins we perform when merging different sources of data. """
+  """ Handle different types of joins when merging different sources of data. """
   STATE_CITY = 1
   COUNTY_FIPS = 2
 
   @classmethod
-  def join_with_combined_table(cls, logger, left_df, right_df, right_table_metadata):
+  def join_with_combined_table(cls, logger, left_df, right_df,
+                               right_table_metadata):
+    """Join dataframes based on 'join_column' in table_metadata. """
     join_column = right_table_metadata['join_column']
     assert join_column in cls
     if join_column == cls.STATE_CITY:
-      return join_on_state_and_city(logger, left_df, right_df)
+      result = join_on_state_and_city(logger, left_df, right_df)
     if join_column == cls.COUNTY_FIPS:
-      return join_on_county(logger, left_df, right_df)
+      result = join_on_county(left_df, right_df)
+    return result
 
   @classmethod
   def keys(cls, table_metadata):
+    """Return join keys based on 'join_column' in table_metadata. """
     join_column = table_metadata['join_column']
     if join_column == JoinColumn.STATE_CITY:
       keys = ['state', 'city']
     if join_column == JoinColumn.COUNTY_FIPS:
       keys = ['county_fips']
     return keys
+
 
 # remove everything below this line, or rewrite it.
 

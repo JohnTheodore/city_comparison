@@ -11,13 +11,9 @@ HEADERS_CHANGE = {
       'deaths from all causes': 'county_all_cause_deaths',
     },
     'drop_columns': [
-      'date as of',
-      'start date',
-      'end date',
-      'state',
-      'county name',
-      'urban rural code',
-      'footnote']
+      'date as of', 'start date', 'end date', 'state', 'county name',
+      'urban rural code', 'footnote'
+    ]
   },
   'zillow_city_codes': {
     'rename_columns': {
