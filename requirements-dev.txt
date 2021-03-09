@@ -4,13 +4,13 @@ coloredlogs==15.0
 flake8==3.8.4
 fuzzywuzzy==0.18.0
 geopy==2.1.0
-pandas==1.2.2
-pylint==2.7.1
+pandas==1.2.3
+pylint==2.7.2
 pytest-cov==2.11.1
 pytest-xdist==2.2.1
 pytest==6.2.2
 pyyaml==5.4.1
-Quandl==3.6.0
+Quandl==3.6.1
 requests==2.25.1
 vulture==2.3
 xenon==0.7.1

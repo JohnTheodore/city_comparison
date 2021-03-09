@@ -46,14 +46,6 @@ HEADERS_CHANGE = {
     },
     'drop_columns': ['rank', 'population', 'unnamed: 5', 'unnamed: 4']
   },
-  'fbi_2014': {
-    'rename_columns': {
-      'rape (revised definition)1': 'rape',
-      'larceny- theft': 'larceny theft',
-      'arson3': 'arson',
-    },
-    'drop_columns': ['rape (legacy definition)2'],
-  },
   'fbi_2015': {
     'rename_columns': {
       'rape (revised definition)1': 'rape',
@@ -85,6 +77,22 @@ HEADERS_CHANGE = {
       'unnamed: 18',
     ]
   },
+  'fbi_2018': {
+    'rename_columns': {
+      'rape1': 'rape',
+      'larceny- theft': 'larceny theft',
+      'arson2': 'arson',
+    },
+    'drop_columns': []
+  },
+  'fbi_2019': {
+    'rename_columns': {
+      'rape1': 'rape',
+      'larceny- theft': 'larceny theft',
+      'arson2': 'arson',
+    },
+    'drop_columns': []
+  },
   'census_2010': {
     'rename_columns': {
       'area in square miles - land area': 'land area sqmi census_2010',
@@ -105,9 +113,10 @@ HEADERS_CHANGE = {
       'city_code', 'city_fbi_crime', 'city_walkscore', 'cityexperian_2017',
       'cityzillow', 'geography census_2010', 'geography.1', 'geography.2',
       'latitudezillow', 'longitudezillow', 'rape_legacy', 'reverse_address',
-      'reverse_addresszillow', 'state_fbi_crime', 'state_fbi_crime',
-      'state_walkscore', 'state_walkscore', 'stateexperian_2017', 'statezillow',
-      'target geo id2'
+      'state_fbi_crime', 'state_fbi_crime', 'state_walkscore',
+      'state_walkscore', 'stateexperian_2017', 'statezillow', 'target geo id2',
+      'longitude_x', 'longitude_y', 'latitude_x', 'latitude_y',
+      'reverse_address_x', 'reverse_address_y'
     ]
   }
 }
