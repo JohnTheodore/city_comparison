@@ -3,7 +3,7 @@
 
 import numpy as np
 from file_locations import CDC_PROVISIONAL_COVID19_DEATHS_2020_FILENAME, CDC_FINAL_CSV_FILENAME
-from file_locations import CENSUS_2019_POPULATION_FILENAME
+from merging_code.census_county_population import get_county_population_dataframe
 from merging_code.utils import get_dataframe_from_spreadsheet
 from merging_code.utils import get_logger, write_final_dataframe
 from merging_code.merge_dataframes import JoinColumn
@@ -18,22 +18,11 @@ def get_final_cdc_dataframe():
     LOGGER, CDC_PROVISIONAL_COVID19_DEATHS_2020_FILENAME)
   cdc_2020_dataframe = normalize_headers_in_dataframes('cdc',
                                                        [cdc_2020_dataframe])[0]
-  census_2019_dataframe = get_dataframe_from_spreadsheet(
-    LOGGER, CENSUS_2019_POPULATION_FILENAME)
-  census_2019_dataframe = normalize_headers_in_dataframes(
-    'census_2019', [census_2019_dataframe])[0]
+
+  census_2019_dataframe = get_county_population_dataframe()
   # Check that the "_fips" column types are int64.
   assert cdc_2020_dataframe['county_fips'].dtype == np.int64
-  assert census_2019_dataframe['state_fips_part'].dtype == np.int64
-  assert census_2019_dataframe['county_fips_part'].dtype == np.int64
-  # We need to concatenate the "state_fips_part" and "county_fips_part" columns
-  # to form a value that matches the CDC's "county_fips".
-  census_2019_dataframe['county_fips'] = (
-    census_2019_dataframe['state_fips_part'] * 1000 +
-    census_2019_dataframe['county_fips_part'])
-  # Remove the "_part" columns.
-  census_2019_dataframe = census_2019_dataframe.drop(
-    columns=['state_fips_part', 'county_fips_part'])
+  assert census_2019_dataframe['county_fips'].dtype == np.int64
 
   cdc_2020_dataframe = JoinColumn.join_with_combined_table(
     LOGGER, cdc_2020_dataframe, census_2019_dataframe,
