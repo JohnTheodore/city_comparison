@@ -1,8 +1,12 @@
 """ Join Census and FBI data into one combined pandas DataFrame. """
 
-from file_locations import CENSUS_FINAL_CSV_FILENAME, FBI_CRIME_COMBINED_CSV_FILENAME
-from file_locations import ZILLOW_FINAL_CSV_FILENAME, CDC_FINAL_CSV_FILENAME
-from file_locations import WALKSCORE_FINAL_CSV_FILENAME, MASTER_CSV_FILENAME
+from file_locations import CDC_FINAL_CSV_FILENAME
+from file_locations import CENSUS_FINAL_CSV_FILENAME
+from file_locations import ELECTIONS_FINAL_CSV_FILENAME
+from file_locations import FBI_CRIME_COMBINED_CSV_FILENAME
+from file_locations import MASTER_CSV_FILENAME
+from file_locations import WALKSCORE_FINAL_CSV_FILENAME
+from file_locations import ZILLOW_FINAL_CSV_FILENAME
 from merging_code.headers_cleanup import HEADERS_CHANGE
 from merging_code.merge_dataframes import get_dataframe_from_merged_table_metadata
 from merging_code.merge_dataframes import JoinColumn
@@ -33,6 +37,10 @@ CSV_FILES_TO_MERGE = [{
 }, {
   'csv_filename': CDC_FINAL_CSV_FILENAME,
   'document_label': 'cdc',
+  'join_column': JoinColumn.COUNTY_FIPS
+}, {
+  'csv_filename': ELECTIONS_FINAL_CSV_FILENAME,
+  'document_label': 'elections_2020',
   'join_column': JoinColumn.COUNTY_FIPS
 }]
 
