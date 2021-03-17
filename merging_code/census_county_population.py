@@ -4,7 +4,7 @@
 import numpy as np
 from file_locations import CENSUS_2019_POPULATION_FILENAME
 from merging_code.utils import get_dataframe_from_spreadsheet
-from merging_code.utils import get_logger, write_final_dataframe
+from merging_code.utils import get_logger
 from merging_code.normalize_dataframes import normalize_headers_in_dataframes
 
 LOGGER = get_logger('county_population')
