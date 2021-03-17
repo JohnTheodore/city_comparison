@@ -1,7 +1,7 @@
 certifi==2020.12.5
 codecov==2.1.11
 coloredlogs==15.0
-flake8==3.8.4
+flake8==3.9.0
 fuzzywuzzy==0.18.0
 geopy==2.1.0
 pandas==1.2.3
@@ -15,5 +15,5 @@ requests==2.25.1
 vulture==2.3
 xenon==0.7.1
 xlrd==2.0.1
-yapf==0.30.0
+yapf==0.31.0
 wheel==0.36.2
