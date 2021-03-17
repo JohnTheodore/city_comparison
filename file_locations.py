@@ -38,5 +38,9 @@ CDC_PROVISIONAL_COVID19_DEATHS_2020_FILENAME = './primary_sources/cdc/Provisiona
 CENSUS_2019_POPULATION_FILENAME = './primary_sources/cdc/co-est2019-alldata.csv'
 CDC_FINAL_CSV_FILENAME = './primary_sources/cdc/cdc_normalized.csv'
 
+# ./primary_sources/elections
+ELECTIONS_2020_FILENAME = './primary_sources/elections/kjhealy_us_elections_2020.csv'
+ELECTIONS_FINAL_CSV_FILENAME = './primary_sources/elections/elections_normalized.csv'
+
 # master compiled csv output
 MASTER_CSV_FILENAME = './city_comparison.csv'

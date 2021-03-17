@@ -4,6 +4,14 @@ This helps make the final product more human readable.
 """
 
 HEADERS_CHANGE = {
+  'elections_2020': {
+    'rename_columns': {
+      'fips5': 'county_fips'
+    },
+    'drop_columns': {
+      'fips_char', 'place', 'fname', 'lname', 'pab', 'incumbent', 'mpc'
+    }
+  },
   'census_2019': {
     'rename_columns': {
       'state': 'state_fips_part',

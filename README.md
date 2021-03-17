@@ -34,9 +34,12 @@ Run python run_tests_locally.py _before_ you make a pull request.
 - "city"                                   # the city/town, this is largely what all the other data revolves around
 - "county_2020_all_cause_deaths_per_100k"  # number of deaths in the county that occurred during 2020 (coronavirus pandemic)
 - "county_covid19_deaths_per_100k"         # number of probably covid19 deaths in the county
+  "county_dem_percent"                     # percent of county that voted for democrat during Presidential race
 - "county_fips"                            # Federal Information Processing Standard (unique code to identify a county)
+  "county_lib_percent"                     # percent of county that voted for libertarian during Presidential race
 - "county_name"                            # name of the county that the town is in
 - "county_population"                      # number of people living in the county in 2019 (latest available census data)
+  "county_rep_percent"                     # percent of county that voted for republican during Presidential race
 - "geoid"                                  # GEOIDs are numeric codes that uniquely identify all geographic areas (from census_2010)
 - "land area sqmi census_2010"             # 2010 census just the land area of a town (excluding water)
 - "larceny theft"                          # fbi larceny theft from the last several years, averaged and normalized per capita
